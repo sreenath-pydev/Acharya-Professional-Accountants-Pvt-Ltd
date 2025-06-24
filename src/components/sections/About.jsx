@@ -32,7 +32,7 @@ const About = () => {
   
 
   <img 
-    src="/src/assets/images/about.png" 
+    src="/images/about.png" 
     alt="Accounting services illustration"
     className="w-full h-full object-cover object-center opacity-90"
   />

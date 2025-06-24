@@ -23,7 +23,7 @@ const Footer = () => {
           <div>
             <div className="mb-6">
               <img 
-                src="/logo.png" 
+                src="/images/logo.png" 
                 alt="Acharya Professional Accountants" 
                 className="h-32 w-auto mb-5"
               />
