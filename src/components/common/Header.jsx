@@ -23,7 +23,7 @@ const Header = () => {
         <nav className="flex justify-between items-center py-4">
           <div className="flex items-center gap-4 h-[50px]">
             <img 
-              src="public/logo.png" 
+              src="/src/assets/images/logo.png" 
               alt="Acharya Professional Accountants" 
               className="h-20 w-auto transition-all duration-300"
             />
