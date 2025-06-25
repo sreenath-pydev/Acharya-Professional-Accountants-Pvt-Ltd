@@ -28,10 +28,8 @@ const Header = () => {
           : 'bg-[rgba(4,4,4,0.95)] backdrop-blur-md'
       }`}
     >
-      {/* Changed container structure */}
       <div className="container mx-auto px-4">
         <nav className="flex justify-between items-center py-3 w-full">
-          {/* Logo - reduced size for mobile */}
           <div className="flex items-center h-[40px]">
             <img
               src="/images/logo.png"
@@ -40,7 +38,6 @@ const Header = () => {
             />
           </div>
 
-          {/* Desktop Menu - unchanged */}
           <ul className="hidden md:flex gap-6 lg:gap-8">
             {['home', 'about', 'services', 'internship', 'careers', 'blog', 'contact'].map((item) => (
               <li key={item}>
@@ -55,8 +52,6 @@ const Header = () => {
               </li>
             ))}
           </ul>
-
-          {/* Mobile Menu Button - adjusted positioning */}
           <button
             className="md:hidden flex flex-col gap-1 z-50 ml-4"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -80,7 +75,6 @@ const Header = () => {
           </button>
         </nav>
 
-        {/* Mobile Menu Overlay - improved spacing */}
         {isMenuOpen && (
           <div className="fixed inset-0 bg-dark-bg z-40 flex flex-col justify-center items-center pt-24 pb-10">
             <ul className="flex flex-col items-center gap-6 w-full px-4">
