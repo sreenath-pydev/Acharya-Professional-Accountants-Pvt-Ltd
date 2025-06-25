@@ -167,7 +167,7 @@ const Footer = () => {
       <div className="py-6 border-t border-primary-accent/10 text-center relative z-10">
         <div className="container mx-auto px-5">
           <p className="text-boulder text-sm">
-            &copy; 2025 Acharya Professional Accountants Pvt Ltd. All Rights Reserved. | Designed & Developed by <a href="https://www.sreenathdev.online/" target="_blank" class="text-primary-accent hover:underline"><i className="fas fa-heart text-primary-accent"></i> Sreenath K K</a> 
+            &copy; 2025 Acharya Professional Accountants Pvt Ltd. All Rights Reserved. | Designed & Developed by <a href="https://www.sreenathdev.online/" target="_blank" className="text-primary-accent hover:underline"><i className="fas fa-heart text-primary-accent"></i> Sreenath K K</a> 
           </p>
         </div>
       </div>
