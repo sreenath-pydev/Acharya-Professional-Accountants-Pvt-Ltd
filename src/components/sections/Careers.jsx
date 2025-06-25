@@ -1,13 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const teamMembers = [
-  { name: 'Sreehari C', role: 'Chairman & CEO' },
-  { name: 'Rahul C', role: 'Managing Director' },
-  { name: 'Anagha G M', role: 'Director' },
-  { name: 'Anjana', role: 'Director' },
-  { name: 'Shamsida', role: 'HR' },
-  { name: 'Ayisha Shifana E P', role: 'Co-ordinator' }
+  { name: 'Sreehari C', role: 'Chairman & CEO', photo: '/teams_images/sreehari.jpg' },
+  { name: 'Rahul C', role: 'Managing Director', photo: '/teams_images/rahul.jpg' },
+  { name: 'Anagha G M', role: 'Director', photo: '/teams_images/anagha.jpg' },
+  { name: 'Anjana', role: 'Director', photo: '/teams_images/anjana.jpg' },
+  { name: 'Shamsida', role: 'HR Manager', photo: '/teams_images/shamsida.jpg' },
+  { name: 'Anandu', role: 'Office Admin', photo: '/teams_images/anandu.jpg' },
+  { name: 'Ayisha Shifana', role: 'Finance coordinator', photo: '/teams_images/ayisha.jpg' }
 ];
+
 
 const perks = [
   { icon: 'fa-chart-line', text: 'Professional Growth' },
@@ -90,22 +94,21 @@ const jobListings = [
     ]
   }
 ];
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+
 const Careers = () => {
   const [activeJob, setActiveJob] = useState(null);
 
   const toggleJob = (index) => {
     setActiveJob(activeJob === index ? null : index);
   };
+
   useEffect(() => {
-  AOS.refresh();
-}, [activeJob]);
+    AOS.refresh();
+  }, [activeJob]);
 
   return (
-    <section id="careers" className="py-20 bg-graphite">
-      <div className="container mx-auto px-5 md:px-20">
+    <section id="careers" className="py-20 bg-graphite overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 md:px-20">
         <div data-aos="fade-up" data-aos-delay="100">
           <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-center mb-12 text-primary-accent">
             Join Our Team
@@ -113,14 +116,15 @@ const Careers = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
-          <div data-aos="fade-right" data-aos-delay="200" className="bg-secondary-dark p-8 rounded-2xl border border-primary-accent/10">
+          <div data-aos="fade-right" data-aos-delay="200" className="bg-secondary-dark p-6 sm:p-8 rounded-2xl border border-primary-accent/10">
             <h3 className="text-2xl font-semibold mb-8 text-center text-primary-accent">Meet Our Team</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
               {teamMembers.map((member, index) => (
-                <div data-aos="fade-up" data-aos-delay={300 + (index * 100)} key={index} className="text-center">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-irish-coffee to-korma flex items-center justify-center text-3xl text-primary-accent hover:scale-105 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300">
-                    <i className="fas fa-user"></i>
-                  </div>
+                <div data-aos="fade-up" data-aos-delay={300 + index * 100} key={index} className="text-center min-w-0 break-words">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-4 rounded-full overflow-hidden shadow-lg hover:scale-105 hover:shadow-primary-accent/30 transition-all duration-300">
+                  <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
+                </div>
+
                   <div className="font-semibold text-white">{member.name}</div>
                   <div className="text-sm text-boulder">{member.role}</div>
                 </div>
@@ -128,11 +132,11 @@ const Careers = () => {
             </div>
           </div>
 
-          <div data-aos="fade-left" data-aos-delay="200" className="bg-gradient-to-br from-korma to-primary-accent p-8 rounded-2xl shadow-lg shadow-korma/30 text-center">
+          <div data-aos="fade-left" data-aos-delay="200" className="bg-gradient-to-br from-korma to-primary-accent p-6 sm:p-8 rounded-2xl shadow-lg shadow-korma/30 text-center">
             <h3 className="text-2xl font-semibold mb-8 text-dark-bg">Why Work With Us</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
               {perks.map((perk, index) => (
-                <div data-aos="fade-up" data-aos-delay={300 + (index * 100)} key={index} className="bg-dark-bg/40 p-4 rounded-lg flex items-center gap-3">
+                <div data-aos="fade-up" data-aos-delay={300 + index * 100} key={index} className="bg-dark-bg/40 p-4 rounded-lg flex items-center gap-3">
                   <div className="text-xl text-primary-accent">
                     <i className={`fas ${perk.icon}`}></i>
                   </div>
@@ -153,7 +157,7 @@ const Careers = () => {
               key={index}
               {...(activeJob !== index && {
                 'data-aos': 'fade-up',
-                'data-aos-delay': 100 + (index * 10)
+                'data-aos-delay': 100 + index * 10
               })}
               className={`bg-secondary-dark rounded-xl overflow-hidden mb-6 border border-primary-accent/10 hover:border-primary-accent transition-all duration-300 ${
                 activeJob === index ? 'shadow-lg shadow-primary-accent/20' : ''
@@ -163,9 +167,9 @@ const Careers = () => {
                 className="p-6 cursor-pointer flex justify-between items-center hover:bg-primary-accent/5 transition-colors duration-300"
                 onClick={() => toggleJob(index)}
               >
-                <div className="flex-1">
-                  <div className="text-xl font-semibold text-white mb-2">{job.title}</div>
-                  <div className="flex flex-wrap gap-5 text-boulder text-sm">
+                <div className="flex-1 min-w-0">
+                  <div className="text-xl font-semibold text-white mb-2 break-words">{job.title}</div>
+                  <div className="flex flex-wrap gap-3 sm:gap-5 text-boulder text-sm min-w-0 break-words">
                     <div className="flex items-center gap-2">
                       <i className="fas fa-map-marker-alt"></i> {job.location}
                     </div>
@@ -214,7 +218,7 @@ const Careers = () => {
 
                   <div className="pt-4 border-t border-primary-accent/10 flex justify-end">
                     <button
-                      className="bg-primary-accent text-dark-bg px-6 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-korma hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300"
+                      className="w-full sm:w-auto bg-primary-accent text-dark-bg px-6 py-3 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-korma hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300"
                       onClick={() => alert(`Application for "${job.title}" will open in a new window.`)}
                     >
                       <i className="fas fa-paper-plane"></i> Apply Now
