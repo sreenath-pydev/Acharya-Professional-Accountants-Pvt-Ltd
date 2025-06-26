@@ -62,7 +62,7 @@ const Contact = () => {
       
       <div className="container mx-auto px-5 md:px-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
-          <div className="bg-secondary-dark p-10 rounded-2xl border border-primary-accent/10 shadow-lg">
+          <div data-aos="fade-right" data-aos-delay="50" className="bg-secondary-dark p-10 rounded-2xl border border-primary-accent/10 shadow-lg">
             <h2 className="font-montserrat text-3xl font-bold mb-8 text-primary-accent relative pb-4">
               Get In Touch
               <span className="absolute bottom-0 left-0 w-16 h-1 bg-primary-accent"></span>
@@ -150,7 +150,7 @@ const Contact = () => {
             </div>
           </div>
           
-          <div className="bg-secondary-dark p-10 rounded-2xl border border-primary-accent/10 shadow-lg">
+          <div data-aos="fade-left" data-aos-delay="50" className="bg-secondary-dark p-10 rounded-2xl border border-primary-accent/10 shadow-lg">
             {!isSubmitted ? (
               <>
                 <h2 className="font-montserrat text-3xl font-bold mb-8 text-primary-accent relative pb-4">
@@ -243,7 +243,7 @@ const Contact = () => {
           </div>
         </div>
         
-        <div className="h-96 rounded-2xl overflow-hidden shadow-lg border border-primary-accent/10">
+        <div data-aos="fade-up" data-aos-delay="50" className="h-96 rounded-2xl overflow-hidden shadow-lg border border-primary-accent/10">
           <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3077.6841848514887!2d75.8030430737993!3d11.2358719889422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6596ca4d1cb11%3A0xa76f81f9ba68fee1!2sAcharya%20professional%20accountants%20pvt%20ltd!5e1!3m2!1sen!2sin!4v1750755342483!5m2!1sen!2sin" className="w-full h-full border-0 filter grayscale-30 contrast-110" allowFullScreen
           loading="lazy" 

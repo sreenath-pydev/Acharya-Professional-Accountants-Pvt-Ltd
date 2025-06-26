@@ -109,18 +109,18 @@ const Careers = () => {
   return (
     <section id="careers" className="py-20 bg-graphite overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 md:px-20">
-        <div data-aos="fade-up" data-aos-delay="100">
+        <div data-aos="fade-up" data-aos-delay="50">
           <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-center mb-12 text-primary-accent">
             Join Our Team
           </h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
-          <div data-aos="fade-right" data-aos-delay="200" className="bg-secondary-dark p-6 sm:p-8 rounded-2xl border border-primary-accent/10">
+          <div data-aos="fade-right" data-aos-delay="50" className="bg-secondary-dark p-6 sm:p-8 rounded-2xl border border-primary-accent/10">
             <h3 className="text-2xl font-semibold mb-8 text-center text-primary-accent">Meet Our Team</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
               {teamMembers.map((member, index) => (
-                <div data-aos="fade-up" data-aos-delay={300 + index * 100} key={index} className="text-center min-w-0 break-words">
+                <div data-aos="fade-up" data-aos-delay={50 + index * 50} key={index} className="text-center min-w-0 break-words">
                   <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-4 rounded-full overflow-hidden shadow-lg hover:scale-105 hover:shadow-primary-accent/30 transition-all duration-300">
                   <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
                 </div>
@@ -132,11 +132,11 @@ const Careers = () => {
             </div>
           </div>
 
-          <div data-aos="fade-left" data-aos-delay="200" className="bg-gradient-to-br from-korma to-primary-accent p-6 sm:p-8 rounded-2xl shadow-lg shadow-korma/30 text-center">
+          <div data-aos="fade-left" data-aos-delay="50" className="bg-gradient-to-br from-korma to-primary-accent p-6 sm:p-8 rounded-2xl shadow-lg shadow-korma/30 text-center">
             <h3 className="text-2xl font-semibold mb-8 text-dark-bg">Why Work With Us</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
               {perks.map((perk, index) => (
-                <div data-aos="fade-up" data-aos-delay={300 + index * 100} key={index} className="bg-dark-bg/40 p-4 rounded-lg flex items-center gap-3">
+                <div data-aos="fade-up" data-aos-delay={50 + index * 50} key={index} className="bg-dark-bg/40 p-4 rounded-lg flex items-center gap-3">
                   <div className="text-xl text-primary-accent">
                     <i className={`fas ${perk.icon}`}></i>
                   </div>
@@ -148,7 +148,7 @@ const Careers = () => {
         </div>
 
         <div className="job-listings">
-          <div data-aos="fade-up" data-aos-delay="100">
+          <div data-aos="fade-up" data-aos-delay="50">
             <h3 className="text-2xl font-semibold mb-8 text-center text-primary-accent">Current Openings</h3>
           </div>
 
@@ -157,7 +157,7 @@ const Careers = () => {
               key={index}
               {...(activeJob !== index && {
                 'data-aos': 'fade-up',
-                'data-aos-delay': 100 + index * 10
+                'data-aos-delay': 50 + index * 10
               })}
               className={`bg-secondary-dark rounded-xl overflow-hidden mb-6 border border-primary-accent/10 hover:border-primary-accent transition-all duration-300 ${
                 activeJob === index ? 'shadow-lg shadow-primary-accent/20' : ''

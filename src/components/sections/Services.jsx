@@ -42,7 +42,7 @@ const Services = () => {
     <section id="services" className="py-20 bg-dark-bg">
       <div
         data-aos="fade-up"
-        data-aos-delay="100"
+        data-aos-delay="50"
         className="container mx-auto px-5 md:px-20"
       >
         <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-center mb-12 text-primary-accent">
@@ -54,8 +54,8 @@ const Services = () => {
             <div
               key={index}
               data-aos="fade-up"
-              data-aos-delay={100 + index * 100} 
-              data-aos-duration={200 + index * 100} 
+              data-aos-delay={50 + index * 50} 
+              data-aos-duration={100 + index * 50} 
               className="bg-secondary-dark p-8 rounded-xl text-center border border-primary-accent/10 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary-accent/20 hover:border-primary-accent transition-all duration-300"
             >
               <div className="text-5xl text-primary-accent mb-4">

@@ -14,14 +14,14 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-graphite pt-20 border-t border-primary-accent/10 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201000%20600%22%3E%3Crect%20fill%3D%22%231c1c1b%22%20width%3D%221000%22%20height%3D%22600%22/%3E%3Cg%20fill%3D%22%23e5a145%22%20opacity%3D%220.03%22%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2280%22/%3E%3Ccircle%20cx%3D%22800%22%20cy%3D%22500%22%20r%3D%22100%22/%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%22300%22%20r%3D%22120%22/%3E%3C/g%3E%3C/svg%3E')] bg-cover z-0"></div>
+    <footer data-aos="fade-up" data-aos-delay="50" className="bg-graphite pt-20 border-t border-primary-accent/10 relative overflow-hidden">
+      <div  className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201000%20600%22%3E%3Crect%20fill%3D%22%231c1c1b%22%20width%3D%221000%22%20height%3D%22600%22/%3E%3Cg%20fill%3D%22%23e5a145%22%20opacity%3D%220.03%22%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2280%22/%3E%3Ccircle%20cx%3D%22800%22%20cy%3D%22500%22%20r%3D%22100%22/%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%22300%22%20r%3D%22120%22/%3E%3C/g%3E%3C/svg%3E')] bg-cover z-0"></div>
 
       
       <div className="container mx-auto px-5 md:px-20 relative z-10 pb-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <div className="mb-6">
+            <div  className="mb-6">
               <img 
                 src="/images/logo.png" 
                 alt="Acharya Professional Accountants" 

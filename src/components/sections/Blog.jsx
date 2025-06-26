@@ -59,12 +59,12 @@ const Blog = () => {
   return (
     <section id="blog" className="py-20 bg-secondary-dark">
       <div className="container mx-auto px-5 md:px-20">
-        <div data-aos="fade-up" data-aos-delay="100">
+        <div data-aos="fade-up" data-aos-delay="50">
           <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-center mb-6 text-primary-accent">
             Insights & Updates
           </h2>
         </div>
-        <div data-aos="fade-up" data-aos-delay="150">
+        <div data-aos="fade-up" data-aos-delay="50">
           <p className="text-center max-w-3xl mx-auto mb-12 text-boulder">
             Stay informed with our latest industry insights, tax updates, and business strategies to help your organization thrive.
           </p>
@@ -75,8 +75,8 @@ const Blog = () => {
             <div
               key={index}
               data-aos="fade-up"
-              data-aos-delay={200 + index * 100}
-              data-aos-duration={400 + index * 100}
+              data-aos-delay={100 + index * 50}
+              data-aos-duration={ 200 + index * 50}
               className="bg-dark-bg rounded-2xl overflow-hidden shadow-lg hover:-translate-y-3 hover:shadow-xl hover:shadow-primary-accent/30 border border-primary-accent/10 hover:border-primary-accent/30 transition-all duration-400 flex flex-col h-full"
             >
               <div className="h-56 relative overflow-hidden">
