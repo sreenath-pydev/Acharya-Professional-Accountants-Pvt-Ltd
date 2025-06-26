@@ -88,7 +88,7 @@ const Internship = () => {
                 { id: "phone", name: "phone", label: "Phone Number", type: "tel" },
                 { id: "institution", name: "institution", label: "Educational Institution", type: "text" },
                 { id: "program", name: "program", label: "Program of Study", type: "text" },
-                { id: "graduation", name: "graduation", label: "Expected Graduation", type: "month" },
+                { id: "graduation", name: "graduation", label: "Year of Graduation", type: "month" },
               ].map(({ id, name, label, type }) => (
                 <div key={id}>
                   <label htmlFor={id} className="block text-primary-accent font-medium mb-2">
@@ -105,16 +105,15 @@ const Internship = () => {
               ))}
 
               <div>
-                <label htmlFor="resume-link" className="block text-primary-accent font-medium mb-2">
-                  Resume Link (Google Drive/Dropbox) *
+                <label htmlFor="resume" className="block text-primary-accent font-medium mb-2">
+                  Upload Resume (PDF) 
                 </label>
-                <input
-                  type="url"
-                  id="resume-link"
-                  name="resume_link"
-                  placeholder="Paste your resume shareable link"
-                  required
+                <input 
+                  type="file"
+                  id="resume"
+                  accept=".pdf,.docx"
                   className="w-full min-w-0 px-4 py-3 rounded-lg bg-dark-bg border border-friar-gray text-white focus:outline-none focus:ring-2 focus:ring-primary-accent focus:border-transparent"
+                  
                 />
               </div>
               <div>
