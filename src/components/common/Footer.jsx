@@ -100,8 +100,8 @@ const Footer = () => {
               <li className="flex items-start gap-4">
                 <i className="fas fa-envelope text-primary-accent text-lg mt-1"></i>
                 <span className="text-boulder">
-                  <a href="mailto:info@acharyapro.com" className="hover:text-primary-accent transition-colors duration-300">acharyas.apa@gmail.com</a><br />
-                  <a href="mailto:support@acharyapro.com" className="hover:text-primary-accent transition-colors duration-300">apa@acharya-professional-accountants.in</a>
+                  <a href="mailto:acharya.apa@gmail.com" className="hover:text-primary-accent transition-colors duration-300">acharya.apa@gmail.com</a><br />
+                  <a href="mailto:apa@acharya-professional-accountants.in" className="hover:text-primary-accent transition-colors duration-300">apa@acharya-professional-accountants.in</a>
                 </span>
               </li>
               
