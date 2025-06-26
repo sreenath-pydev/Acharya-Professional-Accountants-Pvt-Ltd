@@ -107,8 +107,8 @@ const Contact = () => {
                 <div>
                   <h4 className="text-white text-lg mb-1">Email</h4>
                   <p className="text-boulder">
-                    <a href="mailto:info@acharyapro.com" className="hover:text-primary-accent transition-colors duration-300">acharyas.apa@gmail.com</a><br />
-                    <a href="mailto:support@acharyapro.com" className="hover:text-primary-accent transition-colors duration-300">apa@acharya-professional-accountants.in</a>
+                    <a href="mailto:acharya.apa@gmail.com" className="hover:text-primary-accent transition-colors duration-300">acharya.apa@gmail.com</a><br />
+                    <a href="mailto:apa@acharya-professional-accountants.in" className="hover:text-primary-accent transition-colors duration-300">apa@acharya-professional-accountants.in</a>
                   </p>
                 </div>
               </div>
