@@ -22,3 +22,19 @@
 [data-aos].aos-animate {
   opacity: 1;
 }
+
+/* Custom Swiper Navigation Buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #e5a145;
+}
+
+/* Custom Pagination Bullets */
+.swiper-pagination-bullet {
+  background-color: #7c7c7b;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #e5a145; 
+}
