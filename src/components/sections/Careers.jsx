@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -11,7 +11,6 @@ const teamMembers = [
   { name: 'Anandu', role: 'Office Admin', photo: '/teams_images/anandu.jpg' },
   { name: 'Ayisha Shifan', role: 'Finance coordinator', photo: '/teams_images/ayisha.jpg' }
 ];
-
 
 const perks = [
   { icon: 'fa-chart-line', text: 'Professional Growth' },
@@ -97,14 +96,39 @@ const jobListings = [
 
 const Careers = () => {
   const [activeJob, setActiveJob] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedJob, setSelectedJob] = useState('');
+  const modalRef = useRef(null);
 
   const toggleJob = (index) => {
     setActiveJob(activeJob === index ? null : index);
   };
 
+  const handleApplyClick = (jobTitle) => {
+    setSelectedJob(jobTitle);
+    setShowModal(true);
+  };
+
+  const handleClickOutside = (event) => {
+    if (modalRef.current && !modalRef.current.contains(event.target)) {
+      setShowModal(false);
+    }
+  };
+
   useEffect(() => {
     AOS.refresh();
   }, [activeJob]);
+
+  useEffect(() => {
+    if (showModal) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showModal]);
 
   return (
     <section id="careers" className="py-20 bg-graphite overflow-hidden">
@@ -122,9 +146,8 @@ const Careers = () => {
               {teamMembers.map((member, index) => (
                 <div data-aos="fade-up" data-aos-delay={50 + index * 50} key={index} className="text-center min-w-0 break-words">
                   <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-4 rounded-full overflow-hidden shadow-lg hover:scale-105 hover:shadow-primary-accent/30 transition-all duration-300">
-                  <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
-                </div>
-
+                    <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
+                  </div>
                   <div className="font-semibold text-white">{member.name}</div>
                   <div className="text-sm text-boulder">{member.role}</div>
                 </div>
@@ -137,17 +160,16 @@ const Careers = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
               {perks.map((perk, index) => (
                 <div
-                    data-aos="fade-up"
-                    data-aos-delay={50 + index * 50}
-                    key={index}
-                    className="bg-dark-bg/40 p-6 rounded-xl flex flex-col sm:flex-row items-center justify-center gap-4 min-h-[120px] text-center w-full shadow-md hover:shadow-primary-accent/30 transition-all duration-300"
-                  >
-                    <div className="text-2xl text-primary-accent">
-                      <i className={`fas ${perk.icon}`}></i>
-                    </div>
-                    <div className="font-semibold text-dark-bg text-lg">{perk.text}</div>
+                  data-aos="fade-up"
+                  data-aos-delay={50 + index * 50}
+                  key={index}
+                  className="bg-dark-bg/40 p-6 rounded-xl flex flex-col sm:flex-row items-center justify-center gap-4 min-h-[120px] text-center w-full shadow-md hover:shadow-primary-accent/30 transition-all duration-300"
+                >
+                  <div className="text-2xl text-primary-accent">
+                    <i className={`fas ${perk.icon}`}></i>
                   </div>
-
+                  <div className="font-semibold text-dark-bg text-lg">{perk.text}</div>
+                </div>
               ))}
             </div>
           </div>
@@ -225,7 +247,7 @@ const Careers = () => {
                   <div className="pt-4 border-t border-primary-accent/10 flex justify-end">
                     <button
                       className="w-full sm:w-auto bg-primary-accent text-dark-bg px-6 py-3 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-korma hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300"
-                      onClick={() => alert(`Application for "${job.title}" will open in a new window.`)}
+                      onClick={() => handleApplyClick(job.title)}
                     >
                       <i className="fas fa-paper-plane"></i> Apply Now
                     </button>
@@ -236,6 +258,48 @@ const Careers = () => {
           ))}
         </div>
       </div>
+
+      {/* Application Modal */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div 
+            ref={modalRef}
+            className="bg-secondary-dark rounded-xl p-6 max-w-md w-full border border-primary-accent/20"
+            data-aos="zoom-in"
+          >
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-xl font-semibold text-primary-accent">Apply for {selectedJob}</h3>
+              <button 
+                onClick={() => setShowModal(false)}
+                className="text-boulder hover:text-white"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div className="mb-6">
+              <p className="text-boulder mb-4">
+                To apply for this position, please email your CV and cover letter to:
+              </p>
+              <p className="text-primary-accent font-medium text-center text-lg mb-4">
+                acharya.apa@gmail.com
+              </p>
+              <p className="text-boulder text-sm">
+                Please include the job title <span className="font-semibold">"{selectedJob}"</span> in the subject line of your email.
+              </p>
+            </div>
+            <div className="flex justify-end">
+              <button
+                onClick={() => setShowModal(false)}
+                className="px-6 py-2 rounded-full bg-primary-accent text-dark-bg font-medium hover:bg-korma transition-colors"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
