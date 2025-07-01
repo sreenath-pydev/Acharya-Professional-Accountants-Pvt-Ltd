@@ -87,13 +87,14 @@ const Internship = () => {
 
   return (
     <section id="internship" className="py-16 md:py-20 bg-graphite overflow-hidden">
-      <div className="container mx-auto px-4 md:px-20">
+      <div  className="container mx-auto px-4 md:px-20">
+        <div data-aos="fade-up" data-aos-delay="50">
         <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-center mb-10 text-primary-accent">
           Internship Program
         </h2>
-
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div>
+          <div data-aos="fade-right" data-aos-delay="50" >
             <h3 className="text-2xl font-semibold mb-6 text-white">Join Our Dynamic Team</h3>
             <p className="text-boulder mb-6">
               Kickstart your accounting career with our hands-on internship program designed to build real-world skills and professional confidence. Gain practical exposure to accounting practices, work alongside experienced professionals, and enhance your resume with meaningful experience. This is your opportunity to bridge the gap between academic learning and industry expectations.
@@ -121,7 +122,7 @@ const Internship = () => {
             </p>
           </div>
 
-          <div className="bg-secondary-dark p-6 sm:p-8 rounded-xl border border-primary-accent/20">
+          <div data-aos="fade-left" data-aos-delay="50" className="bg-secondary-dark p-6 sm:p-8 rounded-xl border border-primary-accent/20">
             <h3 className="text-2xl font-semibold mb-6 text-primary-accent">Apply Now</h3>
             <form ref={formRef} onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
