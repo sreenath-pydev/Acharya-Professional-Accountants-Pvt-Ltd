@@ -136,12 +136,18 @@ const Careers = () => {
             <h3 className="text-2xl font-semibold mb-8 text-dark-bg">Why Work With Us</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
               {perks.map((perk, index) => (
-                <div data-aos="fade-up" data-aos-delay={50 + index * 50} key={index} className="bg-dark-bg/40 p-4 rounded-lg flex items-center gap-3">
-                  <div className="text-xl text-primary-accent">
-                    <i className={`fas ${perk.icon}`}></i>
+                <div
+                    data-aos="fade-up"
+                    data-aos-delay={50 + index * 50}
+                    key={index}
+                    className="bg-dark-bg/40 p-6 rounded-xl flex flex-col sm:flex-row items-center justify-center gap-4 min-h-[120px] text-center w-full shadow-md hover:shadow-primary-accent/30 transition-all duration-300"
+                  >
+                    <div className="text-2xl text-primary-accent">
+                      <i className={`fas ${perk.icon}`}></i>
+                    </div>
+                    <div className="font-semibold text-dark-bg text-lg">{perk.text}</div>
                   </div>
-                  <div className="font-medium text-dark-bg">{perk.text}</div>
-                </div>
+
               ))}
             </div>
           </div>
