@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +22,46 @@ const Header = () => {
     };
   }, [isMenuOpen]);
 
+  const isHomePage = location.pathname === '/';
+
+  const renderLink = (item) => {
+    if (item === 'internship') {
+      return (
+        <RouterLink
+          to="/internship"
+          className="text-white hover:text-primary-accent transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          {item}
+        </RouterLink>
+      );
+    }
+
+    if (isHomePage) {
+      return (
+        <ScrollLink
+          to={item}
+          smooth={true}
+          duration={500}
+          className="text-white hover:text-primary-accent transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          {item === 'blog' ? 'Insights' : item}
+        </ScrollLink>
+      );
+    }
+
+    return (
+      <RouterLink
+        to={`/#${item}`}
+        className="text-white hover:text-primary-accent transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg"
+        onClick={() => setIsMenuOpen(false)}
+      >
+        {item === 'blog' ? 'Insights' : item}
+      </RouterLink>
+    );
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -31,24 +73,19 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <nav className="flex justify-between items-center py-3 w-full">
           <div className="flex items-center h-[40px]">
-            <img
-              src="/images/logo.png"
-              alt="Acharya Professional Accountants"
-              className="h-12 md:h-16 w-auto transition-all duration-300"
-            />
+            <RouterLink to="/">
+              <img
+                src="/images/logo.png"
+                alt="Acharya Professional Accountants"
+                className="h-12 md:h-16 w-auto transition-all duration-300"
+              />
+            </RouterLink>
           </div>
 
           <ul className="hidden md:flex gap-6 lg:gap-8">
             {['home', 'about', 'services', 'internship', 'careers', 'blog', 'contact'].map((item) => (
               <li key={item}>
-                <Link
-                  to={item}
-                  smooth={true}
-                  duration={500}
-                  className="text-white hover:text-primary-accent transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg"
-                >
-                  {item === 'blog' ? 'Insights' : item}
-                </Link>
+                {renderLink(item)}
               </li>
             ))}
           </ul>
@@ -80,15 +117,7 @@ const Header = () => {
             <ul className="flex flex-col items-center gap-6 w-full px-4">
               {['home', 'about', 'services', 'internship', 'careers', 'blog', 'contact'].map((item) => (
                 <li key={item} className="w-full text-center">
-                  <Link
-                    to={item}
-                    smooth={true}
-                    duration={500}
-                    className="block py-3 text-white hover:text-primary-accent transition-colors duration-300 cursor-pointer capitalize text-lg"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item === 'blog' ? 'Insights' : item}
-                  </Link>
+                  {renderLink(item)}
                 </li>
               ))}
             </ul>
