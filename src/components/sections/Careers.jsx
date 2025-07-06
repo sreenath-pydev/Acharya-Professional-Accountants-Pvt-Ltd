@@ -9,7 +9,7 @@ const teamMembers = [
   { name: 'Anjana', role: 'Director', photo: '/teams_images/anjana.jpg' },
   { name: 'Shamsida', role: 'HR Manager', photo: '/teams_images/shamsida.jpg' },
   { name: 'Anandu', role: 'Office Admin', photo: '/teams_images/anandu.jpg' },
-  { name: 'Ayisha Shifan', role: 'Finance coordinator', photo: '/teams_images/ayisha.jpg' }
+  { name: 'Ayisha Shifa', role: 'Finance coordinator', photo: '/teams_images/ayisha.jpg' }
 ];
 
 const perks = [
