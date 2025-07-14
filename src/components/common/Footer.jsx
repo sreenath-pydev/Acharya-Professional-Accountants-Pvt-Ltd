@@ -59,7 +59,7 @@ const Footer = () => {
             </h3>
             
             <ul className="space-y-3">
-              {['home', 'about', 'services', 'internship', 'careers', 'blog', 'contact'].map((item, index) => (
+              {['home', 'about', 'services', 'careers', 'blog', 'contact'].map((item, index) => (
                 <li key={index}>
                   <a 
                     href={`#${item}`}

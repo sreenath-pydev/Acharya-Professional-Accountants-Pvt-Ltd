@@ -18,10 +18,10 @@ const services = [
       'Independent auditing services that provide stakeholders with confidence in your financial reporting and internal controls.'
   },
   {
-    icon: 'fa-building',
-    title: 'Corporate Compliance',
+    icon: 'fa-file-signature',
+    title: 'GST Services',
     description:
-      'Ensure your business meets all regulatory requirements with our comprehensive compliance monitoring and reporting services.'
+      'Expert GST registration, return filing, reconciliation, and compliance solutions to ensure your business meets all tax regulations with accuracy and ease'
   },
   {
     icon: 'fa-chart-pie',

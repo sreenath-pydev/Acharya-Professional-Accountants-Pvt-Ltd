@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
-import { Link as RouterLink, useLocation } from 'react-router-dom';
+import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,8 +25,22 @@ const Header = () => {
 
   const isHomePage = location.pathname === '/';
 
+  const handleCareersClick = () => {
+    setIsMenuOpen(false);
+    if (location.pathname === '/internship') {
+      // If already on internship page, scroll to job-openings section
+      const jobOpeningsSection = document.getElementById('job-openings');
+      if (jobOpeningsSection) {
+        jobOpeningsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Navigate to internship page and then scroll to job-openings
+      navigate('/internship', { state: { scrollToJobOpenings: true } });
+    }
+  };
+
   const renderLink = (item) => {
-    if (item === 'internship') {
+    if (item === 'careers') {
       return (
         <RouterLink
           to="/internship"
@@ -36,6 +51,17 @@ const Header = () => {
         </RouterLink>
       );
     }
+
+    // if (item === 'careers') {
+    //   return (
+    //     <button
+    //       onClick={handleCareersClick}
+    //       className="text-white hover:text-primary-accent transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg"
+    //     >
+    //       Careers
+    //     </button>
+    //   );
+    // }
 
     if (isHomePage) {
       return (
@@ -83,7 +109,7 @@ const Header = () => {
           </div>
 
           <ul className="hidden md:flex gap-6 lg:gap-8">
-            {['home', 'about', 'services', 'internship', 'careers', 'blog', 'contact'].map((item) => (
+            {['home', 'about', 'services', 'careers','blog', 'contact'].map((item) => (
               <li key={item}>
                 {renderLink(item)}
               </li>
@@ -115,7 +141,7 @@ const Header = () => {
         {isMenuOpen && (
           <div className="fixed inset-0 bg-dark-bg z-40 flex flex-col justify-center items-center pt-24 pb-10">
             <ul className="flex flex-col items-center gap-6 w-full px-4">
-              {['home', 'about', 'services', 'internship', 'careers', 'blog', 'contact'].map((item) => (
+              {['home', 'about', 'services', 'careers', 'blog', 'contact'].map((item) => (
                 <li key={item} className="w-full text-center">
                   {renderLink(item)}
                 </li>

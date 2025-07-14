@@ -1,23 +1,35 @@
 import { useEffect } from 'react';
-import AOS from 'aos';
+import { useLocation } from 'react-router-dom';
 import Internship from '../sections/Internship';
-
+import JobOpenings from '../sections/JobOpenings';
 import Header from '../common/Header';
-
+import Footer from '../common/Footer';
+import AOS from 'aos';
 
 const InternshipPage = () => {
+  const location = useLocation();
+
   useEffect(() => {
-    // Scroll to top when component mounts
-    window.scrollTo(0, 0);
     AOS.refresh();
-  }, []);
+    window.scrollTo(0, 0);
+    
+    // Check if we need to scroll to job openings
+    if (location.state?.scrollToJobOpenings) {
+      setTimeout(() => {
+        const jobOpeningsSection = document.getElementById('job-openings');
+        if (jobOpeningsSection) {
+          jobOpeningsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [location.state]);
 
   return (
     <main className="font-inter text-white bg-dark-bg">
       <Header />
       <Internship />
+      <JobOpenings />
       
-    
     </main>
   );
 };
