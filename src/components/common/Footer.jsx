@@ -28,7 +28,7 @@ const Footer = () => {
                 className="h-32 w-auto mb-5"
               />
               <p className="text-boulder">
-                Providing expert accounting solutions that drive business growth and ensure compliance since 2008.
+                Providing expert accounting solutions that drive business growth and ensure compliance since 2021.
               </p>
             </div>
             
