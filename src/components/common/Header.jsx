@@ -28,13 +28,11 @@ const Header = () => {
   const handleCareersClick = () => {
     setIsMenuOpen(false);
     if (location.pathname === '/internship') {
-      // If already on internship page, scroll to job-openings section
       const jobOpeningsSection = document.getElementById('job-openings');
       if (jobOpeningsSection) {
         jobOpeningsSection.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      // Navigate to internship page and then scroll to job-openings
       navigate('/internship', { state: { scrollToJobOpenings: true } });
     }
   };
@@ -51,17 +49,6 @@ const Header = () => {
         </RouterLink>
       );
     }
-
-    // if (item === 'careers') {
-    //   return (
-    //     <button
-    //       onClick={handleCareersClick}
-    //       className="text-white hover:text-primary-accent transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg"
-    //     >
-    //       Careers
-    //     </button>
-    //   );
-    // }
 
     if (isHomePage) {
       return (
@@ -97,7 +84,7 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4">
-        <nav className="flex justify-between items-center py-3 w-full">
+        <nav className="flex justify-between items-center py-3 w-full relative">
           <div className="flex items-center h-[40px]">
             <RouterLink to="/">
               <img
@@ -109,12 +96,14 @@ const Header = () => {
           </div>
 
           <ul className="hidden md:flex gap-6 lg:gap-8">
-            {['home', 'about', 'services', 'careers','blog', 'contact'].map((item) => (
+            {['home', 'about', 'services', 'careers', 'blog', 'contact'].map((item) => (
               <li key={item}>
                 {renderLink(item)}
               </li>
             ))}
           </ul>
+          
+          {/* Mobile Menu Button */}
           <button
             className="md:hidden flex flex-col gap-1 z-50 ml-4"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -136,10 +125,17 @@ const Header = () => {
               }`}
             ></span>
           </button>
-        </nav>
 
-        {isMenuOpen && (
-          <div className="fixed inset-0 bg-dark-bg z-40 flex flex-col justify-center items-center pt-24 pb-10">
+          {/* Mobile Menu */}
+          <div
+            className={`fixed inset-0 bg-dark-bg z-40 flex flex-col justify-center items-center pt-24 pb-10 transition-all duration-300 ${
+              isMenuOpen ? 'translate-y-0' : '-translate-y-full opacity-0 pointer-events-none'
+            }`}
+            style={{
+              top: isScrolled ? '80px' : '64px',
+              height: isScrolled ? 'calc(100vh - 80px)' : 'calc(100vh - 64px)'
+            }}
+          >
             <ul className="flex flex-col items-center gap-6 w-full px-4">
               {['home', 'about', 'services', 'careers', 'blog', 'contact'].map((item) => (
                 <li key={item} className="w-full text-center">
@@ -148,7 +144,7 @@ const Header = () => {
               ))}
             </ul>
           </div>
-        )}
+        </nav>
       </div>
     </header>
   );
