@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const jobListings = [
   {
@@ -78,7 +79,31 @@ const JobOpenings = () => {
   const [activeJob, setActiveJob] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [selectedJob, setSelectedJob] = useState('');
+  const [aosInitialized, setAosInitialized] = useState(false);
   const modalRef = useRef(null);
+
+  // Initialize AOS on component mount
+  useEffect(() => {
+    AOS.init({
+      duration: 600,
+      easing: 'ease-in-out',
+      once: false,
+      offset: 120,
+      delay: 50
+    });
+    setAosInitialized(true);
+    
+    return () => {
+      AOS.refreshHard(); // Force refresh on unmount
+    };
+  }, []);
+
+  // Refresh AOS when job list changes or activeJob changes
+  useEffect(() => {
+    if (aosInitialized) {
+      AOS.refresh();
+    }
+  }, [activeJob, aosInitialized]);
 
   const toggleJob = (index) => {
     setActiveJob(activeJob === index ? null : index);
@@ -96,10 +121,6 @@ const JobOpenings = () => {
   };
 
   useEffect(() => {
-    AOS.refresh();
-  }, [activeJob]);
-
-  useEffect(() => {
     if (showModal) {
       document.addEventListener('mousedown', handleClickOutside);
     } else {
@@ -113,85 +134,88 @@ const JobOpenings = () => {
   return (
     <section id="job-openings" className="py-20 bg-graphite">
       <div className="container mx-auto px-4 sm:px-6 md:px-20">
-        <div data-aos="fade-up" data-aos-delay="50">
+        <div data-aos="fade-up">
           <h3 className="text-2xl font-semibold mb-8 text-center text-primary-accent">Current Openings</h3>
         </div>
 
         {jobListings.map((job, index) => (
           <div
-              key={index}
-              {...(activeJob !== index && {
-                'data-aos': 'fade-up',
-                'data-aos-delay': 50 + index * 10
-              })}
-              className={`bg-secondary-dark rounded-xl overflow-hidden mb-6 border border-primary-accent/10 hover:border-primary-accent transition-all duration-300 ${
-                activeJob === index ? 'shadow-lg shadow-primary-accent/20' : ''
-              }`}
+            key={index}
+            data-aos="fade-up"
+            data-aos-delay={index * 50}
+            className={`bg-secondary-dark rounded-xl overflow-hidden mb-6 border border-primary-accent/10 hover:border-primary-accent transition-all duration-300 ${
+              activeJob === index ? 'shadow-lg shadow-primary-accent/20' : ''
+            }`}
+            style={{
+              // Fallback styles in case AOS doesn't work
+              opacity: 1,
+              transform: 'translateY(0)'
+            }}
+          >
+            <div
+              className="p-6 cursor-pointer flex justify-between items-center hover:bg-primary-accent/5 transition-colors duration-300"
+              onClick={() => toggleJob(index)}
             >
-              <div
-                className="p-6 cursor-pointer flex justify-between items-center hover:bg-primary-accent/5 transition-colors duration-300"
-                onClick={() => toggleJob(index)}
-              >
-                <div className="flex-1 min-w-0">
-                  <div className="text-xl font-semibold text-white mb-2 break-words">{job.title}</div>
-                  <div className="flex flex-wrap gap-3 sm:gap-5 text-boulder text-sm min-w-0 break-words">
-                    <div className="flex items-center gap-2">
-                      <i className="fas fa-map-marker-alt"></i> {job.location}
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <i className="fas fa-briefcase"></i> {job.type}
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <i className="fas fa-layer-group"></i> {job.experience}
-                    </div>
+              <div className="flex-1 min-w-0">
+                <div className="text-xl font-semibold text-white mb-2 break-words">{job.title}</div>
+                <div className="flex flex-wrap gap-3 sm:gap-5 text-boulder text-sm min-w-0 break-words">
+                  <div className="flex items-center gap-2">
+                    <i className="fas fa-map-marker-alt"></i> {job.location}
                   </div>
-                </div>
-                <div className="text-primary-accent text-xl transition-transform duration-300">
-                  <i className={`fas fa-chevron-${activeJob === index ? 'up' : 'down'}`}></i>
+                  <div className="flex items-center gap-2">
+                    <i className="fas fa-briefcase"></i> {job.type}
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <i className="fas fa-layer-group"></i> {job.experience}
+                  </div>
                 </div>
               </div>
+              <div className="text-primary-accent text-xl transition-transform duration-300">
+                <i className={`fas fa-chevron-${activeJob === index ? 'up' : 'down'}`}></i>
+              </div>
+            </div>
 
-              <div
-                className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                  activeJob === index ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
-                }`}
-              >
-                <div className="px-6 pb-6">
-                  <div className="text-boulder mb-6 leading-relaxed">{job.description}</div>
+            <div
+              className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                activeJob === index ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+              }`}
+            >
+              <div className="px-6 pb-6">
+                <div className="text-boulder mb-6 leading-relaxed">{job.description}</div>
 
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold mb-3 text-primary-accent">Responsibilities</h4>
-                    <ul className="text-boulder pl-6 space-y-2">
-                      {job.responsibilities.map((item, i) => (
-                        <li key={i} className="relative pl-5 before:content-['•'] before:text-primary-accent before:absolute before:left-0 before:text-xl">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold mb-3 text-primary-accent">Responsibilities</h4>
+                  <ul className="text-boulder pl-6 space-y-2">
+                    {job.responsibilities.map((item, i) => (
+                      <li key={i} className="relative pl-5 before:content-['•'] before:text-primary-accent before:absolute before:left-0 before:text-xl">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold mb-3 text-primary-accent">Requirements</h4>
-                    <ul className="text-boulder pl-6 space-y-2">
-                      {job.requirements.map((item, i) => (
-                        <li key={i} className="relative pl-5 before:content-['•'] before:text-primary-accent before:absolute before:left-0 before:text-xl">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold mb-3 text-primary-accent">Requirements</h4>
+                  <ul className="text-boulder pl-6 space-y-2">
+                    {job.requirements.map((item, i) => (
+                      <li key={i} className="relative pl-5 before:content-['•'] before:text-primary-accent before:absolute before:left-0 before:text-xl">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                  <div className="pt-4 border-t border-primary-accent/10 flex justify-end">
-                    <button
-                      className="w-full sm:w-auto bg-primary-accent text-dark-bg px-6 py-3 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-korma hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300"
-                      onClick={() => handleApplyClick(job.title)}
-                    >
-                      <i className="fas fa-paper-plane"></i> Apply Now
-                    </button>
-                  </div>
+                <div className="pt-4 border-t border-primary-accent/10 flex justify-end">
+                  <button
+                    className="w-full sm:w-auto bg-primary-accent text-dark-bg px-6 py-3 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-korma hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300"
+                    onClick={() => handleApplyClick(job.title)}
+                  >
+                    <i className="fas fa-paper-plane"></i> Apply Now
+                  </button>
                 </div>
               </div>
             </div>
+          </div>
         ))}
       </div>
 
@@ -202,6 +226,11 @@ const JobOpenings = () => {
             ref={modalRef}
             className="bg-secondary-dark rounded-xl p-6 max-w-md w-full border border-primary-accent/20"
             data-aos="zoom-in"
+            style={{
+              // Fallback styles in case AOS doesn't work
+              opacity: 1,
+              transform: 'scale(1)'
+            }}
           >
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-xl font-semibold text-primary-accent">Apply for {selectedJob}</h3>
