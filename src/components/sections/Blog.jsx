@@ -12,7 +12,7 @@ const blogPosts = [
     excerpt: 'Discover the latest tax reforms and how to leverage them for your business. Learn about new deductions, credits, and compliance requirements that could impact your bottom line this fiscal year.',
     views: '1.2K',
     comments: '24',
-    image: '/blog_images/card1.png',
+    image: '/blog_images/card1.webp',
   },
   {
     category: 'Compliance',
@@ -21,7 +21,7 @@ const blogPosts = [
     excerpt: 'The upcoming GST reforms will bring significant changes to compliance procedures. We break down the key updates and how to prepare your business for a smooth transition to the new system.',
     views: '2.8K',
     comments: '42',
-    image: '/blog_images/card2.png',
+    image: '/blog_images/card2.webp',
   },
   {
     category: 'Business Growth',
@@ -30,7 +30,7 @@ const blogPosts = [
     excerpt: 'Learn how early-stage companies can implement robust financial planning processes to support sustainable growth. We share proven strategies for cash flow management and investor relations.',
     views: '3.4K',
     comments: '36',
-    image: '/blog_images/card3.png',
+    image: '/blog_images/card3.webp',
   },
   {
     category: 'Technology',
@@ -39,7 +39,7 @@ const blogPosts = [
     excerpt: 'As more businesses migrate financial systems to the cloud, data security becomes critical. Explore best practices for protecting sensitive financial information and maintaining compliance.',
     views: '1.7K',
     comments: '18',
-    image: '/blog_images/card4.png',
+    image: '/blog_images/card4.webp',
   },
   {
     category: 'International',
@@ -48,7 +48,7 @@ const blogPosts = [
     excerpt: 'For businesses expanding globally, understanding international tax regulations is crucial. Learn how to navigate transfer pricing, double taxation, and compliance across jurisdictions.',
     views: '2.1K',
     comments: '29',
-    image: '/blog_images/card5.png',
+    image: '/blog_images/card5.webp',
   },
   {
     category: 'Financial Analysis',
@@ -57,7 +57,7 @@ const blogPosts = [
     excerpt: 'Discover the essential financial KPIs that provide actionable insights into your business performance. Learn how to interpret these metrics and make data-driven decisions.',
     views: '4.2K',
     comments: '56',
-    image: '/blog_images/card6.png',
+    image: '/blog_images/card6.webp',
   }
 ];
 

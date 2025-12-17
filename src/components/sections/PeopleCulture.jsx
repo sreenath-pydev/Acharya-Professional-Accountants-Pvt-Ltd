@@ -3,13 +3,13 @@ import { useEffect } from 'react';
 import 'aos/dist/aos.css'; // Make sure to import AOS CSS
 
 const teamMembers = [
-  { name: 'Sreehari C', role: 'Chairman & CEO', photo: '/teams_images/sreehari.jpg' },
-  { name: 'Rahul C', role: 'Managing Director', photo: '/teams_images/rahul.jpg' },
-  { name: 'Anagha G M', role: 'Director', photo: '/teams_images/anagha.jpg' },
-  { name: 'Anjana', role: 'Director', photo: '/teams_images/anjana.jpg' },
-  { name: 'Shamsida', role: 'HR Manager', photo: '/teams_images/shamsida.jpg' },
-  { name: 'Anandu', role: 'Office Admin', photo: '/teams_images/anandu.jpg' },
-  { name: 'Ayisha Shifa', role: 'Finance coordinator', photo: '/teams_images/ayisha.jpg' }
+  { name: 'Sreehari C', role: 'Chairman & CEO', photo: '/teams_images/sreehari.webp' },
+  { name: 'Rahul C', role: 'Managing Director', photo: '/teams_images/rahul.webp' },
+  { name: 'Anagha G M', role: 'Director', photo: '/teams_images/anagha.webp' },
+  { name: 'Anjana', role: 'Director', photo: '/teams_images/anjana.webp' },
+  { name: 'Shamsida', role: 'HR Manager', photo: '/teams_images/shamsida.webp' },
+  { name: 'Anandu', role: 'Office Admin', photo: '/teams_images/anandu.webp' },
+  { name: 'Ayisha Shifa', role: 'Finance coordinator', photo: '/teams_images/ayisha.webp' }
 ];
 
 const perks = [

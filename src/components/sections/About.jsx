@@ -29,7 +29,7 @@ const About = () => {
           >
             <div className="absolute inset-0 z-0 bg-gradient-to-br from-irish-coffee to-korma" />
             <img
-              src="/images/about.jpg"
+              src="/images/about2.webp"
               alt="Accounting services illustration"
               className="absolute inset-0 w-full h-full object-cover object-center opacity-90"
             />

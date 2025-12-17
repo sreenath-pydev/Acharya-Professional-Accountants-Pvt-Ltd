@@ -13,6 +13,12 @@ const Footer = () => {
     }
   };
 
+  const getLinkHref = (item) => {
+    if (item === 'contact') return '/contact';
+    if (item === 'courses') return '/courses';
+    return `#${item}`;
+  };
+
   return (
     <footer data-aos="fade-up" data-aos-delay="50" className="bg-graphite pt-20 border-t border-primary-accent/10 relative overflow-hidden">
       <div  className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201000%20600%22%3E%3Crect%20fill%3D%22%231c1c1b%22%20width%3D%221000%22%20height%3D%22600%22/%3E%3Cg%20fill%3D%22%23e5a145%22%20opacity%3D%220.03%22%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2280%22/%3E%3Ccircle%20cx%3D%22800%22%20cy%3D%22500%22%20r%3D%22100%22/%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%22300%22%20r%3D%22120%22/%3E%3C/g%3E%3C/svg%3E')] bg-cover z-0"></div>
@@ -23,7 +29,7 @@ const Footer = () => {
           <div>
             <div  className="mb-6">
               <img 
-                src="/images/logo.png" 
+                src="/images/logo.webp" 
                 alt="Acharya Professional Accountants" 
                 className="h-32 w-auto mb-5"
               />
@@ -34,7 +40,7 @@ const Footer = () => {
             
             <div className="flex gap-4">
               {[
-                { icon: 'linkedin-in', url: '#' },
+                { icon: 'linkedin-in', url: 'https://www.linkedin.com/company/acharyaprofessionalaccountants/posts/?feedView=all' },
                 { icon: 'twitter', url: '#' },
                 { icon: 'facebook-f', url: 'https://www.facebook.com/APAinCLT' },
                 { icon: 'instagram', url: 'https://www.instagram.com/acharya_professional_accounts?utm_source=ig_web_button_share_sheet&igsh=MTJhMXk5YzNxYnUxZQ==' }
@@ -59,14 +65,14 @@ const Footer = () => {
             </h3>
             
             <ul className="space-y-3">
-              {['home', 'about', 'services', 'careers', 'blog', 'contact'].map((item, index) => (
+              {['home', 'about', 'services', 'courses', 'careers', 'contact'].map((item, index) => (
                 <li key={index}>
                   <a 
-                    href={`#${item}`}
+                    href={getLinkHref(item)}
                     className="text-boulder hover:text-primary-accent transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <i className="fas fa-chevron-right text-xs text-primary-accent group-hover:translate-x-1 transition-transform duration-300"></i>
-                    {item === 'blog' ? 'Insights' : item.charAt(0).toUpperCase() + item.slice(1)}
+                    {item.charAt(0).toUpperCase() + item.slice(1)}
                   </a>
                 </li>
               ))}

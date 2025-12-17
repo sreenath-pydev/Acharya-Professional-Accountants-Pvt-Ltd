@@ -48,26 +48,40 @@ const ScrollToTop = () => {
   };
 
   return (
-    <button
-      onClick={scrollToTop}
-      aria-label="Scroll to top"
-      className={`fixed z-50 bottom-8 right-8 w-12 h-12 bg-primary-accent text-dark-bg rounded-full flex items-center justify-center text-xl transition-all duration-400 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-      } hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/40 focus:outline-none focus:ring-2 focus:ring-primary-accent focus:ring-opacity-50`}
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5"
-        viewBox="0 0 20 20"
-        fill="currentColor"
+    <div className="fixed z-50 bottom-8 right-8 flex flex-col gap-3">
+      {/* WhatsApp Button */}
+      <a
+        href="https://wa.me/919446369434"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contact us on WhatsApp"
+        className="w-12 h-12 bg-[#25D366] text-white rounded-full flex items-center justify-center text-xl shadow-lg hover:bg-[#20BA5A] hover:scale-110 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-dark-bg"
       >
-        <path
-          fillRule="evenodd"
-          d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
-          clipRule="evenodd"
-        />
-      </svg>
-    </button>
+        <i className="fab fa-whatsapp"></i>
+      </a>
+
+      {/* Scroll to Top Button */}
+      <button
+        onClick={scrollToTop}
+        aria-label="Scroll to top"
+        className={`w-12 h-12 bg-primary-accent text-dark-bg rounded-full flex items-center justify-center text-xl transition-all duration-400 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+        } hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/40 focus:outline-none focus:ring-2 focus:ring-primary-accent focus:ring-opacity-50`}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-5 w-5"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fillRule="evenodd"
+            d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
   );
 };
 
