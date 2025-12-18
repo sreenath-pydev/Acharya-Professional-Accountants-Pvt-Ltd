@@ -40,7 +40,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-black/72 via-black/40 to-transparent pointer-events-none" />
 
       <div className="container mx-auto px-5 md:px-12 lg:px-20 py-20 md:py-28 relative z-10">
-        <div className="max-w-3xl space-y-6" data-aos="fade-right" data-aos-delay="120">
+        <div className="max-w-3xl pt-20 md:pt-0 space-y-6" data-aos="fade-right" data-aos-delay="120">
           <p className="text-primary-accent uppercase tracking-[0.25em] text-xs md:text-sm drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
             Acharya Professional Accountants
           </p>
