@@ -87,8 +87,8 @@ const Internship = () => {
 
   return (
     <section id="internship" className="py-16 md:py-20 bg-graphite overflow-hidden">
-      <div  className="container mx-auto px-4 md:px-20">
-        <div data-aos="fade-up" data-aos-delay="50">
+      <div  className="container mx-auto pt-20  px-4 md:px-20">
+        <div data-aos="fade-up"  data-aos-delay="50">
         <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-center mb-10 text-primary-accent">
           Internship Program
         </h2>
