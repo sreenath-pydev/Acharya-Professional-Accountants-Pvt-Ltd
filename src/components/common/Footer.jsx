@@ -120,53 +120,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
-          <div>
-            <h3 className="text-xl font-semibold mb-6 text-primary-accent relative pb-2">
-              Newsletter
-              <span className="absolute bottom-0 left-0 w-10 h-0.5 bg-primary-accent"></span>
-            </h3>
-            
-            <p className="text-boulder mb-6">
-              Subscribe to our newsletter for the latest industry insights, tax updates, and business strategies.
-            </p>
-            
-            <form onSubmit={handleSubscribe} className="relative mb-3">
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                className="w-full px-5 py-4 pr-36 rounded-full bg-dark-bg border border-friar-gray text-white focus:outline-none focus:ring-2 focus:ring-primary-accent focus:border-transparent"
-                required
-              />
-              <button
-                type="submit"
-                className="absolute right-1 top-1 bg-primary-accent text-dark-bg px-5 py-3 rounded-full font-semibold hover:bg-korma hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary-accent/30 transition-all duration-300"
-              >
-                Subscribe
-              </button>
-            </form>
-            
-            {isSubscribed && (
-              <div className="bg-primary-accent/10 text-primary-accent p-3 rounded-lg text-center animate-fadeIn">
-                <i className="fas fa-check-circle mr-2"></i> Thank you for subscribing!
-              </div>
-            )}
-            
-            <div className="mt-8">
-              <h4 className="text-boulder mb-4">We Accept:</h4>
-              <div className="flex flex-wrap gap-3">
-                {['cc-visa', 'cc-mastercard', 'cc-paypal', 'cc-apple-pay'].map((icon, index) => (
-                  <div key={index} className="w-12 h-8 bg-dark-bg rounded flex items-center justify-center text-boulder">
-                    <i className={`fab fa-${icon}`}></i>
-                  </div>
-                ))}
-                <div className="w-12 h-8 bg-dark-bg rounded flex items-center justify-center text-boulder">
-                  <i className="fas fa-rupee-sign"></i>
-                </div>
-              </div>
-            </div>
-          </div>
+               
         </div>
       </div>
       
