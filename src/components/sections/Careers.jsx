@@ -1,7 +1,7 @@
-<<<<<<< HEAD
+
 import PeopleCulture from './PeopleCulture';
 import JobOpenings from './JobOpenings';
-=======
+
 import { useState, useEffect, useRef } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -97,7 +97,6 @@ const jobListings = [
     ]
   }
 ];
->>>>>>> 10969830d59ed5c9a6a5ca02df58bc7de0372434
 
 const Careers = () => {
   return (

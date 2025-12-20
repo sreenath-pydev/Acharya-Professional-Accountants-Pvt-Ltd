@@ -161,7 +161,7 @@ const Contact = () => {
               <div className="flex gap-4">
                 {[
                   { icon: 'linkedin-in', url: 'https://www.linkedin.com/company/acharyaprofessionalaccountants/posts/?feedView=all' },
-                  { icon: 'twitter', url: '#' },
+                  ///{ icon: 'twitter', url: '#' },
                   { icon: 'facebook-f', url: 'https://www.facebook.com/APAinCLT' },
                   { icon: 'instagram', url: 'https://www.instagram.com/acharya_professional_accounts?utm_source=ig_web_button_share_sheet&igsh=MTJhMXk5YzNxYnUxZQ==' }
                 ].map((social, index) => (

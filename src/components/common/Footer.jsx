@@ -14,16 +14,31 @@ const Footer = () => {
   };
 
   const getLinkHref = (item) => {
-    if (item === 'contact') return '/contact';
-    if (item === 'courses') return '/courses';
-    return `#${item}`;
+  const links = {
+    home: '/',
+    about: '/about',
+    services: '/services',
+    courses: '/courses',
+    careers: '/internship',
+    contact: '/contact',
+
+    accounting: '/accounting',
+    auditing: '/auditing',
+    taxation: '/taxation',
+    gst: '/gst',
+    payroll: '/payroll',
+    consulting: '/consulting',
   };
+
+  return links[item] || '#';
+};
+
 
   return (
     <footer data-aos="fade-up" data-aos-delay="50" className="bg-graphite pt-20 border-t border-primary-accent/10 relative overflow-hidden">
       <div  className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201000%20600%22%3E%3Crect%20fill%3D%22%231c1c1b%22%20width%3D%221000%22%20height%3D%22600%22/%3E%3Cg%20fill%3D%22%23e5a145%22%20opacity%3D%220.03%22%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2280%22/%3E%3Ccircle%20cx%3D%22800%22%20cy%3D%22500%22%20r%3D%22100%22/%3E%3Ccircle%20cx%3D%22500%22%20cy%3D%22300%22%20r%3D%22120%22/%3E%3C/g%3E%3C/svg%3E')] bg-cover z-0"></div>
 
-      
+      {/* Logo & social media icons */}
       <div className="container mx-auto px-5 md:px-20 relative z-10 pb-16">
         <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
@@ -41,7 +56,7 @@ const Footer = () => {
             <div className="flex gap-4">
               {[
                 { icon: 'linkedin-in', url: 'https://www.linkedin.com/company/acharyaprofessionalaccountants/posts/?feedView=all' },
-                { icon: 'twitter', url: '#' },
+                //{ icon: 'twitter', url: '#' },
                 { icon: 'facebook-f', url: 'https://www.facebook.com/APAinCLT' },
                 { icon: 'instagram', url: 'https://www.instagram.com/acharya_professional_accounts?utm_source=ig_web_button_share_sheet&igsh=MTJhMXk5YzNxYnUxZQ==' }
               ].map((social, index) => (
@@ -57,7 +72,29 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          
+          {/* Services */}
+          <div>
+            <h3 className="text-xl font-semibold mb-6 text-primary-accent relative pb-2">
+              Services
+              <span className="absolute bottom-0 left-0 w-10 h-0.5 bg-primary-accent"></span>
+            </h3>
+            
+            <ul className="space-y-3">
+              {['home', 'about', 'services', 'courses', 'careers', 'contact'].map((item, index) => (
+                <li key={index}>
+                  <a 
+                    href={getLinkHref(item)}
+                    className="text-boulder hover:text-primary-accent transition-colors duration-300 flex items-center gap-2 group"
+                  >
+                    <i className="fas fa-chevron-right text-xs text-primary-accent group-hover:translate-x-1 transition-transform duration-300"></i>
+                    {item.charAt(0).toUpperCase() + item.slice(1)}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* quick links */}
           <div>
             <h3 className="text-xl font-semibold mb-6 text-primary-accent relative pb-2">
               Quick Links
@@ -78,7 +115,8 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          
+
+          {/* Contact Info */}
           <div>
             <h3 className="text-xl font-semibold mb-6 text-primary-accent relative pb-2">
               Contact Info
@@ -123,7 +161,8 @@ const Footer = () => {
                
         </div>
       </div>
-      
+
+      {/* End section  */}
       <div className="py-6 border-t border-primary-accent/10 text-center relative z-10">
         <div className="container mx-auto px-5">
           <p className="text-boulder text-sm">
