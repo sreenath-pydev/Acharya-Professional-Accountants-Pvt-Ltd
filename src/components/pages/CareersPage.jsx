@@ -6,7 +6,7 @@ import Header from '../common/Header';
 import Footer from '../common/Footer';
 import AOS from 'aos';
 
-const InternshipPage = () => {
+const CareersPage = () => {
   const location = useLocation();
 
   useEffect(() => {
@@ -34,4 +34,4 @@ const InternshipPage = () => {
   );
 };
 
-export default InternshipPage;
+export default CareersPage;

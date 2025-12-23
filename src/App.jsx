@@ -3,7 +3,7 @@ import Header from './components/common/Header';
 import Home from './components/pages/Home';
 import Footer from './components/common/Footer';
 import ScrollToTop from './components/common/ScrollToTop';
-import InternshipPage from './components/pages/careersPage';
+import CareersPage from './components/pages/careersPage';
 import AboutPage from './components/pages/AboutPage';
 import ServicesPage from './components/pages/ServicesPage';
 import ContactPage from './components/pages/ContactPage';
@@ -37,7 +37,7 @@ function App() {
           <Route path="/courses/globalpro" element={<CourseGlobalProPage />} />
           <Route path="/courses/c-pro" element={<CourseCProPage />} />
           <Route path="/courses/c-pat" element={<CourseCPATPage />} />
-          <Route path="/careers" element={<InternshipPage />} />
+          <Route path="/careers" element={<CareersPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
