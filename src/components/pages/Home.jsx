@@ -1,17 +1,45 @@
+import { useEffect } from 'react';
+import AOS from 'aos';
+import { setCanonical } from '../../utils/seo';
+
 import Hero from '../sections/Hero';
 import About from '../sections/About';
 import Services from '../sections/Services';
 import VincumTaxCalculator from '../sections/VincumTaxCalculator';
 import FAQ from '../sections/FAQ';
 import PeopleCulture from '../sections/PeopleCulture';
-import JobOpenings from '../sections/JobOpenings';
+// import JobOpenings from '../sections/JobOpenings';
 import Contact from '../sections/Contact';
-import AOS from 'aos';
-import { useEffect } from 'react';
 
 const Home = () => {
   useEffect(() => {
+    /* =========================
+       SEO: Title & Description
+    ========================== */
+    document.title =
+      'CA Firm in Kozhikode | Acharya Professional Accountants';
+
+    const metaDescription = document.querySelector(
+      "meta[name='description']"
+    );
+
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        'content',
+        'Trusted chartered accountant firm in Kozhikode offers tax, audit, GST, & registration services nationwide, helping businesses stay compliant & grow.'
+      );
+    }
+
+    /* =========================
+       SEO: Canonical URL
+    ========================== */
+    setCanonical('https://acharyaprofessionalaccountants.in/');
+
+    /* =========================
+       AOS & Scroll
+    ========================== */
     AOS.refresh();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   return (

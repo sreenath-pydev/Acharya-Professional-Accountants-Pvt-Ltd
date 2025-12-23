@@ -1,11 +1,37 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
+import { setCanonical } from '../../utils/seo';
 
 const CoursesPage = () => {
   useEffect(() => {
+    /* =========================
+       SEO: Title & Description
+    ========================== */
+    document.title =
+      'Accounting & GST Courses in Kozhikode | Acharya Training';
+
+    const metaDescription = document.querySelector(
+      "meta[name='description']"
+    );
+
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        'content',
+        'Practical accounting & GST courses in Kozhikode are designed for students & professionals and taught by an experienced Chartered Accountant. Enroll now!'
+      );
+    }
+
+    /* =========================
+       SEO: Canonical URL
+    ========================== */
+    setCanonical('https://acharyaprofessionalaccountants.in/courses');
+
+    /* =========================
+       AOS & Scroll
+    ========================== */
     AOS.refresh();
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   const courses = [
@@ -31,29 +57,54 @@ const CoursesPage = () => {
 
   return (
     <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
-      <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16" data-aos="fade-up">
-        <p className="text-primary-accent uppercase tracking-[0.2em] text-sm mb-3">Courses</p>
+      {/* =========================
+          Page Intro
+      ========================== */}
+      <section
+        className="container mx-auto px-4 md:px-20 mb-12 md:mb-16"
+        data-aos="fade-up"
+      >
+        <p className="text-primary-accent uppercase tracking-[0.2em] text-sm mb-3">
+          Courses
+        </p>
+
         <h1 className="font-montserrat text-3xl md:text-5xl font-bold mb-4">
-          Practical Accounting Courses in Kozhikode
+          Practical Accounting & GST Courses in Kozhikode
         </h1>
+
         <p className="text-lg text-boulder max-w-3xl leading-relaxed">
-          Acharya Professional Accountants offers practical accounting training in Kozhikode that
-          bridges college learning with real corporate work. As a GST course Kerala learners trust, each program blends classroom clarity,
-          GST and finance workflows, and career-style practice to make you career ready.
+          Acharya Professional Accountants offers practical accounting training
+          in Kozhikode that bridges college learning with real corporate work.
+          As a GST course Kerala learners trust, each program blends classroom
+          clarity, GST and finance workflows, and career-style practice to make
+          you career ready.
         </p>
       </section>
 
-      {/* Free Guideline Section */}
-      <section className="container mx-auto px-4 md:px-20 mb-10 md:mb-14" data-aos="fade-up" data-aos-delay="25">
+      {/* =========================
+          Free Guideline Section
+      ========================== */}
+      <section
+        className="container mx-auto px-4 md:px-20 mb-10 md:mb-14"
+        data-aos="fade-up"
+        data-aos-delay="25"
+      >
         <div className="bg-secondary-dark/70 border border-primary-accent/20 rounded-3xl p-8 md:p-10 shadow-[0_16px_48px_rgba(0,0,0,0.35)]">
-          <p className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold mb-2">Free Guideline</p>
+          <p className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold mb-2">
+            Free Guideline
+          </p>
+
           <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-3 text-white">
             Free Course Selection & Accounting Career Guideline
           </h2>
+
           <p className="text-boulder mb-5 max-w-3xl">
-            Confused about which accounting or finance course to choose? Get a clear, practical guideline before you decide—covering
-            what employers expect, how to plan India and GCC paths, and how finance courses with career exposure can help.
+            Confused about which accounting or finance course to choose? Get a
+            clear, practical guideline before you decide—covering what employers
+            expect, how to plan India and GCC paths, and how finance courses with
+            career exposure can help.
           </p>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 text-boulder">
             {[
               'Which course fits your background (Commerce / Finance / Freshers)',
@@ -68,6 +119,7 @@ const CoursesPage = () => {
               </div>
             ))}
           </div>
+
           <div className="flex flex-col sm:flex-row gap-3 mb-4">
             <a
               href="https://wa.me/919446369434?text=Hi%20I%20want%20the%20free%20course%20selection%20guideline"
@@ -77,6 +129,7 @@ const CoursesPage = () => {
             >
               Get Free Guideline
             </a>
+
             <Link
               to="/contact"
               className="inline-flex justify-center items-center border border-primary-accent text-primary-accent font-semibold px-6 py-3 rounded-full hover:bg-primary-accent/10 transition-all duration-300"
@@ -84,13 +137,23 @@ const CoursesPage = () => {
               Enquire Now
             </Link>
           </div>
+
           <p className="text-sm text-boulder">
-            Prepared by practicing professionals at Acharya Professional Accountants—focused on practical accounting training, GST readiness, and real career clarity for accounting courses in Kozhikode.
+            Prepared by practicing professionals at Acharya Professional
+            Accountants—focused on practical accounting training, GST readiness,
+            and real career clarity for accounting courses in Kozhikode.
           </p>
         </div>
       </section>
 
-      <section className="container mx-auto px-4 md:px-20 mb-14 md:mb-16" data-aos="fade-up" data-aos-delay="50">
+      {/* =========================
+          Courses Grid
+      ========================== */}
+      <section
+        className="container mx-auto px-4 md:px-20 mb-14 md:mb-16"
+        data-aos="fade-up"
+        data-aos-delay="50"
+      >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {courses.map((course) => (
             <div
@@ -98,12 +161,15 @@ const CoursesPage = () => {
               className="bg-secondary-dark border border-primary-accent/20 rounded-2xl p-6 flex flex-col justify-between hover:-translate-y-2 transition-transform duration-300 shadow-[0_10px_40px_rgba(0,0,0,0.35)]"
             >
               <div className="space-y-3">
-                <h3 className="font-montserrat text-xl font-semibold text-white">{course.name}</h3>
+                <h3 className="font-montserrat text-xl font-semibold text-white">
+                  {course.name}
+                </h3>
                 <p className="text-boulder">{course.value}</p>
                 <p className="text-primary-accent text-sm font-semibold uppercase tracking-wide">
                   {course.outcome}
                 </p>
               </div>
+
               <div className="mt-6">
                 <Link
                   to={course.link}
@@ -118,81 +184,25 @@ const CoursesPage = () => {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16" data-aos="fade-up" data-aos-delay="100">
-        <div className="bg-secondary-dark/60 border border-primary-accent/15 rounded-2xl p-8 md:p-10">
-          <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-4">
-            What Makes Acharya Courses Different
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-boulder">
-            {[
-              '100% practical & case-based training',
-              'Real client & corporate-style data exposure',
-              'career & office environment learning',
-              'Industry-focused curriculum (GST, Audit, MIS, Reporting)',
-              'Training by practicing professionals',
-              'Kozhikode-based classroom learning',
-            ].map((item) => (
-              <div key={item} className="flex items-start gap-3">
-                <i className="fas fa-check-circle text-primary-accent mt-1"></i>
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16 grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="150">
-        <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-8">
-          <h3 className="font-montserrat text-2xl font-bold mb-4">career & Practical Exposure</h3>
-          <p className="text-boulder leading-relaxed mb-4">
-            Students gain hands-on, Finance career Kozhikode exposure at Acharya Professional Accountants,
-            working in a guided environment that mirrors real offices.
-          </p>
-          <ul className="space-y-3 text-boulder">
-            {[
-              'Live accounting files and reconciliations',
-              'GST & tax data preparation and filing steps',
-              'MIS & reporting tasks that drive business decisions',
-              'Audit-oriented documentation and working papers',
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3">
-                <i className="fas fa-arrow-right text-primary-accent mt-1"></i>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-8">
-          <h3 className="font-montserrat text-2xl font-bold mb-4">Student Outcomes</h3>
-          <p className="text-boulder leading-relaxed mb-4">
-            Each program is crafted to build job readiness without overpromising, combining skill-building with career clarity.
-          </p>
-          <ul className="space-y-3 text-boulder">
-            {[
-              'Improved job readiness and portfolio of practical work',
-              'Strong practical & software skills (GST, Excel, Tally, portals)',
-              'Greater confidence in interviews and assessments',
-              'Entry-level roles in accounting, audit, MIS, and finance',
-              'Overseas readiness pathways for GLOBAL - PRO graduates',
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3">
-                <i className="fas fa-check text-primary-accent mt-1"></i>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section className="container mx-auto px-4 md:px-20 pb-16 md:pb-20" data-aos="fade-up" data-aos-delay="200">
+      {/* =========================
+          CTA
+      ========================== */}
+      <section
+        className="container mx-auto px-4 md:px-20 pb-16 md:pb-20"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
         <div className="bg-primary-accent text-dark-bg rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-[0_20px_60px_rgba(229,161,69,0.25)]">
           <div>
-            <h3 className="font-montserrat text-2xl md:text-3xl font-bold mb-3">Ready to Start?</h3>
+            <h3 className="font-montserrat text-2xl md:text-3xl font-bold mb-3">
+              Ready to Start?
+            </h3>
             <p className="text-lg max-w-2xl">
-              Apply now or enquire to choose the right program for your goals. Career guidance & counselling support available.
+              Apply now or enquire to choose the right program for your goals.
+              Career guidance & counselling support available.
             </p>
           </div>
+
           <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
             <Link
               to="/contact"
@@ -200,6 +210,7 @@ const CoursesPage = () => {
             >
               Apply Now
             </Link>
+
             <Link
               to="/contact"
               className="flex-1 sm:flex-none inline-flex justify-center items-center bg-white text-dark-bg font-semibold px-6 py-3 rounded-full hover:bg-secondary-dark hover:text-white transition-all duration-300"
@@ -214,4 +225,3 @@ const CoursesPage = () => {
 };
 
 export default CoursesPage;
-
