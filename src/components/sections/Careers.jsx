@@ -1,7 +1,7 @@
-<<<<<<< HEAD
+
 import PeopleCulture from './PeopleCulture';
 import JobOpenings from './JobOpenings';
-=======
+
 import { useState, useEffect, useRef } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -76,9 +76,9 @@ const jobListings = [
   {
     title: 'Finance Intern',
     location: 'Kozhikode',
-    type: 'Internship',
+    type: 'career',
     experience: 'Fresher',
-    description: 'We are offering a valuable internship opportunity for students or recent graduates looking to build a career in finance and accounting. As a Finance Intern, you will gain hands-on experience in financial reporting, bookkeeping, and supporting client projects under the guidance of experienced professionals.',
+    description: 'We are offering a valuable career opportunity for students or recent graduates looking to build a career in finance and accounting. As a Finance Intern, you will gain hands-on experience in financial reporting, bookkeeping, and supporting client projects under the guidance of experienced professionals.',
     responsibilities: [
       'Assist in maintaining financial records and preparing basic reports',
       'Support day-to-day bookkeeping and accounting tasks',
@@ -97,7 +97,6 @@ const jobListings = [
     ]
   }
 ];
->>>>>>> 10969830d59ed5c9a6a5ca02df58bc7de0372434
 
 const Careers = () => {
   return (

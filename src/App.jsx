@@ -37,7 +37,7 @@ function App() {
           <Route path="/courses/globalpro" element={<CourseGlobalProPage />} />
           <Route path="/courses/c-pro" element={<CourseCProPage />} />
           <Route path="/courses/c-pat" element={<CourseCPATPage />} />
-          <Route path="/internship" element={<InternshipPage />} />
+          <Route path="/career" element={<InternshipPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />

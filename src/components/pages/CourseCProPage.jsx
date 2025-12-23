@@ -76,9 +76,9 @@ const CourseCProPage = () => {
 
           <div className="space-y-8">
             <div className="bg-secondary-dark border border-primary-accent/20 rounded-2xl p-8">
-              <h3 className="font-montserrat text-xl md:text-2xl font-bold mb-3">Practical & Internship Exposure</h3>
+              <h3 className="font-montserrat text-xl md:text-2xl font-bold mb-3">Practical & career Exposure</h3>
               <p className="text-boulder leading-relaxed">
-                Work with corporate datasets, GST and audit-oriented cases, and gain internship exposure at Acharya Professional
+                Work with corporate datasets, GST and audit-oriented cases, and gain career exposure at Acharya Professional
                 Accountants to experience live corporate-reporting expectations.
               </p>
             </div>

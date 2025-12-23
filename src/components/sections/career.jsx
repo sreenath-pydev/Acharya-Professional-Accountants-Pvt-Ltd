@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from "react";
 const CLOUD_NAME = "dgmvtym2p";
 const UPLOAD_PRESET = "resume_upload";
 
-const Internship = () => {
+const career = () => {
   const formRef = useRef(null);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -86,20 +86,20 @@ const Internship = () => {
   };
 
   return (
-    <section id="internship" className="py-16 md:py-20 bg-graphite overflow-hidden">
-      <div  className="container mx-auto px-4 md:px-20">
-        <div data-aos="fade-up" data-aos-delay="50">
+    <section id="career" className="py-16 md:py-20 bg-graphite overflow-hidden">
+      <div  className="container mx-auto pt-20  px-4 md:px-20">
+        <div data-aos="fade-up"  data-aos-delay="50">
         <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-center mb-10 text-primary-accent">
-          Internship Program
+          career Program
         </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div data-aos="fade-right" data-aos-delay="50" >
             <h3 className="text-2xl font-semibold mb-6 text-white">Join Our Dynamic Team</h3>
             <p className="text-boulder mb-6">
-              Kickstart your accounting career with our hands-on internship program designed to build real-world skills and professional confidence. Gain practical exposure to accounting practices, work alongside experienced professionals, and enhance your resume with meaningful experience. This is your opportunity to bridge the gap between academic learning and industry expectations.
+              Kickstart your accounting career with our hands-on career program designed to build real-world skills and professional confidence. Gain practical exposure to accounting practices, work alongside experienced professionals, and enhance your resume with meaningful experience. This is your opportunity to bridge the gap between academic learning and industry expectations.
               <br /><br />
-              Through structured training, live projects, and continuous mentorship, you’ll develop a strong foundation in financial reporting, taxation, auditing, and compliance. Our flexible work environment and supportive team culture ensure that you grow both professionally and personally. Whether you're aiming for a future in corporate finance, audit firms, or independent practice, this internship is the perfect first step.
+              Through structured training, live projects, and continuous mentorship, you’ll develop a strong foundation in financial reporting, taxation, auditing, and compliance. Our flexible work environment and supportive team culture ensure that you grow both professionally and personally. Whether you're aiming for a future in corporate finance, audit firms, or independent practice, this career is the perfect first step.
             </p>
 
             <h4 className="text-primary-accent text-xl mb-2">Program Benefits:</h4>
@@ -278,4 +278,4 @@ const Internship = () => {
   );
 };
 
-export default Internship;
+export default career;

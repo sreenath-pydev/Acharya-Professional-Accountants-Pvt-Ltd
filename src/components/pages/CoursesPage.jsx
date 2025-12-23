@@ -39,7 +39,7 @@ const CoursesPage = () => {
         <p className="text-lg text-boulder max-w-3xl leading-relaxed">
           Acharya Professional Accountants offers practical accounting training in Kozhikode that
           bridges college learning with real corporate work. As a GST course Kerala learners trust, each program blends classroom clarity,
-          GST and finance workflows, and internship-style practice to make you career ready.
+          GST and finance workflows, and career-style practice to make you career ready.
         </p>
       </section>
 
@@ -52,7 +52,7 @@ const CoursesPage = () => {
           </h2>
           <p className="text-boulder mb-5 max-w-3xl">
             Confused about which accounting or finance course to choose? Get a clear, practical guideline before you decide—covering
-            what employers expect, how to plan India and GCC paths, and how finance courses with internship exposure can help.
+            what employers expect, how to plan India and GCC paths, and how finance courses with career exposure can help.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 text-boulder">
             {[
@@ -127,7 +127,7 @@ const CoursesPage = () => {
             {[
               '100% practical & case-based training',
               'Real client & corporate-style data exposure',
-              'Internship & office environment learning',
+              'career & office environment learning',
               'Industry-focused curriculum (GST, Audit, MIS, Reporting)',
               'Training by practicing professionals',
               'Kozhikode-based classroom learning',
@@ -143,9 +143,9 @@ const CoursesPage = () => {
 
       <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16 grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="150">
         <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-8">
-          <h3 className="font-montserrat text-2xl font-bold mb-4">Internship & Practical Exposure</h3>
+          <h3 className="font-montserrat text-2xl font-bold mb-4">career & Practical Exposure</h3>
           <p className="text-boulder leading-relaxed mb-4">
-            Students gain hands-on, Finance internship Kozhikode exposure at Acharya Professional Accountants,
+            Students gain hands-on, Finance career Kozhikode exposure at Acharya Professional Accountants,
             working in a guided environment that mirrors real offices.
           </p>
           <ul className="space-y-3 text-boulder">

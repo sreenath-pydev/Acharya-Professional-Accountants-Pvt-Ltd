@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Internship from '../sections/Internship';
+import careers from '../sections/Careers';
 import JobOpenings from '../sections/JobOpenings';
 import Header from '../common/Header';
 import Footer from '../common/Footer';
@@ -27,7 +27,7 @@ const InternshipPage = () => {
   return (
     <main className="font-inter text-white bg-dark-bg">
       <Header />
-      <Internship />
+      <careers />
       <JobOpenings />
       
     </main>

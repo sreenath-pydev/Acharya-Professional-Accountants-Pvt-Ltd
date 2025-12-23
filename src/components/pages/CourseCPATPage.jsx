@@ -35,7 +35,7 @@ const CourseCPATPage = () => {
             {[
               '100% practical training',
               'Live accounting & GST filing',
-              'Internship exposure',
+              'career exposure',
               'Industry-recognized certification',
               'Training by practicing professionals',
             ].map((item) => (
@@ -76,9 +76,9 @@ const CourseCPATPage = () => {
 
           <div className="space-y-8">
             <div className="bg-secondary-dark border border-primary-accent/20 rounded-2xl p-8">
-              <h3 className="font-montserrat text-xl md:text-2xl font-bold mb-3">Internship Exposure</h3>
+              <h3 className="font-montserrat text-xl md:text-2xl font-bold mb-3">career Exposure</h3>
               <p className="text-boulder leading-relaxed">
-                Experience internship at Acharya Professional Accountants: work on real client files, follow office procedures,
+                Experience career at Acharya Professional Accountants: work on real client files, follow office procedures,
                 and prepare for interviews with feedback. Top performers receive placement consideration.
               </p>
             </div>
