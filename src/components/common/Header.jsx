@@ -27,13 +27,13 @@ const Header = () => {
 
   const handleCareersClick = () => {
     setIsMenuOpen(false);
-    if (location.pathname === '/internship') {
+    if (location.pathname === '/careers') {
       const jobOpeningsSection = document.getElementById('job-openings');
       if (jobOpeningsSection) {
         jobOpeningsSection.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      navigate('/internship', { state: { scrollToJobOpenings: true } });
+      navigate('/careers', { state: { scrollToJobOpenings: true } });
     }
   };
 
@@ -89,7 +89,7 @@ const Header = () => {
     if (item === 'careers') {
       return (
         <RouterLink
-          to="/internship"
+          to="/careers"
           className="text-white hover:text-primary-accent transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg"
           onClick={() => setIsMenuOpen(false)}
         >

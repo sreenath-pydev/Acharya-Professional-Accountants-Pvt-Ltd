@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Internship from '../sections/Internship';
+import Internship from '../sections/careers';
 import JobOpenings from '../sections/JobOpenings';
 import Header from '../common/Header';
 import Footer from '../common/Footer';

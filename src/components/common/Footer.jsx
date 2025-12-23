@@ -19,7 +19,7 @@ const Footer = () => {
     about: '/about',
     services: '/services',
     courses: '/courses',
-    careers: '/internship',
+    careers: '/careers',
     contact: '/contact',
 
     accounting: '/accounting',
