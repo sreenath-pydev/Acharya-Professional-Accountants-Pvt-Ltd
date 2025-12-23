@@ -3,7 +3,7 @@ import Header from './components/common/Header';
 import Home from './components/pages/Home';
 import Footer from './components/common/Footer';
 import ScrollToTop from './components/common/ScrollToTop';
-import InternshipPage from './components/pages/InternshipPage';
+import InternshipPage from './components/pages/CareersPage';
 import AboutPage from './components/pages/AboutPage';
 import ServicesPage from './components/pages/ServicesPage';
 import ContactPage from './components/pages/ContactPage';
@@ -17,7 +17,7 @@ import ServiceAuditingPage from './components/pages/ServiceAuditingPage';
 import ServiceGstPage from './components/pages/ServiceGstPage';
 import ServiceBusinessConsultingPage from './components/pages/ServiceBusinessConsultingPage';
 import ServiceAdvisoryPage from './components/pages/ServiceAdvisoryPage';
-
+import CareersPage from './components/pages/CareersPage';
 function App() {
   return (
     <Router>
@@ -37,7 +37,8 @@ function App() {
           <Route path="/courses/globalpro" element={<CourseGlobalProPage />} />
           <Route path="/courses/c-pro" element={<CourseCProPage />} />
           <Route path="/courses/c-pat" element={<CourseCPATPage />} />
-          <Route path="/career" element={<InternshipPage />} />
+          <Route path="/careers" element={<CareersPage />} />
+          <Route path="/Internship" element={<InternshipPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />

@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from "react";
 const CLOUD_NAME = "dgmvtym2p";
 const UPLOAD_PRESET = "resume_upload";
 
-const career = () => {
+const InternshipForm = () => {
   const formRef = useRef(null);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -278,4 +278,4 @@ const career = () => {
   );
 };
 
-export default career;
+export default InternshipForm;

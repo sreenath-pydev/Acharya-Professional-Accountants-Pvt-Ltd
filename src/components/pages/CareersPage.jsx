@@ -1,19 +1,22 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import careers from '../sections/Careers';
+import PeopleCulture from '../sections/PeopleCulture';
 import JobOpenings from '../sections/JobOpenings';
-import Header from '../common/Header';
-import Footer from '../common/Footer';
+import InternshipForm from '../sections/InternshipForm';
 import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const InternshipPage = () => {
+const CareersPage = () => {
   const location = useLocation();
 
   useEffect(() => {
-    AOS.refresh();
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+    
     window.scrollTo(0, 0);
     
-    // Check if we need to scroll to job openings
     if (location.state?.scrollToJobOpenings) {
       setTimeout(() => {
         const jobOpeningsSection = document.getElementById('job-openings');
@@ -26,12 +29,10 @@ const InternshipPage = () => {
 
   return (
     <main className="font-inter text-white bg-dark-bg">
-      <Header />
-      <careers />
+      <InternshipForm />
       <JobOpenings />
-      
     </main>
   );
 };
 
-export default InternshipPage;
+export default CareersPage;
