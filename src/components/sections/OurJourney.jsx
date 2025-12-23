@@ -22,7 +22,7 @@ const OurJourney = () => {
       year: '2024',
       title: 'Growth & Innovation',
       description:
-        'Launched internship programs to nurture the next generation of accounting professionals. Integrated advanced technology solutions for improved service delivery.'
+        'Launched career programs to nurture the next generation of accounting professionals. Integrated advanced technology solutions for improved service delivery.'
     },
     {
       year: '2025',
