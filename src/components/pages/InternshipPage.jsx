@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import career from '../sections/careers';
+import careers from '../sections/Careers';
 import JobOpenings from '../sections/JobOpenings';
 import Header from '../common/Header';
 import Footer from '../common/Footer';
 import AOS from 'aos';
 
-const CareersPage = () => {
+const InternshipPage = () => {
   const location = useLocation();
 
   useEffect(() => {
@@ -27,11 +27,11 @@ const CareersPage = () => {
   return (
     <main className="font-inter text-white bg-dark-bg">
       <Header />
-      <career />
+      <careers />
       <JobOpenings />
       
     </main>
   );
 };
 
-export default CareersPage;
+export default InternshipPage;
