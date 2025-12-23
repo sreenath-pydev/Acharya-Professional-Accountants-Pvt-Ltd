@@ -139,14 +139,14 @@ const HeroFAQ = () => {
                 >
                   Enquire Now
                 </Link>
-                <a
+                {/* <a
                   href="/brochure.pdf"
                   download
                   className="border-2 border-[#00C853] text-[#00C853] bg-transparent px-6 py-3 rounded-full font-semibold hover:bg-[#00C853]/10 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#00C853]/20 transition-all duration-300 cursor-pointer text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-[#00C853] focus:ring-offset-2"
                   aria-label="Download Brochure"
                 >
                   Download Brochure
-                </a>
+                </a> */}
               </div>
 
               {/* FAQ Accordion */}
