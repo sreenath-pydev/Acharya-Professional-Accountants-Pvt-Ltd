@@ -18,19 +18,26 @@ const Home = () => {
     /* =========================
        SEO: Title & Description
     ========================== */
-    document.title =
-      'CA Firm in Kozhikode | Acharya Professional Accountants';
+    document.title = 'CA Firm in Kozhikode | Acharya Professional Accountants';
 
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
+    const metaDescription = document.querySelector("meta[name='description']");
     if (metaDescription) {
       metaDescription.setAttribute(
         'content',
         'Trusted chartered accountant firm in Kozhikode offers tax, audit, GST, & registration services nationwide, helping businesses stay compliant & grow.'
       );
     }
+
+    let metaKeywords = document.querySelector("meta[name='keywords']");
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.setAttribute('name', 'keywords');
+      document.head.appendChild(metaKeywords);
+    }
+    metaKeywords.setAttribute(
+      'content',
+      'best ca firms in calicut, ca firm in calicut, chartered accountants in calicut, tax consultants in kozhikode'
+    );
 
     /* =========================
        SEO: Canonical URL

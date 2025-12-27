@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
 import Contact from '../sections/Contact';
+import { setCanonical } from '../../utils/seo';
 
 const ContactPage = () => {
   useEffect(() => {
+    setCanonical('https://acharyaprofessionalaccountants.in/contact');
     AOS.refresh();
     window.scrollTo(0, 0);
   }, []);

@@ -17,10 +17,7 @@ const AboutPage = () => {
     document.title =
       'About Acharya Professional Accountants | CA Firm in Calicut';
 
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
+    const metaDescription = document.querySelector("meta[name='description']");
     if (metaDescription) {
       metaDescription.setAttribute(
         'content',

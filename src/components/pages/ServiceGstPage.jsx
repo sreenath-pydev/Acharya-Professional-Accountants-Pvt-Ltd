@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
+import { setCanonical } from '../../utils/seo';
 
 const ServiceGstPage = () => {
   useEffect(() => {
+    setCanonical('https://acharyaprofessionalaccountants.in/services/gst');
     AOS.refresh();
     window.scrollTo(0, 0);
   }, []);

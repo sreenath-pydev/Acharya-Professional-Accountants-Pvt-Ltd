@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
+import { setCanonical } from '../../utils/seo';
 
 const ServiceAuditingPage = () => {
   useEffect(() => {
+    setCanonical('https://acharyaprofessionalaccountants.in/services/auditing');
     AOS.refresh();
     window.scrollTo(0, 0);
   }, []);

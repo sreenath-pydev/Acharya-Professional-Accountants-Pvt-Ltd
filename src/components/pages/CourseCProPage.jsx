@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
+import { setCanonical } from '../../utils/seo';
 
 const CourseCProPage = () => {
   useEffect(() => {
+    setCanonical('https://acharyaprofessionalaccountants.in/courses/c-pro');
     AOS.refresh();
     window.scrollTo(0, 0);
   }, []);
@@ -135,42 +137,42 @@ const CourseCProPage = () => {
         </div>
       </section>
 
-       <section className="container mx-auto px-4 md:px-20 pb-16 md:pb-20" data-aos="fade-up" data-aos-delay="100">
-         <div className="bg-primary-accent text-dark-bg rounded-3xl p-8 md:p-12 flex flex-col gap-6 shadow-[0_20px_60px_rgba(229,161,69,0.25)]">
-           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-             <div>
-               <h3 className="font-montserrat text-2xl md:text-3xl font-bold mb-3">Apply for C-PRO</h3>
-               <p className="text-lg max-w-2xl">Start building the data-driven finance skills corporates and Big 4 teams expect.</p>
-             </div>
-             <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-               <a
-  href="https://wa.me/919446369434?text=Hi%20I%20want%20to%20apply%20for%20the%20course"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex-1 sm:flex-none inline-flex justify-center items-center bg-dark-bg text-primary-accent font-semibold px-6 py-3 rounded-full hover:bg-secondary-dark transition-all duration-300"
->
-  Apply Now
-</a>
+      <section className="container mx-auto px-4 md:px-20 pb-16 md:pb-20" data-aos="fade-up" data-aos-delay="100">
+        <div className="bg-primary-accent text-dark-bg rounded-3xl p-8 md:p-12 flex flex-col gap-6 shadow-[0_20px_60px_rgba(229,161,69,0.25)]">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div>
+              <h3 className="font-montserrat text-2xl md:text-3xl font-bold mb-3">Apply for C-PRO</h3>
+              <p className="text-lg max-w-2xl">Start building the data-driven finance skills corporates and Big 4 teams expect.</p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+              <a
+                href="https://wa.me/919446369434?text=Hi%20I%20want%20to%20apply%20for%20the%20course"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 sm:flex-none inline-flex justify-center items-center bg-dark-bg text-primary-accent font-semibold px-6 py-3 rounded-full hover:bg-secondary-dark transition-all duration-300"
+              >
+                Apply Now
+              </a>
+              <Link
+                to="/contact"
+                className="flex-1 sm:flex-none inline-flex justify-center items-center bg-white text-dark-bg font-semibold px-6 py-3 rounded-full hover:bg-secondary-dark hover:text-white transition-all duration-300"
+              >
+                Enquire Now
+              </Link>
+            </div>
+          </div>
+          <div>
             <Link
-              to="/contact"
-              className="flex-1 sm:flex-none inline-flex justify-center items-center bg-white text-dark-bg font-semibold px-6 py-3 rounded-full hover:bg-secondary-dark hover:text-white transition-all duration-300"
+              to="/courses"
+              className="inline-flex items-center gap-2 text-dark-bg font-semibold hover:text-secondary-dark transition-colors duration-300"
             >
-              Enquire Now
+              <i className="fas fa-arrow-left text-sm"></i>
+              <span>Back to Courses</span>
             </Link>
           </div>
-           </div>
-           <div>
-             <Link
-               to="/courses"
-               className="inline-flex items-center gap-2 text-dark-bg font-semibold hover:text-secondary-dark transition-colors duration-300"
-             >
-               <i className="fas fa-arrow-left text-sm"></i>
-               <span>Back to Courses</span>
-             </Link>
-           </div>
-         </div>
+        </div>
       </section>
-      
+
     </main>
   );
 };

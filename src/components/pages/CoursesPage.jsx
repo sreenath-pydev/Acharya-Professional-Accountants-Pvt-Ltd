@@ -22,6 +22,17 @@ const CoursesPage = () => {
       );
     }
 
+    let metaKeywords = document.querySelector("meta[name='keywords']");
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.setAttribute('name', 'keywords');
+      document.head.appendChild(metaKeywords);
+    }
+    metaKeywords.setAttribute(
+      'content',
+      'accounting courses in calicut, accounting institutes in calicut, accounting courses in kerala, best accounting institute in calicut, accountant course in kerala'
+    );
+
     /* =========================
        SEO: Canonical URL
     ========================== */
