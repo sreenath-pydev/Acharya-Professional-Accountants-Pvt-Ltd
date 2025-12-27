@@ -5,7 +5,9 @@ import { setCanonical } from '../../utils/seo';
 import Hero from '../sections/Hero';
 import About from '../sections/About';
 import Services from '../sections/Services';
-import VincumTaxCalculator from '../sections/VincumTaxCalculator';
+import TaxCalculatorTeaser from '../sections/TaxCalculatorTeaser';
+import CoursesTeaser from '../sections/CoursesTeaser';
+import CareersTeaser from '../sections/CareersTeaser';
 import FAQ from '../sections/FAQ';
 import PeopleCulture from '../sections/PeopleCulture';
 // import JobOpenings from '../sections/JobOpenings';
@@ -47,7 +49,9 @@ const Home = () => {
       <Hero />
       <About />
       <Services />
-      <VincumTaxCalculator />
+      <TaxCalculatorTeaser />
+      <CoursesTeaser />
+      <CareersTeaser />
       <FAQ />
       <PeopleCulture />
       {/* <JobOpenings /> */}

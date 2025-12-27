@@ -38,6 +38,17 @@ const Header = () => {
   };
 
   const renderLink = (item) => {
+    if (item === 'calculator') {
+      return (
+        <RouterLink
+          to="/calculator"
+          className="text-white hover:text-primary-accent transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          {item}
+        </RouterLink>
+      );
+    }
     if (item === 'about') {
       return (
         <RouterLink
@@ -127,11 +138,10 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 pt-4 px-4">
       <div className="container mx-auto">
         <nav
-          className={`relative flex justify-between items-center py-4 px-6 md:px-8 rounded-2xl transition-all duration-300 ${
-            isScrolled
-              ? 'bg-secondary-dark/95 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.4),0_4px_16px_rgba(229,161,69,0.15),inset_0_1px_0_rgba(255,255,255,0.1)] border border-primary-accent/20'
-              : 'bg-secondary-dark/90 backdrop-blur-md shadow-[0_10px_40px_rgba(0,0,0,0.5),0_6px_20px_rgba(229,161,69,0.2),inset_0_1px_0_rgba(255,255,255,0.15)] border border-primary-accent/30'
-          }`}
+          className={`relative flex justify-between items-center py-4 px-6 md:px-8 rounded-2xl transition-all duration-300 ${isScrolled
+            ? 'bg-secondary-dark/95 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.4),0_4px_16px_rgba(229,161,69,0.15),inset_0_1px_0_rgba(255,255,255,0.1)] border border-primary-accent/20'
+            : 'bg-secondary-dark/90 backdrop-blur-md shadow-[0_10px_40px_rgba(0,0,0,0.5),0_6px_20px_rgba(229,161,69,0.2),inset_0_1px_0_rgba(255,255,255,0.15)] border border-primary-accent/30'
+            }`}
           style={{
             boxShadow: isScrolled
               ? '0 8px 32px rgba(0, 0, 0, 0.4), 0 4px 16px rgba(229, 161, 69, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 2px 8px rgba(0, 0, 0, 0.3)'
@@ -140,7 +150,7 @@ const Header = () => {
         >
           {/* 3D Top Highlight Effect */}
           <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary-accent/40 to-transparent rounded-t-2xl"></div>
-          
+
           <div className="flex items-center h-[40px] relative z-10">
             <RouterLink to="/">
               <img
@@ -153,7 +163,7 @@ const Header = () => {
 
           <div className="hidden md:flex items-center gap-6 lg:gap-8 relative z-10">
             <ul className="flex gap-6 lg:gap-8">
-              {['home', 'about', 'services', 'courses', 'careers'].map((item) => (
+              {['home', 'about', 'services', 'calculator', 'courses', 'careers'].map((item) => (
                 <li key={item}>
                   {renderLink(item)}
                 </li>
@@ -168,7 +178,7 @@ const Header = () => {
               <i className="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform duration-300"></i>
             </RouterLink>
           </div>
-          
+
           {/* Mobile Menu Button */}
           <button
             className="md:hidden flex flex-col gap-1 z-50 ml-4 relative"
@@ -176,34 +186,30 @@ const Header = () => {
             aria-label="Toggle Menu"
           >
             <span
-              className={`block w-6 h-0.5 bg-primary-accent transition-all duration-300 ${
-                isMenuOpen ? 'transform rotate-45 translate-y-1.5' : ''
-              }`}
+              className={`block w-6 h-0.5 bg-primary-accent transition-all duration-300 ${isMenuOpen ? 'transform rotate-45 translate-y-1.5' : ''
+                }`}
             ></span>
             <span
-              className={`block w-6 h-0.5 bg-primary-accent transition-all duration-300 ${
-                isMenuOpen ? 'opacity-0' : ''
-              }`}
+              className={`block w-6 h-0.5 bg-primary-accent transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''
+                }`}
             ></span>
             <span
-              className={`block w-6 h-0.5 bg-primary-accent transition-all duration-300 ${
-                isMenuOpen ? 'transform -rotate-45 -translate-y-1.5' : ''
-              }`}
+              className={`block w-6 h-0.5 bg-primary-accent transition-all duration-300 ${isMenuOpen ? 'transform -rotate-45 -translate-y-1.5' : ''
+                }`}
             ></span>
           </button>
 
           {/* Mobile Menu */}
           <div
-            className={`fixed inset-0 bg-dark-bg z-40 flex flex-col justify-center items-center pt-24 pb-10 transition-all duration-300 ${
-              isMenuOpen ? 'translate-y-0' : '-translate-y-full opacity-0 pointer-events-none'
-            }`}
+            className={`fixed inset-0 bg-dark-bg z-40 flex flex-col justify-center items-center pt-24 pb-10 transition-all duration-300 ${isMenuOpen ? 'translate-y-0' : '-translate-y-full opacity-0 pointer-events-none'
+              }`}
             style={{
               top: isScrolled ? '80px' : '64px',
               height: isScrolled ? 'calc(100vh - 80px)' : 'calc(100vh - 64px)'
             }}
           >
             <ul className="flex flex-col items-center gap-6 w-full px-4">
-              {['home', 'about', 'services', 'courses', 'careers'].map((item) => (
+              {['home', 'about', 'services', 'calculator', 'courses', 'careers'].map((item) => (
                 <li key={item} className="w-full text-center">
                   {renderLink(item)}
                 </li>

@@ -18,6 +18,7 @@ import ServiceGstPage from './components/pages/ServiceGstPage';
 import ServiceBusinessConsultingPage from './components/pages/ServiceBusinessConsultingPage';
 import ServiceAdvisoryPage from './components/pages/ServiceAdvisoryPage';
 import CareersPage from './components/pages/CareersPage';
+import TaxCalculatorPage from './components/pages/TaxCalculatorPage';
 function App() {
   return (
     <Router>
@@ -40,6 +41,7 @@ function App() {
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/Internship" element={<InternshipPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/calculator" element={<TaxCalculatorPage />} />
         </Routes>
         <Footer />
         <ScrollToTop />
