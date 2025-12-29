@@ -1,7 +1,7 @@
 const OurJourney = () => {
   const milestones = [
     {
-      year: '2021',
+      year: '2018',
       title: 'Foundation',
       description:
         'Acharya Professional Accountants was established with a vision to provide exceptional accounting services. Started with a small team of dedicated professionals committed to excellence.'
@@ -55,9 +55,8 @@ const OurJourney = () => {
                 key={index}
                 data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
                 data-aos-delay={50 + index * 50}
-                className={`relative flex flex-col md:flex-row items-center gap-6 md:gap-8 ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
+                className={`relative flex flex-col md:flex-row items-center gap-6 md:gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                  }`}
               >
                 {/* Year Badge */}
                 <div className="relative z-10 flex-shrink-0">
@@ -68,9 +67,8 @@ const OurJourney = () => {
 
                 {/* Content Card */}
                 <div
-                  className={`flex-1 bg-dark-bg/50 p-6 md:p-8 rounded-xl border border-primary-accent/10 hover:border-primary-accent/30 hover:shadow-lg transition-all duration-300 ${
-                    index % 2 === 0 ? 'md:text-left' : 'md:text-right'
-                  }`}
+                  className={`flex-1 bg-dark-bg/50 p-6 md:p-8 rounded-xl border border-primary-accent/10 hover:border-primary-accent/30 hover:shadow-lg transition-all duration-300 ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'
+                    }`}
                 >
                   <h3 className="text-xl md:text-2xl font-semibold mb-3 text-primary-accent">
                     {milestone.title}

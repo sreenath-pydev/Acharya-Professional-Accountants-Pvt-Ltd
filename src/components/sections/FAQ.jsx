@@ -23,7 +23,7 @@ const FAQ = () => {
     {
       question: 'What is your experience and expertise in the accounting field?',
       answer:
-        'Acharya Professional Accountants has been serving clients since 2021 with a team of experienced professionals. We specialize in accounting, taxation, GST compliance, auditing, and financial consulting, helping businesses maintain compliance and optimize their financial operations.'
+        'Acharya Professional Accountants has been serving clients since 2018 with a team of experienced professionals. We specialize in accounting, taxation, GST compliance, auditing, and financial consulting, helping businesses maintain compliance and optimize their financial operations.'
     },
     {
       question: 'How do you ensure data security and confidentiality?',
@@ -149,9 +149,8 @@ const FAQ = () => {
                         {faq.question}
                       </span>
                       <span
-                        className={`text-primary-accent text-xl transition-transform duration-300 flex-shrink-0 ${
-                          openIndex === index ? 'rotate-180' : ''
-                        }`}
+                        className={`text-primary-accent text-xl transition-transform duration-300 flex-shrink-0 ${openIndex === index ? 'rotate-180' : ''
+                          }`}
                         aria-hidden="true"
                       >
                         <i className="fas fa-chevron-down"></i>
@@ -161,9 +160,8 @@ const FAQ = () => {
                       id={`faq-answer-${index}`}
                       role="region"
                       aria-labelledby={`faq-question-${index}`}
-                      className={`transition-all duration-[600ms] ease-in-out overflow-hidden ${
-                        openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-                      }`}
+                      className={`transition-all duration-[600ms] ease-in-out overflow-hidden ${openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                        }`}
                     >
                       <div className="px-5 pb-4 pt-2">
                         <p className="text-boulder text-sm md:text-base leading-relaxed">

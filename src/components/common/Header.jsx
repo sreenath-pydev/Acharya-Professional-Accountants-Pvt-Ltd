@@ -38,7 +38,7 @@ const Header = () => {
   };
 
   const renderLink = (item) => {
-    if (item === 'calculator') {
+    if (item === 'income tax calculator') {
       return (
         <RouterLink
           to="/calculator"
@@ -163,7 +163,7 @@ const Header = () => {
 
           <div className="hidden md:flex items-center gap-6 lg:gap-8 relative z-10">
             <ul className="flex gap-6 lg:gap-8">
-              {['home', 'about', 'services', 'calculator', 'courses', 'careers'].map((item) => (
+              {['home', 'about', 'services', 'income tax calculator', 'courses', 'careers'].map((item) => (
                 <li key={item}>
                   {renderLink(item)}
                 </li>
@@ -209,7 +209,7 @@ const Header = () => {
             }}
           >
             <ul className="flex flex-col items-center gap-6 w-full px-4">
-              {['home', 'about', 'services', 'calculator', 'courses', 'careers'].map((item) => (
+              {['home', 'about', 'services', 'income tax calculator', 'courses', 'careers'].map((item) => (
                 <li key={item} className="w-full text-center">
                   {renderLink(item)}
                 </li>
