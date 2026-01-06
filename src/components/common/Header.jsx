@@ -73,6 +73,18 @@ const Header = () => {
       );
     }
 
+    if (item === 'business loans') {
+      return (
+        <RouterLink
+          to="/services/business-loans"
+          className="text-white hover:text-primary-accent transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          {item}
+        </RouterLink>
+      );
+    }
+
     if (item === 'services') {
       return (
         <RouterLink
@@ -163,7 +175,7 @@ const Header = () => {
 
           <div className="hidden md:flex items-center gap-6 lg:gap-8 relative z-10">
             <ul className="flex gap-6 lg:gap-8">
-              {['home', 'about', 'services', 'income tax calculator', 'courses', 'careers'].map((item) => (
+              {['home', 'about', 'services', 'business loans', 'income tax calculator', 'courses', 'careers'].map((item) => (
                 <li key={item}>
                   {renderLink(item)}
                 </li>
@@ -209,7 +221,7 @@ const Header = () => {
             }}
           >
             <ul className="flex flex-col items-center gap-6 w-full px-4">
-              {['home', 'about', 'services', 'income tax calculator', 'courses', 'careers'].map((item) => (
+              {['home', 'about', 'services', 'business loans', 'income tax calculator', 'courses', 'careers'].map((item) => (
                 <li key={item} className="w-full text-center">
                   {renderLink(item)}
                 </li>

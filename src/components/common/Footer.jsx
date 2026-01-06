@@ -29,6 +29,7 @@ const Footer = () => {
       gst: '/services/gst',
       'business consulting': '/services/business-consulting',
       advisory: '/services/advisory',
+      kozhikode: '/accounting-service-in-kozhikode',
     };
 
     return links[item] || '#';
@@ -103,14 +104,14 @@ const Footer = () => {
             </h3>
 
             <ul className="space-y-3">
-              {['home', 'about', 'services', 'courses', 'careers', 'calculator', 'contact'].map((item, index) => (
+              {['home', 'about', 'services', 'courses', 'careers', 'calculator', 'contact', 'kozhikode'].map((item, index) => (
                 <li key={index}>
                   <a
                     href={getLinkHref(item)}
                     className="text-boulder hover:text-primary-accent transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <i className="fas fa-chevron-right text-xs text-primary-accent group-hover:translate-x-1 transition-transform duration-300"></i>
-                    {item === 'calculator' ? 'Tax Calculator' : item.charAt(0).toUpperCase() + item.slice(1)}
+                    {item === 'calculator' ? 'Tax Calculator' : item === 'kozhikode' ? 'CA in Kozhikode' : item.charAt(0).toUpperCase() + item.slice(1)}
                   </a>
                 </li>
               ))}
