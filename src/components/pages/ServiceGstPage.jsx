@@ -73,6 +73,107 @@ const ServiceGstPage = () => {
         </div>
       </section>
 
+      {/* =========================
+          Detailed GST Services Grid
+      ========================== */}
+      <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16" data-aos="fade-up" data-aos-delay="75">
+        <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-8 text-center">Comprehensive GST Solutions</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              title: 'GST Registration Online',
+              desc: 'Hassle-free new GST registration for businesses and service providers.',
+              icon: 'fa-id-card',
+              slug: 'registration-online',
+            },
+            {
+              title: 'GST Return Filing',
+              desc: 'Accurate and timely filing of GSTR-1, GSTR-3B, and CMP-08 returns.',
+              icon: 'fa-file-invoice-dollar',
+              slug: 'return-filing',
+            },
+            {
+              title: 'GST LUT Filing',
+              desc: 'Letter of Undertaking filing for exporters to supply goods/services without tax payment.',
+              icon: 'fa-globe',
+              slug: 'lut-filing',
+            },
+            {
+              title: 'GST Advisory Services',
+              desc: 'Expert guidance on tax rates, ITC eligibility, and business impact analysis.',
+              icon: 'fa-comments',
+              slug: 'advisory-services',
+            },
+            {
+              title: 'GST Annual Return Filing',
+              desc: 'Preparation and filing of GSTR-9 and GSTR-9C reconciliation statements.',
+              icon: 'fa-calendar-check',
+              slug: 'annual-return-filing',
+            },
+            {
+              title: 'GST Notice Reply',
+              desc: 'Drafting outcomes-based responses to departmental notices and discrepancies.',
+              icon: 'fa-envelope-open-text',
+              slug: 'notice-reply',
+            },
+            {
+              title: 'GST Registration Amendment',
+              desc: 'Updates to core and non-core fields like address, partners, or business details.',
+              icon: 'fa-edit',
+              slug: 'registration-amendment',
+            },
+            {
+              title: 'GST Registration Cancellation',
+              desc: 'Proper surrender of GSTIN for closed or inactive businesses.',
+              icon: 'fa-ban',
+              slug: 'registration-cancellation',
+            },
+            {
+              title: 'GST Revocation Online',
+              desc: 'Assistance in revoking cancelled GST registrations to restore business.',
+              icon: 'fa-undo',
+              slug: 'revocation-online',
+            },
+            {
+              title: 'GST Registration for Foreigners',
+              desc: 'Specialized registration compliance for non-resident taxable persons.',
+              icon: 'fa-passport',
+              slug: 'registration-foreigners',
+            },
+            {
+              title: 'GSTR-10 Return Filing',
+              desc: 'Final return filing support when cancelling your GST registration.',
+              icon: 'fa-file-signature',
+              slug: 'gstr-10-return',
+            },
+            {
+              title: 'GST Invoicing Software',
+              desc: 'Advisory on selecting and implementing compliant invoicing tools.',
+              icon: 'fa-desktop',
+              slug: 'invoicing-software',
+            },
+            {
+              title: 'GST Nil Return Filing',
+              desc: 'Quick support for filing Nil returns when there is no transaction.',
+              icon: 'fa-minus-circle',
+              slug: 'nil-return-filing',
+            },
+          ].map((service, index) => (
+            <Link
+              key={index}
+              to={`/services/gst/${service.slug}`}
+              className="bg-secondary-dark border border-primary-accent/10 rounded-xl p-6 hover:border-primary-accent/40 transition-all duration-300 group block"
+            >
+              <div className="w-12 h-12 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent text-xl mb-4 group-hover:bg-primary-accent group-hover:text-dark-bg transition-colors duration-300">
+                <i className={`fas ${service.icon}`}></i>
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
+              <p className="text-boulder text-sm">{service.desc}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16" data-aos="fade-up" data-aos-delay="100">
         <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-8 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>

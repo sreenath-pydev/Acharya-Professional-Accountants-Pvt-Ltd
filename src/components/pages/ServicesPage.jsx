@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
 import { setCanonical } from '../../utils/seo';
+import { Link } from 'react-router-dom';
+import { locationGroups } from '../../data/locationData';
 
 import Services from '../sections/Services';
 
@@ -150,6 +152,43 @@ const ServicesPage = () => {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* =========================
+          Major Locations (Links)
+      ========================== */}
+      <section
+        className="container mx-auto px-4 md:px-20 mb-12 md:mb-16"
+        data-aos="fade-up"
+      >
+        <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-8 text-center pt-10 border-t border-white/5">
+          Other Locations We Serve
+        </h2>
+
+        <div className="space-y-8">
+          {locationGroups.map((group, index) => (
+            <div key={index} className="bg-secondary-dark/50 rounded-2xl p-6">
+              <h3 className="text-primary-accent font-semibold text-lg mb-4 pb-2 text-center">
+                {group.region}
+              </h3>
+              <div className="flex flex-wrap gap-3 justify-center">
+                {group.cities.map((city) => {
+                  // Generate slug: trim whitespace, lowercase, replace spaces with hyphens
+                  const slug = city.trim().toLowerCase().replace(/\s+/g, '-');
+                  return (
+                    <Link
+                      key={city}
+                      to={`/accounting-service-in-${slug}`}
+                      className="inline-block bg-white/5 hover:bg-primary-accent hover:text-dark-bg text-boulder hover:text-white text-sm px-4 py-2 rounded-full transition-all duration-300 cursor-pointer border border-white/5 hover:border-transparent"
+                    >
+                      {city}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </main>

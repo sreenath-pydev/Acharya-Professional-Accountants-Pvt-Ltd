@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { locationGroups } from '../../data/locationData';
 
 const Footer = () => {
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -164,6 +166,29 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Service Available Cities Section */}
+      <div className="container mx-auto px-5 md:px-20 relative z-10 pb-10 border-t border-primary-accent/10 pt-10">
+        <h3 className="text-xl font-semibold mb-6 text-primary-accent text-center relative pb-2 inline-block left-1/2 transform -translate-x-1/2">
+          Service Available City
+          <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary-accent"></span>
+        </h3>
+
+        <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
+          {locationGroups.flatMap(group => group.cities).map((city, index) => {
+            const slug = city.trim().toLowerCase().replace(/\s+/g, '-');
+            return (
+              <Link
+                key={index}
+                to={`/accounting-service-in-${slug}`}
+                className="text-boulder text-xs hover:text-white hover:underline transition-colors duration-300"
+              >
+                {city}
+              </Link>
+            )
+          })}
+        </div>
+      </div>
+
       {/* End section  */}
       <div className="py-6 border-t border-primary-accent/10 text-center relative z-10">
         <div className="container mx-auto px-5">
@@ -172,7 +197,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
+    </footer >
   );
 };
 

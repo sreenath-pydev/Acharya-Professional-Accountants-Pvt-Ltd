@@ -1,9 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
+import { navbarServices } from '../../data/navbarServices';
+
+import { loanDetails } from '../../data/loanDetails';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesHovered, setIsServicesHovered] = useState(false);
+  const [isLoansHovered, setIsLoansHovered] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
@@ -37,12 +42,45 @@ const Header = () => {
     }
   };
 
+  const isActive = (item) => {
+    const path = location.pathname;
+    switch (item) {
+      case 'home':
+        return path === '/';
+      case 'about':
+        return path === '/about';
+      case 'services':
+        // Highlight services for all sub-services EXCEPT business-loans
+        return path.startsWith('/services') && path !== '/services/business-loans';
+      case 'business loans':
+        return path === '/services/business-loans';
+      case 'income tax calculator':
+        return path === '/calculator';
+      case 'courses':
+        return path.startsWith('/courses');
+      case 'careers':
+        return path === '/careers';
+      case 'contact':
+        return path === '/contact';
+      default:
+        return false;
+    }
+  };
+
+  const getLinkClasses = (item) => {
+    const baseClasses = "transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg";
+    const activeClasses = "text-primary-accent font-medium"; // Added font-medium for better visibility
+    const inactiveClasses = "text-white hover:text-primary-accent";
+
+    return `${baseClasses} ${isActive(item) ? activeClasses : inactiveClasses}`;
+  };
+
   const renderLink = (item) => {
     if (item === 'income tax calculator') {
       return (
         <RouterLink
           to="/calculator"
-          className="text-white hover:text-primary-accent transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg"
+          className={getLinkClasses(item)}
           onClick={() => setIsMenuOpen(false)}
         >
           {item}
@@ -53,7 +91,7 @@ const Header = () => {
       return (
         <RouterLink
           to="/about"
-          className="text-white hover:text-primary-accent transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg"
+          className={getLinkClasses(item)}
           onClick={() => setIsMenuOpen(false)}
         >
           {item}
@@ -65,7 +103,7 @@ const Header = () => {
       return (
         <RouterLink
           to="/contact"
-          className="text-white hover:text-primary-accent transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg"
+          className={getLinkClasses(item)}
           onClick={() => setIsMenuOpen(false)}
         >
           {item}
@@ -75,25 +113,96 @@ const Header = () => {
 
     if (item === 'business loans') {
       return (
-        <RouterLink
-          to="/services/business-loans"
-          className="text-white hover:text-primary-accent transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg"
-          onClick={() => setIsMenuOpen(false)}
+        <div
+          className="relative h-full flex items-center"
+          onMouseEnter={() => setIsLoansHovered(true)}
+          onMouseLeave={() => setIsLoansHovered(false)}
         >
-          {item}
-        </RouterLink>
+          <RouterLink
+            to="/services/business-loans"
+            className={getLinkClasses(item)}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            {item} <i className={`fas fa-chevron-down text-xs ml-1 transition-transform duration-300 ${isLoansHovered ? 'rotate-180' : ''}`}></i>
+          </RouterLink>
+
+          {/* Business Loans Dropdown */}
+          <div
+            className={`absolute top-full left-0 w-64 bg-secondary-dark/95 backdrop-blur-xl border border-primary-accent/20 shadow-2xl transition-all duration-300 transform origin-top rounded-b-xl ${isLoansHovered ? 'opacity-100 scale-y-100 visible' : 'opacity-0 scale-y-0 invisible'
+              }`}
+          >
+            <ul className="py-2">
+              {Object.entries(loanDetails).map(([slug, details]) => (
+                <li key={slug}>
+                  <RouterLink
+                    to={`/services/business-loans/${slug}`}
+                    className="block px-4 py-3 text-sm text-boulder hover:text-white hover:bg-white/5 transition-colors border-b border-white/5 last:border-0"
+                    onClick={() => {
+                      setIsLoansHovered(false);
+                      setIsMenuOpen(false);
+                    }}
+                  >
+                    {details.title}
+                  </RouterLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       );
     }
 
     if (item === 'services') {
       return (
-        <RouterLink
-          to="/services"
-          className="text-white hover:text-primary-accent transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg"
-          onClick={() => setIsMenuOpen(false)}
+        <div
+          className="relative h-full flex items-center"
+          onMouseEnter={() => setIsServicesHovered(true)}
+          onMouseLeave={() => setIsServicesHovered(false)}
         >
-          {item}
-        </RouterLink>
+          <RouterLink
+            to="/services"
+            className={getLinkClasses(item)}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            {item} <i className={`fas fa-chevron-down text-xs ml-1 transition-transform duration-300 ${isServicesHovered ? 'rotate-180' : ''}`}></i>
+          </RouterLink>
+
+          {/* Mega Menu Dropdown */}
+          <div
+            className={`fixed left-0 right-0 top-[60px] md:top-[80px] bg-secondary-dark/95 backdrop-blur-xl border-t border-b border-primary-accent/20 shadow-2xl transition-all duration-300 transform origin-top ${isServicesHovered ? 'opacity-100 scale-y-100 visible' : 'opacity-0 scale-y-0 invisible'
+              }`}
+            style={{ maxHeight: 'calc(100vh - 80px)', overflowY: 'auto' }}
+          >
+            <div className="container mx-auto px-4 py-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+                {navbarServices.map((section, idx) => (
+                  <div key={idx} className="space-y-4">
+                    <RouterLink
+                      to={section.link}
+                      className="block font-montserrat font-bold text-primary-accent text-lg border-b border-white/10 pb-2 hover:text-white transition-colors"
+                      onClick={() => setIsServicesHovered(false)}
+                    >
+                      {section.title}
+                    </RouterLink>
+                    <ul className="space-y-2">
+                      {section.items.map((subItem, subIdx) => (
+                        <li key={subIdx}>
+                          <RouterLink
+                            to={subItem.link}
+                            className="text-boulder text-sm hover:text-white transition-colors block py-0.5"
+                            onClick={() => setIsServicesHovered(false)}
+                          >
+                            {subItem.name}
+                          </RouterLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       );
     }
 
@@ -101,7 +210,7 @@ const Header = () => {
       return (
         <RouterLink
           to="/courses"
-          className="text-white hover:text-primary-accent transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg"
+          className={getLinkClasses(item)}
           onClick={() => setIsMenuOpen(false)}
         >
           {item}
@@ -113,7 +222,7 @@ const Header = () => {
       return (
         <RouterLink
           to="/careers"
-          className="text-white hover:text-primary-accent transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg"
+          className={getLinkClasses(item)}
           onClick={() => setIsMenuOpen(false)}
         >
           {item}
@@ -127,7 +236,7 @@ const Header = () => {
           to={item}
           smooth={true}
           duration={500}
-          className="text-white hover:text-primary-accent transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg"
+          className={getLinkClasses(item)}
           onClick={() => setIsMenuOpen(false)}
         >
           {item}
@@ -138,7 +247,7 @@ const Header = () => {
     return (
       <RouterLink
         to={`/#${item}`}
-        className="text-white hover:text-primary-accent transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg"
+        className={getLinkClasses(item)}
         onClick={() => setIsMenuOpen(false)}
       >
         {item}

@@ -9,7 +9,7 @@ const CareersTeaser = () => {
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-primary-accent/10 group">
                             <div className="absolute inset-0 bg-primary-accent/20 mix-blend-overlay z-10"></div>
                             <img
-                                src="/images/careers.webp" // Assuming this image exists or using a placeholder pattern if not
+                                src="/images/careers.webp" // Updated image path
                                 alt="Careers at Acharya"
                                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                                 onError={(e) => {

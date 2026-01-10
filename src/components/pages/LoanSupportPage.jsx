@@ -52,7 +52,7 @@ const LoanSupportPage = () => {
                     {/* Hero Image */}
                     <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-primary-accent/20">
                         <img
-                            src="/images/business_loan_hero.png"
+                            src="/images/business_loan_hero.webp"
                             alt="Business Loan Consultation"
                             className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
                         />
@@ -78,22 +78,26 @@ const LoanSupportPage = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
-                            { title: 'MSME / Small Business', icon: 'fa-store', desc: 'For retail, trading, and small manufacturing units.' },
-                            { title: 'Startup Loans', icon: 'fa-rocket', desc: 'Funding for new ventures with scalable business models.' },
-                            { title: 'MUDRA Loans', icon: 'fa-hand-holding-usd', desc: 'Shishu, Kishore, and Tarun schemes for micro-units.' },
-                            { title: 'Working Capital', icon: 'fa-chart-line', desc: 'CC/OD limits to manage day-to-day operations.' },
-                            { title: 'Term Loans', icon: 'fa-clock', desc: 'Long-term funding for expansion and assets.' },
-                            { title: 'Professional Loans', icon: 'fa-user-md', desc: 'For Doctors, CAs, Architects, and Consultants.' },
-                            { title: 'Machinery Loans', icon: 'fa-cogs', desc: 'Purchase of new equipment and technology.' },
-                            { title: 'Expansion Loans', icon: 'fa-expand-arrows-alt', desc: 'Scaling operations to new markets or verticals.' },
+                            { title: 'MSME / Small Business', icon: 'fa-store', desc: 'For retail, trading, and small manufacturing units.', slug: 'msme-loans' },
+                            { title: 'Startup Loans', icon: 'fa-rocket', desc: 'Funding for new ventures with scalable business models.', slug: 'msme-loans' },
+                            { title: 'MUDRA Loans', icon: 'fa-hand-holding-usd', desc: 'Shishu, Kishore, and Tarun schemes for micro-units.', slug: 'mudra-loans' },
+                            { title: 'Working Capital', icon: 'fa-chart-line', desc: 'CC/OD limits to manage day-to-day operations.', slug: 'term-loans' },
+                            { title: 'Term Loans', icon: 'fa-clock', desc: 'Long-term funding for expansion and assets.', slug: 'term-loans' },
+                            { title: 'Professional Loans', icon: 'fa-user-md', desc: 'For Doctors, CAs, Architects, and Consultants.', slug: 'private-bank-loans' },
+                            { title: 'Machinery Loans', icon: 'fa-cogs', desc: 'Purchase of new equipment and technology.', slug: 'machinery-loans' },
+                            { title: 'Expansion Loans', icon: 'fa-expand-arrows-alt', desc: 'Scaling operations to new markets or verticals.', slug: 'unsecured-business-loans' },
                         ].map((loan, index) => (
-                            <div key={index} className="bg-dark-bg border border-white/5 p-6 rounded-xl hover:border-primary-accent/30 transition-all duration-300 group">
+                            <Link
+                                to={`/services/business-loans/${loan.slug}`}
+                                key={index}
+                                className="bg-dark-bg border border-white/5 p-6 rounded-xl hover:border-primary-accent/30 transition-all duration-300 group block"
+                            >
                                 <div className="w-12 h-12 bg-secondary-dark rounded-lg flex items-center justify-center text-primary-accent text-xl mb-4 group-hover:scale-110 transition-transform duration-300">
                                     <i className={`fas ${loan.icon}`}></i>
                                 </div>
-                                <h3 className="font-bold text-lg mb-2">{loan.title}</h3>
+                                <h3 className="font-bold text-lg mb-2 text-white group-hover:text-primary-accent transition-colors">{loan.title}</h3>
                                 <p className="text-sm text-boulder">{loan.desc}</p>
-                            </div>
+                            </Link>
                         ))}
                     </div>
 
@@ -149,7 +153,7 @@ const LoanSupportPage = () => {
                     <div className="relative">
                         <div className="relative z-10 transform hover:scale-105 transition-transform duration-500">
                             <img
-                                src="/images/project_report.png"
+                                src="/images/project_report.webp"
                                 alt="Bank Approved Project Report Sample"
                                 className="w-full max-w-md mx-auto drop-shadow-2xl"
                             />

@@ -18,9 +18,13 @@ import ServiceGstPage from './components/pages/ServiceGstPage';
 import ServiceBusinessConsultingPage from './components/pages/ServiceBusinessConsultingPage';
 import ServiceAdvisoryPage from './components/pages/ServiceAdvisoryPage';
 import LoanSupportPage from './components/pages/LoanSupportPage';
+import LoanDetailPage from './components/pages/LoanDetailPage';
 import CareersPage from './components/pages/CareersPage';
 import TaxCalculatorPage from './components/pages/TaxCalculatorPage';
-import LocationPage from './components/pages/LocationPage';
+import LocationPage from './components/pages/LocationPage'; // Kept if needed for reference, though dynamic handler is used
+import GSTServiceDetailPage from './components/pages/GSTServiceDetailPage';
+import MCAServiceDetailPage from './components/pages/MCAServiceDetailPage';
+import DynamicPageHandler from './components/pages/DynamicPageHandler';
 
 function App() {
   return (
@@ -35,9 +39,12 @@ function App() {
           <Route path="/services/taxation" element={<ServiceTaxationPage />} />
           <Route path="/services/auditing" element={<ServiceAuditingPage />} />
           <Route path="/services/gst" element={<ServiceGstPage />} />
+          <Route path="/services/gst/:serviceId" element={<GSTServiceDetailPage />} />
           <Route path="/services/business-consulting" element={<ServiceBusinessConsultingPage />} />
           <Route path="/services/advisory" element={<ServiceAdvisoryPage />} />
+          <Route path="/services/advisory/:serviceId" element={<MCAServiceDetailPage />} />
           <Route path="/services/business-loans" element={<LoanSupportPage />} />
+          <Route path="/services/business-loans/:loanSlug" element={<LoanDetailPage />} />
           <Route path="/courses" element={<CoursesPage />} />
           <Route path="/courses/globalpro" element={<CourseGlobalProPage />} />
           <Route path="/courses/c-pro" element={<CourseCProPage />} />
@@ -47,18 +54,8 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/calculator" element={<TaxCalculatorPage />} />
 
-          {/* Location Based Pages */}
-          <Route
-            path="/accounting-service-in-kozhikode"
-            element={
-              <LocationPage
-                locationName="Kozhikode"
-                seoTitle="CA Firm in Kozhikode | Accounting, Tax & Audit Services | Acharya"
-                seoDescription="Top CA Firm in Kozhikode offering expert Accounting, GST Registration, Income Tax Filing, and Audit services. Trusted by local businesses for financial growth."
-                canonicalUrl="https://acharyaprofessionalaccountants.in/accounting-service-in-kozhikode"
-              />
-            }
-          />
+          {/* Location Based Pages - Dynamic Handler for partial matching */}
+          <Route path="/:slug" element={<DynamicPageHandler />} />
         </Routes>
         <Footer />
         <ScrollToTop />
