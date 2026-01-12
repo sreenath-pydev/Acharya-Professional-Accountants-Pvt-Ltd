@@ -14,6 +14,7 @@ import CourseCPATPage from './components/pages/CourseCPATPage';
 import ServiceAccountingPage from './components/pages/ServiceAccountingPage';
 import ServiceTaxationPage from './components/pages/ServiceTaxationPage';
 import ServiceAuditingPage from './components/pages/ServiceAuditingPage';
+import AuditingServiceDetailPage from './components/pages/AuditingServiceDetailPage';
 import ServiceGstPage from './components/pages/ServiceGstPage';
 import ServiceBusinessConsultingPage from './components/pages/ServiceBusinessConsultingPage';
 import ServiceAdvisoryPage from './components/pages/ServiceAdvisoryPage';
@@ -38,6 +39,7 @@ function App() {
           <Route path="/services/accounting" element={<ServiceAccountingPage />} />
           <Route path="/services/taxation" element={<ServiceTaxationPage />} />
           <Route path="/services/auditing" element={<ServiceAuditingPage />} />
+          <Route path="/services/auditing/:serviceId" element={<AuditingServiceDetailPage />} />
           <Route path="/services/gst" element={<ServiceGstPage />} />
           <Route path="/services/gst/:serviceId" element={<GSTServiceDetailPage />} />
           <Route path="/services/business-consulting" element={<ServiceBusinessConsultingPage />} />

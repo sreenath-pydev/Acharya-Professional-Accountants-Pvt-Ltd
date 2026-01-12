@@ -25,30 +25,25 @@ export const navbarServices = [
         title: "Auditing",
         link: "/services/auditing",
         items: [
-            { name: "Internal Audits", link: "/services/auditing" },
-            { name: "Statutory Audit Support", link: "/services/auditing" },
-            { name: "Management Audits", link: "/services/auditing" },
-            { name: "Control Reviews", link: "/services/auditing" },
-            { name: "Process Checks", link: "/services/auditing" }
+            { name: "Statutory Audit", link: "/services/auditing/statutory-audit" },
+            { name: "Internal Audit", link: "/services/auditing/internal-audit" },
+            { name: "Tax Audit (u/s 44AB)", link: "/services/auditing/tax-audit" },
+            { name: "GST Audit", link: "/services/auditing/gst-audit" },
+            { name: "Stock Audit Support", link: "/services/auditing/stock-audit" },
+            { name: "Audit Documentation", link: "/services/auditing/audit-documentation" },
+            { name: "Audit Query Rectification", link: "/services/auditing/rectification-audit-queries" }
         ]
     },
     {
         title: "GST Services",
         link: "/services/gst",
         items: [
-            { name: "GST Registration", link: "/services/gst/registration-online" },
-            { name: "Return Filing", link: "/services/gst/return-filing" },
-            { name: "LUT Filing", link: "/services/gst/lut-filing" },
-            { name: "GST Advisory", link: "/services/gst/advisory-services" },
-            { name: "Annual Return", link: "/services/gst/annual-return-filing" },
-            { name: "Notice Reply", link: "/services/gst/notice-reply" },
-            { name: "Registration Amendment", link: "/services/gst/registration-amendment" },
-            { name: "Cancellation", link: "/services/gst/registration-cancellation" },
-            { name: "Revocation", link: "/services/gst/revocation-online" },
-            { name: "Foreigner Registration", link: "/services/gst/registration-foreigners" },
-            { name: "GSTR-10 Use", link: "/services/gst/gstr-10-return" },
-            { name: "Invoicing Software", link: "/services/gst/invoicing-software" },
-            { name: "Nil Return", link: "/services/gst/nil-return-filing" }
+            { name: "Registration & Profile", link: "/services/gst/registration-profile-management" },
+            { name: "Return Filing & Compliance", link: "/services/gst/return-filing-compliance" },
+            { name: "Reconciliation & Review", link: "/services/gst/reconciliation-review" },
+            { name: "Compliance & Advisory", link: "/services/gst/compliance-advisory" },
+            { name: "Specialized Services", link: "/services/gst/specialized-gst-services" },
+            { name: "Refunds & Optimization", link: "/services/gst/refunds-optimization" }
         ]
     },
     {
@@ -66,12 +61,15 @@ export const navbarServices = [
         title: "MCA & Advisory",
         link: "/services/advisory",
         items: [
-            { name: "Pvt Ltd Compliance", link: "/services/advisory/annual-compliance-for-private-limited-company" },
-            { name: "LLP Compliance", link: "/services/advisory/annual-filing-for-llp" },
-            { name: "DIR-3 KYC", link: "/services/advisory/dir-3-kyc-filing-online" },
-            { name: "Share Transfer", link: "/services/advisory/share-transfer" },
-            { name: "Director Changes", link: "/services/advisory/appointment-and-resignation-of-director" },
-            { name: "Startup Services", link: "/services/advisory/business-plan" }
+            { name: "Company Formation", link: "/services/advisory/company-formation" },
+            { name: "Annual Compliance", link: "/services/advisory/annual-mca-compliances" },
+            { name: "Director Services", link: "/services/advisory/director-shareholder-compliances" },
+            { name: "Company Changes", link: "/services/advisory/company-changes" },
+            { name: "LLP Compliances", link: "/services/advisory/llp-compliances" },
+            { name: "Nidhi Compliances", link: "/services/advisory/nidhi-compliances" },
+            { name: "Restructuring & Closure", link: "/services/advisory/restructuring-closure" },
+            { name: "Secretarial Support", link: "/services/advisory/secretarial-support" },
+            { name: "Regulatory Advisory", link: "/services/advisory/regulatory-advisory" }
         ]
     }
 ];

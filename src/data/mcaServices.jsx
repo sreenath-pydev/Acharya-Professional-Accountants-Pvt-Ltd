@@ -1,707 +1,653 @@
 export const mcaServices = {
-    // --- 1. Secretarial Compliances ---
-    'annual-compliance-for-private-limited-company': {
-        title: 'Annual Compliance for Private Limited Company',
-        seoTitle: 'Pvt Ltd Company Annual Compliance Services | AOC-4 & MGT-7 Filing',
-        seoDescription: 'Mandatory annual compliance services for Private Limited Companies. We handle AOC-4, MGT-7, and statutory audits to keep your company compliant.',
-        keywords: 'pvt ltd compliance, annual filing pvt ltd, AOC-4 filing, MGT-7 filing, company secretarial services',
+    // ==========================================
+    // 1. COMPANY FORMATION & REGISTRATION (Hub)
+    // ==========================================
+    'company-formation': {
+        title: 'Company Formation & Registration',
+        seoTitle: 'Company Registration Services in Kerala | Pvt Ltd, LLP, OPC',
+        seoDescription: 'Expert assistance for new company registration. Private Limited, LLP, One Person Company, Section 8, and Nidhi Company registration services.',
+        keywords: 'company registration, pvt ltd registration, llp registration, opc registration, section 8 company, nidhi company registration',
         icon: 'fa-building',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Keep Your Pvt Ltd Company Compliant</h3>
                 <p className="mb-4">
-                    Every Private Limited Company must file annual returns with the Ministry of Corporate Affairs (MCA)
-                    regardless of turnover or profit. Non-compliance leads to heavy penalties and disqualification of directors.
+                    Turning your business idea into a legal entity is the first step towards credibility and growth. We guide you through the entire incorporation process—from name approval to getting your Certificate of Incorporation.
                 </p>
-                <h4 className="text-lg font-bold text-white mb-3">What We Cover:</h4>
-                <ul className="list-disc list-inside space-y-2 text-boulder mb-6">
-                    <li><strong>Form AOC-4</strong>: Filing of Financial Statements (Balance Sheet & P&L).</li>
-                    <li><strong>Form MGT-7</strong>: Filing of Annual Return (Shareholders & Directors details).</li>
-                    <li><strong>Statutory Audit</strong>: Coordination with auditors for financial verification.</li>
-                    <li><strong>Board Meetings</strong>: Drafting minutes for mandatory board & AGM meetings.</li>
+            </>
+        ),
+        subServices: [
+            { title: 'Private Limited Company', slug: 'pvt-ltd-registration', desc: 'The most popular structure for startups and growing businesses.' },
+            { title: 'One Person Company (OPC)', slug: 'opc-registration', desc: 'For solo entrepreneurs who want limited liability.' },
+            { title: 'Limited Liability Partnership', slug: 'llp-registration', desc: 'Hybrid structure combining flexibility of partnership with limited liability.' },
+            { title: 'Public Limited Company', slug: 'public-ltd-registration', desc: 'For large-scale businesses planning to raise public funds.' },
+            { title: 'Section 8 (NGO)', slug: 'section-8-registration', desc: 'For non-profit organizations promoting art, science, or charity.' },
+            { title: 'Nidhi Company', slug: 'nidhi-company-registration', desc: 'For non-banking financial entities focused on lending within members.' },
+            { title: 'Producer Company', slug: 'producer-company-registration', desc: 'For farmers and agricultural producers.' }
+        ]
+    },
+    // --- Sub-Services for Formation ---
+    'pvt-ltd-registration': {
+        title: 'Private Limited Company Registration',
+        seoTitle: 'Register Private Limited Company Online | Pvt Ltd Registration',
+        seoDescription: 'Online Private Limited Company registration service. We handle name approval (RUN), SPICe+ filing, MoA, AoA, and PAN/TAN.',
+        keywords: 'pvt ltd registration, private limited company, online company registration, spice+ form',
+        icon: 'fa-building',
+        content: (
+            <>
+                <p className="mb-4">A Private Limited Company is the gold standard for startups in India. It offers limited liability regarding personal assets and restricts the right to transfer shares.</p>
+                <h3 className="text-xl font-bold text-white mb-3">Registration Package Includes:</h3>
+                <ul className="list-disc list-inside space-y-2 mb-6 ml-4">
+                    <li>Digital Signature Certificate (DSC) for Directors.</li>
+                    <li>Director Identification Number (DIN).</li>
+                    <li>Name Reservation (RUN).</li>
+                    <li>Drafting of MOA & AOA.</li>
+                    <li>Certificate of Investigation (COI), PAN, & TAN.</li>
                 </ul>
             </>
-        ),
+        )
     },
-    'annual-filing-for-llp': {
-        title: 'Annual Filing for LLP',
-        seoTitle: 'LLP Annual Filing Services | Form 11 & Form 8 Compliance',
-        seoDescription: 'Expert LLP annual filing services. We handle Form 11 (Annual Return) and Form 8 (Statement of Accounts) filing for Limited Liability Partnerships.',
-        keywords: 'LLP annual filing, form 11 llp, form 8 llp, llp compliance, llp annual return',
-        icon: 'fa-handshake',
-        content: (
-            <>
-                <h3 className="text-xl font-bold text-white mb-4">Mandatory Annual Filings for LLPs</h3>
-                <p className="mb-4">
-                    Limited Liability Partnerships (LLPs) have fewer compliance requirements than companies but stricter timelines.
-                    Late filing attracts a flat penalty of ₹100 per day with no upper limit.
-                </p>
-                <div className="bg-secondary-dark/50 p-6 rounded-xl border border-primary-accent/10 mb-6">
-                    <h4 className="text-lg font-semibold text-primary-accent mb-3">Key Forms & Due Dates</h4>
-                    <ul className="list-disc list-inside space-y-2 text-boulder">
-                        <li><strong>Form 11 (Annual Return)</strong>: Due by 30th May. Contains details of partners.</li>
-                        <li><strong>Form 8 (Statement of Accounts)</strong>: Due by 30th October. Contains financial data.</li>
-                        <li><strong>DIR-3 KYC</strong>: For all designated partners.</li>
-                    </ul>
-                </div>
-            </>
-        ),
-    },
-    'section-8-company-compliance': {
-        title: 'Section 8 Company Compliance',
-        seoTitle: 'Section 8 Company Annual Compliance | NGO & Non-Profit Filing',
-        seoDescription: ' специализирован compliance services for Section 8 (Non-Profit) companies. Managing annual returns, income tax exemptions, and donation records.',
-        keywords: 'section 8 compliance, ngo compliance, non profit annual filing, section 8 audit',
-        icon: 'fa-heart',
-        content: (
-            <>
-                <h3 className="text-xl font-bold text-white mb-4">Compliance for Non-Profits</h3>
-                <p className="mb-4">
-                    Section 8 companies enjoy special privileges but are subject to strict scrutiny regarding the usage
-                    of funds. We ensure your non-profit stays compliant so you can focus on your social mission.
-                </p>
-                <p>
-                    Our services include annual filing with MCA, Income Tax return filing (claiming exemption u/s 11/12),
-                    and maintenance of donation records.
-                </p>
-            </>
-        ),
-    },
-    'annual-compliance-for-one-person-company': {
-        title: 'Annual Compliance for One Person Company',
-        seoTitle: 'OPC Annual Compliance Services | One Person Company Filing',
-        seoDescription: 'Hassle-free annual compliance for One Person Companies (OPC). accurate filing of financial statements and annual returns.',
-        keywords: 'OPC compliance, one person company filing, opc audit, aoc-4 opc',
+    'opc-registration': {
+        title: 'One Person Company (OPC) Registration',
+        seoTitle: 'One Person Company Registration | OPC Incorporation',
+        seoDescription: 'Register your One Person Company (OPC) easily. Enjoy limited liability with full control as a single director.',
+        keywords: 'opc registration, one person company, solo entrepreneur company, single director company',
         icon: 'fa-user-tie',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Simplified Compliance for Solopreneurs</h3>
-                <p className="mb-4">
-                    While One Person Companies (OPCs) have exemptions from holding AGMs, they must still file
-                    audited financial statements (AOC-4) and annual returns (MGT-7/7A) with the ROC.
-                </p>
-                <p>
-                    We handle the entire process remotely, ensuring your OPC status remains active and compliant.
-                </p>
+                <p className="mb-4">An OPC allows a single entrepreneur to operate a corporate entity with limited liability protection. It has fewer compliance requirements than a Pvt Ltd but similar legal standing.</p>
+                <p><strong>Note:</strong> An OPC must have a nominee director to ensure continuity.</p>
             </>
-        ),
+        )
     },
-    'dir-3-kyc-filing-online': {
-        title: 'DIR-3 KYC Filing Online',
-        seoTitle: 'DIR-3 KYC Filing Online | Director KYC Verification',
-        seoDescription: 'File your mandatory DIR-3 KYC for Directors online. Quick verification to avoid director disqualification and penalties.',
-        keywords: 'dir 3 kyc, director kyc filing, din kyc, kyc for directors',
-        icon: 'fa-id-badge',
+    'llp-registration': {
+        title: 'Limited Liability Partnership (LLP)',
+        seoTitle: 'LLP Registration Services | Limited Liability Partnership',
+        seoDescription: 'Register your LLP online. A flexible business structure with lower compliance costs and limited liability for partners.',
+        keywords: 'llp registration, limited liability partnership, partnership with limited liability, llp agreement',
+        icon: 'fa-handshake',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Mandatory Annual KYC for All Directors</h3>
-                <p className="mb-4">
-                    Every person holding a Director Identification Number (DIN) must file DIR-3 KYC annually before
-                    30th September. Failure to do so deactivates your DIN and prevents you from filing any company forms.
-                </p>
-                <p>
-                    We assist with both <strong>Web-KYC</strong> (OTP based) and <strong>Form-KYC</strong> (Document based) filing.
-                </p>
+                <p className="mb-4">LLP is ideal for professional firms (Lawyers, CAs, Architects) and small businesses. It combines the flexibility of a partnership with the benefits of limited liability. No statutory audit is required unless turnover exceeds ₹40 Lakhs.</p>
             </>
-        ),
+        )
     },
-    'share-transfer': {
-        title: 'Share Transfer',
-        seoTitle: 'Company Share Transfer Services | SH-4 Filing Support',
-        seoDescription: 'Expert assistance in transferring shares of a private limited company. Drafting Share Transfer Deed (SH-4) and stamp duty payment.',
-        keywords: 'share transfer procedure, sh-4 form, transfer shares pvt ltd, stamp duty share transfer',
-        icon: 'fa-exchange-alt',
+    'public-ltd-registration': {
+        title: 'Public Limited Company Registration',
+        seoTitle: 'Public Limited Company Registration Services',
+        seoDescription: 'Incorporation of Public Limited Companies. Ideal for large businesses planning IPO or raising capital from the public.',
+        keywords: 'public limited company, plc registration, ipo ready company, 7 shareholders company',
+        icon: 'fa-city',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Seamless Transfer of Company Shares</h3>
-                <p className="mb-4">
-                    Transferring shares in a Private Limited Company involves executing a Share Transfer Deed (Form SH-4),
-                    payment of stamp duty, and approval by the Board of Directors.
-                </p>
-                <p>
-                    We handle the documentation, calculation of stamp duty, and updating of the Register of Members.
-                </p>
+                <p className="mb-4">A Public Limited Company requires a minimum of 7 shareholders and 3 directors. It differs from a Pvt Ltd as it can invite the public to subscribe to its shares (IPO).</p>
             </>
-        ),
+        )
     },
-    'adt-1-filing': {
-        title: 'ADT-1 Filing',
-        seoTitle: 'ADT-1 Filing Services | Auditor Appointment',
-        seoDescription: 'File Form ADT-1 for appointment of statutory auditor. Ensure compliance with Section 139 of the Companies Act.',
-        keywords: 'adt-1 filing, auditor appointment form, appointment of auditor, companies act 139',
-        icon: 'fa-user-check',
+    'section-8-registration': {
+        title: 'Section 8 (NGO) Registration',
+        seoTitle: 'Section 8 Company Registration | NGO Incorporation',
+        seoDescription: 'Register a Section 8 Company for non-profit/charitable purposes. Get clear guidance on MCA compliance and license.',
+        keywords: 'section 8 company, ngo registration, non profit company, charitable trust company',
+        icon: 'fa-heart',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Appointment of Statutory Auditor</h3>
-                <p className="mb-4">
-                    Every company must appoint an auditor and inform the ROC by filing Form ADT-1 within 15 days of the AGM.
-                    We assist in drafting the appointment letter, obtaining auditor consent, and filing the form.
-                </p>
+                <p className="mb-4">Section 8 Companies are established for promoting commerce, art, science, sports, education, research, social welfare, religion, charity, protection of environment, etc. Profits must be applied towards these objectives.</p>
             </>
-        ),
+        )
     },
-    'partnership-firm-compliance': {
-        title: 'Partnership Firm Compliance',
-        seoTitle: 'Partnership Firm Compliance & Tax Filing Services',
-        seoDescription: 'Comprehensive compliance for Partnership Firms. Income Tax filing, Tax Audit, and drafting of partnership deeds.',
-        keywords: 'partnership compliance, partnership firm tax, partnership deed registration, firm audit',
-        icon: 'fa-users',
+    'nidhi-company-registration': {
+        title: 'Nidhi Company Registration',
+        seoTitle: 'Nidhi Company Registration Services',
+        seoDescription: 'Start your Nidhi Company for lending business. We handle incorporation and NDH-4 compliance.',
+        keywords: 'nidhi company, mutual benefit funds, lending company registration, ndh-4',
+        icon: 'fa-piggy-bank',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Compliance for Registered Partnerships</h3>
-                <p className="mb-4">
-                    Unlike companies, partnership firms are compliant primarily under the Income Tax Act. We handle
-                    income tax filing (ITR-5), tax audits (if turnover exceeds limits), and any changes to the partnership deed.
-                </p>
+                <p className="mb-4">Nidhi Companies are NBFCs that borrow and lend money only amongst their members. They are easy to register as they don't need RBI approval for incorporation, but must follow Nidhi Rules 2014.</p>
             </>
-        ),
+        )
     },
-    'dpt-3-filing-online': {
-        title: 'DPT-3 Filing Online',
-        seoTitle: 'DPT-3 Return of Deposits Filing Service',
-        seoDescription: 'File Form DPT-3 for loans and deposits. Mandatory annual return for all companies having outstanding loans.',
-        keywords: 'dpt-3 filing, return of deposits, outstanding loan reporting, mca dpt3',
-        icon: 'fa-money-check-alt',
+    'producer-company-registration': {
+        title: 'Producer Company Registration',
+        seoTitle: 'Producer Company Registration for Farmers',
+        seoDescription: 'Incorporation services for Producer Companies. Empowering farmers and agriculturalists through corporate structure.',
+        keywords: 'producer company, farmer producer organization, fpo registration, agriculture company',
+        icon: 'fa-tractor',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Reporting of Loans and Deposits</h3>
-                <p className="mb-4">
-                    All companies must file Form DPT-3 annually to declare details of outstanding money or loans received
-                    that are not considered deposits. This is a critical compliance to prevent penalties on borrowings.
-                </p>
+                <p className="mb-4">A Producer Company can be formed by 10 or more individuals (producers) or 2 or more producer institutions. It works for the benefit of members engaged in primary production (Agriculture, Handloom, etc.).</p>
             </>
-        ),
+        )
     },
-    'sole-proprietorship-compliance': {
-        title: 'Sole Proprietorship Compliance',
-        seoTitle: 'Sole Proprietorship Tax & Compliance Services',
-        seoDescription: 'Simple compliance solutions for Sole Proprietors. GST return filing, Income Tax (ITR-3/4), and business license renewals.',
-        keywords: 'sole proprietorship compliance, proprietor tax filing, shop and establishment act, msme registration',
-        icon: 'fa-user',
+
+
+    // ==========================================
+    // 2. ANNUAL & PERIODIC MCA COMPLIANCES (Hub)
+    // ==========================================
+    'annual-mca-compliances': {
+        title: 'Annual & Periodic MCA Compliances',
+        seoTitle: 'Annual MCA Compliance Services | AOC-4, MGT-7 & LLP Filing',
+        seoDescription: 'Mandatory annual filing services for Pvt Ltd, LLP, and OPC. We handle AOC-4, MGT-7, Form 8, and Compliance Calendars.',
+        keywords: 'annual return filing, mca compliance, aoc-4 filing, mgt-7 filing, llp annual filing, statutory register',
+        icon: 'fa-calendar-check',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">End-to-End Support for Proprietors</h3>
                 <p className="mb-4">
-                    Proprietorships are easy to start but still require timely tax filings. We manage your GST returns,
-                    Income Tax (ITR-3 or ITR-4), and MSME/Shop Act renewals to keep your business running smoothly.
+                    Once incorporated, a company is a separate legal entity that must file periodic updates with the ROC. Missing these deadlines leads to heavy additional fees and potential director disqualification.
                 </p>
             </>
         ),
+        subServices: [
+            { title: 'Annual Return (MGT-7/AOC-4)', slug: 'annual-return-filing', desc: 'Filing of Financial Statements and Annual Returns.' },
+            { title: 'LLP Annual Filings', slug: 'llp-annual-filing', desc: 'Form 8 (Accounts) and Form 11 (Annual Return).' },
+            { title: 'Director KYC (DIR-3)', slug: 'director-kyc-filing', desc: 'Mandatory annual KYC for every DIN holder.' },
+            { title: 'Statutory Registers', slug: 'statutory-register-maintenance', desc: 'Maintenance of MGT-1, MGT-2, and Board Minutes.' }
+        ]
     },
-    'llp-form-11-filing': {
-        title: 'LLP Form 11 Filing',
-        seoTitle: 'LLP Form 11 Annual Return Filing Service',
-        seoDescription: 'File LLP Form 11 (Annual Return) accurately before the May 30th deadline. Avoid heavy late fees with our expert support.',
-        keywords: 'llp form 11, llp annual return, form 11 due date, llp compliance',
-        icon: 'fa-file-alt',
-        content: (
-            <>
-                <h3 className="text-xl font-bold text-white mb-4">Annual Return for LLPs</h3>
-                <p className="mb-4">
-                    Form 11 contains details of the partners and contributions. It must be filed by 30th May every year.
-                    We ensure accurate data prep so you never miss the deadline.
-                </p>
-            </>
-        ),
-    },
-    'din-reactivation-online': {
-        title: 'DIN Reactivation Online',
-        seoTitle: 'Reactivate Deactivated DIN | Director KYC Support',
-        seoDescription: 'Has your Director Identification Number (DIN) been deactivated? We help you file DIR-3 KYC with penalties to reactivate it instantly.',
-        keywords: 'din reactivation, activate din, dir-3 kyc penalty, director disqualification removal',
-        icon: 'fa-unlock',
-        content: (
-            <>
-                <h3 className="text-xl font-bold text-white mb-4">Restore Your Director Status</h3>
-                <p className="mb-4">
-                    If your DIN was deactivated due to non-filing of KYC, you cannot sign any company documents.
-                    We assist in filing the necessary forms with the penalty fee to reactivate your DIN immediately.
-                </p>
-            </>
-        ),
-    },
-    'fssai-annual-return-filing': {
-        title: 'FSSAI Annual Return Filing',
-        seoTitle: 'FSSAI Annual Return Filing Services | Food License Compliance',
-        seoDescription: 'Mandatory annual return filing for FSSAI license holders. Ensure food safety compliance and avoid license cancellation.',
-        keywords: 'fssai return filing, food license return, form d1 return, fssai compliance',
-        icon: 'fa-utensils',
-        content: (
-            <>
-                <h3 className="text-xl font-bold text-white mb-4">Compliance for Food Businesses</h3>
-                <p className="mb-4">
-                    Food Business Operators (FBOs) with state or central licenses must file an annual return (Form D-1)
-                    by 31st May. We compile your sales data and file the return on the FoSCoS portal.
-                </p>
-            </>
-        ),
-    },
-    'dematerialisation-of-shares': {
-        title: 'Dematerialisation of Shares',
-        seoTitle: 'Demat of Private Limited Company Shares | ISIN Creation',
-        seoDescription: 'Guidance on mandatory dematerialisation of shares for private companies. Convert physical share certificates to electronic mode.',
-        keywords: 'demat shares pvt ltd, isin creation, share dematerialisation, rta services',
-        icon: 'fa-digital-tachograph',
-        content: (
-            <>
-                <h3 className="text-xl font-bold text-white mb-4">Go Paperless with Share Demat</h3>
-                <p className="mb-4">
-                    The MCA is mandating private companies to dematerialise their shares. We assist in appointing an RTA,
-                    obtaining an ISIN, and converting physical share certificates into electronic form.
-                </p>
-            </>
-        ),
-    },
-    'form-mgt-7-filing': {
-        title: 'Form MGT-7 Filing',
-        seoTitle: 'Form MGT-7/7A Filing Services | Annual Return for Companies',
-        seoDescription: 'Expert filing of Form MGT-7 (Annual Return) for companies. Reporting shareholding and management details to ROC.',
-        keywords: 'mgt-7 filing, mgt 7a for small company, company annual return, roc filing',
+    // --- Sub-Services for Annual Compliance ---
+    'annual-return-filing': {
+        title: 'Annual Return Filing (AOC-4 & MGT-7)',
+        seoTitle: 'AOC-4 & MGT-7 Filing Services | Company Annual Return',
+        seoDescription: 'Expert filing of Form AOC-4 (Financial Statements) and MGT-7 (Annual Return). XBRL filing support available.',
+        keywords: 'aoc-4 filing, mgt-7 filing, company annual return, xbrl filing, roc annual compliance',
         icon: 'fa-file-invoice',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Reporting Shareholding Pattern</h3>
-                <p className="mb-4">
-                    MGT-7 details the company's registered office, principal business activities, particulars of its
-                    holding, subsidiary and associate companies, shares, debentures and other securities and shareholding pattern.
-                </p>
+                <p className="mb-4">Every company must file its financial statements (Form AOC-4) within 30 days of the AGM and its Annual Return (Form MGT-7) within 60 days. We ensure your data is error-free and filed on time.</p>
             </>
-        ),
+        )
     },
-    'form-aoc-4-filing': {
-        title: 'Form AOC-4 Filing',
-        seoTitle: 'Form AOC-4 Filing Services | Financial Statement Filing',
-        seoDescription: 'File your company\'s financial statements (Balance Sheet, P&L) via Form AOC-4. XBRL filing support provided.',
-        keywords: 'aoc-4 filing, financial statement filing, xbrl filing, roc compliance',
-        icon: 'fa-balance-scale',
-        content: (
-            <>
-                <h3 className="text-xl font-bold text-white mb-4">Filing Financial Statements with ROC</h3>
-                <p className="mb-4">
-                    AOC-4 is used to file the financial statements of the company with the ROC. It must be filed within
-                    30 days of the AGM. We ensure your financial data is correctly mapped and filed.
-                </p>
-            </>
-        ),
-    },
-    'llp-form-8-filing': {
-        title: 'LLP Form 8 Filing',
-        seoTitle: 'LLP Form 8 Statement of Account Filing',
-        seoDescription: 'File LLP Form 8 (Statement of Account & Solvency). Mandatory annual financial reporting for LLPs.',
-        keywords: 'llp form 8, statement of solvency, llp accounts filing, llp audit',
+    'llp-annual-filing': {
+        title: 'LLP Annual Filings (Form 8 & 11)',
+        seoTitle: 'LLP Annual Compliance | Form 8 & Form 11 Filing',
+        seoDescription: 'File LLP Form 11 by May 30th and Form 8 by Oct 30th. Avoid ₹100/day penalties with our timely service.',
+        keywords: 'llp form 11, llp form 8, llp annual return, statement of accounts llp',
         icon: 'fa-file-contract',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Financial Reporting for LLPs</h3>
+                <p className="mb-4">LLP compliance is time-critical. Late filing penalties are ₹100 per day with no upper cap. We handle Form 11 (Partners details) and Form 8 (Solvency & Accounts) well before the deadline.</p>
+            </>
+        )
+    },
+    'director-kyc-filing': {
+        title: 'Director KYC Filing (DIR-3 KYC)',
+        seoTitle: 'DIR-3 KYC Filing Online | Director Verification',
+        seoDescription: 'File DIR-3 KYC for directors. Reactivate deactivated DINs. Mandatory compliance for all DIN holders.',
+        keywords: 'dir-3 kyc, director kyc, din reactivation, kyc web service',
+        icon: 'fa-id-badge',
+        content: (
+            <>
+                <p className="mb-4">Every person holding a DIN must file KYC annually. Non-filing deactivates the DIN, disqualifying the person from being a director. We handle both Web-KYC (OTP based) and Form-KYC (Document based).</p>
+            </>
+        )
+    },
+    'statutory-register-maintenance': {
+        title: 'Statutory Register Maintenance',
+        seoTitle: 'Statutory Register & Minute Book Maintenance',
+        seoDescription: 'Drafting and updating mandatory registers (Members, Directors, Charges) and Board Meeting Minutes.',
+        keywords: 'statutory registers, minute book, register of members, board resolution drafting',
+        icon: 'fa-book-open',
+        content: (
+            <>
+                <p className="mb-4">Maintaining physical or electronic registers (Register of Members, Director Shareholding, Board Minutes) is mandatory under the Companies Act. We keep these records updated and audit-ready.</p>
+            </>
+        )
+    },
+
+    // ==========================================
+    // 3. DIRECTOR & SHAREHOLDER COMPLIANCES (Hub)
+    // ==========================================
+    'director-shareholder-compliances': {
+        title: 'Director & Shareholder Compliances',
+        seoTitle: 'Director Appointment & Shareholder Compliance Services',
+        seoDescription: 'Manage board changes and shareholder relations. DIN application, Director appointment/resignation, and Shareholder resolutions.',
+        keywords: 'director appointment, din application, shareholder resolution, removal of director, pas-3',
+        icon: 'fa-users',
+        content: (
+            <>
                 <p className="mb-4">
-                    Form 8 declares the solvency of the LLP and details its assets and liabilities. It must be signed
-                    by the designated partners and certified by a professional if turnover exceeds limits.
+                    The Board of Directors and Shareholders are the pillars of a company. We manage the legal formalities related to their appointment, resignation, and decision-making powers.
                 </p>
             </>
         ),
+        subServices: [
+            { title: 'DIN Services', slug: 'din-services', desc: 'Application for new DIN or Reactivation of old DIN.' },
+            { title: 'Director Changes', slug: 'director-appointment-resignation', desc: 'Appoint or accept resignation of directors (DIR-12).' },
+            { title: 'Shareholder Resolutions', slug: 'shareholder-resolutions', desc: 'Drafting Ordinary and Special resolutions.' },
+            { title: 'Meeting Documentation', slug: 'meeting-documentation', desc: 'Notices and Minutes for Valid Board/General Meetings.' }
+        ]
     },
-
-    // --- 2. Event-Based Compliances ---
-    'add-a-new-partner-in-llp': {
-        title: 'Add a New Partner in LLP',
-        seoTitle: 'Add Partner to LLP | Admission of Partner Process',
-        seoDescription: 'Process to add a new partner to your Limited Liability Partnership. Drafting supplementary deed and filing Form 3 & 4.',
-        keywords: 'add partner llp, admission of partner, change in llp agreement, llp form 3 form 4',
+    // --- Sub-Services for Directors ---
+    'din-services': {
+        title: 'DIN Application & Reactivation',
+        seoTitle: 'Apply for Director Identification Number (DIN)',
+        seoDescription: 'Get a new DIN (Form DIR-3) or reactivate a deactivated DIN. Essential requirement for becoming a company director.',
+        keywords: 'apply for din, dir-3 form, reactivate din, director id',
+        icon: 'fa-id-card',
+        content: (
+            <>
+                <p className="mb-4">A DIN is a unique ID for a director. We assist individuals in obtaining a fresh DIN or restoring a DIN deactivated due to non-compliance of KYC.</p>
+            </>
+        )
+    },
+    'director-appointment-resignation': {
+        title: 'Director Appointment / Resignation',
+        seoTitle: 'Add or Remove Company Directors | DIR-12 Filing',
+        seoDescription: 'Legal procedure for appointing an Additional Director or accepting resignation. We handle DIR-12 filing and Board Resolutions.',
+        keywords: 'appoint director, resign director, dir-12 filing, change director designation',
         icon: 'fa-user-plus',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Expanding Your LLP Partnership</h3>
-                <p className="mb-4">
-                    Adding a partner involves drafting a supplementary LLP agreement, obtaining consent, and filing
-                    Forms 3 and 4 with the ROC. We handle the drafting and filing seamlessly.
-                </p>
+                <p className="mb-4">Changing the board composition requires filing Form DIR-12 within 30 days. We draft the appointment letter, consent (DIR-2), and resignation notice (DIR-11) to ensure legal validity.</p>
             </>
-        ),
+        )
     },
-    'removal-of-partner-from-llp': {
-        title: 'Removal of Partner from LLP',
-        seoTitle: 'Resignation or Removal of Partner from LLP',
-        seoDescription: 'Legal procedure for resignation or removal of a partner from an LLP. Drafting retirement deed and ROC filing.',
-        keywords: 'remove partner llp, resignation of partner, llp partner exit, form 4 llp',
-        icon: 'fa-user-minus',
-        content: (
-            <>
-                <h3 className="text-xl font-bold text-white mb-4">Partner Exit Formalities</h3>
-                <p className="mb-4">
-                    Whether due to resignation, death, or removal, a partner's exit requires updating the LLP agreement
-                    and informing the ROC. We ensure the liability of the outgoing partner is properly settled and recorded.
-                </p>
-            </>
-        ),
-    },
-    'event-based-compliance-for-companies': {
-        title: 'Event-Based Compliance for Companies',
-        seoTitle: 'Corporate Secretarial Services | Event Based Filings',
-        seoDescription: 'Handle all event-based compliances like change of address, name, directors, or capital. Professional ROC filing services.',
-        keywords: 'mca event based compliance, roc filing services, company law services, corporate secretarial',
-        icon: 'fa-calendar-alt',
-        content: (
-            <>
-                <h3 className="text-xl font-bold text-white mb-4">Ad-hoc Corporate Filings</h3>
-                <p className="mb-4">
-                    Companies go through many changes—changing bankers, modifying board resolutions, or altering
-                    authorized capital. We handle all such non-routine filings to keep your company records updated.
-                </p>
-            </>
-        ),
-    },
-    'change-in-object-clause': {
-        title: 'Change in Object Clause',
-        seoTitle: 'Alteration of Object Clause of Company | MOA Amendment',
-        seoDescription: 'Process to change the main business activity of your company. Drafting special resolution and amending MOA.',
-        keywords: 'change object clause, amend moa, change business activity, form mgt-14',
-        icon: 'fa-bullseye',
-        content: (
-            <>
-                <h3 className="text-xl font-bold text-white mb-4">Pivoting Your Business?</h3>
-                <p className="mb-4">
-                    If your company wants to start a new business line not listed in the Memorandum of Association (MOA),
-                    you must alter the Object Clause. We assist in passing the Special Resolution and filing MGT-14.
-                </p>
-            </>
-        ),
-    },
-    'appointment-and-resignation-of-director': {
-        title: 'Appointment and Resignation of Director',
-        seoTitle: 'Director Appointment & Resignation Services | DIR-12 Filing',
-        seoDescription: 'Appoint or remove directors in your company. We handle DIR-12 filing, board resolutions, and consent letters.',
-        keywords: 'appoint director, resign director, dir-12, change in directors',
-        icon: 'fa-chalkboard-teacher',
-        content: (
-            <>
-                <h3 className="text-xl font-bold text-white mb-4">Manage Your Board Composition</h3>
-                <p className="mb-4">
-                    We handle the complete documentation for inducting new directors (DIR-2 consent, MBP-1) or
-                    accepting resignations (DIR-11), ensuring the ROC registry is updated via Form DIR-12.
-                </p>
-            </>
-        ),
-    },
-    'change-in-name-clause': {
-        title: 'Change in Name Clause',
-        seoTitle: 'Company Name Change Services | Alteration of Name Clause',
-        seoDescription: 'Procedure to change your company name. Name reservation (RUN), special resolution, and fresh certificate of incorporation.',
-        keywords: 'change company name, name change procedure, form inc-24, fresh certificate incorporation',
-        icon: 'fa-tag',
-        content: (
-            <>
-                <h3 className="text-xl font-bold text-white mb-4">Rebranding Your Business</h3>
-                <p className="mb-4">
-                    Changing a company name is a multi-step legal process involving name reservation, shareholder approval,
-                    and central government approval. We guide you from name check to getting the fresh certificate.
-                </p>
-            </>
-        ),
-    },
-    'removal-of-director': {
-        title: 'Removal of Director',
-        seoTitle: 'Removal of Director Procedure | Corporate Governance',
-        seoDescription: 'Legal process to remove a director from the board. Ensuring compliance with Section 169 of Companies Act.',
-        keywords: 'remove director, removal of director section 169, director disqualification, board dispute',
-        icon: 'fa-user-times',
-        content: (
-            <>
-                <h3 className="text-xl font-bold text-white mb-4">Legal Removal of Directors</h3>
-                <p className="mb-4">
-                    Removing a director before their term ends requires following a strict due process under Section 169,
-                    including giving a special notice and an opportunity to be heard. We ensure the procedure is legally watertight.
-                </p>
-            </>
-        ),
-    },
-    'change-in-share-capital': {
-        title: 'Change in Share Capital',
-        seoTitle: 'Increase or Decrease Share Capital | SH-7 Filing',
-        seoDescription: 'Increase authorized share capital or alter capital structure. We handle SH-7 filing and stamp duty payments.',
-        keywords: 'increase authorized capital, form sh-7, change capital clause, issue of shares',
-        icon: 'fa-coins',
-        content: (
-            <>
-                <h3 className="text-xl font-bold text-white mb-4">Scaling Your Capital Base</h3>
-                <p className="mb-4">
-                    To issue new shares for funding, you may need to increase your Authorized Capital. We assist in
-                    amending the Capital Clause of the MOA and paying the necessary stamp duty to MCA.
-                </p>
-            </>
-        ),
-    },
-    'change-in-registered-office-address': {
-        title: 'Change in Registered Office Address',
-        seoTitle: 'Change Registered Office Address | Within or Outside State',
-        seoDescription: 'Shift your company registered office easily. We handle filings for change within same city, state, or interstate shifting.',
-        keywords: 'change registered office, inc-22, shift office interstate, registered office change procedure',
-        icon: 'fa-map-marked-alt',
-        content: (
-            <>
-                <h3 className="text-xl font-bold text-white mb-4">Moving Your Headquarters</h3>
-                <p className="mb-4">
-                    Whether moving designated office within the same city, to another city, or another state, specific
-                    forms (INC-22, MGT-14, INC-23) apply. We manage the shifting process and RD approvals if required.
-                </p>
-            </>
-        ),
-    },
-    'company-name-change': {
-        title: 'Company Name Change',
-        seoTitle: 'Company Name Change Consultant',
-        seoDescription: 'Complete assistance for changing company name. Run name search, file MGT-14 and INC-24.',
-        keywords: 'company name change, rename company, mca name change service',
+    'shareholder-resolutions': {
+        title: 'Shareholder Resolutions & ROC Filings',
+        seoTitle: 'Drafting Shareholder Resolutions | MGT-14 Filing',
+        seoDescription: 'Drafting Ordinary and Special Resolutions for corporate actions. Filing MGT-14 with ROC for special resolutions.',
+        keywords: 'shareholder resolution, special resolution drafting, mgt-14, egm notice',
         icon: 'fa-file-signature',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">New Name, New Identity</h3>
-                <p className="mb-4">
-                    See 'Change in Name Clause' for details. We ensure your new name is available and strictly compliant
-                    with naming guidelines.
-                </p>
+                <p className="mb-4">Major decisions (like name change, capital increase) require Shareholder approval via Special Resolution. We draft the resolution and explanatory statement, and file Form MGT-14 with the ROC.</p>
             </>
-        ),
+        )
     },
-    'moa-amendment': {
-        title: 'MOA Amendment',
-        seoTitle: 'Memorandum of Association (MOA) Amendment Services',
-        seoDescription: 'Amend your MOA for object change, name change, or capital change. Drafting special resolutions and MGT-14.',
-        keywords: 'moa amendment, alter memorandum, mgt-14 filing, company charter change',
-        icon: 'fa-file-contract',
+    'meeting-documentation': {
+        title: 'Board & General Meeting Documentation',
+        seoTitle: 'Board Meeting Minutes & AGM Documentation',
+        seoDescription: 'Professional drafting of Notices, Agenda, and Minutes for Board Meetings and Annual General Meetings (AGM).',
+        keywords: 'board meeting minutes, agm notice, egm documentation, secretarial standards',
+        icon: 'fa-clipboard-list',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Updating Your Company Charter</h3>
-                <p className="mb-4">
-                    The Memorandum of Association defines the constitution of your company. Any change to its core clauses
-                    requires shareholder approval and ROC filing.
-                </p>
+                <p className="mb-4">As per Secretarial Standards (SS-1 & SS-2), every meeting must have a proper notice, agenda, and recorded minutes. We prepare these documents to protect the directors from liability.</p>
             </>
-        ),
-    },
-    'aoa-amendment': {
-        title: 'AOA Amendment',
-        seoTitle: 'Articles of Association (AOA) Amendment Services',
-        seoDescription: 'Alter your AOA to change internal rules, share transfer restrictions, or operational guidelines.',
-        keywords: 'aoa amendment, alter articles, company bylaws change, mgt-14 aoa',
-        icon: 'fa-file-alt',
-        content: (
-            <>
-                <h3 className="text-xl font-bold text-white mb-4">Modifying Internal Rules</h3>
-                <p className="mb-4">
-                    The Articles of Association define internal management rules. We help you amend the AOA to adopt
-                    new regulations, remove restrictive clauses, or align with shareholder agreements.
-                </p>
-            </>
-        ),
-    },
-    'increase-authorized-capital': {
-        title: 'Increase Authorized Capital',
-        seoTitle: 'Increase Authorized Share Capital Service',
-        seoDescription: 'Expand your capacity to issue shares. We file Form SH-7 and calculate stamp duty for capital increase.',
-        keywords: 'increase authorized capital, sh-7, share capital increase, funding compliance',
-        icon: 'fa-chart-line',
-        content: (
-            <>
-                <h3 className="text-xl font-bold text-white mb-4">Room for Investment</h3>
-                <p className="mb-4">
-                    Startups often need to increase authorized capital before raising a new round of investment.
-                    We expedite this process so you can issue shares to investors without delay.
-                </p>
-            </>
-        ),
-    },
-    'amendment-of-llp-agreement': {
-        title: 'Amendment of LLP Agreement',
-        seoTitle: 'LLP Agreement Amendment Services | Form 3 Filing',
-        seoDescription: 'Modify your LLP Agreement for partner changes, profit sharing ratio change, or capital contribution. File Form 3.',
-        keywords: 'amend llp agreement, change profit sharing ratio, form 3 llp, llp deed change',
-        icon: 'fa-pen-fancy',
-        content: (
-            <>
-                <h3 className="text-xl font-bold text-white mb-4">Changing LLP Terms</h3>
-                <p className="mb-4">
-                    Any change in the mutual rights and duties of partners (profit ratio, capital, rights) requires
-                    executing a supplementary agreement and filing Form 3 with the ROC within 30 days.
-                </p>
-            </>
-        ),
+        )
     },
 
-    // --- 3. Accounting & Book Keeping ---
-    'secretarial-audit': {
-        title: 'Secretarial Audit',
-        seoTitle: 'Secretarial Audit Services | Form MR-3',
-        seoDescription: 'Independent verification of compliance by a Company Secretary. Mandatory for listed and large public companies.',
-        keywords: 'secretarial audit, form mr-3, compliance audit, cs audit',
+    // ==========================================
+    // 4. COMPANY CHANGE & EVENT-BASED FILINGS (Hub)
+    // ==========================================
+    'company-changes': {
+        title: 'Company Change & Event-Based Filings',
+        seoTitle: 'Company Changes & ROC Event Based Filing Services',
+        seoDescription: 'Modify your company structure. Change Name, Address, Capital, or Object Clause. We verify feasibility and file forms.',
+        keywords: 'change company name, change registered office, increase authorized capital, share allotment pas-3, share transfer',
+        icon: 'fa-exchange-alt',
+        content: (
+            <>
+                <p className="mb-4">
+                    Businesses evolve. Whether you are rebranding, moving offices, or raising funds, we handle the complex ROC forms required to update your company's master data.
+                </p>
+            </>
+        ),
+        subServices: [
+            { title: 'Change Business Address', slug: 'change-registered-office', desc: 'Shift office within city, state, or interstate.' },
+            { title: 'Change Company Name', slug: 'change-company-name', desc: 'Rebranding procedure with Central Govt approval.' },
+            { title: 'Capital & Shares', slug: 'capital-share-changes', desc: 'Increase Auth Capital, Allotment (PAS-3), and Transfer.' },
+            { title: 'Change Object Clause', slug: 'moa-object-change', desc: 'Amending MOA to start new business activities.' }
+        ]
+    },
+    // --- Sub-Services for Changes ---
+    'change-registered-office': {
+        title: 'Change In Registered Office',
+        seoTitle: 'Change Company Registered Office Address',
+        seoDescription: 'Shift your registered office within the same city, state, or to another state. Filing INC-22, MGT-14, and RD petitions.',
+        keywords: 'change registered office, inc-22, shift office interstate, rd approval office shift',
+        icon: 'fa-map-marker-alt',
+        content: (
+            <>
+                <p className="mb-4">Shifting office within the same city is simple (Board Resolution + INC-22). However, shifting between states involves a lengthy process of Regional Director (RD) approval. We manage both seamlessly.</p>
+            </>
+        )
+    },
+    'change-company-name': {
+        title: 'Change In Company Name',
+        seoTitle: 'Company Name Change Services',
+        seoDescription: 'Procedure to change company name: Name reservation (RUN), Special Resolution, and fresh Certificate of Incorporation.',
+        keywords: 'change company name, inc-24, rename company, name change resolution',
+        icon: 'fa-tag',
+        content: (
+            <>
+                <p className="mb-4">Rebranding? We check name availability, pass the Special Resolution, and file form INC-24 to obtain a fresh Certificate of Incorporation reflecting the new name.</p>
+            </>
+        )
+    },
+    'capital-share-changes': {
+        title: 'Capital Increase & Share Allotment',
+        seoTitle: 'Increase Authorized Capital & Share Allotment (PAS-3)',
+        seoDescription: 'Increase authorized capital (SH-7) and report share allotment (PAS-3). Handle share transfers (SH-4).',
+        keywords: 'increase authorized capital, pas-3 filing, share allotment, share transfer deed',
+        icon: 'fa-coins',
+        content: (
+            <>
+                <p className="mb-4">To raise funds, you may need to increase your Authorized Capital (Form SH-7). Once money is received, shares must be allotted and reported via Form PAS-3 within 30 days. We handle the entire funding compliance compliance cycle.</p>
+            </>
+        )
+    },
+    'moa-object-change': {
+        title: 'Change in Object Clause',
+        seoTitle: 'MOA Amendment | Change Company Business Activity',
+        seoDescription: 'Amend your Memorandum of Association (MOA) to add or remove business activities. MGT-14 filing services.',
+        keywords: 'change object clause, amend moa, mgt-14 object change, alter main objects',
+        icon: 'fa-bullseye',
+        content: (
+            <>
+                <p className="mb-4">If you venture into a new business line not covered by your MOA, you must amend the Object Clause. This requires shareholder approval and ROC filing to be valid.</p>
+            </>
+        )
+    },
+
+    // ==========================================
+    // 5. LLP-SPECIFIC COMPLIANCES (Hub)
+    // ==========================================
+    'llp-compliances': {
+        title: 'LLP-Specific Compliances',
+        seoTitle: 'LLP Compliance Services | Partner Admission & Agreement Change',
+        seoDescription: 'Specialized services for Limited Liability Partnerships. Add/Remove partners, change LLP agreement, and closure.',
+        keywords: 'llp compliance, add partner llp, change llp agreement, close llp, llp strike off',
+        icon: 'fa-handshake',
+        content: (
+            <>
+                <p className="mb-4">
+                    LLPs are flexible, but any change in the partnership structure requires immediate reporting. We draft the supplementary deeds and file the necessary forms.
+                </p>
+            </>
+        ),
+        subServices: [
+            { title: 'Partner Admission/Resignation', slug: 'llp-partner-changes', desc: 'Add new partners or accept resignations.' },
+            { title: 'LLP Agreement Change', slug: 'llp-agreement-change', desc: 'Change profit ratio, capital, or terms.' },
+            { title: 'LLP Closure', slug: 'llp-strike-off', desc: 'Winding up an defunct LLP (Form 24).' }
+        ]
+    },
+    // --- Sub-Services for LLP ---
+    'llp-partner-changes': {
+        title: 'LLP Partner Admission / Resignation',
+        seoTitle: 'Add or Remove Partner in LLP | Form 3 & 4',
+        seoDescription: 'Drafting Supplementary LLP Agreement for admission or retirement of partners. Filing Form 3 and Form 4.',
+        keywords: 'add partner llp, resign partner llp, llp form 3, llp form 4',
+        icon: 'fa-user-friends',
+        content: (
+            <>
+                <p className="mb-4">When a partner joins or leaves, the LLP Agreement must be amended. We draft the Deed of Admission/Retirement and file Form 4 (Notice of appointment/cessation) and Form 3 (Information with regard to LLP agreement).</p>
+            </>
+        )
+    },
+    'llp-agreement-change': {
+        title: 'LLP Agreement Drafting & Filing',
+        seoTitle: 'Change LLP Agreement | Profit Ratio & Capital',
+        seoDescription: 'Amend your LLP Agreement terms. Change profit sharing ratio, capital contribution, or rights of partners.',
+        keywords: 'change profit sharing ratio llp, amend llp agreement, llp deed drafting, form 3 filing',
+        icon: 'fa-file-signature',
+        content: (
+            <>
+                <p className="mb-4">Any change in internal terms—like profit sharing ratio or capital contribution—must be reported to the ROC within 30 days via Form 3. We ensure your deed is legally sound and compliant.</p>
+            </>
+        )
+    },
+    'llp-strike-off': {
+        title: 'LLP Closure & Strike Off',
+        seoTitle: 'Close LLP | LLP Strike Off Services',
+        seoDescription: 'Legally close your inactive LLP using Form 24. Hassle-free winding up services.',
+        keywords: 'close llp, llp strike off, form 24 llp, wind up llp',
+        icon: 'fa-ban',
+        content: (
+            <>
+                <p className="mb-4">If your LLP has been inactive for over a year, you can apply for 'Strike Off' using Form 24. This is a faster and cheaper alternative to formal liquidation.</p>
+            </>
+        )
+    },
+
+    // ==========================================
+    // 6. NIDHI COMPANY COMPLIANCES (Hub)
+    // ==========================================
+    'nidhi-compliances': {
+        title: 'Nidhi Company Compliances',
+        seoTitle: 'Nidhi Company Compliance Services | NDH-1, NDH-3, NDH-4',
+        seoDescription: 'Complete compliance management for Nidhi Companies. Filing of NDH-1, NDH-2, and NDH-3 forms. Statutory audit support.',
+        keywords: 'nidhi company compliance, ndh-1, ndh-3, nidhi rules 2014, nidhi audit',
+        icon: 'fa-piggy-bank',
+        content: (
+            <>
+                <p className="mb-4">
+                    Nidhi Companies handle public money and are strictly regulated. We ensure you meet the 'Net Owned Funds' criteria and file the mandatory NDH forms on time.
+                </p>
+            </>
+        ),
+        subServices: [
+            { title: 'NDH Filings', slug: 'ndh-filings', desc: 'NDH-1 (Statutory), NDH-2 (Extension), NDH-3 (Half-Yearly).' },
+            { title: 'Statutory Compliance', slug: 'nidhi-statutory-review', desc: 'Review of deposits, members, and liquidity ratio.' },
+            { title: 'RBI & MCA Advisory', slug: 'nidhi-advisory', desc: 'Guidance on Nidhi Rules 2014 updates.' }
+        ]
+    },
+    // --- Sub-Services for Nidhi ---
+    'ndh-filings': {
+        title: 'NDH-1, NDH-2 & NDH-3 Filings',
+        seoTitle: 'Nidhi Company NDH Filing Services',
+        seoDescription: 'File NDH-1 (Return of Statutory Compliances), NDH-2 (Extension), and NDH-3 (Half-yearly Return) accurately.',
+        keywords: 'ndh-1 filing, ndh-3 return, nidhi forms, mca nidhi compliance',
+        icon: 'fa-file-invoice',
+        content: (
+            <>
+                <p className="mb-4">Nidhis must file NDH-1 annually to prove they have 200 members and Net Owned Funds ratio of 1:20. NDH-3 is a half-yearly return detailing deposits and loans. We manage these critical filings.</p>
+            </>
+        )
+    },
+    'nidhi-statutory-review': {
+        title: 'Nidhi Statutory Compliance Review',
+        seoTitle: 'Nidhi Company Member & Deposit Compliance',
+        seoDescription: 'Audit of Nidhi Company membership limits, deposit caps, and unencumbered term deposits.',
+        keywords: 'nidhi membership limit, nidhi deposit rules, unencumbered term deposit, nidhi audit',
         icon: 'fa-search',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Governance Health Check</h3>
-                <p className="mb-4">
-                    A Secretarial Audit checks your company's compliance with Companies Act, FEMA, SCRA, and other laws.
-                    It serves as a mechanism to detect non-compliance and take corrective action.
-                </p>
+                <p className="mb-4">We review your books to ensure you maintain the 10% unencumbered term deposit rule and do not exceed the deposit ceiling, keeping you safe from penalties.</p>
             </>
-        ),
+        )
     },
-    'due-diligence': {
-        title: 'Due Diligence',
-        seoTitle: 'Financial & Legal Due Diligence Services',
-        seoDescription: 'Comprehensive due diligence for mergers, acquisitions, and investments. Uncover risks before you sign the deal.',
-        keywords: 'due diligence report, financial due diligence, legal due diligence, m&a support',
-        icon: 'fa-microscope',
+    'nidhi-advisory': {
+        title: 'RBI & MCA Advisory for Nidhi',
+        seoTitle: 'Nidhi Company Advisory Services',
+        seoDescription: 'Expert advisory on Nidhi Rules 2014 and RBI exemptions. Guidance on loan rates and branch expansion.',
+        keywords: 'nidhi rules advisory, rbi nidhi regulations, nidhi loan interest rates, nidhi branch opening',
+        icon: 'fa-gavel',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Invest with Eyes Open</h3>
-                <p className="mb-4">
-                    We conduct thorough financial, tax, and legal due diligence to assess the health of a target business,
-                    identifying hidden liabilities and valuation risks before a transaction.
-                </p>
+                <p className="mb-4">Nidhi rules change frequently. We advise directors on maximum loan amounts, interest rate caps, and restrictions on opening branches to ensure 100% adherence to the law.</p>
             </>
-        ),
+        )
     },
-    'business-plan': {
-        title: 'Business Plan',
-        seoTitle: 'Professional Business Plan Preparation | Pitch Decks',
-        seoDescription: 'Create compelling business plans and pitch decks for investors and bank loans. Financial projections and market analysis.',
-        keywords: 'business plan writing, startup pitch deck, financial projections, bank loan project report',
-        icon: 'fa-project-diagram',
+
+    // ==========================================
+    // 7. CORPORATE RESTRUCTURING & CLOSURE (Hub)
+    // ==========================================
+    'restructuring-closure': {
+        title: 'Corporate Restructuring, Conversion & Closure',
+        seoTitle: 'Company Strike Off, Revival & Conversion Services',
+        seoDescription: 'End-to-end restructuring solutions. Convert Proprietorship to Pvt Ltd, Strike Off defunct companies, or Revive struck-off entities.',
+        keywords: 'company strike off, stk-2, company revival, convert proprietorship to pvt ltd, dormant company',
+        icon: 'fa-random',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Blueprint for Success</h3>
                 <p className="mb-4">
-                    We craft detailed business plans including market analysis, operational models, and 5-year financial
-                    projections to help you secure funding from VCs, angels, or banks.
+                    Sometimes the best way forward is a change in structure. We assist in closing defunct entities, reviving struck-off ones, or converting your business type.
                 </p>
             </>
         ),
+        subServices: [
+            { title: 'Company Strike Off', slug: 'company-strike-off', desc: 'Fast track exit (STK-2) for inactive companies.' },
+            { title: 'Company Revival', slug: 'company-revival', desc: 'Restoration of name via NCLT order.' },
+            { title: 'Conversion Services', slug: 'business-conversion', desc: 'Proprietorship/Partnership to Pvt Ltd/LLP.' },
+            { title: 'Dormant Company', slug: 'dormant-status', desc: 'Maintaining inactive status legally (MSC-1).' }
+        ]
     },
-    'virtual-cfo-services': {
-        title: 'Virtual CFO Services',
-        seoTitle: 'Virtual CFO Services | Outsourced CFO for SMEs',
-        seoDescription: 'Get high-level financial strategy without the cost of a full-time CFO. Budgeting, cash flow management, and strategic reporting.',
-        keywords: 'virtual cfo, outsourced cfo, cfo services for startups, financial strategy',
+    // --- Sub-Services for Restructuring ---
+    'company-strike-off': {
+        title: 'Company Strike Off (STK-2)',
+        seoTitle: 'Close Private Limited Company | Fast Track Exit',
+        seoDescription: 'File Form STK-2 to close your company under Fast Track Exit mode. Complete winding up service.',
+        keywords: 'stk-2 filing, close company online, fast track exit, wind up pvt ltd',
+        icon: 'fa-power-off',
+        content: (
+            <>
+                <p className="mb-4">If your company has zero assets and liabilities and hasn't done business for 2 years, we can close it using Form STK-2. This is faster and simpler than liquidation.</p>
+            </>
+        )
+    },
+    'company-revival': {
+        title: 'Company Revival',
+        seoTitle: 'Revive Struck Off Company | NCLT Restoration',
+        seoDescription: 'Restore a company struck off by ROC. We handle the NCLT petition and legal representation.',
+        keywords: 'revive company, nclt restoration petition, restore struck off company, roc revival',
+        icon: 'fa-trash-restore',
+        content: (
+            <>
+                <p className="mb-4">Did the ROC strike off your company name? We file a petition with the National Company Law Tribunal (NCLT) to restore your company, enabling you to recover assets or continue business.</p>
+            </>
+        )
+    },
+    'business-conversion': {
+        title: 'Conversion Services',
+        seoTitle: 'Convert Proprietorship to Pvt Ltd or LLP',
+        seoDescription: 'Upgrade your business structure. Convert Sole Proprietorship or Firm into Private Limited Company or LLP.',
+        keywords: 'convert proprietorship to pvt ltd, partnership to llp conversion, business conversion services',
+        icon: 'fa-level-up-alt',
+        content: (
+            <>
+                <p className="mb-4">Scaling up? We manage the legal takeover of your proprietorship/firm by a new Pvt Ltd or LLP, ensuring tax neutrality (capital gains exemption) and seamless asset transfer.</p>
+            </>
+        )
+    },
+    'dormant-status': {
+        title: 'Dormant Company Status',
+        seoTitle: 'Apply for Dormant Company Status | Form MSC-1',
+        seoDescription: 'Pause your compliance by applying for Dormant Status. Useful for companies holding IP or land but no operations.',
+        keywords: 'dormant company application, msc-1, inactive company status, pause mca compliance',
+        icon: 'fa-bed',
+        content: (
+            <>
+                <p className="mb-4">If you want to hold a registered company for a future project without annual filing hassles, we can apply for 'Dormant Status' (Form MSC-1), reducing your compliance burden significantly.</p>
+            </>
+        )
+    },
+
+    // ==========================================
+    // 8. SECRETARIAL & COMPLIANCE SUPPORT (Hub)
+    // ==========================================
+    'secretarial-support': {
+        title: 'Secretarial & Compliance Support',
+        seoTitle: 'Company Secretarial Services & ROC Notice Handling',
+        seoDescription: 'Ongoing secretarial support. We handle ROC notices, penalty compounding, and secretarial compliance checks.',
+        keywords: 'secretarial services, roc notice reply, compounding of offences, secretarial audit',
         icon: 'fa-briefcase',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Strategic Finance Leadership</h3>
                 <p className="mb-4">
-                    Our Virtual CFO service gives SMEs access to experienced financial leadership. We handle budgeting,
-                    cash flow analysis, investor reporting, and strategic planning at a fraction of the cost.
+                    Compliance isn't just filing forms; it's about governance. We act as your extended secretarial team, handling notices and audits.
                 </p>
             </>
         ),
+        subServices: [
+            { title: 'Secretarial Compliance Check', slug: 'compliance-check', desc: 'Mock audit of your records.' },
+            { title: 'ROC Notice Handling', slug: 'roc-notice-reply', desc: 'Drafting replies to Adjudication Notices.' },
+            { title: 'Compounding of Offences', slug: 'compounding-offences', desc: 'Legal route to settle defaults.' }
+        ]
     },
-    'accounting-services': {
-        title: 'Accounting Services',
-        seoTitle: 'Outsourced Accounting & Bookkeeping Services',
-        seoDescription: 'Professional accounting services for businesses. Daily bookkeeping, bank reconciliation, and financial statement preparation.',
-        keywords: 'accounting services, bookkeeping outsourcing, accountant for small business, daily accounting',
-        icon: 'fa-book',
+    'compliance-check': {
+        title: 'Secretarial Compliance Check',
+        seoTitle: 'Secretarial Compliance Health Check',
+        seoDescription: 'Review of your statutory registers, minutes, and filings to ensure readiness for due diligence or inspection.',
+        keywords: 'secretarial health check, compliance review, statutory record audit',
+        icon: 'fa-clipboard-check',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Accurate Books, On Time</h3>
-                <p className="mb-4">
-                    We handle your day-to-day accounting, ensuring every transaction is recorded correctly. From bank
-                    reconciliations to finalization of accounts, we keep your books auditor-ready.
-                </p>
+                <p className="mb-4">We verify if your board minutes, registers, and ROC filings are in sync. This "Mock Audit" helps identifying gaps before they turn into penalties.</p>
             </>
-        ),
+        )
     },
-    'accounts-payable-services': {
-        title: 'Accounts Payable Services',
-        seoTitle: 'Accounts Payable (AP) Outsourcing Services',
-        seoDescription: 'Streamline your vendor payments. We manage invoice processing, payment scheduling, and vendor reconciliation.',
-        keywords: 'accounts payable, ap services, vendor management, invoice processing',
-        icon: 'fa-money-bill-wave',
+    'roc-notice-reply': {
+        title: 'ROC Notice Handling & Reply',
+        seoTitle: 'Reply to ROC Notices | Adjudication Support',
+        seoDescription: 'Expert drafting of replies to ROC Show Cause Notices and Adjudication Orders.',
+        keywords: 'roc notice reply, adjudication notice response, mca notice help',
+        icon: 'fa-envelope-open-text',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Manage Your Outflows</h3>
-                <p className="mb-4">
-                    We optimize your Accounts Payable process—validating invoices, scheduling payments, and managing
-                    vendor relationships—to improve cash flow management and prevent duplicate payments.
-                </p>
+                <p className="mb-4">Received a Show Cause Notice? We interpret the allegation, draft a legally sound reply citing relevant sections, and represent you if required, to drop or minimize the penalty.</p>
             </>
-        ),
+        )
     },
-    'accounts-receivable-services': {
-        title: 'Accounts Receivable Services',
-        seoTitle: 'Accounts Receivable (AR) Management Services',
-        seoDescription: 'Improve your cash flow with efficient AR management. Invoice generation, followup, and reconciliation.',
-        keywords: 'accounts receivable, ar services, debt collection support, invoicing services',
-        icon: 'fa-hand-holding-usd',
+    'compounding-offences': {
+        title: 'Compounding of Offences',
+        seoTitle: 'Compounding of Offences under Companies Act',
+        seoDescription: 'Settle past non-compliances legally. Application for Compounding of Offences to RD/NCLT.',
+        keywords: 'compounding of offences, settle mca default, form gnl-1, rd compounding',
+        icon: 'fa-gavel',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Get Paid Faster</h3>
-                <p className="mb-4">
-                    Our AR services ensure quick invoice generation and systematic follow-ups. We track aging reports
-                    and help you recover dues faster, boosting your working capital.
-                </p>
+                <p className="mb-4">If you missed a critical filing (like AGM or Board Report), "Compounding" is a legal way to admit the mistake and pay a reduced penalty, avoiding prosecution.</p>
             </>
-        ),
+        )
     },
-    'tax-audit': {
-        title: 'Tax Audit',
-        seoTitle: 'Income Tax Audit Services | Section 44AB',
-        seoDescription: 'Mandatory Tax Audit services for businesses and professionals. Verification of books of accounts and Form 3CA/3CB/3CD filing.',
-        keywords: 'tax audit, section 44ab audit, income tax audit, form 3cd',
-        icon: 'fa-file-invoice-dollar',
+
+    // ==========================================
+    // 9. REGULATORY & ADVISORY (Hub)
+    // ==========================================
+    'regulatory-advisory': {
+        title: 'Regulatory & Advisory Support',
+        seoTitle: 'Corporate Regulatory Advisory Services',
+        seoDescription: 'General corporate advisory. Due diligence, startup compliance, and interpreting complex MCA circulars.',
+        keywords: 'corporate advisory, mca advisory, startup compliance, due diligence',
+        icon: 'fa-balance-scale',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Certification of Financials</h3>
                 <p className="mb-4">
-                    If your turnover exceeds the specified limit (₹1 Cr/₹10 Cr for businesses), a Tax Audit is mandatory.
-                    Our CAs verify your books and issue the Audit Report required by the Income Tax Department.
+                    The corporate regulatory landscape is vast. We provide expert opinions and general guidance on the Companies Act, 2013 and allied laws.
                 </p>
             </>
         ),
+        subServices: [
+            { title: 'Compliance Health Check', slug: 'compliance-health-check', desc: 'Overall entity health assessment.' },
+            { title: 'Due Diligence', slug: 'corporate-due-diligence', desc: 'Investigation for investors/buyers.' },
+            { title: 'Startup & SME Advisory', slug: 'startup-advisory', desc: 'Structuring and scale-up advice.' }
+        ]
     },
-    'payroll-services': {
-        title: 'Payroll Services',
-        seoTitle: 'Payroll Outsourcing Services | Salary Processing & Compliance',
-        seoDescription: 'End-to-end payroll processing. Salary calculation, PF/ESI/PT compliance, and TDS deduction management.',
-        keywords: 'payroll services, salary processing, pf esi compliance, payroll outsourcing',
-        icon: 'fa-users-cog',
+    'corporate-due-diligence': {
+        title: 'Due Diligence for Companies & LLPs',
+        seoTitle: 'Legal & Financial Due Diligence Services',
+        seoDescription: 'Comprehensive due diligence reports for M&A, investment, or bank loans. Cover Legal, Tax, and Financial aspects.',
+        keywords: 'due diligence report, legal due diligence, financial due diligence, startup investment check',
+        icon: 'fa-search-dollar',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Standardized Salary Processing</h3>
-                <p className="mb-4">
-                    We manage the entire employee lifecycle—from onboarding to exit. Monthly salary calculation,
-                    payslip generation, and compliance with PF, ESI, Professional Tax, and TDS.
-                </p>
+                <p className="mb-4">Before an investment or merger, we dig deep into the target company's records. We check for hidden liabilities, pending litigations, and compliance history to protect your interest.</p>
             </>
-        ),
+        )
     },
-    'forensic-audit': {
-        title: 'Forensic Audit',
-        seoTitle: 'Forensic Audit & Fraud Investigation Services',
-        seoDescription: 'Investigate financial discrepancies and fraud. Specialized forensic audit services for legal evidence and internal control fixing.',
-        keywords: 'forensic audit, fraud investigation, financial investigation, internal control audit',
-        icon: 'fa-fingerprint',
+    'startup-advisory': {
+        title: 'Startup & SME Compliance Advisory',
+        seoTitle: 'Compliance Advisory for Startups & SMEs',
+        seoDescription: 'Tailored compliance roadmap for startups. ESOPs, Cap Table management, and fundraising compliance.',
+        keywords: 'startup legal advisory, esop planning, cap table management, fundraising compliance',
+        icon: 'fa-rocket',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Uncovering Financial Truths</h3>
-                <p className="mb-4">
-                    Suspect fraud or financial mismanagement? Our forensic audit dig deeps into the data to identify
-                    diversion of funds, willful defaults, or embezzlement, providing evidence that stands in court.
-                </p>
+                <p className="mb-4">Startups move fast. We ensure your compliance keeps up. We advise on issuing ESOPs, managing your Cap Table, and filing the necessary forms (PAS-3, MGT-14) during funding rounds.</p>
             </>
-        ),
+        )
     },
-    'financial-report-preparation': {
-        title: 'Financial Report Preparation',
-        seoTitle: 'Financial Reporting & MIS Services',
-        seoDescription: 'Preparation of financial statements, balance sheets, and custom Management Information System (MIS) reports.',
-        keywords: 'financial reporting, mis reports, balance sheet preparation, financial analysis',
-        icon: 'fa-table',
+    'compliance-health-check': {
+        title: 'Compliance Health Check',
+        seoTitle: 'Corporate Compliance Health Check Service',
+        seoDescription: 'A 360-degree review of your entity\'s standing with MCA, Income Tax, and GST authorities.',
+        keywords: 'compliance health check, corporate status check, regulatory gap analysis',
+        icon: 'fa-user-md',
         content: (
             <>
-                <h3 className="text-xl font-bold text-white mb-4">Reports that Drive Decision Making</h3>
-                <p className="mb-4">
-                    We go beyond statutory formats to create custom MIS reports—profitability by product, cash flow
-                    forecasts, and variance analysis—giving you clear visibility into business performance.
-                </p>
+                <p className="mb-4">Is your company fully compliant? Our Health Check reviews your status across MCA, GST, and Income Tax to give you a single "Compliance Scorecard" and a roadmap to fix gaps.</p>
             </>
-        ),
-    },
+        )
+    }
 };

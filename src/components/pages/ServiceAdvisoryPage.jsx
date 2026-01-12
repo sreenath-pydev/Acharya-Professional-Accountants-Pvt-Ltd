@@ -41,27 +41,71 @@ const ServiceAdvisoryPage = () => {
           <h2 className="font-montserrat text-2xl font-bold mb-6 text-primary-accent">1. Secretarial Compliances</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-8">
             {[
-              { name: 'Annual Compliance for Private Limited Company', slug: 'annual-compliance-for-private-limited-company' },
-              { name: 'Annual Filing for LLP', slug: 'annual-filing-for-llp' },
-              { name: 'Section 8 Company Compliance', slug: 'section-8-company-compliance' },
-              { name: 'Annual Compliance for One Person Company', slug: 'annual-compliance-for-one-person-company' },
-              { name: 'DIR-3 KYC Filing Online', slug: 'dir-3-kyc-filing-online' },
-              { name: 'Share Transfer', slug: 'share-transfer' },
-              { name: 'ADT-1 Filing', slug: 'adt-1-filing' },
-              { name: 'Partnership Firm Compliance', slug: 'partnership-firm-compliance' },
-              { name: 'DPT-3 Filing Online', slug: 'dpt-3-filing-online' },
-              { name: 'Sole Proprietorship Compliance', slug: 'sole-proprietorship-compliance' },
-              { name: 'LLP Form 11 Filing', slug: 'llp-form-11-filing' },
-              { name: 'DIN Reactivation Online', slug: 'din-reactivation-online' },
-              { name: 'FSSAI Annual Return Filing', slug: 'fssai-annual-return-filing' },
-              { name: 'Dematerialisation of Shares', slug: 'dematerialisation-of-shares' },
-              { name: 'Form MGT-7 Filing', slug: 'form-mgt-7-filing' },
-              { name: 'Form AOC-4 Filing', slug: 'form-aoc-4-filing' },
-              { name: 'LLP Form 8 Filing', slug: 'llp-form-8-filing' },
-            ].map((item, index) => (
-              <Link key={index} to={`/services/advisory/${item.slug}`} className="flex items-start gap-3 group hover:text-primary-accent transition-colors">
-                <i className="fas fa-check-circle text-primary-accent/70 mt-1 text-sm group-hover:text-primary-accent"></i>
-                <span className="text-boulder text-sm md:text-base group-hover:text-white transition-colors">{item.name}</span>
+              {
+                title: 'Company Formation',
+                desc: 'Start your business journey with expert company registration services (Pvt Ltd, LLP, OPC, etc.).',
+                icon: 'fa-building',
+                slug: 'company-formation',
+              },
+              {
+                title: 'Annual Compliance',
+                desc: 'Mandatory annual filings (AOC-4, MGT-7) and compliance calendar management.',
+                icon: 'fa-calendar-check',
+                slug: 'annual-mca-compliances',
+              },
+              {
+                title: 'Director Services',
+                desc: 'DIN application, KYC, appointment, and resignation of directors.',
+                icon: 'fa-users',
+                slug: 'director-shareholder-compliances',
+              },
+              {
+                title: 'Company Changes',
+                desc: 'Change of Name, Address, Capital, or Object Clause with ROC approval.',
+                icon: 'fa-exchange-alt',
+                slug: 'company-changes',
+              },
+              {
+                title: 'LLP Compliances',
+                desc: 'Specialized compliance for LLPs: Agreement changes, partner admission, and annual filing.',
+                icon: 'fa-handshake',
+                slug: 'llp-compliances',
+              },
+              {
+                title: 'Nidhi Services',
+                desc: 'Complete Nidhi Company compliance including NDH-1, NDH-2, and NDH-3 filings.',
+                icon: 'fa-piggy-bank',
+                slug: 'nidhi-compliances',
+              },
+              {
+                title: 'Restructuring',
+                desc: 'Conversion, Strike Off (Closure), and Revival of companies.',
+                icon: 'fa-random',
+                slug: 'restructuring-closure',
+              },
+              {
+                title: 'Secretarial Support',
+                desc: 'Drafting minutes, registers, and handling ROC notices/penalties.',
+                icon: 'fa-briefcase',
+                slug: 'secretarial-support',
+              },
+              {
+                title: 'Regulatory Advisory',
+                desc: 'Expert opinions on Companies Act, startup advisory, and due diligence.',
+                icon: 'fa-balance-scale',
+                slug: 'regulatory-advisory',
+              }
+            ].map((service, index) => (
+              <Link
+                key={index}
+                to={`/services/advisory/${service.slug}`}
+                className="bg-secondary-dark border border-primary-accent/10 rounded-xl p-6 hover:border-primary-accent/40 transition-all duration-300 group block"
+              >
+                <div className="w-12 h-12 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent text-xl mb-4 group-hover:bg-primary-accent group-hover:text-dark-bg transition-colors duration-300">
+                  <i className={`fas ${service.icon}`}></i>
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
+                <p className="text-boulder text-sm">{service.desc}</p>
               </Link>
             ))}
           </div>

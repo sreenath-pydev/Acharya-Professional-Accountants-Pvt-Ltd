@@ -58,6 +58,24 @@ const MCAServiceDetailPage = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-10">
                     <div className="space-y-6 text-boulder leading-relaxed text-lg">
                         {service.content}
+
+                        {/* Sub-Services Grid if available */}
+                        {service.subServices && (
+                            <div className="mt-8">
+                                <h3 className="text-2xl font-bold text-white mb-6">Explore {service.title}</h3>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {service.subServices.map((sub, idx) => (
+                                        <Link key={idx} to={`/services/advisory/${sub.slug}`} className="block bg-secondary-dark/50 border border-primary-accent/10 hover:bg-secondary-dark hover:border-primary-accent/40 p-5 rounded-xl transition-all group">
+                                            <h4 className="font-bold text-primary-accent mb-2 group-hover:text-white transition-colors">{sub.title}</h4>
+                                            <p className="text-sm text-boulder">{sub.desc}</p>
+                                            <div className="mt-3 text-xs text-primary-accent/60 group-hover:text-primary-accent flex items-center gap-1">
+                                                <span>Read More</span> <i className="fas fa-arrow-right"></i>
+                                            </div>
+                                        </Link>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
                     </div>
 
                     {/* Sidebar CTA */}

@@ -73,6 +73,72 @@ const ServiceAuditingPage = () => {
         </div>
       </section>
 
+      {/* =========================
+          Detailed Auditing Services Grid
+      ========================== */}
+      <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16" data-aos="fade-up" data-aos-delay="75">
+        <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-8 text-center">Comprehensive Auditing Solutions</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              title: 'Statutory Audit',
+              desc: 'Ensuring your financial statements obey all legal requirements and accounting standards (Ind AS / IFRS).',
+              icon: 'fa-balance-scale',
+              slug: 'statutory-audit',
+            },
+            {
+              title: 'Internal Audit',
+              desc: 'Evaluating your internal controls, risk management, and governance to improve operational efficiency.',
+              icon: 'fa-search-dollar',
+              slug: 'internal-audit',
+            },
+            {
+              title: 'Tax Audit (u/s 44AB)',
+              desc: 'Verification of books of accounts for businesses/professions crossing turnover limits strictly as per Income Tax Act.',
+              icon: 'fa-file-invoice',
+              slug: 'tax-audit',
+            },
+            {
+              title: 'GST Audit & Reconciliation',
+              desc: 'Detailed examination of records to ensure GST compliance, reconciling returns with books to prevent penalties.',
+              icon: 'fa-calculator',
+              slug: 'gst-audit',
+            },
+            {
+              title: 'Stock Audit Support',
+              desc: 'Physical verification and valuation of inventory to ensure accuracy and match book records.',
+              icon: 'fa-boxes',
+              slug: 'stock-audit',
+            },
+            {
+              title: 'Audit Documentation',
+              desc: 'Preparation of audit-ready schedules, financial statements, and supporting documents to facilitate smooth audits.',
+              icon: 'fa-folder-open',
+              slug: 'audit-documentation',
+            },
+            {
+              title: 'Rectification of Audit Queries',
+              desc: 'Expert assistance in resolving queries raised during statutory or tax audits with proper justifications.',
+              icon: 'fa-clipboard-check',
+              slug: 'rectification-audit-queries',
+            },
+          ].map((service, index) => (
+            <Link
+              key={index}
+              to={`/services/auditing/${service.slug}`}
+              className="bg-secondary-dark border border-primary-accent/10 rounded-xl p-6 hover:border-primary-accent/40 transition-all duration-300 group block"
+            >
+              <div className="w-12 h-12 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent text-xl mb-4 group-hover:bg-primary-accent group-hover:text-dark-bg transition-colors duration-300">
+                <i className={`fas ${service.icon}`}></i>
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
+              <p className="text-boulder text-sm">{service.desc}</p>
+            </Link>
+          ))}
+        </div>
+
+      </section>
+
       <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16" data-aos="fade-up" data-aos-delay="100">
         <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-8 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
