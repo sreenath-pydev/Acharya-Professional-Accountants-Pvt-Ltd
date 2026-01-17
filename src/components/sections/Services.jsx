@@ -1,4 +1,13 @@
 import { Link } from 'react-router-dom';
+import {
+  IconCalculator,
+  IconFileInvoiceDollar,
+  IconSearchDollar,
+  IconFileSignature,
+  IconChartPie,
+  IconHandshake,
+  IconArrowRight
+} from '../common/Icons';
 
 const services = [
   {
@@ -51,6 +60,18 @@ const services = [
   }
 ];
 
+const getIconComponent = (iconName) => {
+  switch (iconName) {
+    case 'fa-calculator': return IconCalculator;
+    case 'fa-file-invoice-dollar': return IconFileInvoiceDollar;
+    case 'fa-search-dollar': return IconSearchDollar;
+    case 'fa-file-signature': return IconFileSignature;
+    case 'fa-chart-pie': return IconChartPie;
+    case 'fa-handshake': return IconHandshake;
+    default: return IconCalculator;
+  }
+};
+
 const Services = () => {
   return (
     <section id="services" className="py-20 bg-dark-bg">
@@ -64,30 +85,33 @@ const Services = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              data-aos="fade-up"
-              data-aos-delay={50 + index * 50}
-              data-aos-duration={100 + index * 50}
-              className="bg-secondary-dark p-8 rounded-xl text-center border border-primary-accent/10 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary-accent/20 hover:border-primary-accent transition-all duration-300"
-            >
-              <div className="text-5xl text-primary-accent mb-4">
-                <i className={`fas ${service.icon}`}></i>
-              </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">
-                {service.title}
-              </h3>
-              <p className="text-boulder mb-4">{service.description}</p>
-              <Link
-                to={service.link}
-                className="inline-flex items-center justify-center bg-primary-accent text-dark-bg font-semibold px-5 py-2.5 rounded-full hover:bg-korma transition-all duration-300 text-sm"
+          {services.map((service, index) => {
+            const IconComponent = getIconComponent(service.icon);
+            return (
+              <div
+                key={index}
+                data-aos="fade-up"
+                data-aos-delay={50 + index * 50}
+                data-aos-duration={100 + index * 50}
+                className="bg-secondary-dark p-8 rounded-xl text-center border border-primary-accent/10 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary-accent/20 hover:border-primary-accent transition-all duration-300"
               >
-                View Service Details
-                <i className="fas fa-arrow-right text-xs ml-2"></i>
-              </Link>
-            </div>
-          ))}
+                <div className="text-5xl text-primary-accent mb-4 flex justify-center">
+                  <IconComponent className="w-12 h-12" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-white">
+                  {service.title}
+                </h3>
+                <p className="text-boulder mb-4">{service.description}</p>
+                <Link
+                  to={service.link}
+                  className="inline-flex items-center justify-center bg-primary-accent text-dark-bg font-semibold px-5 py-2.5 rounded-full hover:bg-korma transition-all duration-300 text-sm group"
+                >
+                  View Service Details
+                  <IconArrowRight className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

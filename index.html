@@ -1,66 +1,69 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Basic -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Title & Description (DEFAULT – React will update per page) -->
-    <title>Acharya Professional Accountants | CA & Tax Consultant in Calicut</title>
-    <meta
-      name="description"
-      content="Acharya Professional Accountants is a trusted CA firm in Kozhikode offering expert tax consulting, GST filing, audit, and business registration services across India."
-    />
+<head>
+  <!-- Basic -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://acharyaprofessionalaccountants.in/" />
+  <!-- Title & Description (DEFAULT – React will update per page) -->
+  <title>Acharya Professional Accountants | CA & Tax Consultant in Calicut</title>
+  <meta name="description"
+    content="Acharya Professional Accountants is a trusted CA firm in Kozhikode offering expert tax consulting, GST filing, audit, and business registration services across India." />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/webp" href="/images/logo_dark.webp" />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://acharyaprofessionalaccountants.in/" />
 
-    <!-- Robots -->
-    <meta name="robots" content="index, follow" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="/images/logo_dark.webp" />
 
-    <!-- Google Site Verification -->
-    <meta
-      name="google-site-verification"
-      content="XAwAAIJFhdmPbjdfM8ChJplxzfw4lh-BcpJcUrUHT3c"
-    />
+  <!-- Robots -->
+  <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Acharya Professional Accountants" />
-    <meta property="og:url" content="https://acharyaprofessionalaccountants.in/" />
-    <meta
-      property="og:title"
-      content="Acharya Professional Accountants | CA & Tax Consultant in Calicut"
-    />
-    <meta
-      property="og:description"
-      content="Trusted CA firm in Kozhikode providing tax consulting, GST, audit, and business registration services."
-    />
-    <meta
-      property="og:image"
-      content="https://acharyaprofessionalaccountants.in/images/logo_dark.webp"
-    />
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="XAwAAIJFhdmPbjdfM8ChJplxzfw4lh-BcpJcUrUHT3c" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Acharya Professional Accountants | CA & Tax Consultant in Calicut"
-    />
-    <meta
-      name="twitter:description"
-      content="Trusted CA firm in Kozhikode offering tax, GST, audit, and compliance services."
-    />
-    <meta
-      name="twitter:image"
-      content="https://acharyaprofessionalaccountants.in/images/logo_dark.webp"
-    />
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
 
-    <!-- Structured Data (Schema.org) -->
-    <script type="application/ld+json">
+  <!-- Optimized Font Loading -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap"
+    media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" />
+  </noscript>
+
+  <!-- Font Awesome (Fallback for subpages) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print"
+    onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </noscript>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Acharya Professional Accountants" />
+  <meta property="og:url" content="https://acharyaprofessionalaccountants.in/" />
+  <meta property="og:title" content="Acharya Professional Accountants | CA & Tax Consultant in Calicut" />
+  <meta property="og:description"
+    content="Trusted CA firm in Kozhikode providing tax consulting, GST, audit, and business registration services." />
+  <meta property="og:image" content="https://acharyaprofessionalaccountants.in/images/logo_dark.webp" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Acharya Professional Accountants | CA & Tax Consultant in Calicut" />
+  <meta name="twitter:description"
+    content="Trusted CA firm in Kozhikode offering tax, GST, audit, and compliance services." />
+  <meta name="twitter:image" content="https://acharyaprofessionalaccountants.in/images/logo_dark.webp" />
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -70,18 +73,28 @@
       }
     </script>
 
-    <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CEXGQV30H8"></script>
-    <script>
+  <!-- Defer Google Analytics (GA4) -->
+  <script>
+    window.addEventListener('load', function () {
+      var script = document.createElement('script');
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-CEXGQV30H8";
+      script.async = true;
+      document.head.appendChild(script);
+
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
       gtag('config', 'G-CEXGQV30H8');
-    </script>
-  </head>
+    });
+  </script>
+</head>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script type="module">
+    // Service worker registration or other delayed tasks can go here
+  </script>
+</body>
+
 </html>

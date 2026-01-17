@@ -1,6 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { locationGroups } from '../../data/locationData';
+import {
+  IconChevronRight,
+  IconMapMarker,
+  IconPhone,
+  IconEnvelope,
+  IconClock,
+  IconHeart,
+  IconLinkedIn,
+  IconFacebook,
+  IconInstagram
+} from './Icons';
 
 const Footer = () => {
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -51,6 +62,9 @@ const Footer = () => {
                 src="/images/logo.webp"
                 alt="Acharya Professional Accountants"
                 className="h-32 w-auto mb-5"
+                loading="lazy"
+                width="128"
+                height="128"
               />
               <p className="text-boulder">
                 Providing expert accounting solutions that drive business growth and ensure compliance since 2018.
@@ -58,22 +72,33 @@ const Footer = () => {
             </div>
 
             <div className="flex gap-4">
-              {[
-                { icon: 'linkedin-in', url: 'https://www.linkedin.com/company/acharyaprofessionalaccountants/posts/?feedView=all' },
-                //{ icon: 'twitter', url: '#' },
-                { icon: 'facebook-f', url: 'https://www.facebook.com/APAinCLT' },
-                { icon: 'instagram', url: 'https://www.instagram.com/acharya_professional_accounts?utm_source=ig_web_button_share_sheet&igsh=MTJhMXk5YzNxYnUxZQ==' }
-              ].map((social, index) => (
-                <a
-                  key={index}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 bg-dark-bg rounded-full flex items-center justify-center text-primary-accent text-lg hover:bg-primary-accent hover:text-dark-bg hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300"
-                >
-                  <i className={`fab fa-${social.icon}`}></i>
-                </a>
-              ))}
+              <a
+                href="https://www.linkedin.com/company/acharyaprofessionalaccountants/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-dark-bg rounded-full flex items-center justify-center text-primary-accent hover:bg-primary-accent hover:text-dark-bg hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300"
+                aria-label="LinkedIn"
+              >
+                <IconLinkedIn className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.facebook.com/APAinCLT"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-dark-bg rounded-full flex items-center justify-center text-primary-accent hover:bg-primary-accent hover:text-dark-bg hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300"
+                aria-label="Facebook"
+              >
+                <IconFacebook className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.instagram.com/acharya_professional_accounts?utm_source=ig_web_button_share_sheet&igsh=MTJhMXk5YzNxYnUxZQ=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-dark-bg rounded-full flex items-center justify-center text-primary-accent hover:bg-primary-accent hover:text-dark-bg hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300"
+                aria-label="Instagram"
+              >
+                <IconInstagram className="w-5 h-5" />
+              </a>
             </div>
           </div>
           {/* Services */}
@@ -90,7 +115,7 @@ const Footer = () => {
                     href={getLinkHref(item)}
                     className="text-boulder hover:text-primary-accent transition-colors duration-300 flex items-center gap-2 group"
                   >
-                    <i className="fas fa-chevron-right text-xs text-primary-accent group-hover:translate-x-1 transition-transform duration-300"></i>
+                    <IconChevronRight className="w-3 h-3 text-primary-accent group-hover:translate-x-1 transition-transform duration-300" />
                     {item === 'gst' ? 'GST' : item.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
                   </a>
                 </li>
@@ -112,7 +137,7 @@ const Footer = () => {
                     href={getLinkHref(item)}
                     className="text-boulder hover:text-primary-accent transition-colors duration-300 flex items-center gap-2 group"
                   >
-                    <i className="fas fa-chevron-right text-xs text-primary-accent group-hover:translate-x-1 transition-transform duration-300"></i>
+                    <IconChevronRight className="w-3 h-3 text-primary-accent group-hover:translate-x-1 transition-transform duration-300" />
                     {item === 'calculator' ? 'Tax Calculator' : item === 'kozhikode' ? 'CA in Kozhikode' : item.charAt(0).toUpperCase() + item.slice(1)}
                   </a>
                 </li>
@@ -129,7 +154,7 @@ const Footer = () => {
 
             <ul className="space-y-4">
               <li className="flex items-start gap-4">
-                <i className="fas fa-map-marker-alt text-primary-accent text-lg mt-1"></i>
+                <IconMapMarker className="w-5 h-5 text-primary-accent mt-1 flex-shrink-0" />
                 <span className="text-boulder">
                   1st Floor Palace Arcade, Palace Road, Mankave, Kozhikode,
                   Kerala 673007
@@ -137,7 +162,7 @@ const Footer = () => {
               </li>
 
               <li className="flex items-start gap-4">
-                <i className="fas fa-phone-alt text-primary-accent text-lg mt-1"></i>
+                <IconPhone className="w-5 h-5 text-primary-accent mt-1 flex-shrink-0" />
                 <span className="text-boulder">
                   <a href="tel:+919562069434" className="hover:text-primary-accent transition-colors duration-300">+91 9562 06 9434</a><br />
                   <a href="tel:+917025546914" className="hover:text-primary-accent transition-colors duration-300">+91 7025 54 6914</a><br />
@@ -146,7 +171,7 @@ const Footer = () => {
               </li>
 
               <li className="flex items-start gap-4">
-                <i className="fas fa-envelope text-primary-accent text-lg mt-1"></i>
+                <IconEnvelope className="w-5 h-5 text-primary-accent mt-1 flex-shrink-0" />
                 <span className="text-boulder">
                   <a href="mailto:acharya.apa@gmail.com" className="hover:text-primary-accent transition-colors duration-300">acharya.apa@gmail.com</a><br />
                   <a href="mailto:apa@acharya-professional-accountants.in" className="hover:text-primary-accent transition-colors duration-300">apa@acharya-professional-accountants.in</a>
@@ -154,7 +179,7 @@ const Footer = () => {
               </li>
 
               <li className="flex items-start gap-4">
-                <i className="fas fa-clock text-primary-accent text-lg mt-1"></i>
+                <IconClock className="w-5 h-5 text-primary-accent mt-1 flex-shrink-0" />
                 <span className="text-boulder">
                   Monday - Saturday:<br /> 9:00 AM - 6:00 PM<br />
 
@@ -193,7 +218,7 @@ const Footer = () => {
       <div className="py-6 border-t border-primary-accent/10 text-center relative z-10">
         <div className="container mx-auto px-5">
           <p className="text-boulder text-sm">
-            &copy; 2025 Acharya Professional Accountants Pvt Ltd. All Rights Reserved. | Designed & Developed by <a href="https://www.sreenathdev.online/" target="_blank" className="text-primary-accent hover:underline"><i className="fas fa-heart text-primary-accent"></i> Sreenath K K</a>
+            &copy; 2025 Acharya Professional Accountants Pvt Ltd. All Rights Reserved. | Designed & Developed by <a href="https://www.sreenathdev.online/" target="_blank" className="text-primary-accent hover:underline flex items-center gap-1 inline-flex"><IconHeart className="w-3 h-3 text-primary-accent" /> Sreenath K K</a>
           </p>
         </div>
       </div>

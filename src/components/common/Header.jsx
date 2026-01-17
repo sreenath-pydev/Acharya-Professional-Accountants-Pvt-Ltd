@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
 import { navbarServices } from '../../data/navbarServices';
-
 import { loanDetails } from '../../data/loanDetails';
+import { IconChevronDown, IconArrowRight } from './Icons';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -123,7 +123,7 @@ const Header = () => {
             className={getLinkClasses(item)}
             onClick={() => setIsMenuOpen(false)}
           >
-            {item} <i className={`fas fa-chevron-down text-xs ml-1 transition-transform duration-300 ${isLoansHovered ? 'rotate-180' : ''}`}></i>
+            {item} <IconChevronDown className={`w-3 h-3 ml-1 transition-transform duration-300 inline-block ${isLoansHovered ? 'rotate-180' : ''}`} />
           </RouterLink>
 
           {/* Business Loans Dropdown */}
@@ -164,7 +164,7 @@ const Header = () => {
             className={getLinkClasses(item)}
             onClick={() => setIsMenuOpen(false)}
           >
-            {item} <i className={`fas fa-chevron-down text-xs ml-1 transition-transform duration-300 ${isServicesHovered ? 'rotate-180' : ''}`}></i>
+            {item} <IconChevronDown className={`w-3 h-3 ml-1 transition-transform duration-300 inline-block ${isServicesHovered ? 'rotate-180' : ''}`} />
           </RouterLink>
 
           {/* Mega Menu Dropdown */}
@@ -278,6 +278,8 @@ const Header = () => {
                 src="/images/logo.webp"
                 alt="Acharya Professional Accountants"
                 className="h-12 md:h-16 w-auto transition-all duration-300"
+                width="64"
+                height="64"
               />
             </RouterLink>
           </div>
@@ -296,7 +298,7 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               <span>Talk to Us</span>
-              <i className="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform duration-300"></i>
+              <IconArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" />
             </RouterLink>
           </div>
 
@@ -342,7 +344,7 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <span>Talk to Us</span>
-                  <i className="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform duration-300"></i>
+                  <IconArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" />
                 </RouterLink>
               </li>
             </ul>
