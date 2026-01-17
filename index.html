@@ -71,17 +71,42 @@
 
   <!-- Defer Google Analytics (GA4) -->
   <script>
-    window.addEventListener('load', function () {
-      var script = document.createElement('script');
-      script.src = "https://www.googletagmanager.com/gtag/js?id=G-CEXGQV30H8";
-      script.async = true;
-      document.head.appendChild(script);
+    // Lazy load GTM
+    (function () {
+      var gtmId = 'G-CEXGQV30H8';
+      var scriptLoaded = false;
 
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-CEXGQV30H8');
-    });
+      function loadGTM() {
+        if (scriptLoaded) return;
+        scriptLoaded = true;
+
+        var script = document.createElement('script');
+        script.src = "https://www.googletagmanager.com/gtag/js?id=" + gtmId;
+        script.async = true;
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', gtmId);
+      }
+
+      // Load on interaction
+      var events = ['mousedown', 'mousemove', 'keydown', 'scroll', 'touchstart'];
+      function onInteraction() {
+        loadGTM();
+        events.forEach(function (event) {
+          window.removeEventListener(event, onInteraction, { passive: true });
+        });
+      }
+
+      events.forEach(function (event) {
+        window.addEventListener(event, onInteraction, { passive: true });
+      });
+
+      // Load after timeout (fallback)
+      setTimeout(loadGTM, 4000);
+    })();
   </script>
 </head>
 
