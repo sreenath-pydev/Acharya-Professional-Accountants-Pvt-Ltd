@@ -3,6 +3,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const blogPosts = [
   {
@@ -114,7 +115,7 @@ const Blog = () => {
 
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="text-boulder text-sm mb-3 flex items-center gap-2">
-                    <i className="far fa-calendar text-primary-accent"></i> {post.date}
+                    <DynamicFaIcon name="fa-calendar" className="text-primary-accent" /> {post.date}
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-white hover:text-primary-accent transition-colors duration-300">
                     {post.title}
@@ -126,14 +127,14 @@ const Blog = () => {
                       href="#"
                       className="text-primary-accent font-semibold flex items-center gap-2 hover:gap-3 transition-all duration-300"
                     >
-                      Read More <i className="fas fa-arrow-right text-sm"></i>
+                      Read More <DynamicFaIcon name="fa-arrow-right" className="text-sm" />
                     </a>
                     <div className="flex gap-5">
                       <div className="flex items-center gap-1 text-boulder text-sm">
-                        <i className="far fa-eye text-primary-accent"></i> {post.views}
+                        <DynamicFaIcon name="fa-eye" className="text-primary-accent" /> {post.views}
                       </div>
                       <div className="flex items-center gap-1 text-boulder text-sm">
-                        <i className="far fa-comment text-primary-accent"></i> {post.comments}
+                        <DynamicFaIcon name="fa-comment" className="text-primary-accent" /> {post.comments}
                       </div>
                     </div>
                   </div>
@@ -148,7 +149,7 @@ const Blog = () => {
             href="#"
             className="inline-flex items-center gap-3 border-2 border-primary-accent text-primary-accent px-8 py-3 rounded-full font-semibold hover:bg-primary-accent hover:text-dark-bg hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300"
           >
-            View All Articles <i className="fas fa-arrow-right"></i>
+            View All Articles <DynamicFaIcon name="fa-arrow-right" />
           </a>
         </div>
       </div>

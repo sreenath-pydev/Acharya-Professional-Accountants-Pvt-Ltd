@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import SEO from '../common/SEO';
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const LoanSupportPage = () => {
     useEffect(() => {
@@ -35,7 +36,7 @@ const LoanSupportPage = () => {
                             rel="noopener noreferrer"
                             className="inline-flex justify-center items-center bg-primary-accent text-dark-bg font-semibold px-6 py-3 rounded-full hover:bg-white transition-all duration-300 shadow-[0_4px_14px_rgba(229,161,69,0.3)]"
                         >
-                            <i className="fab fa-whatsapp mr-2"></i> Free Eligibility Check
+                            <DynamicFaIcon name="fa-whatsapp" className="mr-2" /> Free Eligibility Check
                         </a>
                         <a
                             href="#project-reports"
@@ -55,7 +56,7 @@ const LoanSupportPage = () => {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-dark-bg/80 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 right-4 bg-secondary-dark/90 backdrop-blur-sm p-4 rounded-xl border border-white/10">
-                            <p className="text-primary-accent font-bold text-sm mb-1"><i className="fas fa-check-circle mr-2"></i>Approved by Top Banks</p>
+                            <p className="text-primary-accent font-bold text-sm mb-1"><DynamicFaIcon name="fa-check-circle" className="mr-2" />Approved by Top Banks</p>
                             <p className="text-xs text-gray-300">We ensure your project report meets every compliance standard.</p>
                         </div>
                     </div>
@@ -90,7 +91,7 @@ const LoanSupportPage = () => {
                                 className="bg-dark-bg border border-white/5 p-6 rounded-xl hover:border-primary-accent/30 transition-all duration-300 group block"
                             >
                                 <div className="w-12 h-12 bg-secondary-dark rounded-lg flex items-center justify-center text-primary-accent text-xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                                    <i className={`fas ${loan.icon}`}></i>
+                                    <DynamicFaIcon name={loan.icon} />
                                 </div>
                                 <h3 className="font-bold text-lg mb-2 text-white group-hover:text-primary-accent transition-colors">{loan.title}</h3>
                                 <p className="text-sm text-boulder">{loan.desc}</p>
@@ -101,7 +102,7 @@ const LoanSupportPage = () => {
                     <div className="mt-10 text-center">
                         <p className="text-gray-400 mb-4">Not sure which loan suits you?</p>
                         <Link to="/contact" className="text-primary-accent hover:text-white font-semibold transition-colors">
-                            Talk to Our Loan Support Team <i className="fas fa-arrow-right ml-1"></i>
+                            Talk to Our Loan Support Team <DynamicFaIcon name="fa-arrow-right" className="ml-1" />
                         </Link>
                     </div>
                 </div>
@@ -134,7 +135,7 @@ const LoanSupportPage = () => {
                                     'Ratio Analysis & Justification'
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
-                                        <i className="fas fa-check text-primary-accent mt-1"></i> {item}
+                                        <DynamicFaIcon name="fa-check" className="text-primary-accent mt-1" /> {item}
                                     </li>
                                 ))}
                             </ul>
@@ -168,7 +169,7 @@ const LoanSupportPage = () => {
                         {/* Rejection */}
                         <div>
                             <h3 className="text-2xl font-bold mb-6 flex items-center gap-3 text-red-400">
-                                <i className="fas fa-times-circle"></i> Why Loans Get Rejected
+                                <DynamicFaIcon name="fa-times-circle" /> Why Loans Get Rejected
                             </h3>
                             <ul className="space-y-4">
                                 {[
@@ -188,7 +189,7 @@ const LoanSupportPage = () => {
                         {/* Acharya Help */}
                         <div>
                             <h3 className="text-2xl font-bold mb-6 flex items-center gap-3 text-green-400">
-                                <i className="fas fa-check-circle"></i> How Acharya Helps
+                                <DynamicFaIcon name="fa-check-circle" /> How Acharya Helps
                             </h3>
                             <div className="bg-dark-bg/50 p-6 rounded-lg border-l-4 border-green-400/50 h-full">
                                 <p className="text-lg text-white mb-4 leading-relaxed">
@@ -198,8 +199,8 @@ const LoanSupportPage = () => {
                                     By pre-verifying your eligibility and preparing watertight documentation, we significantly improve your approval chances. We don't just write reports; we guide you through the banking query process.
                                 </p>
                                 <ul className="space-y-3">
-                                    <li className="flex items-center gap-2"><i className="fas fa-check text-green-400"></i> Kerala-focused support</li>
-                                    <li className="flex items-center gap-2"><i className="fas fa-check text-green-400"></i> Practical banking experience</li>
+                                    <li className="flex items-center gap-2"><DynamicFaIcon name="fa-check" className="text-green-400" /> Kerala-focused support</li>
+                                    <li className="flex items-center gap-2"><DynamicFaIcon name="fa-check" className="text-green-400" /> Practical banking experience</li>
                                 </ul>
                             </div>
                         </div>
@@ -272,7 +273,7 @@ const LoanSupportPage = () => {
 
                     <div className="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
                         <a href="https://wa.me/919446369434?text=Hi%2C%20I%20want%20to%20book%20a%20consultation" target="_blank" rel="noopener noreferrer" className="bg-green-600 text-white font-bold px-6 py-3 rounded-full hover:bg-green-700 transition-colors flex items-center justify-center gap-2">
-                            <i className="fab fa-whatsapp"></i> WhatsApp Us Instantly
+                            <DynamicFaIcon name="fa-whatsapp" /> WhatsApp Us Instantly
                         </a>
                         <Link to="/contact" className="bg-white text-dark-bg font-bold px-6 py-3 rounded-full hover:bg-gray-200 transition-colors">
                             Book a Free Consultation

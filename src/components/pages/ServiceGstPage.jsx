@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import SEO from '../common/SEO';
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const ServiceGstPage = () => {
   useEffect(() => {
@@ -51,7 +52,7 @@ const ServiceGstPage = () => {
               'Support with GST notices, audits, and queries',
             ].map((item) => (
               <li key={item} className="flex items-start gap-3">
-                <i className="fas fa-check-circle text-primary-accent mt-1"></i>
+                <DynamicFaIcon name="fa-check-circle" className="text-primary-accent mt-1" />
                 <span>{item}</span>
               </li>
             ))}
@@ -69,7 +70,7 @@ const ServiceGstPage = () => {
               'Comfort during departmental visits or information requests',
             ].map((item) => (
               <li key={item} className="flex items-start gap-3">
-                <i className="fas fa-star text-primary-accent mt-1"></i>
+                <DynamicFaIcon name="fa-star" className="text-primary-accent mt-1" />
                 <span>{item}</span>
               </li>
             ))}
@@ -127,7 +128,7 @@ const ServiceGstPage = () => {
               className="bg-secondary-dark border border-primary-accent/10 rounded-xl p-6 hover:border-primary-accent/40 transition-all duration-300 group block"
             >
               <div className="w-12 h-12 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent text-xl mb-4 group-hover:bg-primary-accent group-hover:text-dark-bg transition-colors duration-300">
-                <i className={`fas ${service.icon}`}></i>
+                <DynamicFaIcon name={service.icon} />
               </div>
               <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
               <p className="text-boulder text-sm">{service.desc}</p>
@@ -158,7 +159,7 @@ const ServiceGstPage = () => {
                 'Firms wanting to streamline GST with accounting',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <i className="fas fa-user text-primary-accent mt-1"></i>
+                  <DynamicFaIcon name="fa-user" className="text-primary-accent mt-1" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -224,7 +225,7 @@ const ServiceGstPage = () => {
               to="/services"
               className="inline-flex items-center gap-2 text-dark-bg font-semibold hover:text-secondary-dark transition-colors duration-300"
             >
-              <i className="fas fa-arrow-left text-sm"></i>
+              <DynamicFaIcon name="fa-arrow-left" className="text-sm" />
               <span>Back to Services</span>
             </Link>
           </div>

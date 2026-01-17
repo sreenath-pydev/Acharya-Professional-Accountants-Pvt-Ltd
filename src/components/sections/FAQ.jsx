@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-scroll';
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -153,7 +154,7 @@ const FAQ = () => {
                           }`}
                         aria-hidden="true"
                       >
-                        <i className="fas fa-chevron-down"></i>
+                        <DynamicFaIcon name="fa-chevron-down" />
                       </span>
                     </button>
                     <div

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import SEO from '../common/SEO';
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const CoursesPage = () => {
   useEffect(() => {
@@ -93,7 +94,7 @@ const CoursesPage = () => {
             <div className="space-y-6 mb-8">
               <div className="bg-secondary-dark border border-primary-accent/20 rounded-xl p-5">
                 <h3 className="text-white font-semibold text-lg mb-3 flex items-center gap-2">
-                  <i className="fas fa-briefcase text-primary-accent"></i>
+                  <DynamicFaIcon name="fa-briefcase" className="text-primary-accent" />
                   What You Will Learn
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4">
@@ -114,7 +115,7 @@ const CoursesPage = () => {
               <div className="flex flex-col sm:flex-row gap-6 text-sm text-white">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent">
-                    <i className="fas fa-calendar-alt"></i>
+                    <DynamicFaIcon name="fa-calendar-alt" />
                   </div>
                   <div>
                     <p className="text-primary-accent text-xs uppercase tracking-wider font-bold">Duration</p>
@@ -123,7 +124,7 @@ const CoursesPage = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent">
-                    <i className="fas fa-laptop-house"></i>
+                    <DynamicFaIcon name="fa-laptop-house" />
                   </div>
                   <div>
                     <p className="text-primary-accent text-xs uppercase tracking-wider font-bold">Mode</p>
@@ -132,7 +133,7 @@ const CoursesPage = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent">
-                    <i className="fas fa-certificate"></i>
+                    <DynamicFaIcon name="fa-certificate" />
                   </div>
                   <div>
                     <p className="text-primary-accent text-xs uppercase tracking-wider font-bold">Benefit</p>
@@ -197,7 +198,7 @@ const CoursesPage = () => {
             <div className="space-y-6 mb-8">
               <div className="bg-secondary-dark border border-primary-accent/20 rounded-xl p-5">
                 <h3 className="text-white font-semibold text-lg mb-3 flex items-center gap-2">
-                  <i className="fas fa-chart-line text-primary-accent"></i>
+                  <DynamicFaIcon name="fa-chart-line" className="text-primary-accent" />
                   Technical Exposure
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4">
@@ -218,7 +219,7 @@ const CoursesPage = () => {
               <div className="flex flex-col sm:flex-row gap-6 text-sm text-white">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent">
-                    <i className="fas fa-clock"></i>
+                    <DynamicFaIcon name="fa-clock" />
                   </div>
                   <div>
                     <p className="text-primary-accent text-xs uppercase tracking-wider font-bold">Timing</p>
@@ -227,7 +228,7 @@ const CoursesPage = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent">
-                    <i className="fas fa-file-alt"></i>
+                    <DynamicFaIcon name="fa-file-alt" />
                   </div>
                   <div>
                     <p className="text-primary-accent text-xs uppercase tracking-wider font-bold">Proof</p>
@@ -259,7 +260,7 @@ const CoursesPage = () => {
             />
             <div className="absolute top-6 right-6 bg-secondary-dark/90 backdrop-blur-sm p-4 rounded-xl border border-white/10 shadow-lg max-w-xs">
               <div className="flex items-center gap-3 mb-2">
-                <i className="fas fa-user-graduate text-primary-accent text-xl"></i>
+                <DynamicFaIcon name="fa-user-graduate" className="text-primary-accent text-xl" />
                 <p className="text-white text-sm font-bold">Career & Exam Friendly</p>
               </div>
               <p className="text-boulder text-xs">
@@ -300,7 +301,7 @@ const CoursesPage = () => {
                   className="inline-flex items-center justify-center w-full bg-primary-accent text-dark-bg font-semibold px-4 py-3 rounded-full hover:bg-korma transition-all duration-300 group"
                 >
                   <span>View Course Details</span>
-                  <i className="fas fa-arrow-right text-sm ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                  <DynamicFaIcon name="fa-arrow-right" className="text-sm ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
             </div>
@@ -341,7 +342,7 @@ const CoursesPage = () => {
               'Common mistakes students make while choosing courses',
             ].map((item) => (
               <div key={item} className="flex items-start gap-3">
-                <i className="fas fa-check-circle text-primary-accent mt-1"></i>
+                <DynamicFaIcon name="fa-check-circle" className="text-primary-accent mt-1" />
                 <span>{item}</span>
               </div>
             ))}

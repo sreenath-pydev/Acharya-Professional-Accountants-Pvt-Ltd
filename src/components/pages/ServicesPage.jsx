@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { locationGroups } from '../../data/locationData';
 
 import Services from '../sections/Services';
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const ServicesPage = () => {
   useEffect(() => {
@@ -110,7 +111,7 @@ const ServicesPage = () => {
               'Organizations needing outsourced finance teams',
             ].map((item) => (
               <li key={item} className="flex items-start gap-3">
-                <i className="fas fa-check text-primary-accent mt-1"></i>
+                <DynamicFaIcon name="fa-check" className="text-primary-accent mt-1" />
                 <span>{item}</span>
               </li>
             ))}
@@ -130,7 +131,7 @@ const ServicesPage = () => {
               'Kozhikode-based team with modern tools and systems',
             ].map((item) => (
               <li key={item} className="flex items-start gap-3">
-                <i className="fas fa-star text-primary-accent mt-1"></i>
+                <DynamicFaIcon name="fa-star" className="text-primary-accent mt-1" />
                 <span>{item}</span>
               </li>
             ))}

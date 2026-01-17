@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import SEO from '../common/SEO';
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const CourseGlobalProPage = () => {
   useEffect(() => {
@@ -48,7 +49,7 @@ const CourseGlobalProPage = () => {
               'Interview & overseas job readiness support',
             ].map((item) => (
               <li key={item} className="flex items-start gap-3">
-                <i className="fas fa-check-circle text-primary-accent mt-1"></i>
+                <DynamicFaIcon name="fa-check-circle" className="text-primary-accent mt-1" />
                 <span>{item}</span>
               </li>
             ))}
@@ -108,7 +109,7 @@ const CourseGlobalProPage = () => {
                 'Professionals planning overseas careers',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <i className="fas fa-user text-primary-accent mt-1"></i>
+                  <DynamicFaIcon name="fa-user" className="text-primary-accent mt-1" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -126,7 +127,7 @@ const CourseGlobalProPage = () => {
                 'VAT Executive',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <i className="fas fa-briefcase text-primary-accent mt-1"></i>
+                  <DynamicFaIcon name="fa-briefcase" className="text-primary-accent mt-1" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -137,15 +138,15 @@ const CourseGlobalProPage = () => {
             <h3 className="font-montserrat text-xl font-bold mb-4">Program Details</h3>
             <ul className="space-y-3 text-boulder">
               <li className="flex items-start gap-3">
-                <i className="fas fa-clock text-primary-accent mt-1"></i>
+                <DynamicFaIcon name="fa-clock" className="text-primary-accent mt-1" />
                 <span>Duration: 1 / 3 / 6 Months</span>
               </li>
               <li className="flex items-start gap-3">
-                <i className="fas fa-chalkboard-teacher text-primary-accent mt-1"></i>
+                <DynamicFaIcon name="fa-chalkboard-teacher" className="text-primary-accent mt-1" />
                 <span>Mode: Classroom + Practical Training</span>
               </li>
               <li className="flex items-start gap-3">
-                <i className="fas fa-map-marker-alt text-primary-accent mt-1"></i>
+                <DynamicFaIcon name="fa-map-marker-alt" className="text-primary-accent mt-1" />
                 <span>Location: Kozhikode, Kerala</span>
               </li>
             </ul>
@@ -183,7 +184,7 @@ const CourseGlobalProPage = () => {
               to="/courses"
               className="inline-flex items-center gap-2 text-dark-bg font-semibold hover:text-secondary-dark transition-colors duration-300"
             >
-              <i className="fas fa-arrow-left text-sm"></i>
+              <DynamicFaIcon name="fa-arrow-left" className="text-sm" />
               <span>Back to Courses</span>
             </Link>
           </div>

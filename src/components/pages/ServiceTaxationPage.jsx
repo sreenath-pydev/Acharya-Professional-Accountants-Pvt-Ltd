@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import SEO from '../common/SEO';
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const ServiceTaxationPage = () => {
   useEffect(() => {
@@ -52,7 +53,7 @@ const ServiceTaxationPage = () => {
               'Year-end tax review and projections for the next year',
             ].map((item) => (
               <li key={item} className="flex items-start gap-3">
-                <i className="fas fa-check-circle text-primary-accent mt-1"></i>
+                <DynamicFaIcon name="fa-check-circle" className="text-primary-accent mt-1" />
                 <span>{item}</span>
               </li>
             ))}
@@ -70,7 +71,7 @@ const ServiceTaxationPage = () => {
               'Single point-of-contact for ongoing tax queries',
             ].map((item) => (
               <li key={item} className="flex items-start gap-3">
-                <i className="fas fa-star text-primary-accent mt-1"></i>
+                <DynamicFaIcon name="fa-star" className="text-primary-accent mt-1" />
                 <span>{item}</span>
               </li>
             ))}
@@ -100,7 +101,7 @@ const ServiceTaxationPage = () => {
                 'NRIs needing support with Indian tax filings',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <i className="fas fa-user text-primary-accent mt-1"></i>
+                  <DynamicFaIcon name="fa-user" className="text-primary-accent mt-1" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -166,7 +167,7 @@ const ServiceTaxationPage = () => {
               to="/services"
               className="inline-flex items-center gap-2 text-dark-bg font-semibold hover:text-secondary-dark transition-colors duration-300"
             >
-              <i className="fas fa-arrow-left text-sm"></i>
+              <DynamicFaIcon name="fa-arrow-left" className="text-sm" />
               <span>Back to Services</span>
             </Link>
           </div>

@@ -1,3 +1,5 @@
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
+
 const MissionValues = () => {
   const values = [
     {
@@ -51,7 +53,7 @@ const MissionValues = () => {
           {/* Mission Section */}
           <div data-aos="fade-right" data-aos-delay="50" className="bg-dark-bg/50 p-8 rounded-2xl border border-primary-accent/10">
             <h3 className="text-2xl font-semibold mb-6 text-primary-accent flex items-center gap-3">
-              <i className="fas fa-bullseye"></i>
+              <DynamicFaIcon name="fa-bullseye" />
               Our Mission
             </h3>
             <p className="text-boulder text-lg leading-relaxed mb-4">
@@ -69,7 +71,7 @@ const MissionValues = () => {
           {/* Vision Section */}
           <div data-aos="fade-left" data-aos-delay="50" className="bg-dark-bg/50 p-8 rounded-2xl border border-primary-accent/10">
             <h3 className="text-2xl font-semibold mb-6 text-primary-accent flex items-center gap-3">
-              <i className="fas fa-eye"></i>
+              <DynamicFaIcon name="fa-eye" />
               Our Vision
             </h3>
             <p className="text-boulder text-lg leading-relaxed mb-4">
@@ -94,7 +96,7 @@ const MissionValues = () => {
               className="bg-dark-bg/50 p-6 rounded-xl border border-primary-accent/10 hover:border-primary-accent/30 hover:shadow-lg hover:shadow-primary-accent/10 transition-all duration-300"
             >
               <div className="text-4xl text-primary-accent mb-4">
-                <i className={`fas ${value.icon}`}></i>
+                <DynamicFaIcon name={value.icon} />
               </div>
               <h4 className="text-xl font-semibold mb-3 text-white">{value.title}</h4>
               <p className="text-boulder leading-relaxed">{value.description}</p>

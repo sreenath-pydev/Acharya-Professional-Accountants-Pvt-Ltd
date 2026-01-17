@@ -12,6 +12,7 @@ import {
   Legend,
 } from 'recharts';
 import jsPDF from 'jspdf';
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const COLORS = ['#e5a145', '#8e400e', '#7c7c7b'];
 
@@ -448,11 +449,10 @@ const VincumTaxCalculator = () => {
                       key={opt.value}
                       type="button"
                       onClick={() => setRegime(opt.value)}
-                      className={`flex-1 px-3 py-2 rounded-lg border text-sm font-medium transition-all duration-200 ${
-                        regime === opt.value
+                      className={`flex-1 px-3 py-2 rounded-lg border text-sm font-medium transition-all duration-200 ${regime === opt.value
                           ? 'bg-primary-accent text-dark-bg border-primary-accent'
                           : 'bg-dark-bg text-boulder border-primary-accent/20 hover:border-primary-accent/60'
-                      }`}
+                        }`}
                     >
                       {opt.label}
                     </button>
@@ -503,7 +503,7 @@ const VincumTaxCalculator = () => {
                   <label className="flex items-center justify-between mb-1">
                     <span className="text-boulder">Gross Salary (Annual)</span>
                     <span className="text-xs text-friar-gray">
-                      <i className="fas fa-circle-info mr-1" /> Includes basic, allowances, bonus
+                      <DynamicFaIcon name="fa-circle-info" className="mr-1" /> Includes basic, allowances, bonus
                     </span>
                   </label>
                   <input
@@ -519,7 +519,7 @@ const VincumTaxCalculator = () => {
                   <label className="flex items-center justify-between mb-1">
                     <span className="text-boulder">Other Income</span>
                     <span className="text-xs text-friar-gray">
-                      <i className="fas fa-circle-info mr-1" /> Interest, rental, etc.
+                      <DynamicFaIcon name="fa-circle-info" className="mr-1" /> Interest, rental, etc.
                     </span>
                   </label>
                   <input
@@ -547,15 +547,14 @@ const VincumTaxCalculator = () => {
                 </span>
               </div>
               <div
-                className={`grid grid-cols-1 md:grid-cols-2 gap-3 text-sm ${
-                  deductionsDisabled ? 'opacity-60' : ''
-                }`}
+                className={`grid grid-cols-1 md:grid-cols-2 gap-3 text-sm ${deductionsDisabled ? 'opacity-60' : ''
+                  }`}
               >
                 <div>
                   <label className="flex items-center justify-between mb-1">
                     <span className="text-boulder">80C Investments</span>
                     <span className="text-xs text-friar-gray">
-                      <i className="fas fa-circle-info mr-1" /> PF, ELSS, LIC (Max ₹1.5L)
+                      <DynamicFaIcon name="fa-circle-info" className="mr-1" /> PF, ELSS, LIC (Max ₹1.5L)
                     </span>
                   </label>
                   <input
@@ -572,7 +571,7 @@ const VincumTaxCalculator = () => {
                   <label className="flex items-center justify-between mb-1">
                     <span className="text-boulder">80D – Self/Family</span>
                     <span className="text-xs text-friar-gray">
-                      <i className="fas fa-circle-info mr-1" /> Health insurance premium
+                      <DynamicFaIcon name="fa-circle-info" className="mr-1" /> Health insurance premium
                     </span>
                   </label>
                   <input
@@ -589,7 +588,7 @@ const VincumTaxCalculator = () => {
                   <label className="flex items-center justify-between mb-1">
                     <span className="text-boulder">80D – Parents</span>
                     <span className="text-xs text-friar-gray">
-                      <i className="fas fa-circle-info mr-1" /> Health insurance for parents
+                      <DynamicFaIcon name="fa-circle-info" className="mr-1" /> Health insurance for parents
                     </span>
                   </label>
                   <input
@@ -606,7 +605,7 @@ const VincumTaxCalculator = () => {
                   <label className="flex items-center justify-between mb-1">
                     <span className="text-boulder">Home Loan Interest</span>
                     <span className="text-xs text-friar-gray">
-                      <i className="fas fa-circle-info mr-1" /> Section 24(b), Max ₹2L
+                      <DynamicFaIcon name="fa-circle-info" className="mr-1" /> Section 24(b), Max ₹2L
                     </span>
                   </label>
                   <input
@@ -623,7 +622,7 @@ const VincumTaxCalculator = () => {
                   <label className="flex items-center justify-between mb-1">
                     <span className="text-boulder">HRA Exemption</span>
                     <span className="text-xs text-friar-gray">
-                      <i className="fas fa-circle-info mr-1" /> As per HRA rules
+                      <DynamicFaIcon name="fa-circle-info" className="mr-1" /> As per HRA rules
                     </span>
                   </label>
                   <input
@@ -640,7 +639,7 @@ const VincumTaxCalculator = () => {
                   <label className="flex items-center justify-between mb-1">
                     <span className="text-boulder">LTA Exemption</span>
                     <span className="text-xs text-friar-gray">
-                      <i className="fas fa-circle-info mr-1" /> As per LTA rules
+                      <DynamicFaIcon name="fa-circle-info" className="mr-1" /> As per LTA rules
                     </span>
                   </label>
                   <input
@@ -657,7 +656,7 @@ const VincumTaxCalculator = () => {
                   <label className="flex items-center justify-between mb-1">
                     <span className="text-boulder">Professional Tax</span>
                     <span className="text-xs text-friar-gray">
-                      <i className="fas fa-circle-info mr-1" /> Max ₹2,500
+                      <DynamicFaIcon name="fa-circle-info" className="mr-1" /> Max ₹2,500
                     </span>
                   </label>
                   <input
@@ -942,11 +941,10 @@ const VincumTaxCalculator = () => {
                 <button
                   type="submit"
                   disabled={!isLeadFormValid}
-                  className={`inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                    isLeadFormValid
+                  className={`inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${isLeadFormValid
                       ? 'bg-primary-accent text-dark-bg hover:bg-korma'
                       : 'bg-friar-gray text-dark-bg cursor-not-allowed opacity-70'
-                  }`}
+                    }`}
                 >
                   {isSubmittingLead ? (
                     <span>Submitting...</span>

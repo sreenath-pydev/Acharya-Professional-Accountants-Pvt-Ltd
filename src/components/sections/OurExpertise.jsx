@@ -1,3 +1,5 @@
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
+
 const OurExpertise = () => {
   const expertiseAreas = [
     {
@@ -66,14 +68,14 @@ const OurExpertise = () => {
               className="bg-secondary-dark p-6 rounded-xl border border-primary-accent/10 hover:border-primary-accent/30 hover:shadow-lg hover:shadow-primary-accent/10 hover:-translate-y-2 transition-all duration-300"
             >
               <div className="text-4xl text-primary-accent mb-4">
-                <i className={`fas ${area.icon}`}></i>
+                <DynamicFaIcon name={area.icon} />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-white">{area.title}</h3>
               <p className="text-boulder mb-4 leading-relaxed">{area.description}</p>
               <ul className="space-y-2">
                 {area.highlights.map((highlight, idx) => (
                   <li key={idx} className="text-boulder text-sm flex items-start gap-2">
-                    <i className="fas fa-check-circle text-primary-accent mt-1 text-xs"></i>
+                    <DynamicFaIcon name="fa-check-circle" className="text-primary-accent mt-1 text-xs" />
                     <span>{highlight}</span>
                   </li>
                 ))}

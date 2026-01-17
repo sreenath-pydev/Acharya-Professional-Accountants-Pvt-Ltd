@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import DynamicFaIcon from './FontAwesomeRegistry';
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -57,16 +58,15 @@ const ScrollToTop = () => {
         aria-label="Contact us on WhatsApp"
         className="w-12 h-12 bg-[#25D366] text-white rounded-full flex items-center justify-center text-xl shadow-lg hover:bg-[#20BA5A] hover:scale-110 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-dark-bg"
       >
-        <i className="fab fa-whatsapp"></i>
+        <DynamicFaIcon name="fa-whatsapp" />
       </a>
 
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
         aria-label="Scroll to top"
-        className={`w-12 h-12 bg-primary-accent text-dark-bg rounded-full flex items-center justify-center text-xl transition-all duration-400 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-        } hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/40 focus:outline-none focus:ring-2 focus:ring-primary-accent focus:ring-opacity-50`}
+        className={`w-12 h-12 bg-primary-accent text-dark-bg rounded-full flex items-center justify-center text-xl transition-all duration-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+          } hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/40 focus:outline-none focus:ring-2 focus:ring-primary-accent focus:ring-opacity-50`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

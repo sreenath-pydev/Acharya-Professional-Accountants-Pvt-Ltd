@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react";
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const CLOUD_NAME = "dgmvtym2p";
 const UPLOAD_PRESET = "resume_upload";
@@ -87,11 +88,11 @@ const InternshipForm = () => {
 
   return (
     <section id="career" className="py-16 md:py-20 bg-graphite overflow-hidden">
-      <div  className="container mx-auto   px-4 md:px-20">
-        <div data-aos="fade-up"  data-aos-delay="50">
-        <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-center mb-10 text-primary-accent">
-          career Program
-        </h2>
+      <div className="container mx-auto   px-4 md:px-20">
+        <div data-aos="fade-up" data-aos-delay="50">
+          <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-center mb-10 text-primary-accent">
+            career Program
+          </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div data-aos="fade-right" data-aos-delay="50" >
@@ -264,7 +265,7 @@ const InternshipForm = () => {
 
               {submitted && (
                 <div className="md:col-span-2 mt-4 bg-green-600/20 text-green-300 px-4 py-4 rounded-xl flex items-center gap-3">
-                  <i className="fas fa-check-circle text-green-400 text-xl"></i>
+                  <DynamicFaIcon name="fa-check-circle" className="text-green-400 text-xl" />
                   <span className="font-medium text-base">
                     Thank you! Your application was successfully submitted.
                   </span>

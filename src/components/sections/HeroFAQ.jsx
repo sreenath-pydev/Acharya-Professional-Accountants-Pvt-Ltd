@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-scroll';
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const HeroFAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -173,7 +174,7 @@ const HeroFAQ = () => {
                           }`}
                         aria-hidden="true"
                       >
-                        <i className="fas fa-chevron-down"></i>
+                        <DynamicFaIcon name="fa-chevron-down" />
                       </span>
                     </button>
                     <div
@@ -211,7 +212,7 @@ const HeroFAQ = () => {
             data-aos-delay={200 + index * 100}
             data-aos-duration="400"
           >
-            <i className="fab fa-whatsapp"></i>
+            <DynamicFaIcon name="fa-whatsapp" />
           </a>
         ))}
       </div>

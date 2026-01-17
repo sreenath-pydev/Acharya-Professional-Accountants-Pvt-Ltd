@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const CareersTeaser = () => {
     return (
@@ -41,7 +42,7 @@ const CareersTeaser = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                             <div className="flex items-center gap-4 bg-secondary-dark/50 p-4 rounded-xl border border-primary-accent/5">
                                 <div className="w-10 h-10 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent flex-shrink-0">
-                                    <i className="fas fa-graduation-cap"></i>
+                                    <DynamicFaIcon name="fa-graduation-cap" />
                                 </div>
                                 <div>
                                     <h4 className="text-white font-semibold">Internships</h4>
@@ -50,7 +51,7 @@ const CareersTeaser = () => {
                             </div>
                             <div className="flex items-center gap-4 bg-secondary-dark/50 p-4 rounded-xl border border-primary-accent/5">
                                 <div className="w-10 h-10 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent flex-shrink-0">
-                                    <i className="fas fa-briefcase"></i>
+                                    <DynamicFaIcon name="fa-briefcase" />
                                 </div>
                                 <div>
                                     <h4 className="text-white font-semibold">Job Openings</h4>
@@ -64,7 +65,7 @@ const CareersTeaser = () => {
                             className="inline-flex items-center gap-2 bg-primary-accent text-dark-bg font-semibold px-8 py-4 rounded-full hover:bg-white transition-all duration-300 shadow-[0_10px_20px_rgba(229,161,69,0.2)]"
                         >
                             <span>Explore Opportunities</span>
-                            <i className="fas fa-arrow-right"></i>
+                            <DynamicFaIcon name="fa-arrow-right" />
                         </Link>
                     </div>
                 </div>

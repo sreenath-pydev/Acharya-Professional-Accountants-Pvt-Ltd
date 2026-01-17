@@ -1,9 +1,11 @@
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
+
 const OurFounder = () => {
   const socialLinks = [
-    { icon: 'linkedin-in', url: '#', label: 'LinkedIn' },
-    { icon: 'twitter', url: '#', label: 'Twitter' },
-    { icon: 'facebook-f', url: '#', label: 'Facebook' },
-    { icon: 'instagram', url: '#', label: 'Instagram' }
+    { icon: 'fa-linkedin-in', url: '#', label: 'LinkedIn' },
+    { icon: 'fa-twitter', url: '#', label: 'Twitter' },
+    { icon: 'fa-facebook-f', url: '#', label: 'Facebook' },
+    { icon: 'fa-instagram', url: '#', label: 'Instagram' }
   ];
 
   return (
@@ -31,7 +33,7 @@ const OurFounder = () => {
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-primary-accent rounded-full flex items-center justify-center shadow-lg border-4 border-dark-bg">
-                <i className="fas fa-award text-3xl text-dark-bg"></i>
+                <DynamicFaIcon name="fa-award" className="text-3xl text-dark-bg" />
               </div>
             </div>
 
@@ -46,7 +48,7 @@ const OurFounder = () => {
                   className="w-12 h-12 bg-secondary-dark rounded-full flex items-center justify-center text-primary-accent text-lg hover:bg-primary-accent hover:text-dark-bg hover:scale-110 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300"
                   aria-label={social.label}
                 >
-                  <i className={`fab fa-${social.icon}`}></i>
+                  <DynamicFaIcon name={social.icon} />
                 </a>
               ))}
             </div>
@@ -80,19 +82,19 @@ const OurFounder = () => {
                 </h4>
                 <ul className="space-y-2">
                   <li className="text-boulder flex items-start gap-2">
-                    <i className="fas fa-check-circle text-primary-accent mt-1"></i>
+                    <DynamicFaIcon name="fa-check-circle" className="text-primary-accent mt-1" />
                     <span>Established and scaled Acharya Professional Accountants from ground up</span>
                   </li>
                   <li className="text-boulder flex items-start gap-2">
-                    <i className="fas fa-check-circle text-primary-accent mt-1"></i>
+                    <DynamicFaIcon name="fa-check-circle" className="text-primary-accent mt-1" />
                     <span>Led successful client engagements across multiple industries</span>
                   </li>
                   <li className="text-boulder flex items-start gap-2">
-                    <i className="fas fa-check-circle text-primary-accent mt-1"></i>
+                    <DynamicFaIcon name="fa-check-circle" className="text-primary-accent mt-1" />
                     <span>Pioneered innovative accounting solutions and service delivery models</span>
                   </li>
                   <li className="text-boulder flex items-start gap-2">
-                    <i className="fas fa-check-circle text-primary-accent mt-1"></i>
+                    <DynamicFaIcon name="fa-check-circle" className="text-primary-accent mt-1" />
                     <span>Mentored and developed numerous accounting professionals</span>
                   </li>
                 </ul>

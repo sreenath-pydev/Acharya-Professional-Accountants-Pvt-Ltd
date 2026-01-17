@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const CoursesTeaser = () => {
     const courses = [
@@ -57,7 +58,7 @@ const CoursesTeaser = () => {
                                 className="inline-flex items-center text-white font-semibold hover:text-primary-accent transition-colors text-sm"
                             >
                                 <span>Details</span>
-                                <i className="fas fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                                <DynamicFaIcon name="fa-arrow-right" className="ml-2 text-xs group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </div>
                     ))}
@@ -69,7 +70,7 @@ const CoursesTeaser = () => {
                         className="inline-flex items-center gap-2 bg-transparent border border-primary-accent text-primary-accent font-semibold px-8 py-3 rounded-full hover:bg-primary-accent hover:text-dark-bg transition-all duration-300"
                     >
                         <span>View All Courses</span>
-                        <i className="fas fa-arrow-right"></i>
+                        <DynamicFaIcon name="fa-arrow-right" />
                     </Link>
                 </div>
             </div>

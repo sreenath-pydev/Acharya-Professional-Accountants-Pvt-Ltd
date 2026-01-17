@@ -5,6 +5,7 @@ import AOS from 'aos';
 import ReactMarkdown from 'react-markdown';
 import { loanDetails } from '../../data/loanDetails';
 import SEO from '../common/SEO';
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const LoanDetailPage = () => {
     const { loanSlug } = useParams();
@@ -32,7 +33,7 @@ const LoanDetailPage = () => {
             <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16 grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-8 items-center" data-aos="fade-up">
                 <div>
                     <Link to="/services/business-loans" className="text-primary-accent hover:text-white mb-4 inline-flex items-center gap-2 text-sm font-semibold transition-colors">
-                        <i className="fas fa-arrow-left"></i> Back to All Loans
+                        <DynamicFaIcon name="fa-arrow-left" /> Back to All Loans
                     </Link>
                     <h1 className="font-montserrat text-3xl md:text-5xl font-bold mb-6 leading-tight">
                         {loan.title}
@@ -48,7 +49,7 @@ const LoanDetailPage = () => {
                             rel="noopener noreferrer"
                             className="inline-flex justify-center items-center bg-primary-accent text-dark-bg font-semibold px-6 py-3 rounded-full hover:bg-white transition-all duration-300 shadow-[0_4px_14px_rgba(229,161,69,0.3)]"
                         >
-                            <i className="fab fa-whatsapp mr-2"></i> Enquire Now
+                            <DynamicFaIcon name="fa-whatsapp" className="mr-2" /> Enquire Now
                         </a>
                         <Link
                             to="/contact"
@@ -85,7 +86,7 @@ const LoanDetailPage = () => {
                                         <ul className="space-y-3 mt-4">
                                             {section.list.map((item, i) => (
                                                 <li key={i} className="flex items-start gap-3 text-gray-300">
-                                                    <i className="fas fa-check-circle text-primary-accent mt-1.5 shrink-0"></i>
+                                                    <DynamicFaIcon name="fa-check-circle" className="text-primary-accent mt-1.5 shrink-0" />
                                                     <div className="leading-relaxed">
                                                         <ReactMarkdown components={{ p: 'span' }}>{item}</ReactMarkdown>
                                                     </div>
@@ -108,7 +109,7 @@ const LoanDetailPage = () => {
                                     'Transparency in processing fees and hidden charges'
                                 ].map((feat, i) => (
                                     <li key={i} className="flex items-start gap-3 text-sm text-gray-400">
-                                        <i className="fas fa-star text-primary-accent shrink-0 mt-1"></i>
+                                        <DynamicFaIcon name="fa-star" className="text-primary-accent shrink-0 mt-1" />
                                         {feat}
                                     </li>
                                 ))}
@@ -117,7 +118,7 @@ const LoanDetailPage = () => {
                                 href="tel:+919446369434"
                                 className="block w-full text-center bg-white text-dark-bg font-bold py-3 rounded-xl hover:bg-gray-200 transition-colors mb-4"
                             >
-                                <i className="fas fa-phone-alt mr-2"></i> Call +91 94463 69434
+                                <DynamicFaIcon name="fa-phone-alt" className="mr-2" /> Call +91 94463 69434
                             </a>
                             <p className="text-center text-xs text-gray-500">Available Mon-Sat, 9AM to 6PM</p>
                         </div>

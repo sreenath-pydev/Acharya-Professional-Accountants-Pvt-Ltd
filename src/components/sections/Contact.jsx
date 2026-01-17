@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,7 +11,7 @@ const Contact = () => {
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  
+
   // Add useEffect to handle the timeout for the success message
   useEffect(() => {
     let timer;
@@ -90,7 +91,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-dark-bg relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-[rgba(44,14,9,0.1)] to-[rgba(4,4,4,0.9)] z-0"></div>
-      
+
       <div className="container mx-auto px-5 md:px-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
           <div data-aos="fade-right" data-aos-delay="50" className="bg-secondary-dark p-10 rounded-2xl border border-primary-accent/10 shadow-lg">
@@ -101,11 +102,11 @@ const Contact = () => {
             <p className="text-boulder mb-8 leading-relaxed">
               Have questions or need professional accounting services? Reach out to our team for personalized assistance and expert guidance.
             </p>
-            
+
             <div className="space-y-8 mb-12">
               <div className="flex items-start gap-5 hover:translate-x-1 transition-transform duration-300">
                 <div className="w-12 h-12 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent text-xl">
-                  <i className="fas fa-map-marker-alt"></i>
+                  <DynamicFaIcon name="fa-map-marker-alt" />
                 </div>
                 <div>
                   <h4 className="text-white text-lg mb-1">Our Office</h4>
@@ -115,10 +116,10 @@ const Contact = () => {
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-5 hover:translate-x-1 transition-transform duration-300">
                 <div className="w-12 h-12 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent text-xl">
-                  <i className="fas fa-phone-alt"></i>
+                  <DynamicFaIcon name="fa-phone-alt" />
                 </div>
                 <div>
                   <h4 className="text-white text-lg mb-1">Phone</h4>
@@ -129,10 +130,10 @@ const Contact = () => {
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-5 hover:translate-x-1 transition-transform duration-300">
                 <div className="w-12 h-12 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent text-xl">
-                  <i className="fas fa-envelope"></i>
+                  <DynamicFaIcon name="fa-envelope" />
                 </div>
                 <div>
                   <h4 className="text-white text-lg mb-1">Email</h4>
@@ -142,10 +143,10 @@ const Contact = () => {
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-5 hover:translate-x-1 transition-transform duration-300">
                 <div className="w-12 h-12 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent text-xl">
-                  <i className="fas fa-clock"></i>
+                  <DynamicFaIcon name="fa-clock" />
                 </div>
                 <div>
                   <h4 className="text-white text-lg mb-1">Working Hours</h4>
@@ -155,36 +156,36 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            
+
             <div>
               <h3 className="text-white text-xl mb-5">Connect With Us</h3>
               <div className="flex gap-4">
                 {[
-                  { icon: 'linkedin-in', url: 'https://www.linkedin.com/company/acharyaprofessionalaccountants/posts/?feedView=all' },
+                  { icon: 'fa-linkedin-in', url: 'https://www.linkedin.com/company/acharyaprofessionalaccountants/posts/?feedView=all' },
                   ///{ icon: 'twitter', url: '#' },
-                  { icon: 'facebook-f', url: 'https://www.facebook.com/APAinCLT' },
-                  { icon: 'instagram', url: 'https://www.instagram.com/acharya_professional_accounts?utm_source=ig_web_button_share_sheet&igsh=MTJhMXk5YzNxYnUxZQ==' }
+                  { icon: 'fa-facebook-f', url: 'https://www.facebook.com/APAinCLT' },
+                  { icon: 'fa-instagram', url: 'https://www.instagram.com/acharya_professional_accounts?utm_source=ig_web_button_share_sheet&igsh=MTJhMXk5YzNxYnUxZQ==' }
                 ].map((social, index) => (
-                  <a 
+                  <a
                     key={index}
-                    href={social.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 bg-dark-bg rounded-full flex items-center justify-center text-primary-accent text-lg hover:bg-primary-accent hover:text-dark-bg hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300"
                   >
-                    <i className={`fab fa-${social.icon}`}></i>
+                    <DynamicFaIcon name={social.icon} />
                   </a>
                 ))}
               </div>
             </div>
           </div>
-          
+
           <div data-aos="fade-left" data-aos-delay="50" className="bg-secondary-dark p-10 rounded-2xl border border-primary-accent/10 shadow-lg">
             <h2 className="font-montserrat text-3xl font-bold mb-8 text-primary-accent relative pb-4">
               Send a Message
               <span className="absolute bottom-0 left-0 w-16 h-1 bg-primary-accent"></span>
             </h2>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-boulder font-medium mb-2">Full Name *</label>
@@ -199,7 +200,7 @@ const Contact = () => {
                 />
                 {errors.name && <p className="text-red-500 text-sm mt-2">{errors.name}</p>}
               </div>
-              
+
               <div>
                 <label htmlFor="email" className="block text-boulder font-medium mb-2">Email Address *</label>
                 <input
@@ -213,7 +214,7 @@ const Contact = () => {
                 />
                 {errors.email && <p className="text-red-500 text-sm mt-2">{errors.email}</p>}
               </div>
-              
+
               <div>
                 <label htmlFor="subject" className="block text-boulder font-medium mb-2">Subject *</label>
                 <input
@@ -227,7 +228,7 @@ const Contact = () => {
                 />
                 {errors.subject && <p className="text-red-500 text-sm mt-2">{errors.subject}</p>}
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-boulder font-medium mb-2">Message *</label>
                 <textarea
@@ -241,7 +242,7 @@ const Contact = () => {
                 ></textarea>
                 {errors.message && <p className="text-red-500 text-sm mt-2">{errors.message}</p>}
               </div>
-              
+
               <button
                 type="submit"
                 disabled={isLoading}
@@ -257,7 +258,7 @@ const Contact = () => {
                   </>
                 ) : (
                   <>
-                    Send Message <i className="fas fa-paper-plane"></i>
+                    Send Message <DynamicFaIcon name="fa-paper-plane" />
                   </>
                 )}
               </button>
@@ -276,13 +277,13 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        
+
         <div data-aos="fade-up" data-aos-delay="50" className="h-96 rounded-2xl overflow-hidden shadow-lg border border-primary-accent/10">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3077.6841848514887!2d75.8030430737993!3d11.2358719889422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6596ca4d1cb11%3A0xa76f81f9ba68fee1!2sAcharya%20professional%20accountants%20pvt%20ltd!5e1!3m2!1sen!2sin!4v1750755342483!5m2!1sen!2sin" 
-            className="w-full h-full border-0 filter grayscale-30 contrast-110" 
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3077.6841848514887!2d75.8030430737993!3d11.2358719889422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6596ca4d1cb11%3A0xa76f81f9ba68fee1!2sAcharya%20professional%20accountants%20pvt%20ltd!5e1!3m2!1sen!2sin!4v1750755342483!5m2!1sen!2sin"
+            className="w-full h-full border-0 filter grayscale-30 contrast-110"
             allowFullScreen
-            loading="lazy" 
+            loading="lazy"
             referrerPolicy="no-referrer-when-downgrade">
           </iframe>
         </div>

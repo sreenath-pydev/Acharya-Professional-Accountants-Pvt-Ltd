@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import VincumTaxCalculator from '../sections/VincumTaxCalculator';
 import SEO from '../common/SEO';
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const TaxCalculatorPage = () => {
     useEffect(() => {
@@ -38,7 +39,7 @@ const TaxCalculatorPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="bg-secondary-dark/50 border border-primary-accent/10 p-6 rounded-2xl hover:border-primary-accent/30 transition-colors">
                         <div className="w-12 h-12 bg-primary-accent/10 rounded-full flex items-center justify-center mb-4 text-primary-accent text-xl">
-                            <i className="fas fa-calculator"></i>
+                            <DynamicFaIcon name="fa-calculator" />
                         </div>
                         <h3 className="font-montserrat text-xl font-bold mb-2">Accurate Estimation</h3>
                         <p className="text-boulder text-sm">
@@ -47,7 +48,7 @@ const TaxCalculatorPage = () => {
                     </div>
                     <div className="bg-secondary-dark/50 border border-primary-accent/10 p-6 rounded-2xl hover:border-primary-accent/30 transition-colors">
                         <div className="w-12 h-12 bg-primary-accent/10 rounded-full flex items-center justify-center mb-4 text-primary-accent text-xl">
-                            <i className="fas fa-balance-scale"></i>
+                            <DynamicFaIcon name="fa-balance-scale" />
                         </div>
                         <h3 className="font-montserrat text-xl font-bold mb-2">Regime Comparison</h3>
                         <p className="text-boulder text-sm">
@@ -56,7 +57,7 @@ const TaxCalculatorPage = () => {
                     </div>
                     <div className="bg-secondary-dark/50 border border-primary-accent/10 p-6 rounded-2xl hover:border-primary-accent/30 transition-colors">
                         <div className="w-12 h-12 bg-primary-accent/10 rounded-full flex items-center justify-center mb-4 text-primary-accent text-xl">
-                            <i className="fas fa-file-invoice-dollar"></i>
+                            <DynamicFaIcon name="fa-file-invoice-dollar" />
                         </div>
                         <h3 className="font-montserrat text-xl font-bold mb-2">Detailed Breakdown</h3>
                         <p className="text-boulder text-sm">
@@ -78,26 +79,26 @@ const TaxCalculatorPage = () => {
                         </p>
                         <ul className="space-y-3 mb-8">
                             <li className="flex items-center gap-3 text-sm text-boulder">
-                                <i className="fas fa-check text-primary-accent"></i> ITR Filing for Salaried & Business
+                                <DynamicFaIcon name="fa-check" className="text-primary-accent" /> ITR Filing for Salaried & Business
                             </li>
                             <li className="flex items-center gap-3 text-sm text-boulder">
-                                <i className="fas fa-check text-primary-accent"></i> Capital Gains & Foreign Income
+                                <DynamicFaIcon name="fa-check" className="text-primary-accent" /> Capital Gains & Foreign Income
                             </li>
                             <li className="flex items-center gap-3 text-sm text-boulder">
-                                <i className="fas fa-check text-primary-accent"></i> Notice Management & Appeals
+                                <DynamicFaIcon name="fa-check" className="text-primary-accent" /> Notice Management & Appeals
                             </li>
                         </ul>
                         <Link
                             to="/services/taxation"
                             className="inline-flex items-center gap-2 bg-primary-accent text-dark-bg font-semibold px-6 py-3 rounded-full hover:bg-white transition-all duration-300"
                         >
-                            Explore Taxation Services <i className="fas fa-arrow-right"></i>
+                            Explore Taxation Services <DynamicFaIcon name="fa-arrow-right" />
                         </Link>
                     </div>
                     <div className="w-full md:w-1/3">
                         {/* Placeholder for an illustration or icon if needed, using a simple stylized box for now or reused image */}
                         <div className="bg-dark-bg/50 p-6 rounded-2xl border border-primary-accent/10 text-center">
-                            <i className="fas fa-user-tie text-6xl text-primary-accent/20 mb-4"></i>
+                            <DynamicFaIcon name="fa-user-tie" className="text-6xl text-primary-accent/20 mb-4" />
                             <p className="text-white font-semibold">Expert CA Support</p>
                             <p className="text-xs text-friar-gray mt-1">Get personalized advice locally in Kozhikode & Online</p>
                         </div>

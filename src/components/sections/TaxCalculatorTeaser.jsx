@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const TaxCalculatorTeaser = () => {
     return (
@@ -27,7 +28,7 @@ const TaxCalculatorTeaser = () => {
                                 className="group relative inline-flex items-center gap-3 bg-primary-accent text-dark-bg font-semibold px-8 py-4 rounded-full hover:bg-white transition-all duration-300 shadow-[0_10px_20px_rgba(229,161,69,0.2)] hover:shadow-[0_10px_30px_rgba(255,255,255,0.2)]"
                             >
                                 <span>Open Tax Calculator</span>
-                                <i className="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+                                <DynamicFaIcon name="fa-arrow-right" className="group-hover:translate-x-1 transition-transform duration-300" />
                             </Link>
                         </div>
                     </div>

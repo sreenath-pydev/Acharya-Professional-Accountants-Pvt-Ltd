@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import SEO from '../common/SEO';
+import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const ServiceAccountingPage = () => {
   useEffect(() => {
@@ -52,7 +53,7 @@ const ServiceAccountingPage = () => {
               'Management reports for owners and leadership teams',
             ].map((item) => (
               <li key={item} className="flex items-start gap-3">
-                <i className="fas fa-check-circle text-primary-accent mt-1"></i>
+                <DynamicFaIcon name="fa-check-circle" className="text-primary-accent mt-1" />
                 <span>{item}</span>
               </li>
             ))}
@@ -70,7 +71,7 @@ const ServiceAccountingPage = () => {
               'Confidence in numbers before taking key decisions',
             ].map((item) => (
               <li key={item} className="flex items-start gap-3">
-                <i className="fas fa-star text-primary-accent mt-1"></i>
+                <DynamicFaIcon name="fa-star" className="text-primary-accent mt-1" />
                 <span>{item}</span>
               </li>
             ))}
@@ -100,7 +101,7 @@ const ServiceAccountingPage = () => {
                 'Firms looking to upgrade from basic bookkeeping to MIS',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <i className="fas fa-user text-primary-accent mt-1"></i>
+                  <DynamicFaIcon name="fa-user" className="text-primary-accent mt-1" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -167,7 +168,7 @@ const ServiceAccountingPage = () => {
               to="/services"
               className="inline-flex items-center gap-2 text-dark-bg font-semibold hover:text-secondary-dark transition-colors duration-300"
             >
-              <i className="fas fa-arrow-left text-sm"></i>
+              <DynamicFaIcon name="fa-arrow-left" className="text-sm" />
               <span>Back to Services</span>
             </Link>
           </div>
