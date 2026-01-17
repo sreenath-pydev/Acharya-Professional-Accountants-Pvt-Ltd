@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import AOS from 'aos';
 import { auditingServices } from '../../data/auditingServices.jsx';
-import { setCanonical } from '../../utils/seo';
+import SEO from '../common/SEO';
 
 const AuditingServiceDetailPage = () => {
     const { serviceId } = useParams();
@@ -11,20 +11,6 @@ const AuditingServiceDetailPage = () => {
 
     useEffect(() => {
         if (service) {
-            document.title = `${service.seoTitle} | Acharya`;
-
-            const metaDescription = document.querySelector("meta[name='description']");
-            if (metaDescription) {
-                metaDescription.setAttribute('content', service.seoDescription);
-            }
-
-            const metaKeywords = document.querySelector("meta[name='keywords']");
-            if (metaKeywords) {
-                metaKeywords.setAttribute('content', service.keywords);
-            }
-
-            setCanonical(`https://acharyaprofessionalaccountants.in/services/auditing/${serviceId}`);
-
             AOS.refresh();
             window.scrollTo(0, 0);
         }
@@ -36,6 +22,12 @@ const AuditingServiceDetailPage = () => {
 
     return (
         <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
+            <SEO
+                title={service.seoTitle}
+                description={service.seoDescription}
+                keywords={service.keywords}
+                canonical={`https://acharyaprofessionalaccountants.in/services/auditing/${serviceId}`}
+            />
             {/* Hero Section */}
             <section className="container mx-auto px-4 md:px-20 mb-12" data-aos="fade-up">
                 <Link to="/services/auditing" className="inline-flex items-center gap-2 text-primary-accent text-sm mb-4 hover:underline">

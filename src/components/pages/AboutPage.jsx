@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
-import { setCanonical } from '../../utils/seo';
+import SEO from '../common/SEO';
 
 import WhoWeAre from '../sections/WhoWeAre';
 import MissionValues from '../sections/MissionValues';
@@ -11,25 +11,6 @@ import PeopleCulture from '../sections/PeopleCulture';
 
 const AboutPage = () => {
   useEffect(() => {
-    /* =========================
-       SEO: Title & Description
-    ========================== */
-    document.title =
-      'About Acharya Professional Accountants | CA Firm in Calicut';
-
-    const metaDescription = document.querySelector("meta[name='description']");
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        'content',
-        'Learn about Acharya Professional Accountants, a trusted CA firm in Kozhikode, delivering reliable tax, audit, GST, & compliance services across India.'
-      );
-    }
-
-    /* =========================
-       SEO: Canonical URL
-    ========================== */
-    setCanonical('https://acharyaprofessionalaccountants.in/about');
-
     /* =========================
        AOS Init
     ========================== */
@@ -70,6 +51,12 @@ const AboutPage = () => {
 
   return (
     <main className="font-inter text-white bg-dark-bg pt-32 md:pt-36 scroll-smooth">
+      <SEO
+        title="About Acharya Professional Accountants | CA Firm in Calicut"
+        description="Learn about Acharya Professional Accountants, a trusted CA firm in Kozhikode, delivering reliable tax, audit, GST, & compliance services across India."
+        canonical="https://acharyaprofessionalaccountants.in/about"
+      />
+
       <section
         className="container mx-auto px-4 md:px-20 mb-10 md:mb-14"
         data-aos="fade-up"

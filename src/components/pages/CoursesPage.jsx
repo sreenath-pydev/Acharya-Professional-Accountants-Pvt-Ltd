@@ -1,43 +1,10 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
-import { setCanonical } from '../../utils/seo';
+import SEO from '../common/SEO';
 
 const CoursesPage = () => {
   useEffect(() => {
-    /* =========================
-       SEO: Title & Description
-    ========================== */
-    document.title =
-      'Accounting & Finance Internship in Kerala | Acharya';
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        'content',
-        'Join job-oriented Accounting & Finance courses in Kerala with internships for BCom, CMA, & ACCA students. Gain real practical experience in Kozhikode.'
-      );
-    }
-
-    let metaKeywords = document.querySelector("meta[name='keywords']");
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.setAttribute('name', 'keywords');
-      document.head.appendChild(metaKeywords);
-    }
-    metaKeywords.setAttribute(
-      'content',
-      'accounting courses in calicut, accounting institutes in calicut, accounting courses in kerala, best accounting institute in calicut, accountant course in kerala, accountant internship kerala, finance internship kozhikode, CMA practical training, ACCA work experience'
-    );
-
-    /* =========================
-       SEO: Canonical URL
-    ========================== */
-    setCanonical('https://acharyaprofessionalaccountants.in/courses');
-
     /* =========================
        AOS & Scroll
     ========================== */
@@ -68,6 +35,12 @@ const CoursesPage = () => {
 
   return (
     <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
+      <SEO
+        title="Accounting & Finance Internship in Kerala | Acharya"
+        description="Join job-oriented Accounting & Finance courses in Kerala with internships for BCom, CMA, & ACCA students. Gain real practical experience in Kozhikode."
+        keywords="accounting courses in calicut, accounting institutes in calicut, accounting courses in kerala, best accounting institute in calicut, accountant course in kerala, accountant internship kerala, finance internship kozhikode, CMA practical training, ACCA work experience"
+        canonical="https://acharyaprofessionalaccountants.in/courses"
+      />
       {/* =========================
           Page Intro
       ========================== */}

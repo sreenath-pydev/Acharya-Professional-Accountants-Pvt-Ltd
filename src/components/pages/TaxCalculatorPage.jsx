@@ -2,18 +2,21 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import VincumTaxCalculator from '../sections/VincumTaxCalculator';
-import { setCanonical } from '../../utils/seo';
+import SEO from '../common/SEO';
 
 const TaxCalculatorPage = () => {
     useEffect(() => {
-        document.title = 'Income Tax Calculator FY 2025-26 | Plan & Save Tax | Acharya';
-        setCanonical('https://acharyaprofessionalaccountants.in/calculator');
         window.scrollTo({ top: 0, behavior: 'smooth' });
         AOS.refresh();
     }, []);
 
     return (
         <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
+            <SEO
+                title="Income Tax Calculator FY 2025-26 | Plan & Save Tax"
+                description="Calculate your income tax liability for FY 2025-26 with our free online tool. Compare Old vs New Regime and plan your tax savings."
+                canonical="https://acharyaprofessionalaccountants.in/calculator"
+            />
             {/* SEO Header Section */}
             <section className="container mx-auto px-4 md:px-20 mb-8 md:mb-12 text-center" data-aos="fade-up">
                 <p className="text-primary-accent uppercase tracking-[0.2em] text-sm mb-3">

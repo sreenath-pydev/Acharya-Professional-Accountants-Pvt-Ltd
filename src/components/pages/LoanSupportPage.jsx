@@ -1,24 +1,21 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
-import { setCanonical } from '../../utils/seo';
+import SEO from '../common/SEO';
 
 const LoanSupportPage = () => {
     useEffect(() => {
-        setCanonical('https://acharyaprofessionalaccountants.in/services/business-loans');
         AOS.refresh();
         window.scrollTo(0, 0);
-        document.title = 'Business Loan Support & Project Reports | Acharya Professional Accountants';
-
-        // Set meta description manually if not present in index.html or needs override
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-            metaDescription.setAttribute('content', 'End-to-end business loan assistance: Eligibility checks, bank-approved project reports, and documentation support for Startups and MSMEs in Kerala.');
-        }
     }, []);
 
     return (
         <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
+            <SEO
+                title="Business Loan Support & Project Reports"
+                description="End-to-end business loan assistance: Eligibility checks, bank-approved project reports, and documentation support for Startups and MSMEs in Kerala."
+                canonical="https://acharyaprofessionalaccountants.in/services/business-loans"
+            />
             {/* Hero Section */}
             <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16 grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-8 items-center" data-aos="fade-up">
                 <div>

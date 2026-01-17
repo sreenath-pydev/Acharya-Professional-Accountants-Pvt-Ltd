@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { setCanonical } from '../../utils/seo';
+import SEO from '../common/SEO';
 
 import InternshipForm from '../sections/InternshipForm';
 import JobOpenings from '../sections/JobOpenings';
@@ -12,28 +12,6 @@ const CareersPage = () => {
   const location = useLocation();
 
   useEffect(() => {
-    /* =========================
-       SEO: Title & Description
-    ========================== */
-    document.title =
-      'Accounting Internships & Jobs in Kozhikode | Acharya Careers';
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        'content',
-        'Join the team at Acharya Professional Accountants in Kozhikode for internship and career opportunities. Build your accounting career with experts.'
-      );
-    }
-
-    /* =========================
-       SEO: Canonical URL
-    ========================== */
-    setCanonical('https://acharyaprofessionalaccountants.in/career');
-
     /* =========================
        AOS Init
     ========================== */
@@ -64,6 +42,11 @@ const CareersPage = () => {
 
   return (
     <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
+      <SEO
+        title="Accounting Internships & Jobs in Kozhikode | Acharya Careers"
+        description="Join the team at Acharya Professional Accountants in Kozhikode for internship and career opportunities. Build your accounting career with experts."
+        canonical="https://acharyaprofessionalaccountants.in/careers"
+      />
       {/* =========================
           Page Intro
       ========================== */}

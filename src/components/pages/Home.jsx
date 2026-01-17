@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
-import { setCanonical } from '../../utils/seo';
+import SEO from '../common/SEO';
 
 import Hero from '../sections/Hero';
 import About from '../sections/About';
@@ -14,45 +14,23 @@ import PeopleCulture from '../sections/PeopleCulture';
 import Contact from '../sections/Contact';
 
 const Home = () => {
+  // SEO handled by component
+
+
   useEffect(() => {
-    /* =========================
-       SEO: Title & Description
-    ========================== */
-    document.title = 'CA Firm in Kozhikode | Acharya Professional Accountants';
-
-    const metaDescription = document.querySelector("meta[name='description']");
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        'content',
-        'Trusted chartered accountant firm in Kozhikode offers tax, audit, GST, & registration services nationwide, helping businesses stay compliant & grow.'
-      );
-    }
-
-    let metaKeywords = document.querySelector("meta[name='keywords']");
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.setAttribute('name', 'keywords');
-      document.head.appendChild(metaKeywords);
-    }
-    metaKeywords.setAttribute(
-      'content',
-      'best ca firms in calicut, ca firm in calicut, chartered accountants in calicut, tax consultants in kozhikode'
-    );
-
-    /* =========================
-       SEO: Canonical URL
-    ========================== */
-    setCanonical('https://acharyaprofessionalaccountants.in/');
-
-    /* =========================
-       AOS & Scroll
-    ========================== */
     AOS.refresh();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   return (
     <main>
+      <SEO
+        title="CA Firm in Kozhikode | Acharya Professional Accountants"
+        description="Trusted chartered accountant firm in Kozhikode offers tax, audit, GST, & registration services nationwide, helping businesses stay compliant & grow."
+        keywords="best ca firms in calicut, ca firm in calicut, chartered accountants in calicut, tax consultants in kozhikode"
+        canonical="https://acharyaprofessionalaccountants.in/"
+      />
+
       <Hero />
       <About />
       <Services />

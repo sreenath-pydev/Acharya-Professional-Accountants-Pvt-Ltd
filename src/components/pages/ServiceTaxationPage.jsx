@@ -1,17 +1,21 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
-import { setCanonical } from '../../utils/seo';
+import SEO from '../common/SEO';
 
 const ServiceTaxationPage = () => {
   useEffect(() => {
-    setCanonical('https://acharyaprofessionalaccountants.in/services/taxation');
     AOS.refresh();
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
+      <SEO
+        title="Taxation Services | Acharya Professional Accountants"
+        description="Expert tax planning and filing support for individuals and businesses in Calicut. Reduce risk and optimize savings."
+        canonical="https://acharyaprofessionalaccountants.in/services/taxation"
+      />
       <section className="container mx-auto px-4 md:px-20 mb-10 md:mb-14 grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-8" data-aos="fade-up">
         <div>
           <p className="text-primary-accent uppercase tracking-[0.2em] text-sm mb-3">Services / Taxation</p>

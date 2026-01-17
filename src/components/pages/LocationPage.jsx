@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
-import { setCanonical } from '../../utils/seo';
+import SEO from '../common/SEO';
 import Services from '../sections/Services';
 import { Link, useParams } from 'react-router-dom';
 import { locationGroups } from '../../data/locationData';
@@ -22,24 +22,6 @@ const LocationPage = ({ citySlugOverride }) => {
 
     useEffect(() => {
         /* =========================
-           SEO: Title & Description
-        ========================== */
-        document.title = `Accounting Services in ${locationName} | CA Firm & Tax Consultants`;
-
-        const metaDescription = document.querySelector("meta[name='description']");
-        if (metaDescription) {
-            metaDescription.setAttribute(
-                'content',
-                `Top CA Firm in ${locationName} offering expert Accounting, GST Registration, Income Tax Filing, and Audit services. Trusted by local businesses in ${locationName} for financial growth.`
-            );
-        }
-
-        /* =========================
-           SEO: Canonical URL
-        ========================== */
-        setCanonical(`https://acharyaprofessionalaccountants.in/accounting-service-in-${citySlug || 'kozhikode'}`);
-
-        /* =========================
            AOS & Scroll
         ========================== */
         // Delay AOS refresh to ensure DOM is fully ready
@@ -52,6 +34,11 @@ const LocationPage = ({ citySlugOverride }) => {
 
     return (
         <main key={citySlug} className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
+            <SEO
+                title={`Accounting Services in ${locationName} | CA Firm & Tax Consultants`}
+                description={`Top CA Firm in ${locationName} offering expert Accounting, GST Registration, Income Tax Filing, and Audit services. Trusted by local businesses in ${locationName} for financial growth.`}
+                canonical={`https://acharyaprofessionalaccountants.in/accounting-service-in-${citySlug || 'kozhikode'}`}
+            />
             {/* =========================
           Page Intro
       ========================== */}

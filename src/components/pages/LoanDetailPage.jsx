@@ -4,7 +4,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import AOS from 'aos';
 import ReactMarkdown from 'react-markdown';
 import { loanDetails } from '../../data/loanDetails';
-import { setCanonical } from '../../utils/seo';
+import SEO from '../common/SEO';
 
 const LoanDetailPage = () => {
     const { loanSlug } = useParams();
@@ -12,15 +12,6 @@ const LoanDetailPage = () => {
 
     useEffect(() => {
         if (loan) {
-            setCanonical(`https://acharyaprofessionalaccountants.in/services/business-loans/${loanSlug}`);
-            document.title = `${loan.title} | Acharya Business Loans`;
-
-            // Set seo description
-            const metaDescription = document.querySelector('meta[name="description"]');
-            if (metaDescription) {
-                metaDescription.setAttribute('content', loan.seoDescription);
-            }
-
             AOS.refresh();
             window.scrollTo(0, 0);
         }
@@ -32,6 +23,11 @@ const LoanDetailPage = () => {
 
     return (
         <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
+            <SEO
+                title={loan.title}
+                description={loan.seoDescription}
+                canonical={`https://acharyaprofessionalaccountants.in/services/business-loans/${loanSlug}`}
+            />
             {/* Hero Section */}
             <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16 grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-8 items-center" data-aos="fade-up">
                 <div>

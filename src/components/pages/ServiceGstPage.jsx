@@ -1,17 +1,21 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
-import { setCanonical } from '../../utils/seo';
+import SEO from '../common/SEO';
 
 const ServiceGstPage = () => {
   useEffect(() => {
-    setCanonical('https://acharyaprofessionalaccountants.in/services/gst');
     AOS.refresh();
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
+      <SEO
+        title="GST Services | Acharya Professional Accountants"
+        description="End-to-end GST support including registration, returns, and compliance for businesses in Calicut and beyond."
+        canonical="https://acharyaprofessionalaccountants.in/services/gst"
+      />
       <section className="container mx-auto px-4 md:px-20 mb-10 md:mb-14 grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-8" data-aos="fade-up">
         <div>
           <p className="text-primary-accent uppercase tracking-[0.2em] text-sm mb-3">Services / GST</p>

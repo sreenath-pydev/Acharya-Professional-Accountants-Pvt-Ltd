@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
-import { setCanonical } from '../../utils/seo';
+import SEO from '../common/SEO';
 import { Link } from 'react-router-dom';
 import { locationGroups } from '../../data/locationData';
 
@@ -8,28 +8,6 @@ import Services from '../sections/Services';
 
 const ServicesPage = () => {
   useEffect(() => {
-    /* =========================
-       SEO: Title & Description
-    ========================== */
-    document.title =
-      'Accounting, Tax, GST & Audit Services | Acharya Kozhikode';
-
-    const metaDescription = document.querySelector(
-      "meta[name='description']"
-    );
-
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        'content',
-        'Professional CA services in Kozhikode, including tax consulting, auditing, GST, business consulting, and business registration for clients nationwide.'
-      );
-    }
-
-    /* =========================
-       SEO: Canonical URL
-    ========================== */
-    setCanonical('https://acharyaprofessionalaccountants.in/services');
-
     /* =========================
        AOS & Scroll
     ========================== */
@@ -39,6 +17,11 @@ const ServicesPage = () => {
 
   return (
     <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
+      <SEO
+        title="Accounting, Tax, GST & Audit Services | Acharya Kozhikode"
+        description="Professional CA services in Kozhikode, including tax consulting, auditing, GST, business consulting, and business registration for clients nationwide."
+        canonical="https://acharyaprofessionalaccountants.in/services"
+      />
       {/* =========================
           Page Intro
       ========================== */}

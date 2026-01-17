@@ -1,17 +1,21 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
-import { setCanonical } from '../../utils/seo';
+import SEO from '../common/SEO';
 
 const CourseCProPage = () => {
   useEffect(() => {
-    setCanonical('https://acharyaprofessionalaccountants.in/courses/c-pro');
     AOS.refresh();
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
+      <SEO
+        title="Corporate Accounting & Reporting Course | C-PRO"
+        description="Master data analysis, MIS reporting, and corporate finance skills with C-PRO. Ideal for commerce graduates and analyst role seekers."
+        canonical="https://acharyaprofessionalaccountants.in/courses/c-pro"
+      />
       <section className="container mx-auto px-4 md:px-20 mb-10 md:mb-14" data-aos="fade-up">
         <p className="text-primary-accent uppercase tracking-[0.2em] text-sm mb-3">Course Detail</p>
         <h1 className="font-montserrat text-3xl md:text-5xl font-bold mb-3">
