@@ -37,9 +37,8 @@ const CoursesPage = () => {
   return (
     <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
       <SEO
-        title="Accounting & Finance Internship in Kerala | Acharya"
-        description="Join job-oriented Accounting & Finance courses in Kerala with internships for BCom, CMA, & ACCA students. Gain real practical experience in Kozhikode."
-        keywords="accounting courses in calicut, accounting institutes in calicut, accounting courses in kerala, best accounting institute in calicut, accountant course in kerala, accountant internship kerala, finance internship kozhikode, CMA practical training, ACCA work experience"
+        title="Accounting & Finance Course with Internship in Kerala | Acharya"
+        description="Join Acharya's accounting & finance course with an internship in Kerala. Gain practical training, industry exposure, & job-ready skills from industry experts."
         canonical="https://acharyaprofessionalaccountants.in/courses"
       />
       {/* =========================

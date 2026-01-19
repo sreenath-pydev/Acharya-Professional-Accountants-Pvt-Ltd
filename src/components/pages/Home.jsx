@@ -25,9 +25,8 @@ const Home = () => {
   return (
     <main>
       <SEO
-        title="CA Firm in Kozhikode | Acharya Professional Accountants"
-        description="Trusted chartered accountant firm in Kozhikode offers tax, audit, GST, & registration services nationwide, helping businesses stay compliant & grow."
-        keywords="best ca firms in calicut, ca firm in calicut, chartered accountants in calicut, tax consultants in kozhikode"
+        title="Accounting and Tax Consulting Services in India | Acharya"
+        description="Acharya Professional Accountants is a trusted CA firm offering expert tax consulting, GST filing, auditing, and business registration services across India."
         canonical="https://acharyaprofessionalaccountants.in/"
       />
 

@@ -19,8 +19,8 @@ const ServicesPage = () => {
   return (
     <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
       <SEO
-        title="Accounting, Tax, GST & Audit Services | Acharya Kozhikode"
-        description="Professional CA services in Kozhikode, including tax consulting, auditing, GST, business consulting, and business registration for clients nationwide."
+        title="Accounting, Tax, GST & Audit Services | Acharya"
+        description="Get professional accounting, tax, GST, and audit services for businesses and individuals. Reliable compliance solutions from expert accountants."
         canonical="https://acharyaprofessionalaccountants.in/services"
       />
       {/* =========================

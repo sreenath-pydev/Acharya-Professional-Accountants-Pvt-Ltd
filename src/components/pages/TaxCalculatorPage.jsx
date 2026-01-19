@@ -14,8 +14,8 @@ const TaxCalculatorPage = () => {
     return (
         <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
             <SEO
-                title="Income Tax Calculator FY 2025-26 | Plan & Save Tax"
-                description="Calculate your income tax liability for FY 2025-26 with our free online tool. Compare Old vs New Regime and plan your tax savings."
+                title="Income Tax Calculator & Planner | Acharya Accountants"
+                description="Calculate your income tax instantly with our easy-to-use online tax calculator. Plan your taxes accurately and make informed financial decisions."
                 canonical="https://acharyaprofessionalaccountants.in/calculator"
             />
             {/* SEO Header Section */}

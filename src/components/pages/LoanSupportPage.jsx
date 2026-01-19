@@ -13,8 +13,8 @@ const LoanSupportPage = () => {
     return (
         <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
             <SEO
-                title="Business Loan Support & Project Reports"
-                description="End-to-end business loan assistance: Eligibility checks, bank-approved project reports, and documentation support for Startups and MSMEs in Kerala."
+                title="Business Loan Assistance & Project Reports | Acharya"
+                description="Get expert help with business loan applications and project reports, with accurate documentation and guidance to improve your chances of loan approval."
                 canonical="https://acharyaprofessionalaccountants.in/services/business-loans"
             />
             {/* Hero Section */}

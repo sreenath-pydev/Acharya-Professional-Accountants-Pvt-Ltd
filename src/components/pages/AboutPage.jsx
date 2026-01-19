@@ -52,8 +52,8 @@ const AboutPage = () => {
   return (
     <main className="font-inter text-white bg-dark-bg pt-32 md:pt-36 scroll-smooth">
       <SEO
-        title="About Acharya Professional Accountants | CA Firm in Calicut"
-        description="Learn about Acharya Professional Accountants, a trusted CA firm in Kozhikode, delivering reliable tax, audit, GST, & compliance services across India."
+        title="About Acharya | Professional Accounting & Tax Experts"
+        description="Acharya is a professional CA firm that provides reliable accounting, tax, and compliance solutions to businesses and individuals across India."
         canonical="https://acharyaprofessionalaccountants.in/about"
       />
 
