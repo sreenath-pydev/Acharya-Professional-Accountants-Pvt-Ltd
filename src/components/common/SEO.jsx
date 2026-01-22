@@ -25,7 +25,7 @@ const SEO = ({
         : defaultImage;
 
     const fullTitle = title
-        ? `${title} | Acharya Professional Accountants`
+        ? (title.includes('Acharya') ? title : `${title} | Acharya Professional Accountants`)
         : 'Acharya Professional Accountants | CA & Tax Consultant in Calicut';
 
     return (
