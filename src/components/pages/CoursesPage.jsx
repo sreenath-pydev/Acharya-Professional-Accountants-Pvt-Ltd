@@ -38,7 +38,7 @@ const CoursesPage = () => {
     <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
       <SEO
         title="Accounting & Finance Course with Internship in Kerala | Acharya"
-        description="Join Acharya's accounting & finance course with an internship in Kerala. Gain practical training, industry exposure, & job-ready skills from industry experts."
+        description="Join Acharya’s accounting & finance course in Kerala with internship, practical training, industry exposure, and job-ready skills from experts."
         canonical="https://acharyaprofessionalaccountants.in/courses"
       />
       {/* =========================
