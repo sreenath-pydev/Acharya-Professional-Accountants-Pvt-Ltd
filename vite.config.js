@@ -1,10 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+// import path from 'path';
+// import prerender from 'vite-plugin-prerender';
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
+    // Custom prerender implementation handles static generation
     {
       name: 'vite-plugin-inline-css',
       apply: 'build',
@@ -42,7 +46,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
+          vendor: ['react', 'react-dom', 'react-router-dom', 'react-helmet-async'],
           ui: ['aos', 'swiper', 'react-icons']
         }
       }
