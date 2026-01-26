@@ -1,5 +1,8 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
+import { Helmet } from 'react-helmet';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import SEO from '../common/SEO';
 
 import WhoWeAre from '../sections/WhoWeAre';
@@ -52,10 +55,27 @@ const AboutPage = () => {
   return (
     <main className="font-inter text-white bg-dark-bg pt-32 md:pt-36 scroll-smooth">
       <SEO
-        title="About Acharya | Professional Accounting & Tax Experts"
-        description="Acharya is a professional CA firm that provides reliable accounting, tax, and compliance solutions to businesses and individuals across India."
+        title="About Acharya Professional Accountants | CA Firm in India"
+        description="Acharya Professional Accountants is a trusted CA firm in India offering tax, GST, auditing, and business registration services."
         canonical="https://acharyaprofessionalaccountants.in/about"
+        robots="index, follow"
       />
+
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AccountingService",
+            "name": "Acharya Professional Accountants Pvt Ltd",
+            "url": "https://acharyaprofessionalaccountants.in",
+            "logo": "https://acharyaprofessionalaccountants.in/logo.png",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "IN"
+            }
+          })}
+        </script>
+      </Helmet>
 
       <section
         className="container mx-auto px-4 md:px-20 mb-10 md:mb-14"
@@ -66,13 +86,18 @@ const AboutPage = () => {
         </p>
 
         <h1 className="font-montserrat text-3xl md:text-5xl font-bold mb-4">
-          Acharya Professional Accountants
+          About Acharya Professional Accountants
         </h1>
 
+        <h2 className="text-2xl font-semibold mb-4 text-primary-accent">Trusted CA Firm in India</h2>
+
         <p className="text-lg text-boulder max-w-3xl">
-          Learn more about who we are, the values that drive us, and how we
-          support businesses with trusted accounting expertise across every
-          stage of growth.
+          Acharya Professional Accountants is a leading firm providing expert financial solutions.
+          Our services include <Link to="/services/gst-filing" className="text-primary-accent hover:underline">GST Filing</Link>,
+          <Link to="/services/income-tax" className="text-primary-accent hover:underline"> Income Tax Services</Link>,
+          <Link to="/services/company-registration" className="text-primary-accent hover:underline"> Company Registration</Link>,
+          and professional <Link to="/services/audit" className="text-primary-accent hover:underline">Audit Services</Link>.
+          If you need expert financial guidance, <Link to="/contact" className="text-primary-accent hover:underline">Contact Us</Link> today.
         </p>
       </section>
 

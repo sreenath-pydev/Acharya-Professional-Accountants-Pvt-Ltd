@@ -8,7 +8,8 @@ const SEO = ({
     keywords,
     canonical,
     ogType = 'website',
-    ogImage
+    ogImage,
+    robots
 }) => {
     const location = useLocation();
     const siteUrl = 'https://acharyaprofessionalaccountants.in';
@@ -34,6 +35,7 @@ const SEO = ({
             <title>{fullTitle}</title>
             <meta name="description" content={description} />
             {keywords && <meta name="keywords" content={keywords} />}
+            {robots && <meta name="robots" content={robots} />}
             <link rel="canonical" href={currentUrl} />
 
             {/* Open Graph / Facebook */}
