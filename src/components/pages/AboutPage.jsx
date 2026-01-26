@@ -56,7 +56,7 @@ const AboutPage = () => {
     <main className="font-inter text-white bg-dark-bg pt-32 md:pt-36 scroll-smooth">
       <SEO
         title="About Acharya Professional Accountants | CA Firm in India"
-        description="Acharya Professional Accountants is a trusted CA firm in India offering tax, GST, auditing, and business registration services."
+        description="Know Acharya Professional Accountants' story, mission, and values, a client-focused CA firm committed to ethical, transparent guidance for Indian taxpayers."
         canonical="https://acharyaprofessionalaccountants.in/about"
         robots="index, follow"
       />
