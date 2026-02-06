@@ -37,7 +37,7 @@ const LocationPage = ({ citySlugOverride }) => {
             <SEO
                 title={`Accounting Services in ${locationName} | CA Firm & Tax Consultants`}
                 description={`Top CA Firm in ${locationName} offering expert Accounting, GST Registration, Income Tax Filing, and Audit services. Trusted by local businesses in ${locationName} for financial growth.`}
-                canonical={`https://acharyaprofessionalaccountants.in/accounting-service-in-${citySlug || 'kozhikode'}`}
+                canonical={`https://www.acharyaprofessionalaccountants.in/accounting-service-in-${citySlug || 'kozhikode'}`}
             />
             {/* =========================
           Page Intro

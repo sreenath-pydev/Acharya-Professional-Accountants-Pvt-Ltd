@@ -15,7 +15,7 @@ const CourseGlobalProPage = () => {
       <SEO
         title="Accountant Course for UAE & GCC Career | Global PRO"
         description="Train for UAE and GCC accounting careers with Global PRO. Learn international reporting, VAT, and MIS to become overseas job-ready."
-        canonical="https://acharyaprofessionalaccountants.in/courses/globalpro"
+        canonical="https://www.acharyaprofessionalaccountants.in/courses/globalpro"
       />
       <section className="container mx-auto px-4 md:px-20 mb-10 md:mb-14" data-aos="fade-up">
         <p className="text-primary-accent uppercase tracking-[0.2em] text-sm mb-3">Course Detail</p>

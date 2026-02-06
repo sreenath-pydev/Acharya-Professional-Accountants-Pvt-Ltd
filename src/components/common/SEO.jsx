@@ -12,7 +12,7 @@ const SEO = ({
     robots
 }) => {
     const location = useLocation();
-    const siteUrl = 'https://acharyaprofessionalaccountants.in';
+    const siteUrl = 'https://www.acharyaprofessionalaccountants.in';
 
     // Construct absolute URL for canonical if not provided or relative
     const currentUrl = canonical

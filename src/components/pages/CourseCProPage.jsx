@@ -15,7 +15,7 @@ const CourseCProPage = () => {
       <SEO
         title="Corporate Accounting & Reporting Course | C-PRO"
         description="Master data analysis, MIS reporting, and corporate finance skills with C-PRO. Ideal for commerce graduates and analyst role seekers."
-        canonical="https://acharyaprofessionalaccountants.in/courses/c-pro"
+        canonical="https://www.acharyaprofessionalaccountants.in/courses/c-pro"
       />
       <section className="container mx-auto px-4 md:px-20 mb-10 md:mb-14" data-aos="fade-up">
         <p className="text-primary-accent uppercase tracking-[0.2em] text-sm mb-3">Course Detail</p>

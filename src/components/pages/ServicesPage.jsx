@@ -21,7 +21,7 @@ const ServicesPage = () => {
       <SEO
         title="Accounting, Tax, GST & Audit Services | Acharya"
         description="Get professional accounting, tax, GST, and audit services for businesses and individuals. Reliable compliance solutions from expert accountants."
-        canonical="https://acharyaprofessionalaccountants.in/services"
+        canonical="https://www.acharyaprofessionalaccountants.in/services"
       />
       {/* =========================
           Page Intro

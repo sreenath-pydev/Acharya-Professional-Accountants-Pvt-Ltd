@@ -57,7 +57,7 @@ const AboutPage = () => {
       <SEO
         title="About Acharya Professional Accountants | CA Firm in India"
         description="Know Acharya Professional Accountants' story, mission, and values, a client-focused CA firm committed to ethical, transparent guidance for Indian taxpayers."
-        canonical="https://acharyaprofessionalaccountants.in/about"
+        canonical="https://www.acharyaprofessionalaccountants.in/about"
         robots="index, follow"
       />
 
@@ -67,8 +67,8 @@ const AboutPage = () => {
             "@context": "https://schema.org",
             "@type": "AccountingService",
             "name": "Acharya Professional Accountants Pvt Ltd",
-            "url": "https://acharyaprofessionalaccountants.in",
-            "logo": "https://acharyaprofessionalaccountants.in/logo.png",
+            "url": "https://www.acharyaprofessionalaccountants.in",
+            "logo": "https://www.acharyaprofessionalaccountants.in/logo.png",
             "address": {
               "@type": "PostalAddress",
               "addressCountry": "IN"

@@ -15,7 +15,7 @@ const ServiceAuditingPage = () => {
       <SEO
         title="Auditing Services | Acharya Professional Accountants"
         description="Independent auditing services including statutory, internal, and tax audits to ensure compliance and control."
-        canonical="https://acharyaprofessionalaccountants.in/services/auditing"
+        canonical="https://www.acharyaprofessionalaccountants.in/services/auditing"
       />
       <section className="container mx-auto px-4 md:px-20 mb-10 md:mb-14 grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-8" data-aos="fade-up">
         <div>

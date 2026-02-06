@@ -15,7 +15,7 @@ const ServiceGstPage = () => {
       <SEO
         title="GST Services | Acharya Professional Accountants"
         description="End-to-end GST support including registration, returns, and compliance for businesses in Calicut and beyond."
-        canonical="https://acharyaprofessionalaccountants.in/services/gst"
+        canonical="https://www.acharyaprofessionalaccountants.in/services/gst"
       />
       <section className="container mx-auto px-4 md:px-20 mb-10 md:mb-14 grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-8" data-aos="fade-up">
         <div>

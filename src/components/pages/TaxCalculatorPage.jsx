@@ -16,7 +16,7 @@ const TaxCalculatorPage = () => {
             <SEO
                 title="Income Tax Calculator & Planner | Acharya Accountants"
                 description="Calculate your income tax instantly with our easy-to-use online tax calculator. Plan your taxes accurately and make informed financial decisions."
-                canonical="https://acharyaprofessionalaccountants.in/calculator"
+                canonical="https://www.acharyaprofessionalaccountants.in/calculator"
             />
             {/* SEO Header Section */}
             <section className="container mx-auto px-4 md:px-20 mb-8 md:mb-12 text-center" data-aos="fade-up">

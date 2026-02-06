@@ -45,7 +45,7 @@ const CareersPage = () => {
       <SEO
         title="Careers & Internships at Acharya Professional Accountants"
         description="Explore accounting careers and internships in Kerala with Acharya. Join our expert team and grow your accounting and finance career with us."
-        canonical="https://acharyaprofessionalaccountants.in/careers"
+        canonical="https://www.acharyaprofessionalaccountants.in/careers"
       />
       {/* =========================
           Page Intro

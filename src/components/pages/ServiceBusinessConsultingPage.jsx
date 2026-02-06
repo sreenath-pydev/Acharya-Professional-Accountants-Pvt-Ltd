@@ -15,7 +15,7 @@ const ServiceBusinessConsultingPage = () => {
       <SEO
         title="Business Consulting Services | Acharya Professional Accountants"
         description="Strategic business consulting to improve profitability, cash flow, and financial planning for growing businesses."
-        canonical="https://acharyaprofessionalaccountants.in/services/business-consulting"
+        canonical="https://www.acharyaprofessionalaccountants.in/services/business-consulting"
       />
       <section className="container mx-auto px-4 md:px-20 mb-10 md:mb-14 grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-8" data-aos="fade-up">
         <div>

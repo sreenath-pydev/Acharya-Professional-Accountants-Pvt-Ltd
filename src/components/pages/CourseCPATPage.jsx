@@ -15,7 +15,7 @@ const CourseCPATPage = () => {
       <SEO
         title="Practical Accounting Training Course | C-PAT"
         description="Hands-on accounting training in Calicut covering GST, Income Tax, Tally, and real work exposure. Become a job-ready accountant."
-        canonical="https://acharyaprofessionalaccountants.in/courses/c-pat"
+        canonical="https://www.acharyaprofessionalaccountants.in/courses/c-pat"
       />
       <section className="container mx-auto px-4 md:px-20 mb-10 md:mb-14" data-aos="fade-up">
         <p className="text-primary-accent uppercase tracking-[0.2em] text-sm mb-3">Course Detail</p>

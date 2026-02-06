@@ -15,7 +15,7 @@ const ServiceTaxationPage = () => {
       <SEO
         title="Taxation Services | Acharya Professional Accountants"
         description="Expert tax planning and filing support for individuals and businesses in Calicut. Reduce risk and optimize savings."
-        canonical="https://acharyaprofessionalaccountants.in/services/taxation"
+        canonical="https://www.acharyaprofessionalaccountants.in/services/taxation"
       />
       <section className="container mx-auto px-4 md:px-20 mb-10 md:mb-14 grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-8" data-aos="fade-up">
         <div>

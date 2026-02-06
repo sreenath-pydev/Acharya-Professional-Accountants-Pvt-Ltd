@@ -14,7 +14,7 @@ const ContactPage = () => {
       <SEO
         title="Contact Us | Acharya Professional Accountants"
         description="Get in touch with Acharya Professional Accountants in Calicut for expert CA services, tax consulting, and business support."
-        canonical="https://acharyaprofessionalaccountants.in/contact"
+        canonical="https://www.acharyaprofessionalaccountants.in/contact"
       />
       <section className="container mx-auto px-4 md:px-20 mb-10 md:mb-14" data-aos="fade-up">
         <p className="text-primary-accent uppercase tracking-[0.2em] text-sm mb-3">Contact</p>

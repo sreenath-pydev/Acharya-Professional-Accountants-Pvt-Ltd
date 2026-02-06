@@ -26,7 +26,7 @@ const GSTServiceDetailPage = () => {
                 title={service.seoTitle}
                 description={service.seoDescription}
                 keywords={service.keywords}
-                canonical={`https://acharyaprofessionalaccountants.in/services/gst/${serviceId}`}
+                canonical={`https://www.acharyaprofessionalaccountants.in/services/gst/${serviceId}`}
             />
             {/* Hero Section */}
             <section className="container mx-auto px-4 md:px-20 mb-12" data-aos="fade-up">

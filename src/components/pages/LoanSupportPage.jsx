@@ -15,7 +15,7 @@ const LoanSupportPage = () => {
             <SEO
                 title="Business Loan Assistance & Project Reports | Acharya"
                 description="Get expert guidance on a business loan from Acharya Professional Accountants, covering eligibility, documentation, and approvals for seamless funding."
-                canonical="https://acharyaprofessionalaccountants.in/services/business-loans"
+                canonical="https://www.acharyaprofessionalaccountants.in/services/business-loans"
             />
             {/* Hero Section */}
             <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16 grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-8 items-center" data-aos="fade-up">
