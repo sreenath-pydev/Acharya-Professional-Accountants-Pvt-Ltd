@@ -25,7 +25,7 @@ const CourseGlobalProPage = lazy(() => import('./components/pages/CourseGlobalPr
 const CourseCProPage = lazy(() => import('./components/pages/CourseCProPage'));
 const CourseCPATPage = lazy(() => import('./components/pages/CourseCPATPage'));
 const CareersPage = lazy(() => import('./components/pages/CareersPage'));
-const InternshipPage = lazy(() => import('./components/pages/CareersPage')); // Note: pointing to same component as original
+const InternshipPage = lazy(() => import('./components/pages/InternshipPage'));
 const ContactPage = lazy(() => import('./components/pages/ContactPage'));
 const TaxCalculatorPage = lazy(() => import('./components/pages/TaxCalculatorPage'));
 const DynamicPageHandler = lazy(() => import('./components/pages/DynamicPageHandler'));

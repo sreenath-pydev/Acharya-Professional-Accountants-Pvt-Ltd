@@ -56,6 +56,8 @@ const Header = () => {
         return path === '/services/business-loans';
       case 'income tax calculator':
         return path === '/calculator';
+      case 'internship':
+        return path === '/Internship';
       case 'courses':
         return path.startsWith('/courses');
       case 'careers':
@@ -80,6 +82,18 @@ const Header = () => {
       return (
         <RouterLink
           to="/calculator"
+          className={getLinkClasses(item)}
+          onClick={() => setIsMenuOpen(false)}
+        >
+          {item}
+        </RouterLink>
+      );
+    }
+
+    if (item === 'internship') {
+      return (
+        <RouterLink
+          to="/Internship"
           className={getLinkClasses(item)}
           onClick={() => setIsMenuOpen(false)}
         >
@@ -286,7 +300,7 @@ const Header = () => {
 
           <div className="hidden md:flex items-center gap-6 lg:gap-8 relative z-10">
             <ul className="flex gap-6 lg:gap-8">
-              {['home', 'about', 'services', 'business loans', 'income tax calculator', 'courses', 'careers'].map((item) => (
+              {['home', 'about', 'services', 'business loans', 'income tax calculator', 'internship', 'courses', 'careers'].map((item) => (
                 <li key={item}>
                   {renderLink(item)}
                 </li>
@@ -332,7 +346,7 @@ const Header = () => {
             }}
           >
             <ul className="flex flex-col items-center gap-6 w-full px-4">
-              {['home', 'about', 'services', 'business loans', 'income tax calculator', 'courses', 'careers'].map((item) => (
+              {['home', 'about', 'services', 'business loans', 'income tax calculator', 'internship', 'courses', 'careers'].map((item) => (
                 <li key={item} className="w-full text-center">
                   {renderLink(item)}
                 </li>
