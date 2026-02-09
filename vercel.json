@@ -1,5 +1,21 @@
 {
-   "rewrites":  [
-       {"source": "/(.*)", "destination": "/"}
+    "redirects": [
+        {
+            "source": "/:path*",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "acharyaprofessionalaccountants.in"
+                }
+            ],
+            "destination": "https://www.acharyaprofessionalaccountants.in/:path*",
+            "permanent": true
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/"
+        }
     ]
 }
