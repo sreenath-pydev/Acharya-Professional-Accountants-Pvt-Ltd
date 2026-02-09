@@ -70,7 +70,7 @@ const Header = () => {
   };
 
   const getLinkClasses = (item) => {
-    const baseClasses = "transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg";
+    const baseClasses = "transition-colors duration-300 cursor-pointer capitalize text-base lg:text-lg whitespace-nowrap";
     const activeClasses = "text-primary-accent font-medium"; // Added font-medium for better visibility
     const inactiveClasses = "text-white hover:text-primary-accent";
 
