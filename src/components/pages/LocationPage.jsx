@@ -1,43 +1,51 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
 import SEO from '../common/SEO';
-import Services from '../sections/Services';
+import LocationServices from '../sections/LocationServices';
 import { Link, useParams } from 'react-router-dom';
-import { locationGroups } from '../../data/locationData';
+import { locationGroups, cityContent } from '../../data/locationData';
+import { IconCheck } from '../common/Icons';
 
 const LocationPage = ({ citySlugOverride }) => {
     const params = useParams();
     const citySlug = citySlugOverride || params.citySlug;
 
-    // Helper to format slug to Title Case (e.g., 'kochi' -> 'Kochi', 'new-delhi' -> 'New Delhi')
-    const formatCityName = (slug) => {
-        if (!slug) return 'Kozhikode'; // Default fallback
-        return slug
-            .split('-')
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(' ');
-    };
+    // key might need normalization if URL slug differs from data key
+    // In our data, keys are like 'kozhikode', 'bengaluru'. 
+    // The slug coming in is already normalized by DynamicPageHandler presumably, 
+    // but let's be safe.
+    const normalizedSlug = citySlug ? citySlug.toLowerCase() : 'kozhikode';
 
-    const locationName = formatCityName(citySlug);
+    const cityData = cityContent[normalizedSlug];
 
     useEffect(() => {
         /* =========================
            AOS & Scroll
         ========================== */
-        // Delay AOS refresh to ensure DOM is fully ready
         setTimeout(() => {
             AOS.refresh();
         }, 100);
 
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, [locationName, citySlug]);
+    }, [citySlug]);
+
+    // Fallback if city data not found (shouldn't happen with correct routing)
+    if (!cityData) {
+        return (
+            <div className="min-h-screen pt-32 text-center text-white bg-dark-bg">
+                <h1 className="text-3xl font-bold">Location Not Found</h1>
+                <p className="mt-4">We are expanding our services. Please contact us for support.</p>
+                <Link to="/contact" className="inline-block mt-6 bg-primary-accent px-6 py-2 rounded-full text-white">Contact Us</Link>
+            </div>
+        );
+    }
 
     return (
         <main key={citySlug} className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
             <SEO
-                title={`Accounting Services in ${locationName} | CA Firm & Tax Consultants`}
-                description={`Top CA Firm in ${locationName} offering expert Accounting, GST Registration, Income Tax Filing, and Audit services. Trusted by local businesses in ${locationName} for financial growth.`}
-                canonical={`https://www.acharyaprofessionalaccountants.in/accounting-service-in-${citySlug || 'kozhikode'}`}
+                title={cityData.metaTitle}
+                description={cityData.metaDescription}
+                canonical={`https://www.acharyaprofessionalaccountants.in/accounting-service-in-${cityData.slug}`}
             />
             {/* =========================
           Page Intro
@@ -49,99 +57,82 @@ const LocationPage = ({ citySlugOverride }) => {
                 <div className="flex flex-col md:flex-row items-center gap-10">
                     <div className="w-full md:w-3/5">
                         <p className="text-primary-accent uppercase tracking-[0.2em] text-sm mb-3">
-                            Location: {locationName}
+                            Location: {cityData.name}
                         </p>
 
-                        <h1 className="font-montserrat text-3xl md:text-5xl font-bold mb-4">
-                            Expert CA & Accounting Services in {locationName}
+                        <h1 className="font-montserrat text-3xl md:text-5xl font-bold mb-6 leading-tight">
+                            {cityData.introTitle}
                         </h1>
 
-                        <p className="text-lg text-boulder max-w-3xl mb-6">
-                            Acharya Professional Accountants brings world-class financial expertise directly to {locationName}.
-                            From GST filing and income tax returns to comprehensive business auditing and advisory,
-                            we help businesses in {locationName} grow with confidence and compliance.
-                        </p>
-
-                        {/* Local SEO Text Block */}
-                        <div className="bg-secondary-dark/30 border border-primary-accent/10 rounded-xl p-6 mb-6 text-sm text-boulder leading-relaxed">
-                            <p className="mb-2">
-                                We understand the unique business landscape of <strong>{locationName}</strong>. Whether you are a startup looking for company registration in {locationName} or an established firm needing complex audit support, our team provides tailored solutions right here in your city.
-                            </p>
-                            <p>
-                                Partner with the most trusted accounting firm serving <strong>{locationName}</strong> and nearby regions to ensure your business remains 100% compliant with Indian tax laws.
-                            </p>
+                        <div className="text-lg text-boulder max-w-3xl mb-8 space-y-4">
+                            {cityData.introText.map((paragraph, idx) => (
+                                <p key={idx}>{paragraph}</p>
+                            ))}
                         </div>
 
-
-                        <div className="mt-6">
+                        <div className="mt-8">
                             <Link to="/contact" className="inline-block bg-primary-accent hover:bg-primary-accent/90 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-primary-accent/20">
                                 Get a Free Consultation
                             </Link>
                         </div>
                     </div>
-                    {/* Image Placeholder - Dynamic ALT Text */}
-                    <div className="w-full md:w-2/5">
-                        <div className="rounded-2xl overflow-hidden border border-primary-accent/20 shadow-2xl relative group">
-                            <div className="absolute inset-0 bg-primary-accent/10 group-hover:bg-transparent transition-colors duration-500"></div>
-                            {/* Ideally replace this src with a dynamic map or city image if available, else a generic office image */}
-                            <img
-                                src="/images/internship_office.webp"
-                                alt={`Accounting and CA Services office in ${locationName}`}
-                                className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
-                            />
-                        </div>
-                    </div>
                 </div>
             </section>
+
+            {/* =========================
+          Services List (City Specific)
+      ========================== */}
+            <LocationServices services={cityData.services} cityName={cityData.name} />
 
             {/* =========================
           Why Local Businesses Choose Us
       ========================== */}
             <section
-                className="container mx-auto px-4 md:px-20 mb-12 md:mb-16 grid grid-cols-1 md:grid-cols-3 gap-8"
+                className="container mx-auto px-4 md:px-20 mb-16 py-10"
                 data-aos="fade-up"
                 data-aos-delay="50"
             >
-                <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-6 hover:border-primary-accent/40 transition-colors duration-300">
-                    <h2 className="font-montserrat text-xl font-semibold mb-3 text-white">
-                        Local {locationName} Expertise
-                    </h2>
-                    <p className="text-boulder text-sm md:text-base">
-                        Detailed understanding of the local business environment in {locationName}, ensuring relevant and timely financial advice for local market conditions.
-                    </p>
-                </div>
+                <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-10 text-center">
+                    Why Choose Acharya in {cityData.name}?
+                </h2>
 
-                <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-6 hover:border-primary-accent/40 transition-colors duration-300">
-                    <h2 className="font-montserrat text-xl font-semibold mb-3 text-white">
-                        Digital-First Approach
-                    </h2>
-                    <p className="text-boulder text-sm md:text-base">
-                        Modern tools and cloud-based accounting that keep you connected to your finances, no matter where you are in {locationName} or travelling.
-                    </p>
-                </div>
-
-                <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-6 hover:border-primary-accent/40 transition-colors duration-300">
-                    <h2 className="font-montserrat text-xl font-semibold mb-3 text-white">
-                        Comprehensive Growth Support
-                    </h2>
-                    <p className="text-boulder text-sm md:text-base">
-                        Beyond just filing taxes in {locationName}, we partner with you to structure your business for long-term growth and stability.
-                    </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {cityData.whyChooseUs.map((item, index) => (
+                        <div key={index} className="bg-secondary-dark border border-white/5 rounded-2xl p-6 hover:border-primary-accent/40 transition-colors duration-300">
+                            <h3 className="font-montserrat text-lg font-semibold mb-2 text-white flex items-center gap-2">
+                                <IconCheck className="text-primary-accent w-5 h-5" />
+                                {item.title}
+                            </h3>
+                            <p className="text-boulder text-sm leading-relaxed pl-7">
+                                {item.description}
+                            </p>
+                        </div>
+                    ))}
                 </div>
             </section>
 
             {/* =========================
-          Services List (Reused)
+          Areas Served
       ========================== */}
-            <div className="container mx-auto px-4 md:px-20 mb-8">
-                <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-6 text-center">
-                    Top Accounting Services in {locationName}
-                </h2>
-                <p className="text-center text-boulder max-w-2xl mx-auto mb-10">
-                    We offer a complete suite of financial services customized for {locationName} based businesses.
-                </p>
-            </div>
-            <Services />
+            {cityData.areasServed && cityData.areasServed.length > 0 && (
+                <section className="container mx-auto px-4 md:px-20 mb-16" data-aos="fade-up">
+                    <div className="bg-secondary-dark/30 border border-white/5 rounded-3xl p-8 md:p-12 text-center">
+                        <h2 className="font-montserrat text-2xl font-bold mb-6 text-white">
+                            Areas We Serve in {cityData.name}
+                        </h2>
+                        <p className="text-boulder mb-8 max-w-2xl mx-auto">
+                            Our {cityData.name} team provides dedicated support to businesses and professionals across these key locations:
+                        </p>
+                        <div className="flex flex-wrap justify-center gap-3">
+                            {cityData.areasServed.map((area, idx) => (
+                                <span key={idx} className="bg-dark-bg text-gray-300 px-4 py-2 rounded-lg text-sm border border-white/10 hover:border-primary-accent/50 transition-colors cursor-default">
+                                    {area}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
 
             {/* =========================
           Major Locations (Links)
@@ -154,16 +145,33 @@ const LocationPage = ({ citySlugOverride }) => {
                     Other Locations We Serve
                 </h2>
 
-                <div className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {locationGroups.map((group, index) => (
                         <div key={index} className="bg-secondary-dark/50 rounded-2xl p-6">
-                            <h3 className="text-primary-accent font-semibold text-lg mb-4 pb-2 text-center">
+                            <h3 className="text-primary-accent font-semibold text-lg mb-4 pb-2 border-b border-white/5">
                                 {group.region}
                             </h3>
-                            <div className="flex flex-wrap gap-3 justify-center">
+                            <div className="flex flex-wrap gap-3">
                                 {group.cities.map((city) => {
                                     // Generate slug: trim whitespace, lowercase, replace spaces with hyphens
-                                    const slug = city.trim().toLowerCase().replace(/\s+/g, '-');
+                                    // Special handling for cities with brackets/commas if needed, 
+                                    // but we know our map keys are simple.
+                                    // We'll map the Display Name (e.g. "Kochi") to the slug key if needed, or 
+                                    // just rely on our simple slugify logic if it matches.
+                                    // For safety, let's look for mapping or just simple slugify.
+                                    // "Delhi (NCR)" -> "delhi-ncr" -> wait, our key is "delhi". 
+                                    // The user provided list logic in locationData.js is helpful. 
+                                    // Ideally locationData.js groups should use the KEYS or SLUGS directly?
+                                    // Current locationGroups uses DISPLAY NAMES. 
+                                    // Let's adjust slug logic slightly for known edge cases.
+
+                                    let slug = city.toLowerCase();
+                                    if (city.includes('Delhi')) slug = 'delhi';
+                                    else if (city.includes('Kochi')) slug = 'kochi';
+                                    else if (city.includes('Bengaluru')) slug = 'bengaluru';
+                                    else if (city.includes('Mangaluru')) slug = 'mangaluru';
+                                    else slug = city.trim().toLowerCase().replace(/\s+/g, '-');
+
                                     return (
                                         <Link
                                             key={city}
@@ -188,10 +196,10 @@ const LocationPage = ({ citySlugOverride }) => {
                 data-aos="fade-up"
             >
                 <h2 className="font-montserrat text-2xl md:text-4xl font-bold mb-6">
-                    Ready to streamline your accounting in {locationName}?
+                    Ready to streamline your accounting in {cityData.name}?
                 </h2>
                 <p className="text-boulder text-lg mb-8 max-w-2xl mx-auto">
-                    Book a consultation with our experts today and discover how we can simplify your financial management in {locationName}.
+                    Book a consultation with our experts today.
                 </p>
                 <Link to="/contact" className="inline-block border border-primary-accent text-primary-accent hover:bg-primary-accent hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300">
                     Contact Us Today

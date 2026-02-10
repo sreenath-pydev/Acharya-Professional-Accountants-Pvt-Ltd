@@ -104,3 +104,9 @@ export const IconHandshake = ({ className }) => (
         <path d="M14.6 2.4l-3.8 3.8-2.8-2.8a2 2 0 00-2.8 0l-4 4a2 2 0 000 2.8l8 8a2 2 0 002.8 0l7.6-7.6a2 2 0 000-2.8l-5-5zM9.4 17l-5-5 2.6-2.6 3.8 3.8 1.4-1.4-3.8-3.8 1.4-1.4 5.2 5.2-1.4 1.4-3.8-3.8-1.4 1.4 3.8 3.8-2.8 2.4z" />
     </svg>
 );
+
+export const IconCheck = ({ className }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={className}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+    </svg>
+);
