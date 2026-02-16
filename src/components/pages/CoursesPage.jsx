@@ -53,7 +53,7 @@ const CoursesPage = () => {
         </p>
 
         <h1 className="font-montserrat text-3xl md:text-5xl font-bold mb-4">
-          Accounting & Finance Internship in Kerala | Acharya
+          Accounting & Finance Courses in Kerala | Acharya
         </h1>
 
         <p className="text-lg text-boulder max-w-3xl leading-relaxed">
