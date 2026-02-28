@@ -1,7 +1,7 @@
 const OurJourney = () => {
   const milestones = [
     {
-      year: '2018',
+      year: '2015',
       title: 'Foundation',
       description:
         'Acharya Professional Accountants was established with a vision to provide exceptional accounting services. Started with a small team of dedicated professionals committed to excellence.'
