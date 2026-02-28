@@ -67,7 +67,7 @@ const Footer = () => {
                 height="128"
               />
               <p className="text-boulder">
-                Providing expert accounting solutions that drive business growth and ensure compliance since 2018.
+                Providing expert accounting solutions that drive business growth and ensure compliance since 2015.
               </p>
             </div>
 
