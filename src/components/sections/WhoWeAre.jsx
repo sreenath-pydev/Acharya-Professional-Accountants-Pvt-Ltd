@@ -11,7 +11,7 @@ const WhoWeAre = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div data-aos="fade-right" data-aos-delay="50">
             <h3 className="text-2xl font-semibold mb-4 text-primary-accent">
-              Leading Accounting Excellence Since 2018
+              Leading Accounting Excellence Since 2015
             </h3>
             <p className="text-boulder mb-6 text-lg leading-relaxed">
               Acharya Professional Accountants Pvt Ltd stands as a beacon of excellence in the

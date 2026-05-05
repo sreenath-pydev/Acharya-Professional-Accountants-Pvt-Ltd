@@ -24,7 +24,7 @@ const FAQ = () => {
     {
       question: 'What is your experience and expertise in the accounting field?',
       answer:
-        'Acharya Professional Accountants has been serving clients since 2018 with a team of experienced professionals. We specialize in accounting, taxation, GST compliance, auditing, and financial consulting, helping businesses maintain compliance and optimize their financial operations.'
+        'Acharya Professional Accountants has been serving clients since 2015 with a team of experienced professionals. We specialize in accounting, taxation, GST compliance, auditing, and financial consulting, helping businesses maintain compliance and optimize their financial operations.'
     },
     {
       question: 'How do you ensure data security and confidentiality?',
