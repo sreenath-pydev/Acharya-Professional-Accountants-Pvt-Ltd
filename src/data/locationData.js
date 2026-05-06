@@ -5,8 +5,8 @@ export const cityContent = {
     "kozhikode": {
         name: "Kozhikode",
         slug: "kozhikode",
-        metaTitle: "Expert CA Services in Kozhikode | Tax, Audit & Accounting",
-        metaDescription: "Acharya Professional Accountants delivers best professional CA and accounting services in Kozhikode. Expert GST, Income Tax, and Audit support.",
+        metaTitle: "Expert CA and Accounting Services in Kozhikode | Acharya",
+        metaDescription: "Acharya Professional Accountants provides the best CA and accounting services in Kozhikode. Get expert GST, income tax, and audit support for your business.",
         introTitle: "Looking for expert CA services in Kozhikode?",
         introText: [
             "Acharya Professional Accountants delivers best professional CA and accounting services built on strong compliance, accuracy, and long-term financial clarity. Our approach focuses on structured accounting systems, disciplined tax management, and reliable statutory support for businesses and individuals at every stage.",
@@ -76,8 +76,8 @@ export const cityContent = {
     "malappuram": {
         name: "Malappuram",
         slug: "malappuram",
-        metaTitle: "CA Services in Malappuram | Accounting, GST & Tax Consultants",
-        metaDescription: "Comprehensive accounting and CA services in Malappuram. We support businesses with GST, Income Tax, Audits, and Company Registration.",
+        metaTitle: "Top CA & Accounting Services in Malappuram | Acharya",
+        metaDescription: "Streamline your finances with Acharya’s expert tax consultants in Malappuram, specializing in bookkeeping, GST filing, and statutory audit support.",
         introTitle: "Need CA services in Malappuram?",
         introText: [
             "Acharya Professional Accountants provides comprehensive accounting and CA services designed to support organized financial management and statutory compliance. Our focus is on building reliable systems that help businesses and professionals maintain transparency, accuracy, and regulatory discipline.",
@@ -147,8 +147,8 @@ export const cityContent = {
     "kasaragod": {
         name: "Kasaragod",
         slug: "kasaragod",
-        metaTitle: "CA Services in Kasaragod | Tax & Accounting Experts",
-        metaDescription: "Best CA and accounting services in Kasaragod with a strong focus on regulatory compliance, GST, Income Tax, and Auditing.",
+        metaTitle: "Expert CA Services in Kasaragod | Tax & Accounting | Acharya",
+        metaDescription: "Looking for CA services in Kasaragod? Acharya provides expert GST registration, income tax filing, bookkeeping, and business setup for local professionals.",
         introTitle: "Searching for CA services in Kasaragod?",
         introText: [
             "Acharya Professional Accountants offers best CA and accounting services with a strong focus on regulatory compliance and financial accuracy. We help businesses and individuals manage accounting records, taxation responsibilities, and audit requirements through well-structured processes and consistent reporting practices.",
@@ -218,8 +218,8 @@ export const cityContent = {
     "kannur": {
         name: "Kannur",
         slug: "kannur",
-        metaTitle: "CA & Accounting Services in Kannur | GST & Tax Consultants",
-        metaDescription: "Structured accounting and CA services in Kannur. We focus on compliance, documentation, and financial clarity for local businesses.",
+        metaTitle: "Best CA & Accounting Services in Kannur | Acharya",
+        metaDescription: "Get expert accounting and tax services in Kannur with Acharya. We offer GST filing, audits, and business registration at affordable rates. Contact us!",
         introTitle: "CA & Accounting Services in Kannur",
         introText: [
             "Acharya Professional Accountants provides structured accounting and CA services focused on compliance, documentation, and financial clarity. We assist businesses and professionals in maintaining accurate records, meeting statutory requirements, and understanding their financial position through systematic reporting.",
@@ -289,8 +289,8 @@ export const cityContent = {
     "thrissur": {
         name: "Thrissur",
         slug: "thrissur",
-        metaTitle: "CA Services in Thrissur | Accounting, Audit & Tax Filing",
-        metaDescription: "Comprehensive CA services in Thrissur covering Accounting, GST, Income Tax, and Audits. Partner with us for financial stability.",
+        metaTitle: "CA & Accounting Firm in Thrissur - Tax & GST Experts | Acharya",
+        metaDescription: "Acharya provides complete CA and accounting services in Thrissur. We handle your daily bookkeeping, GST returns, income tax filings, and statutory audits.",
         introTitle: "CA & Accounting Services in Thrissur",
         introText: [
             "Running a business or managing personal wealth in Thrissur comes with exciting opportunities and important responsibilities. Our role is to help you handle the financial responsibilities with ease, so you can focus on the opportunities.",
@@ -360,8 +360,8 @@ export const cityContent = {
     "kochi": {
         name: "Kochi",
         slug: "kochi",
-        metaTitle: "CA & Accounting Services in Kochi (Ernakulam) | Expert CA Firm",
-        metaDescription: "Professional CA services in Kochi tailored for startups and corporates. We offer Accounting, GST, Income Tax, and Company Registration.",
+        metaTitle: "Best CA & Accounting Services in Kochi | Acharya",
+        metaDescription: "Simplify your business finances in Kochi with Acharya. Our expert Chartered Accountants offer complete tax planning, GST filing, and audit services.",
         introTitle: "CA & Accounting Services in Kochi (Ernakulam)",
         introText: [
             "In the vibrant and competitive business environment of Kochi, strong financial management is not just an advantage—it's a necessity. We offer professional CA services designed to be a strategic asset for your venture or personal finances.",
@@ -431,8 +431,8 @@ export const cityContent = {
     "wayanad": {
         name: "Wayanad",
         slug: "wayanad",
-        metaTitle: "CA Services in Wayanad | Accounting & Tax Consultants",
-        metaDescription: "Straightforward and stress-free CA services in Wayanad. We help local businesses with Accounting, GST, Income Tax, and Audits.",
+        metaTitle: "Best CA Services in Wayanad - Tax & Audit Experts | Acharya",
+        metaDescription: "Acharya offers clear, accessible CA services in Wayanad. We provide professional bookkeeping, GST compliance, and income tax filing. Contact us today! ",
         introTitle: "CA & Accounting Services in Wayanad",
         introText: [
             "For the hardworking individuals and business owners of Wayanad, managing finances should be straightforward and stress-free. Our local CA practice is built on this very idea. We provide clear and accessible services that start with the basics of good accounting.",
@@ -573,8 +573,8 @@ export const cityContent = {
     "hyderabad": {
         name: "Hyderabad",
         slug: "hyderabad",
-        metaTitle: "CA Services in Hyderabad | Accounting, Tax & Audit",
-        metaDescription: "Navigate your financial path in Hyderabad with our comprehensive CA services. Expert support for GST, Income Tax, Accounting, and Business Registration.",
+        metaTitle: "Professional CA & Accounting Services in Hyderabad | Acharya",
+        metaDescription: "Looking for professional accounting and GST support in Hyderabad? Acharya offers complete tax filing, audit, & company registration services. Call us today!",
         introTitle: "CA & Accounting Services in Hyderabad",
         introText: [
             "Navigating your financial path in Hyderabad requires a partner who combines local understanding with professional expertise Our CA firm offers just that—a comprehensive suite of services designed to support your ambitions.",
@@ -715,8 +715,8 @@ export const cityContent = {
     "mumbai": {
         name: "Mumbai",
         slug: "mumbai",
-        metaTitle: "CA Services in Mumbai | Expert Accounting & Tax Consultants",
-        metaDescription: "World-class CA services in Mumbai for high-growth businesses. We specialize in complex GST, Income Tax, Audits, and Corporate Compliance.",
+        metaTitle: "Best CA Firm in Mumbai | Tax & Accounting Experts | Acharya",
+        metaDescription: "Scale your business in Mumbai with Acharya’s world-class CA services. We offer professional bookkeeping, multi-location GST, & statutory audits. Contact us now.",
         introTitle: "CA & Accounting Services in Mumbai",
         introText: [
             "Operating in a global financial hub like Mumbai demands CA services of the highest caliber, precision, and strategic insight. We meet that demand by providing world-class support to businesses, entrepreneurs, and professionals across the city.",
@@ -857,8 +857,8 @@ export const cityContent = {
     "palakkad": {
         name: "Palakkad",
         slug: "palakkad",
-        metaTitle: "CA Services in Palakkad | Accounting, Tax & Audit Support",
-        metaDescription: "Secure your financial future with expert CA services in Palakkad. We deal with Accounting, GST, Income Tax, and Business Registration.",
+        metaTitle: "Best Accounting and CA Services in Palakkad | Acharya",
+        metaDescription: "Get the best professional CA and accounting services in Palakkad. Acharya provides reliable bookkeeping, income tax filing, GST returns, and audit support.",
         introTitle: "CA & Accounting Services in Palakkad",
         introText: [
             "Building a secure future, whether for a business or a family, requires a solid financial plan and strict adherence to rules. In Palakkad, our CA services are dedicated to helping you achieve both. We believe everything begins with accurate and honest accounting.",
@@ -928,8 +928,8 @@ export const cityContent = {
     "pune": {
         name: "Pune",
         slug: "pune",
-        metaTitle: "CA Services in Pune | Modern Accounting & Tax Solutions",
-        metaDescription: "Growth-oriented CA services in Pune for IT, manufacturing, and startups. We handle GST, Income Tax, Audits, and Corporate Filings.",
+        metaTitle: "Best CA & Accounting Services in Pune | Acharya",
+        metaDescription: "Acharya offers expert CA and accounting services for Pune's startups and growing businesses. We handle GST compliance, tax planning, and statutory audits.",
         introTitle: "CA & Accounting Services in Pune",
         introText: [
             "The thriving and diverse business community of Pune deserves CA services that are as innovative and growth-oriented as the city itself. We provide exactly that—professional support that helps you manage, plan, and expand with confidence.",
@@ -999,8 +999,8 @@ export const cityContent = {
     "coimbatore": {
         name: "Coimbatore",
         slug: "coimbatore",
-        metaTitle: "CA Services in Coimbatore | Industrial & MSME Accounting Experts",
-        metaDescription: "Personalized CA services in Coimbatore. We support industries and MSMEs with Accounting, GST, Tax Planning, and Business Registration.",
+        metaTitle: "Expert Accounting & Tax Services in Coimbatore | Acharya",
+        metaDescription: "Get expert guidance on tax, GST, auditing or company registration in Coimbatore. Acharya provides reliable accounting services. Contact us today!",
         introTitle: "CA & Accounting Services in Coimbatore",
         introText: [
             "For the industrious businesses and families of Coimbatore, financial well-being is built on a foundation of trust, diligence, and careful planning. Our CA services embody these values, offering personalized and attentive support right here in the city.",
@@ -1070,8 +1070,8 @@ export const cityContent = {
     "mangaluru": {
         name: "Mangaluru",
         slug: "mangaluru",
-        metaTitle: "CA Services in Mangaluru | Accounting & Tax Consultants",
-        metaDescription: "Trusted CA services in Mangaluru based on relationships and reliability. Expert GST, Income Tax, and Accounting support for local businesses.",
+        metaTitle: "Expert CA & Tax Consultants in Mangaluru | Acharya",
+        metaDescription: "Drive your business forward with precise accounting & strategic tax advice. Acharya provides expert GST, corporate compliance, & audit services in Mangaluru.",
         introTitle: "CA & Accounting Services in Mangaluru (Mangalore)",
         introText: [
             "In the close-knit community of Mangaluru, financial services should be based on relationships, clear communication, and trust. Our CA practice is built on these very principles, offering support that feels personal and reliable.",
@@ -1141,8 +1141,8 @@ export const cityContent = {
     "delhi": {
         name: "Delhi (NCR)",
         slug: "delhi",
-        metaTitle: "CA Services in Delhi NCR | Corporate Tax & Audit Experts",
-        metaDescription: "Strategic CA services for Delhi NCR businesses. Scalable Accounting, Multi-State GST, Income Tax, and ROC Compliance services.",
+        metaTitle: "Chartered Accounting, Tax & GST Services in Delhi | Acharya",
+        metaDescription: "Get expert Chartered Accountant services in Delhi for accounting, tax filing, GST compliance, audits & company registration. Contact Acharya today!",
         introTitle: "CA & Accounting Services in Delhi (NCR)",
         introText: [
             "The dynamic and expansive business environment of Delhi NCR requires CA services that are strategic, scalable, and meticulously detailed. We provide precisely that level of support to enterprises, professionals, and entrepreneurs across the region.",

@@ -21,10 +21,13 @@ const ServiceBusinessConsultingPage = () => {
         <div>
           <p className="text-primary-accent uppercase tracking-[0.2em] text-sm mb-3">Services / Business Consulting</p>
           <h1 className="font-montserrat text-3xl md:text-5xl font-bold mb-4">
-            Business Consulting
+            Expert Business Consulting Services
           </h1>
+          <p className="text-lg text-boulder max-w-3xl mb-4">
+            In today’s dynamic economic landscape, navigating business challenges requires more than just standard accounting. Our strategic financial and business consulting services are designed to help you see the story behind your numbers, enabling confident, data-driven, and growth-focused decisions. 
+          </p>
           <p className="text-lg text-boulder max-w-3xl">
-            Strategic financial and business consulting to help you see the story behind your numbers and take confident, growth-focused decisions.
+            Whether you are a startup scaling rapidly or an established enterprise optimizing operations, Acharya Professional Accountants provides tailored advisory solutions. We bridge the gap between compliance and strategic growth, offering virtual CFO services, financial modeling, and operational insights to propel your business forward.
           </p>
         </div>
         <div className="bg-secondary-dark/80 border border-primary-accent/20 rounded-2xl overflow-hidden" data-aos="fade-left">
@@ -32,7 +35,7 @@ const ServiceBusinessConsultingPage = () => {
             <source srcSet="/images/businessct.webp" type="image/webp" />
             <img
               src="/images/businessct.webp"
-              alt="Business consulting at Acharya Professional Accountants"
+              alt="Expert Business consulting and financial advisory at Acharya Professional Accountants"
               className="w-full h-full object-cover"
               loading="lazy"
             />
@@ -40,16 +43,46 @@ const ServiceBusinessConsultingPage = () => {
         </div>
       </section>
 
+      <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16" data-aos="fade-up">
+        <div className="bg-secondary-dark/50 border border-primary-accent/10 rounded-2xl p-8 md:p-12">
+           <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-6 text-center">Why Does Your Business Need Strategic Consulting?</h2>
+           <p className="text-boulder text-center max-w-4xl mx-auto mb-8">
+             Many businesses face stagnation because they lack a clear view of their financial health. Our corporate consulting services go beyond traditional audits and tax filings to offer actionable intelligence. We identify revenue leakages, optimize capital allocation, and structure your financial operations to withstand market volatility and drive sustainable profitability.
+           </p>
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+             <div className="bg-dark-bg p-6 rounded-xl border border-primary-accent/10">
+               <DynamicFaIcon name="fa-chart-line" className="text-primary-accent text-3xl mb-4" />
+               <h3 className="text-xl font-semibold mb-2">Sustainable Growth</h3>
+               <p className="text-boulder text-sm">Develop long-term financial strategies that scale with your business vision without compromising cash reserves.</p>
+             </div>
+             <div className="bg-dark-bg p-6 rounded-xl border border-primary-accent/10">
+               <DynamicFaIcon name="fa-shield-alt" className="text-primary-accent text-3xl mb-4" />
+               <h3 className="text-xl font-semibold mb-2">Risk Mitigation</h3>
+               <p className="text-boulder text-sm">Identify operational and financial risks early, establishing robust internal controls and compliance frameworks.</p>
+             </div>
+             <div className="bg-dark-bg p-6 rounded-xl border border-primary-accent/10">
+               <DynamicFaIcon name="fa-lightbulb" className="text-primary-accent text-3xl mb-4" />
+               <h3 className="text-xl font-semibold mb-2">Operational Efficiency</h3>
+               <p className="text-boulder text-sm">Optimize your resource allocation, streamline workflows, and eliminate redundancies to improve overall margins.</p>
+             </div>
+           </div>
+        </div>
+      </section>
+
       <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16 grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="50">
         <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-8">
-          <h2 className="font-montserrat text-2xl font-bold mb-4">Consulting Areas</h2>
+          <h2 className="font-montserrat text-2xl font-bold mb-4">Core Consulting Areas</h2>
+          <p className="text-boulder mb-6 text-sm">Our extensive portfolio of advisory services covers every financial aspect of your business operations.</p>
           <ul className="space-y-3 text-boulder">
             {[
-              'Business model and pricing reviews',
-              'Profitability and cost-structure analysis',
-              'Cash flow and working capital planning',
-              'Budgeting and performance tracking',
-              'Financial feasibility for new initiatives',
+              'Business model validation and pricing strategy reviews',
+              'Profitability analysis and cost-structure optimization',
+              'Cash flow forecasting and working capital management',
+              'Comprehensive budgeting and variance tracking',
+              'Financial feasibility studies for new initiatives & projects',
+              'Virtual CFO (Chief Financial Officer) services',
+              'Mergers, acquisitions, and business valuation support',
+              'Internal control audits and system improvements'
             ].map((item) => (
               <li key={item} className="flex items-start gap-3">
                 <DynamicFaIcon name="fa-check-circle" className="text-primary-accent mt-1" />
@@ -60,14 +93,17 @@ const ServiceBusinessConsultingPage = () => {
         </div>
 
         <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-8">
-          <h2 className="font-montserrat text-2xl font-bold mb-4">Outcomes You Can Expect</h2>
+          <h2 className="font-montserrat text-2xl font-bold mb-4">Tangible Outcomes You Can Expect</h2>
+          <p className="text-boulder mb-6 text-sm">Partnering with Acharya Professional Accountants brings measurable improvements to your bottom line.</p>
           <ul className="space-y-3 text-boulder">
             {[
-              'Clearer understanding of which products/services drive profit',
-              'Structured plans to improve margins and cash flow',
-              'Better preparedness for lenders, investors, or partners',
-              'Regular review cadence instead of reactive firefighting',
-              'Decisions backed by numbers, not guesswork',
+              'Clearer understanding of which products, services, or locations drive maximum profit.',
+              'Structured turnaround plans to consistently improve margins and manage cash flow efficiently.',
+              'Enhanced preparedness for securing loans, attracting investors, or onboarding partners.',
+              'A proactive, regular review cadence that replaces reactive financial firefighting.',
+              'Strategic decisions backed by hard numbers and data, rather than guesswork.',
+              'Optimized tax structures aligned with your overall corporate strategy.',
+              'Robust management information systems (MIS) for real-time performance tracking.'
             ].map((item) => (
               <li key={item} className="flex items-start gap-3">
                 <DynamicFaIcon name="fa-star" className="text-primary-accent mt-1" />
@@ -81,26 +117,30 @@ const ServiceBusinessConsultingPage = () => {
       <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16" data-aos="fade-up" data-aos-delay="100">
         <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-8 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <h2 className="font-montserrat text-2xl font-bold mb-4">Engagement Style</h2>
+            <h2 className="font-montserrat text-2xl font-bold mb-4">Our Engagement Style</h2>
+            <p className="text-boulder mb-5 text-sm">We don't just hand you a report; we partner with you to implement strategic changes effectively.</p>
             <ol className="space-y-3 text-boulder list-decimal list-inside">
-              <li>Understand your goals, pain points, and current numbers.</li>
-              <li>Deep-dive into financials, processes, and key drivers.</li>
-              <li>Co-create realistic plans, milestones, and metrics.</li>
-              <li>Review progress periodically and recalibrate as needed.</li>
-              <li>Support your internal team in implementing changes.</li>
+              <li><strong>Discovery:</strong> Understand your long-term goals, immediate pain points, and current financial metrics.</li>
+              <li><strong>Analysis:</strong> Deep-dive into your financial statements, business processes, and key performance drivers.</li>
+              <li><strong>Strategy:</strong> Co-create realistic, actionable plans with clear milestones and defined KPIs.</li>
+              <li><strong>Monitoring:</strong> Review progress periodically through management meetings and recalibrate strategies as needed.</li>
+              <li><strong>Execution:</strong> Actively support your internal finance and management team in implementing recommended changes.</li>
             </ol>
           </div>
           <div>
-            <h2 className="font-montserrat text-2xl font-bold mb-4">Ideal For</h2>
+            <h2 className="font-montserrat text-2xl font-bold mb-4">Who Is This Ideal For?</h2>
+            <p className="text-boulder mb-5 text-sm">Our consulting services cater to ambitious businesses ready for the next level.</p>
             <ul className="space-y-3 text-boulder">
               {[
-                'Founders planning to scale operations',
-                'Businesses with revenue but unclear profitability',
-                'Teams preparing for expansion, funding, or restructuring',
-                'Owners who want a regular financial sounding board',
+                'Startup founders and entrepreneurs planning to scale operations rapidly and sustainably.',
+                'Businesses with high revenue generation but unclear or shrinking profitability margins.',
+                'Management teams preparing for market expansion, venture capital funding, or corporate restructuring.',
+                'Business owners who want a professional, regular financial sounding board to discuss strategy.',
+                'Organizations looking to outsource their CFO functions for expert, cost-effective financial leadership.',
+                'Family-owned businesses navigating succession planning and professionalization.'
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <DynamicFaIcon name="fa-user" className="text-primary-accent mt-1" />
+                  <DynamicFaIcon name="fa-user" className="text-primary-accent mt-1 flex-shrink-0" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -111,25 +151,31 @@ const ServiceBusinessConsultingPage = () => {
 
       <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16" data-aos="fade-up" data-aos-delay="150">
         <div className="bg-secondary-dark/80 rounded-2xl p-8 md:p-10 border border-primary-accent/10">
-          <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-6">Business Consulting – FAQ</h2>
-          <div className="space-y-4 text-boulder">
+          <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-6">Business Consulting – Frequently Asked Questions</h2>
+          <div className="space-y-6 text-boulder">
             <div>
-              <h3 className="font-semibold text-white mb-1 text-base md:text-lg">
+              <h3 className="font-semibold text-white mb-2 text-base md:text-lg">
                 Is this a one-time project or ongoing support?
               </h3>
-              <p>We offer both—one-time reviews as well as ongoing consulting relationships with periodic review meetings.</p>
+              <p>We offer highly flexible engagement models. Depending on your needs, we provide targeted, one-time financial health reviews, project feasibility studies, as well as ongoing consulting relationships (like Virtual CFO services) that include monthly or quarterly strategic review meetings.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-white mb-1 text-base md:text-lg">
-                Will you help implement the recommendations?
+              <h3 className="font-semibold text-white mb-2 text-base md:text-lg">
+                Will you help implement the recommendations you provide?
               </h3>
-              <p>Yes, we work with your team to translate recommendations into processes, dashboards, and review rhythms.</p>
+              <p>Absolutely. We strongly believe that strategy without execution is futile. We work closely with your internal team to translate our strategic recommendations into daily processes, set up comprehensive performance dashboards, and establish a disciplined review rhythm.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-white mb-1 text-base md:text-lg">
-                Do you only work with large companies?
+              <h3 className="font-semibold text-white mb-2 text-base md:text-lg">
+                Do you only work with large corporate enterprises?
               </h3>
-              <p>No, we work closely with SMEs and growing businesses where consulting support can make a visible difference.</p>
+              <p>No, our passion lies in supporting SMEs, growing startups, and family-managed businesses. We customize our consulting frameworks to suit the size, complexity, and budget of your organization, ensuring that expert financial guidance makes a visible difference regardless of your current scale.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-white mb-2 text-base md:text-lg">
+                What makes your business consulting different from standard CA services?
+              </h3>
+              <p>While standard CA services often focus on historical data—like past audits, tax compliance, and retroactive bookkeeping—our business consulting is forward-looking. We use your financial data to forecast future performance, identify growth opportunities, structure capital efficiently, and advise on high-level corporate decisions.</p>
             </div>
           </div>
         </div>

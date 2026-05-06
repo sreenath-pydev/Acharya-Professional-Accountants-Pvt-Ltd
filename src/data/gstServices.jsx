@@ -320,7 +320,8 @@ export const gstServices = {
             { title: 'Classification (HSN/SAC)', slug: 'hsn-sac-classification', desc: 'Correct tax rate determination.' },
             { title: 'Place of Supply', slug: 'place-of-supply', desc: 'IGST vs CGST/SGST determination logic.' },
             { title: 'RCM Compliance', slug: 'rcm-compliance', desc: 'Reverse Charge Mechanism liability handling.' },
-            { title: 'E-Invoicing & E-Way Bill', slug: 'e-invoicing-advisory', desc: 'Implementation for turnover > ₹5 Cr.' }
+            { title: 'E-Invoicing & E-Way Bill', slug: 'e-invoicing-advisory', desc: 'Implementation for turnover > ₹5 Cr.' },
+            { title: 'Invoicing Software', slug: 'invoicing-software', desc: 'GST-compliant billing and invoicing solutions.' }
         ]
     },
     // --- Sub-Services for Advisory ---
@@ -381,6 +382,25 @@ export const gstServices = {
         content: (
             <>
                 <p className="mb-4">E-Invoicing is now mandatory for B2B supplies if turnover exceeds ₹5 Cr. Non-compliance means your invoice is invalid and your buyer loses ITC. We guide you on selecting software and integrating with the IRP portal.</p>
+            </>
+        )
+    },
+    'invoicing-software': {
+        title: 'GST Invoicing Software Solutions',
+        seoTitle: 'GST Compliant Billing & Invoicing Software Support',
+        seoDescription: 'Implement reliable, GST-compliant invoicing software to streamline your billing, E-Invoicing, and E-Way bill generation.',
+        keywords: 'gst billing software, gst invoicing software, e-invoicing software, automated billing, accounting software',
+        icon: 'fa-desktop',
+        content: (
+            <>
+                <p className="mb-4">Transitioning to a robust GST invoicing software is essential for maintaining accurate records and ensuring seamless compliance. We help you choose, implement, and integrate the right billing software tailored to your business needs.</p>
+                <h3 className="text-xl font-bold text-white mb-3">Key Benefits:</h3>
+                <ul className="list-disc list-inside space-y-2 mb-6 ml-4">
+                    <li><strong>Automated E-Invoicing:</strong> Direct integration with the IRP portal for businesses over ₹5 Cr turnover.</li>
+                    <li><strong>Error-Free Billing:</strong> Auto-calculation of CGST, SGST, IGST, and Cess to eliminate manual errors.</li>
+                    <li><strong>E-Way Bill Generation:</strong> Generate E-Way bills directly from the software with a single click.</li>
+                    <li><strong>Inventory Integration:</strong> Track stock in real-time alongside your billing process.</li>
+                </ul>
             </>
         )
     },

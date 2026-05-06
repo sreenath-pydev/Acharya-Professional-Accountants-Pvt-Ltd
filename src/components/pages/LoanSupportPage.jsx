@@ -26,7 +26,7 @@ const LoanSupportPage = () => {
                         <span className="text-primary-accent">Project Report Support</span>
                     </h1>
                     <p className="text-lg text-boulder mb-8 max-w-2xl">
-                        From eligibility checks to bank approval—we help Startups, MSMEs, and Professionals secure loans with proper documentation and bank-ready project reports.
+                        Navigating the complex world of business financing can be challenging. From preliminary eligibility checks to final bank approval, Acharya Professional Accountants helps Startups, MSMEs, and established Professionals secure loans with proper documentation and bank-ready, expert-crafted project reports. Whether you need working capital or long-term expansion funds, we ensure your financial profile meets the highest banking standards.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">
@@ -71,7 +71,9 @@ const LoanSupportPage = () => {
                 <div className="container mx-auto px-4 md:px-20">
                     <div className="text-center mb-12">
                         <h2 className="font-montserrat text-2xl md:text-4xl font-bold mb-4">Types of Business Loans We Support</h2>
-                        <p className="text-boulder max-w-2xl mx-auto">We assist you in choosing the right loan instrument based on your business profile and financial needs.</p>
+                        <p className="text-boulder max-w-3xl mx-auto">
+                            Choosing the right credit facility is crucial for maintaining healthy cash flow and sustainable growth. We assist you in identifying and securing the optimal loan instrument based on your unique business profile, industry requirements, and long-term financial goals. Our extensive expertise covers a wide spectrum of commercial financing options.
+                        </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -117,8 +119,8 @@ const LoanSupportPage = () => {
                             Bank-Approved <span className="text-primary-accent">Project Reports</span>
                         </h2>
                         <p className="text-boulder text-lg mb-6">
-                            We prepare customized project reports strictly as per bank formats, accepted by Nationalized Banks, Private Banks, and NBFCs.
-                            <span className="block mt-2 text-white font-semibold text-sm">📌 No copied templates. Every report is business-specific.</span>
+                            A Detailed Project Report (DPR) is the most critical document in your loan application. It acts as a comprehensive financial roadmap that helps credit managers assess the viability, risk profile, and repayment capacity of your business. We prepare highly customized, bank-compliant project reports and CMA data strictly as per the formats accepted by Nationalized Banks, Private Sector Banks, and leading NBFCs.
+                            <span className="block mt-4 text-white font-semibold text-sm bg-dark-bg/50 p-3 rounded border border-white/10">📌 No copied templates. Every financial model and projection is custom-built and meticulously justified for your specific business.</span>
                         </p>
 
                         <div className="bg-secondary-dark border border-white/10 rounded-xl p-6">
@@ -193,14 +195,15 @@ const LoanSupportPage = () => {
                             </h3>
                             <div className="bg-dark-bg/50 p-6 rounded-lg border-l-4 border-green-400/50 h-full">
                                 <p className="text-lg text-white mb-4 leading-relaxed">
-                                    We identify issues <span className="text-green-400 font-bold">before submission</span>.
+                                    We identify compliance gaps and financial inconsistencies <span className="text-green-400 font-bold">before submission</span>.
                                 </p>
                                 <p className="text-boulder mb-6">
-                                    By pre-verifying your eligibility and preparing watertight documentation, we significantly improve your approval chances. We don't just write reports; we guide you through the banking query process.
+                                    A loan application backed by a professional Chartered Accountant carries significantly more credibility. By pre-verifying your financial eligibility, preparing watertight CMA data, and structuring your documentation perfectly, we maximize your approval chances. We don't just hand you a report; we actively guide you through complex banking queries and credit appraisals.
                                 </p>
                                 <ul className="space-y-3">
-                                    <li className="flex items-center gap-2"><DynamicFaIcon name="fa-check" className="text-green-400" /> Kerala-focused support</li>
-                                    <li className="flex items-center gap-2"><DynamicFaIcon name="fa-check" className="text-green-400" /> Practical banking experience</li>
+                                    <li className="flex items-center gap-2"><DynamicFaIcon name="fa-check" className="text-green-400" /> End-to-end banking compliance support</li>
+                                    <li className="flex items-center gap-2"><DynamicFaIcon name="fa-check" className="text-green-400" /> Deep understanding of local credit policies</li>
+                                    <li className="flex items-center gap-2"><DynamicFaIcon name="fa-check" className="text-green-400" /> Expert justification of financial projections</li>
                                 </ul>
                             </div>
                         </div>
@@ -212,6 +215,9 @@ const LoanSupportPage = () => {
             <section className="container mx-auto px-4 md:px-20 py-16" data-aos="fade-up">
                 <div className="text-center mb-12">
                     <h2 className="font-montserrat text-3xl font-bold mb-4">Our Simple Loan Assistance Process</h2>
+                    <p className="text-boulder max-w-2xl mx-auto mt-4">
+                        We transform the traditionally stressful and paperwork-heavy loan application journey into a structured, transparent, and seamless five-step process designed to get you funded faster.
+                    </p>
                 </div>
                 <div className="flex flex-col md:flex-row justify-between items-start gap-4 relkative">
                     {[
@@ -246,7 +252,10 @@ const LoanSupportPage = () => {
             {/* Who Can Take Support */}
             <section className="bg-secondary-dark/30 py-16" data-aos="fade-up">
                 <div className="container mx-auto px-4 md:px-20 text-center">
-                    <h2 className="font-montserrat text-2xl font-bold mb-8">Who Can Take Our Support?</h2>
+                    <h2 className="font-montserrat text-2xl font-bold mb-4">Who Can Benefit from Our Loan Support?</h2>
+                    <p className="text-boulder max-w-2xl mx-auto mb-8">
+                        Our specialized business loan advisory and project report services are tailored to meet the diverse funding requirements of multiple sectors across the Indian economy.
+                    </p>
                     <div className="flex flex-wrap justify-center gap-3 md:gap-4">
                         {[
                             'Startup Founders', 'Small Business Owners', 'Shop Owners & Traders',
