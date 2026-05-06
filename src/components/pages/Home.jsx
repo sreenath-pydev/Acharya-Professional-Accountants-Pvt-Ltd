@@ -25,8 +25,8 @@ const Home = () => {
   return (
     <main>
       <SEO
-        title="Accounting and Tax Consulting Services in India | Acharya"
-        description="Acharya Professional Accountants is a trusted CA firm offering expert tax consulting, GST filing, auditing, and business registration services across India."
+        title="Acharya Accountants | CA, Tax, GST & Audit Services in India"
+        description="Acharya Professional Accountants offers expert CA services, tax planning, GST filing, and audits across India, plus 100% practical accounting courses."
         canonical="https://www.acharyaprofessionalaccountants.in/"
       />
 

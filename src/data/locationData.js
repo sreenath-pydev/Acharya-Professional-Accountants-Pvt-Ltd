@@ -502,8 +502,8 @@ export const cityContent = {
     "bengaluru": {
         name: "Bengaluru",
         slug: "bengaluru",
-        metaTitle: "CA Firm in Bengaluru | Accounting & Compliance Services",
-        metaDescription: "Modern CA services for Bengaluru startups and companies. Specialized in Accounting, GST, Income Tax, and Corporate Compliance.",
+        metaTitle: "Best CA and Accounting Services in Bengaluru | Acharya",
+        metaDescription: "Acharya Professional Accountants provides expert CA, accounting, tax, GST, audit & business registration services in Bengaluru. Contact us today!",
         introTitle: "CA & Accounting Services in Bengaluru (Bangalore)",
         introText: [
             "In the fast-paced and innovative ecosystem of Bengaluru, your financial systems need to be just as dynamic and reliable. We provide modern CA services tailored to meet the demands of startups, established companies, and professionals in the city.",
