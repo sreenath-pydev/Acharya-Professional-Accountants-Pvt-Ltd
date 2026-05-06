@@ -644,8 +644,8 @@ export const cityContent = {
     "chennai": {
         name: "Chennai",
         slug: "chennai",
-        metaTitle: "CA & Accounting Services in Chennai | Tax & Audit Firm",
-        metaDescription: "Steadfast CA services in Chennai for businesses and individuals. We offer precise Accounting, GST Filing, Income Tax, and Company Registration services.",
+        metaTitle: "Best Accounting Services in Chennai | CA Firm | Acharya",
+        metaDescription: "Acharya Professional Accountants provides expert bookkeeping, tax planning, GST filing, and business registration services in Chennai. Contact us today!",
         introTitle: "CA & Accounting Services in Chennai",
         introText: [
             "In a city with a rich legacy of business and trade like Chennai, maintaining financial discipline is a timeless principle for success. Our CA services are built on this principle, offering steadfast support to businesses and individuals alike.",
