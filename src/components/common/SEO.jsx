@@ -39,11 +39,14 @@ const SEO = ({
             <link rel="canonical" href={currentUrl} />
 
             {/* Open Graph / Facebook */}
+            <meta property="og:site_name" content="Acharya Professional Accountants" />
             <meta property="og:type" content={ogType} />
             <meta property="og:title" content={fullTitle} />
             <meta property="og:description" content={description} />
             <meta property="og:url" content={currentUrl} />
             <meta property="og:image" content={absoluteImage} />
+            <meta property="og:image:secure_url" content={absoluteImage} />
+            <meta property="og:image:alt" content={fullTitle} />
 
             {/* Twitter */}
             <meta name="twitter:card" content="summary_large_image" />
