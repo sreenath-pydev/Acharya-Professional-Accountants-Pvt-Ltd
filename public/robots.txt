@@ -1,4 +1,8 @@
+# ============================================
+# robots.txt for acharyaprofessionalaccountants.in
+# ============================================
+
 User-agent: *
-Allow: /
+Disallow: /*utm_
 
 Sitemap: https://www.acharyaprofessionalaccountants.in/sitemap.xml
