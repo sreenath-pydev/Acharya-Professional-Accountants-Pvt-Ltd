@@ -4,6 +4,7 @@ import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 import ScrollToTop from './components/common/ScrollToTop';
 import LoadingSpinner from './components/common/LoadingSpinner';
+import AnalyticsTracker from './components/common/AnalyticsTracker';
 
 // Lazy loaded pages
 const Home = lazy(() => import('./components/pages/Home'));
@@ -34,6 +35,7 @@ function App() {
   return (
     <Router>
       <div className="font-inter text-white bg-dark-bg">
+        <AnalyticsTracker />
         <Header />
         <Suspense fallback={<LoadingSpinner />}>
           <Routes>
