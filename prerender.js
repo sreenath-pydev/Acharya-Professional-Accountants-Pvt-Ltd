@@ -26,6 +26,42 @@ const routes = [
     '/calculator',
 ];
 
+// Helper to extract top-level keys from JS/JSX data files
+function extractKeys(filePath) {
+    try {
+        const content = fs.readFileSync(filePath, 'utf8');
+        // Match keys with 4 spaces indentation at start of lines (top level keys in our exported objects)
+        const regex = /^ {4}['"]([^'"]+)['"]\s*:\s*\{/gm;
+        const keys = [];
+        let match;
+        while ((match = regex.exec(content)) !== null) {
+            keys.push(match[1]);
+        }
+        return keys;
+    } catch (e) {
+        console.error(`Error reading keys from ${filePath}:`, e);
+        return [];
+    }
+}
+
+// Dynamically add all dynamic sub-service and location routes
+const locationKeys = extractKeys(path.join(__dirname, 'src', 'data', 'locationData.js'));
+locationKeys.forEach(key => routes.push(`/accounting-service-in-${key}`));
+
+const gstKeys = extractKeys(path.join(__dirname, 'src', 'data', 'gstServices.jsx'));
+gstKeys.forEach(key => routes.push(`/services/gst/${key}`));
+
+const auditKeys = extractKeys(path.join(__dirname, 'src', 'data', 'auditingServices.jsx'));
+auditKeys.forEach(key => routes.push(`/services/auditing/${key}`));
+
+const mcaKeys = extractKeys(path.join(__dirname, 'src', 'data', 'mcaServices.jsx'));
+mcaKeys.forEach(key => routes.push(`/services/advisory/${key}`));
+
+const loanKeys = extractKeys(path.join(__dirname, 'src', 'data', 'loanDetails.js'));
+loanKeys.forEach(key => routes.push(`/services/business-loans/${key}`));
+
+console.log(`Loaded ${routes.length} total routes for pre-rendering.`);
+
 async function prerender() {
     console.log('Starting pre-rendering...');
     const browser = await puppeteer.launch({

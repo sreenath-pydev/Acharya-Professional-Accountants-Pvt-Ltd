@@ -211,6 +211,99 @@ const LoanSupportPage = () => {
                 </div>
             </section>
 
+            {/* New Section: What is CMA Data & Why is it Critical? */}
+            <section className="container mx-auto px-4 md:px-20 py-16 md:py-24" data-aos="fade-up">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div className="bg-secondary-dark/40 border border-primary-accent/10 rounded-2xl p-8 lg:p-10">
+                        <span className="text-primary-accent font-bold tracking-wider uppercase text-sm">Credit Analysis</span>
+                        <h2 className="font-montserrat text-2xl md:text-3xl font-bold mt-2 mb-6">What is CMA Data & Why do Banks Demand it?</h2>
+                        <p className="text-boulder text-sm leading-relaxed mb-4">
+                            CMA stands for <strong>Credit Monitoring Arrangement</strong>. It is a structured report containing past financial analysis and future financial projections of a company. Under RBI guidelines, commercial banks require CMA data to assess the creditworthiness of a business requesting working capital loans (Cash Credit/Overdraft) or term loans exceeding ₹50 Lakhs.
+                        </p>
+                        <p className="text-boulder text-sm leading-relaxed mb-6">
+                            A CMA report is not just a spreadsheet of arbitrary numbers. It involves deep financial calculations that credit officers scrutinize closely:
+                        </p>
+                        <div className="space-y-4">
+                            <div className="flex items-start gap-3">
+                                <div className="text-primary-accent mt-1 flex-shrink-0"><DynamicFaIcon name="fa-percentage" /></div>
+                                <div>
+                                    <h5 className="font-bold text-white text-sm">MPBF (Maximum Permissible Bank Finance)</h5>
+                                    <p className="text-xs text-boulder mt-1">Calculates the working capital gap based on raw material, stock-in-progress, finished goods, and debtors velocity to determine your actual eligible loan limit.</p>
+                                </div>
+                            </div>
+                            <div className="flex items-start gap-3">
+                                <div className="text-primary-accent mt-1 flex-shrink-0"><DynamicFaIcon name="fa-chart-line" /></div>
+                                <div>
+                                    <h5 className="font-bold text-white text-sm">DSCR (Debt Service Coverage Ratio)</h5>
+                                    <p className="text-xs text-boulder mt-1">Measures whether your business generates sufficient operational profit to service the proposed loan interest and principal installments. A ratio below 1.25 is typically rejected.</p>
+                                </div>
+                            </div>
+                            <div className="flex items-start gap-3">
+                                <div className="text-primary-accent mt-1 flex-shrink-0"><DynamicFaIcon name="fa-balance-scale" /></div>
+                                <div>
+                                    <h5 className="font-bold text-white text-sm">Current Ratio & Debt-Equity Ratio</h5>
+                                    <p className="text-xs text-boulder mt-1">Evaluates your business's solvency and leverage. Banks prefer a current ratio of at least 1.33 to ensure short-term obligations can be comfortably covered.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span className="text-primary-accent font-bold tracking-wider uppercase text-sm">Required Documentation</span>
+                        <h2 className="font-montserrat text-2xl md:text-3xl font-bold mt-2 mb-6">The Business Loan Documentation Checklist</h2>
+                        <p className="text-boulder text-sm mb-6">
+                            Having your documents structured perfectly is 50% of the battle won. Below is the standard checklist of documents required by top-tier commercial banks and NBFCs for processing a business loan:
+                        </p>
+                        <div className="space-y-4">
+                            <div className="p-4 bg-secondary-dark/60 rounded-xl border border-white/5">
+                                <h4 className="font-semibold text-white text-sm flex items-center gap-2"><DynamicFaIcon name="fa-folder-open" className="text-primary-accent" /> KYC & Registration Documents</h4>
+                                <p className="text-xs text-boulder mt-1">PAN Card of Entity & Promoters, GST Registration Certificate, Udyam (MSME) Registration Certificate, Partnership Deed / MoA & AoA, and Certificate of Incorporation.</p>
+                            </div>
+                            <div className="p-4 bg-secondary-dark/60 rounded-xl border border-white/5">
+                                <h4 className="font-semibold text-white text-sm flex items-center gap-2"><DynamicFaIcon name="fa-file-invoice-dollar" className="text-primary-accent" /> Financial & Tax Statements</h4>
+                                <p className="text-xs text-boulder mt-1">Last 3 years Audited Financial Statements, Income Tax Returns (ITR), GST Returns (GSTR-1 & GSTR-3B) for the last 12 months, and Bank Account Statements for the last 12 months.</p>
+                            </div>
+                            <div className="p-4 bg-secondary-dark/60 rounded-xl border border-white/5">
+                                <h4 className="font-semibold text-white text-sm flex items-center gap-2"><DynamicFaIcon name="fa-shield-alt" className="text-primary-accent" /> Collateral & Project Documents</h4>
+                                <p className="text-xs text-boulder mt-1">Title Deeds of properties offered as collateral security, building approval plans, machinery quotes from authorized vendors, and a Detailed Project Report (DPR) with CMA data.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* New Section: Pre-Sanction and Post-Sanction Advisory */}
+            <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16" data-aos="fade-up">
+                <div className="bg-secondary-dark/30 border border-primary-accent/15 rounded-3xl p-8 md:p-12">
+                    <div className="text-center mb-10">
+                        <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-4">Pre-Sanction & Post-Sanction Advisory Services</h2>
+                        <p className="text-boulder max-w-3xl mx-auto">
+                            Getting a loan isn't just about filing forms. We provide expert advice at every critical phase of the lending cycle to protect your business interests.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="bg-dark-bg/60 p-6 rounded-xl border border-white/5">
+                            <h4 className="font-semibold text-primary-accent mb-2">1. Credit Appraisal Advisory</h4>
+                            <p className="text-xs text-boulder leading-relaxed">
+                                We help you prepare for interactions with bank credit managers, explaining the logic behind your sales projections, inventory margins, and capital expenditure timelines.
+                            </p>
+                        </div>
+                        <div className="bg-dark-bg/60 p-6 rounded-xl border border-white/5">
+                            <h4 className="font-semibold text-primary-accent mb-2">2. Answering Query Letters</h4>
+                            <p className="text-xs text-boulder leading-relaxed">
+                                When bank risk teams issue query letters regarding historical losses, debtor aging, or credit deviations, we draft professional responses backed by accounting standards to justify your position.
+                            </p>
+                        </div>
+                        <div className="bg-dark-bg/60 p-6 rounded-xl border border-white/5">
+                            <h4 className="font-semibold text-primary-accent mb-2">3. Sanction Conditions Review</h4>
+                            <p className="text-xs text-boulder leading-relaxed">
+                                We scrutinize the bank's draft Sanction Letter, advising on hidden clauses like debt service reserve accounts (DSRA), escrow mandates, debt-covenants, and processing charge concessions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Process Steps */}
             <section className="container mx-auto px-4 md:px-20 py-16" data-aos="fade-up">
                 <div className="text-center mb-12">
@@ -219,7 +312,7 @@ const LoanSupportPage = () => {
                         We transform the traditionally stressful and paperwork-heavy loan application journey into a structured, transparent, and seamless five-step process designed to get you funded faster.
                     </p>
                 </div>
-                <div className="flex flex-col md:flex-row justify-between items-start gap-4 relkative">
+                <div className="flex flex-col md:flex-row justify-between items-start gap-4 relative">
                     {[
                         { step: '1', title: 'Eligibility Check', desc: 'Free assessment of your profile' },
                         { step: '2', title: 'Doc Review', desc: 'Guidance on missing papers' },
@@ -266,6 +359,45 @@ const LoanSupportPage = () => {
                                 {tag}
                             </span>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* New Section: FAQs for Business Loans & Project Reports */}
+            <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16" data-aos="fade-up">
+                <div className="bg-secondary-dark/80 rounded-2xl p-8 md:p-10 border border-primary-accent/10">
+                    <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-6 text-center">Business Loans & Project Reports – FAQs</h2>
+                    <div className="space-y-6 text-boulder">
+                        <div>
+                            <h3 className="font-semibold text-white mb-2 text-base md:text-lg">
+                                How much time does it take to prepare a bankable Project Report and CMA data?
+                            </h3>
+                            <p>Typically, we prepare a detailed project report and CMA data within 3 to 5 business days, depending on the complexity of your business model and the availability of historical financial statements. If you have an urgent bank deadline, let us know, and we will prioritize your file accordingly.</p>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-white mb-2 text-base md:text-lg">
+                                Does Acharya guarantee loan approval from banks?
+                            </h3>
+                            <p>No, we do not guarantee loan approvals, as final sanctioning depends entirely on bank policies, CIBIL scores, eligibility, and security valuations. However, our professional documentation, CMA data accuracy, and pre-verification process significantly minimize compliance rejections and maximize approval chances.</p>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-white mb-2 text-base md:text-lg">
+                                Can a new startup get a business loan without collateral security?
+                            </h3>
+                            <p>Yes. Under the government's CGTMSE scheme (Credit Guarantee Fund Trust for Micro and Small Enterprises), eligible startups and MSMEs can secure collateral-free business loans up to ₹5 Crores. We help you prepare your project report matching the guidelines of CGTMSE-approved banks.</p>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-white mb-2 text-base md:text-lg">
+                                What is DSCR (Debt Service Coverage Ratio) and why is it important?
+                            </h3>
+                            <p>DSCR is a financial metric used by credit managers to assess your ability to repay a loan. It compares your net operating income with your total debt service obligations (interest + principal). Banks generally look for a DSCR of 1.25 or higher to ensure the business produces a healthy cushion of profit.</p>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-white mb-2 text-base md:text-lg">
+                                What is the difference between working capital limits (CC/OD) and a term loan?
+                            </h3>
+                            <p>A term loan is a fixed-amount loan disbursed as a lump sum for capital expenses (like buying land, buildings, or machinery) and is repaid via regular monthly installments (EMIs). A Cash Credit (CC) or Overdraft (OD) is a revolving credit limit determined based on your inventory and debtors, used to manage daily cash flow fluctuations.</p>
+                        </div>
                     </div>
                 </div>
             </section>

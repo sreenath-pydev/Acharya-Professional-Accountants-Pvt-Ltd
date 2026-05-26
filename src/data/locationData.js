@@ -5,7 +5,7 @@ export const cityContent = {
     "kozhikode": {
         name: "Kozhikode",
         slug: "kozhikode",
-        metaTitle: "Expert CA and Accounting Services in Kozhikode | Acharya",
+        metaTitle: "CA and Accounting Services in Kozhikode | Acharya",
         metaDescription: "Acharya Professional Accountants provides the best CA and accounting services in Kozhikode. Get expert GST, income tax, and audit support for your business.",
         introTitle: "Looking for expert CA services in Kozhikode?",
         introText: [

@@ -20,7 +20,7 @@ const SEO = ({
         : `${siteUrl}${location.pathname}`;
 
     // Default fallback image
-    const defaultImage = `${siteUrl}/images/logo_dark.webp`;
+    const defaultImage = `${siteUrl}/images/Acharya-Professional-Accountants-OG-image.webp`;
     const absoluteImage = ogImage
         ? (ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`)
         : defaultImage;
