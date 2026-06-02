@@ -11,7 +11,16 @@ const Home = lazy(() => import('./components/pages/Home'));
 const AboutPage = lazy(() => import('./components/pages/AboutPage'));
 const ServicesPage = lazy(() => import('./components/pages/ServicesPage'));
 const ServiceAccountingPage = lazy(() => import('./components/pages/ServiceAccountingPage'));
+const ServiceBookkeepingPage = lazy(() => import('./components/pages/ServiceBookkeepingPage'));
+const ServiceFinancialStatementsPage = lazy(() => import('./components/pages/ServiceFinancialStatementsPage'));
+const ServiceCashFlowPage = lazy(() => import('./components/pages/ServiceCashFlowPage'));
+const ServiceManagementReportsPage = lazy(() => import('./components/pages/ServiceManagementReportsPage'));
+const ServiceReconciliationsPage = lazy(() => import('./components/pages/ServiceReconciliationsPage'));
 const ServiceTaxationPage = lazy(() => import('./components/pages/ServiceTaxationPage'));
+const ServiceTdsTcsPage = lazy(() => import('./components/pages/ServiceTdsTcsPage'));
+const ServiceTaxPlanningPage = lazy(() => import('./components/pages/ServiceTaxPlanningPage'));
+const ServiceNoticeResponsesPage = lazy(() => import('./components/pages/ServiceNoticeResponsesPage'));
+const ServiceTaxAuditPage = lazy(() => import('./components/pages/ServiceTaxAuditPage'));
 const ServiceAuditingPage = lazy(() => import('./components/pages/ServiceAuditingPage'));
 const AuditingServiceDetailPage = lazy(() => import('./components/pages/AuditingServiceDetailPage'));
 const ServiceGstPage = lazy(() => import('./components/pages/ServiceGstPage'));
@@ -43,8 +52,18 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/services/accounting" element={<ServiceAccountingPage />} />
+            <Route path="/services/accounting/bookkeeping" element={<ServiceBookkeepingPage />} />
+            <Route path="/services/accounting/financial-statements" element={<ServiceFinancialStatementsPage />} />
+            <Route path="/services/accounting/cash-flow" element={<ServiceCashFlowPage />} />
+            <Route path="/services/accounting/management-reports" element={<ServiceManagementReportsPage />} />
+            <Route path="/services/accounting/reconciliations" element={<ServiceReconciliationsPage />} />
             <Route path="/services/taxation" element={<ServiceTaxationPage />} />
+            <Route path="/services/taxation/tds-tcs" element={<ServiceTdsTcsPage />} />
+            <Route path="/services/taxation/tax-planning" element={<ServiceTaxPlanningPage />} />
+            <Route path="/services/taxation/notice-responses" element={<ServiceNoticeResponsesPage />} />
+            <Route path="/services/taxation/tax-audit" element={<ServiceTaxAuditPage />} />
             <Route path="/services/auditing" element={<ServiceAuditingPage />} />
+            <Route path="/services/auditing/tax-audit" element={<ServiceTaxAuditPage />} />
             <Route path="/services/auditing/:serviceId" element={<AuditingServiceDetailPage />} />
             <Route path="/services/gst" element={<ServiceGstPage />} />
             <Route path="/services/gst/:serviceId" element={<GSTServiceDetailPage />} />

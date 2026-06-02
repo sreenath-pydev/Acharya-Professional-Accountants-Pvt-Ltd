@@ -13,95 +13,101 @@ const ServiceTaxationPage = () => {
   return (
     <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
       <SEO
-        title="Taxation Services | Acharya Professional Accountants"
-        description="Expert tax planning and filing support for individuals and businesses in Calicut. Reduce risk and optimize savings."
+        title="Professional Income Tax Filing Solutions | Acharya Professional Accountants"
+        description="Reliable and compliance-focused Income Tax Filing solutions designed to help businesses and individuals manage tax obligations efficiently and accurately in Kerala and India."
         canonical="https://www.acharyaprofessionalaccountants.in/services/taxation"
       />
+      
+      {/* Hero Section */}
       <section className="container mx-auto px-4 md:px-20 mb-10 md:mb-14 grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-8" data-aos="fade-up">
         <div>
           <p className="text-primary-accent uppercase tracking-[0.2em] text-sm mb-3">Services / Taxation</p>
-          <h1 className="font-montserrat text-3xl md:text-5xl font-bold mb-4">
-            Taxation Services
+          <h1 className="font-montserrat text-3xl md:text-5xl font-bold mb-6 leading-tight">
+            Professional Income Tax Filing Solutions for Businesses and Individuals
           </h1>
-          <p className="text-lg text-boulder max-w-3xl">
-            Practical, regulation-aligned tax planning and filing support for individuals and businesses, designed to reduce risk,
-            avoid penalties, and optimise savings.
-          </p>
+          <div className="space-y-4 text-boulder text-lg max-w-3xl">
+            <p>
+              At <strong className="text-white">Acharya Professional Accountants</strong>, we provide reliable and compliance-focused <strong className="text-white">Income Tax Filing</strong> solutions designed to help businesses and individuals manage tax obligations efficiently and accurately. Our expert-driven services ensure timely tax filing, regulatory compliance, financial transparency, and improved financial planning for businesses across Kerala and India.
+            </p>
+            <p>
+              As a trusted provider of <strong className="text-white">Professional Accounting Services India</strong>, we offer comprehensive support for tax filing, financial reporting, and compliance management. Our experienced professionals help businesses streamline tax processes while reducing compliance risks and improving financial decision-making.
+            </p>
+          </div>
         </div>
-        <div className="bg-secondary-dark/80 border border-primary-accent/20 rounded-2xl overflow-hidden" data-aos="fade-left">
+        <div className="bg-secondary-dark/80 border border-primary-accent/20 rounded-2xl overflow-hidden self-start" data-aos="fade-left">
           <picture>
             <source srcSet="/images/tax.webp" type="image/webp" />
             <img
               src="/images/tax.webp"
-              alt="Taxation services at Acharya Professional Accountants"
-              className="w-full h-full object-cover"
+              alt="Professional Income Tax Filing Solutions at Acharya Professional Accountants"
+              className="w-full h-auto object-cover"
               loading="lazy"
             />
           </picture>
         </div>
       </section>
 
-      <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16 grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="50">
-        <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-8">
-          <h2 className="font-montserrat text-2xl font-bold mb-4">What We Cover</h2>
-          <ul className="space-y-3 text-boulder">
-            {[
-              'Income tax planning and filing for individuals and businesses',
-              'Advance tax, TDS, and TCS support',
-              'Tax computation, working papers, and documentation',
-              'Responding to notices and handling queries',
-              'Year-end tax review and projections for the next year',
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3">
-                <DynamicFaIcon name="fa-check-circle" className="text-primary-accent mt-1" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-8">
-          <h2 className="font-montserrat text-2xl font-bold mb-4">Benefits for You</h2>
-          <ul className="space-y-3 text-boulder">
-            {[
-              'Accurate, timely filing with clear documentation',
-              'Better visibility on tax liability through the year',
-              'Support in optimising eligible deductions and benefits',
-              'Reduced stress around scrutiny and assessments',
-              'Single point-of-contact for ongoing tax queries',
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3">
-                <DynamicFaIcon name="fa-star" className="text-primary-accent mt-1" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16" data-aos="fade-up" data-aos-delay="100">
-        <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-8 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+      {/* Solutions and Compliance Grid */}
+      <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16 grid grid-cols-1 lg:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="50">
+        {/* Solutions Card */}
+        <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-8 flex flex-col justify-between">
           <div>
-            <h2 className="font-montserrat text-2xl font-bold mb-4">Engagement Flow</h2>
-            <ol className="space-y-3 text-boulder list-decimal list-inside">
-              <li>Understand your income sources, entity type, and current tax position.</li>
-              <li>Collect data, challans, and previous returns as needed.</li>
-              <li>Prepare workings and draft returns with clear explanations.</li>
-              <li>Review with you, finalize and file within due dates.</li>
-              <li>Support you with post-filing clarifications or notices.</li>
-            </ol>
-          </div>
-          <div>
-            <h2 className="font-montserrat text-2xl font-bold mb-4">Ideal For</h2>
-            <ul className="space-y-3 text-boulder">
+            <h2 className="font-montserrat text-2xl font-bold mb-4 text-white">
+              Comprehensive Income Tax Filing Solutions
+            </h2>
+            <p className="text-boulder mb-6">
+              Our professional tax experts provide end-to-end assistance for businesses, professionals, startups, and individuals with accurate documentation and timely filing support. Our services include:
+            </p>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-boulder text-sm">
               {[
-                'Salaried individuals with multiple income sources',
-                'Professionals, consultants, and freelancers',
-                'Business owners and partners in firms/companies',
-                'NRIs needing support with Indian tax filings',
+                'Income Tax Return Filing India for businesses and individuals',
+                'Business Tax Filing Services with complete compliance support',
+                'GST and Income Tax Services coordination and reporting',
+                'Financial Statement Preparation for tax assessment',
+                'Revenue Monitoring Services and taxable income analysis',
+                'Expense Tracking Services for accurate deductions and claims',
+                'Financial Reporting Services for compliance and planning',
+                'Business Financial Analysis to optimize tax efficiency',
+                'Tax planning and advisory services',
+                'Audit and Taxation Services support',
+                'Financial Compliance Services for statutory accuracy',
+                'Advance tax calculation and filing assistance',
+                'TDS compliance and reporting support',
+                'Customized reporting for business taxation and regulatory review',
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <DynamicFaIcon name="fa-user" className="text-primary-accent mt-1" />
+                <li key={item} className="flex items-start gap-2.5">
+                  <DynamicFaIcon name="fa-check-circle" className="text-primary-accent mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Compliance Card */}
+        <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-8 flex flex-col justify-between">
+          <div>
+            <h2 className="font-montserrat text-2xl font-bold mb-4 text-white">
+              Ensure Compliance and Financial Accuracy
+            </h2>
+            <p className="text-boulder mb-6">
+              Efficient tax filing is essential for maintaining financial discipline, avoiding penalties, and supporting long-term business growth. Our professional team ensures accurate record management, timely submissions, and transparent reporting aligned with current tax regulations.
+            </p>
+            <p className="text-boulder mb-4">
+              With our expert <strong className="text-white">Accounting Services Kerala</strong>, businesses can:
+            </p>
+            <ul className="space-y-3 text-boulder text-sm mb-6">
+              {[
+                'Maintain accurate and compliant tax records',
+                'Ensure timely filing of income tax returns and GST reports',
+                'Improve financial transparency and operational control',
+                'Reduce tax-related risks and penalties',
+                'Strengthen budgeting and financial planning',
+                'Support strategic business decision-making',
+                'Enhance compliance with evolving tax regulations in India',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2.5">
+                  <DynamicFaIcon name="fa-star" className="text-primary-accent mt-0.5 shrink-0" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -110,47 +116,52 @@ const ServiceTaxationPage = () => {
         </div>
       </section>
 
+      {/* Expertise Section */}
+      <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16" data-aos="fade-up" data-aos-delay="100">
+        <div className="bg-gradient-to-r from-secondary-dark to-secondary-dark/65 border border-primary-accent/15 rounded-2xl p-8 md:p-10 text-center max-w-4xl mx-auto">
+          <p className="text-lg md:text-xl text-boulder italic leading-relaxed">
+            "As specialists in <strong className="text-white">Chartered Accountant Services Kozhikode</strong>, we combine accounting expertise, tax knowledge, and modern financial practices to deliver dependable and efficient income tax filing solutions for businesses across multiple industries."
+          </p>
+        </div>
+      </section>
+
+      {/* Partner Section */}
       <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16" data-aos="fade-up" data-aos-delay="150">
-        <div className="bg-secondary-dark/80 rounded-2xl p-8 md:p-10 border border-primary-accent/10">
-          <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-6">Taxation – FAQ</h2>
-          <div className="space-y-4 text-boulder">
-            <div>
-              <h3 className="font-semibold text-white mb-1 text-base md:text-lg">
-                Can you work with my existing accounts team or CA?
-              </h3>
-              <p>Yes, we often work alongside internal teams and auditors, ensuring all tax workings are aligned and well-documented.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-white mb-1 text-base md:text-lg">
-                How early should I engage you before due dates?
-              </h3>
-              <p>We recommend engaging us at least a few weeks before key filing dates so there is enough time to review and clarify data.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-white mb-1 text-base md:text-lg">
-                Do you assist in responding to tax notices?
-              </h3>
-              <p>Yes, we can help draft responses, prepare supporting documentation, and guide you on the next steps for most common notices.</p>
-            </div>
+        <div className="bg-secondary-dark/80 rounded-2xl p-8 md:p-10 border border-primary-accent/10 grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 items-center">
+          <div>
+            <h2 className="font-montserrat text-2xl md:text-3xl font-bold leading-tight text-white">
+              Best Tax and Accounting Partner Across Kerala and India
+            </h2>
+          </div>
+          <div className="space-y-4 text-boulder text-base md:text-lg">
+            <p>
+              At <strong className="text-white">Acharya Professional Accountants</strong>, we are committed to delivering professional, secure, and result-oriented tax and accounting services tailored to modern business requirements. Our team provides reliable support for taxation, reporting, compliance management, and financial advisory services with a strong focus on accuracy and professionalism.
+            </p>
+            <p>
+              Whether you require support for tax filing, GST compliance, financial reporting, or complete accounting solutions, we deliver customized services that support operational efficiency and business growth.
+            </p>
           </div>
         </div>
       </section>
 
+      {/* Call to Action (CTA) Section */}
       <section className="container mx-auto px-4 md:px-20 pb-16 md:pb-20" data-aos="fade-up" data-aos-delay="200">
         <div className="bg-primary-accent text-dark-bg rounded-3xl p-8 md:p-12 flex flex-col gap-6 shadow-[0_20px_60px_rgba(229,161,69,0.25)]">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
-              <h3 className="font-montserrat text-2xl md:text-3xl font-bold mb-3">Plan Your Taxes with Confidence</h3>
-              <p className="text-lg max-w-2xl">
-                Let us understand your income pattern and help you structure taxes in a compliant, stress-free manner.
+              <h3 className="font-montserrat text-2xl md:text-3xl font-bold mb-3">
+                Partner with Acharya Professional Accountants
+              </h3>
+              <p className="text-lg max-w-2xl font-medium">
+                Your trusted financial and accounting partner for professional income tax filing, compliance management, and business success across Kerala and India.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+            <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto font-inter">
               <a
-                href="https://wa.me/919446369434?text=Hi%20I%20want%20to%20discuss%20Taxation%20Services"
+                href="https://wa.me/919446369434?text=Hi%20I%20want%20to%20discuss%20Income%20Tax%20Filing%20Services"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 sm:flex-none inline-flex justify-center items-center bg-dark-bg text-primary-accent font-semibold px-6 py-3 rounded-full hover:bg-secondary-dark transition-all duration-300"
+                className="flex-1 sm:flex-none inline-flex justify-center items-center bg-dark-bg text-primary-accent font-semibold px-6 py-3 rounded-full hover:bg-secondary-dark hover:text-primary-accent transition-all duration-300"
               >
                 Enquire on WhatsApp
               </a>
@@ -178,5 +189,3 @@ const ServiceTaxationPage = () => {
 };
 
 export default ServiceTaxationPage;
-
-

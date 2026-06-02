@@ -3,11 +3,11 @@ export const navbarServices = [
         title: "Accounting",
         link: "/services/accounting",
         items: [
-            { name: "Bookkeeping", link: "/services/accounting" },
-            { name: "Financial Statements", link: "/services/accounting" },
-            { name: "Reconciliations", link: "/services/accounting" },
-            { name: "Cash Flow Tracking", link: "/services/accounting" },
-            { name: "Management Reports", link: "/services/accounting" }
+            { name: "Bookkeeping", link: "/services/accounting/bookkeeping" },
+            { name: "Financial Statements", link: "/services/accounting/financial-statements" },
+            { name: "Reconciliations", link: "/services/accounting/reconciliations" },
+            { name: "Cash Flow Tracking", link: "/services/accounting/cash-flow" },
+            { name: "Management Reports", link: "/services/accounting/management-reports" }
         ]
     },
     {
@@ -15,10 +15,10 @@ export const navbarServices = [
         link: "/services/taxation",
         items: [
             { name: "Income Tax Filing", link: "/services/taxation" },
-            { name: "Tax Planning", link: "/services/taxation" },
-            { name: "TDS & TCS", link: "/services/taxation" },
-            { name: "Tax Audit Support", link: "/services/taxation" },
-            { name: "Notice Responses", link: "/services/taxation" }
+            { name: "Tax Planning", link: "/services/taxation/tax-planning" },
+            { name: "TDS & TCS", link: "/services/taxation/tds-tcs" },
+            { name: "Tax Audit Support", link: "/services/taxation/tax-audit" },
+            { name: "Notice Responses", link: "/services/taxation/notice-responses" }
         ]
     },
     {
