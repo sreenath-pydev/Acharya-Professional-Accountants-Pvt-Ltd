@@ -4,12 +4,17 @@ import LocationPage from './LocationPage';
 import SEO from '../common/SEO';
 
 const KozhikodePage = lazy(() => import('./KozhikodePage'));
+const KannurPage = lazy(() => import('./KannurPage'));
 
 const DynamicPageHandler = () => {
     const { slug } = useParams();
 
     if (slug === 'accounting-service-in-kozhikode') {
         return <KozhikodePage />;
+    }
+
+    if (slug === 'accounting-service-in-kannur') {
+        return <KannurPage />;
     }
 
     if (slug && slug.startsWith('accounting-service-in-')) {
