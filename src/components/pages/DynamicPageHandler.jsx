@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import { useParams } from 'react-router-dom';
 import LocationPage from './LocationPage';
 import SEO from '../common/SEO';
 
+const KozhikodePage = lazy(() => import('./KozhikodePage'));
+
 const DynamicPageHandler = () => {
     const { slug } = useParams();
+
+    if (slug === 'accounting-service-in-kozhikode') {
+        return <KozhikodePage />;
+    }
 
     if (slug && slug.startsWith('accounting-service-in-')) {
         const citySlug = slug.replace('accounting-service-in-', '');
