@@ -286,7 +286,7 @@ const Header = () => {
           {/* 3D Top Highlight Effect */}
           <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary-accent/40 to-transparent rounded-t-2xl"></div>
 
-          <div className="flex items-center h-[40px] relative z-10">
+          <div className="flex items-center h-[40px] relative z-10 shrink-0">
             <RouterLink to="/">
               <img
                 src="/images/logo.webp"
@@ -298,7 +298,7 @@ const Header = () => {
             </RouterLink>
           </div>
 
-          <div className="hidden md:flex items-center gap-6 lg:gap-8 relative z-10">
+          <div className="hidden xl:flex items-center gap-6 lg:gap-8 relative z-10">
             <ul className="flex gap-6 lg:gap-8">
               {['home', 'about', 'services', 'business loans', 'income tax calculator', 'internship', 'courses', 'careers'].map((item) => (
                 <li key={item}>
@@ -318,7 +318,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden flex flex-col gap-1 z-50 ml-4 relative"
+            className="xl:hidden flex flex-col gap-1 z-50 ml-4 relative"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle Menu"
           >
@@ -338,7 +338,7 @@ const Header = () => {
 
           {/* Mobile Menu */}
           <div
-            className={`fixed inset-0 bg-dark-bg z-40 flex flex-col justify-center items-center pt-24 pb-10 transition-all duration-300 ${isMenuOpen ? 'translate-y-0' : '-translate-y-full opacity-0 pointer-events-none'
+            className={`fixed inset-0 bg-dark-bg z-40 flex flex-col justify-center items-center pt-24 pb-10 transition-all duration-300 xl:hidden ${isMenuOpen ? 'translate-y-0' : '-translate-y-full opacity-0 pointer-events-none'
               }`}
             style={{
               top: isScrolled ? '80px' : '64px',
