@@ -6,6 +6,7 @@ import SEO from '../common/SEO';
 const KozhikodePage = lazy(() => import('./KozhikodePage'));
 const KannurPage = lazy(() => import('./KannurPage'));
 const MalappuramPage = lazy(() => import('./MalappuramPage'));
+const ThrissurPage = lazy(() => import('./ThrissurPage'));
 
 const DynamicPageHandler = () => {
     const { slug } = useParams();
@@ -20,6 +21,10 @@ const DynamicPageHandler = () => {
 
     if (slug === 'accounting-service-in-malappuram') {
         return <MalappuramPage />;
+    }
+
+    if (slug === 'accounting-service-in-thrissur') {
+        return <ThrissurPage />;
     }
 
     if (slug && slug.startsWith('accounting-service-in-')) {
