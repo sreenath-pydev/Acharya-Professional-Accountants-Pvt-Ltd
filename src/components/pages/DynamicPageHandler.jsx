@@ -9,6 +9,7 @@ const MalappuramPage = lazy(() => import('./MalappuramPage'));
 const ThrissurPage = lazy(() => import('./ThrissurPage'));
 const WayanadPage = lazy(() => import('./WayanadPage'));
 const KasaragodPage = lazy(() => import('./KasaragodPage'));
+const KochiPage = lazy(() => import('./KochiPage'));
 
 const DynamicPageHandler = () => {
     const { slug } = useParams();
@@ -35,6 +36,10 @@ const DynamicPageHandler = () => {
 
     if (slug === 'accounting-service-in-kasaragod') {
         return <KasaragodPage />;
+    }
+
+    if (slug === 'accounting-service-in-kochi') {
+        return <KochiPage />;
     }
 
     if (slug && slug.startsWith('accounting-service-in-')) {
