@@ -1,11 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
+import { fileURLToPath } from 'url'
 
-// import path from 'path';
-// import prerender from 'vite-plugin-prerender';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://vite.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: [
+      { find: /^aos$/, replacement: path.resolve(__dirname, './src/utils/aosObserver.js') }
+    ]
+  },
   plugins: [
     react(),
     // Custom prerender implementation handles static generation
@@ -46,8 +52,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom', 'react-helmet-async'],
-          ui: ['aos', 'swiper', 'react-icons']
+          vendor: ['react', 'react-dom', 'react-router-dom', 'react-helmet-async']
         }
       }
     }
