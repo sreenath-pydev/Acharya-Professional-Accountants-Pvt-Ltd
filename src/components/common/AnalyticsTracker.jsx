@@ -2,15 +2,13 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const GTM_ID = import.meta.env.VITE_GTM_ID;
-const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID;
 
 const AnalyticsTracker = () => {
   const location = useLocation();
 
   const isGtmValid = GTM_ID && GTM_ID !== 'GTM-NHQBRDLJ';
-  const isPixelValid = META_PIXEL_ID && META_PIXEL_ID !== '123456789012345';
 
-  // 1. Initialize dataLayer and fbq placeholders immediately on mount
+  // 1. Initialize dataLayer placeholder immediately on mount
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
@@ -18,29 +16,13 @@ const AnalyticsTracker = () => {
     if (isGtmValid) {
       window.dataLayer = window.dataLayer || [];
     }
-
-    // Initialize Meta Pixel (fbq) queue
-    if (isPixelValid && !window.fbq) {
-      window.fbq = function () {
-        window.fbq.callMethod ?
-          window.fbq.callMethod.apply(window.fbq, arguments) :
-          window.fbq.queue.push(arguments);
-      };
-      if (!window._fbq) window._fbq = window.fbq;
-      window.fbq.push = window.fbq;
-      window.fbq.loaded = true;
-      window.fbq.version = '2.0';
-      window.fbq.queue = [];
-
-      // Push initialization command
-      window.fbq('init', META_PIXEL_ID);
-    }
-  }, [isGtmValid, isPixelValid]);
+  }, [isGtmValid]);
 
   // 2. Dynamically load scripts on first user interaction or fallback timeout (Performance optimization)
+  // GTM handles loading the Meta Pixel and Microsoft Clarity scripts.
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    if (!isGtmValid && !isPixelValid) return;
+    if (!isGtmValid) return;
 
     let scriptsLoaded = false;
 
@@ -58,14 +40,7 @@ const AnalyticsTracker = () => {
         return;
       }
 
-
-      // Load Meta Pixel Script
-      if (isPixelValid) {
-        const pixelScript = document.createElement('script');
-        pixelScript.async = true;
-        pixelScript.src = 'https://connect.facebook.net/en_US/fbevents.js';
-        document.head.appendChild(pixelScript);
-      }
+      // GTM script is loaded in index.html, and pageviews are triggered dynamically below.
     };
 
     const events = ['mousedown', 'mousemove', 'keydown', 'scroll', 'touchstart'];
@@ -84,9 +59,11 @@ const AnalyticsTracker = () => {
       });
       clearTimeout(timeoutId);
     };
-  }, [isGtmValid, isPixelValid]);
+  }, [isGtmValid]);
 
   // 3. Track pageviews on route changes (including initial load)
+  // Both Meta Pixel and Microsoft Clarity are configured inside GTM and will fire
+  // on GTM's virtual page_view event pushed to the dataLayer on route changes.
   useEffect(() => {
     if (typeof window === 'undefined') return;
     if (navigator.webdriver || window.__PRERENDER_INJECTED) return;
@@ -101,14 +78,10 @@ const AnalyticsTracker = () => {
         page_title: document.title
       });
     }
-
-    // Track Meta Pixel pageview
-    if (isPixelValid && typeof window.fbq === 'function') {
-      window.fbq('track', 'PageView');
-    }
-  }, [location, isGtmValid, isPixelValid]);
+  }, [location, isGtmValid]);
 
   return null;
 };
 
 export default AnalyticsTracker;
+
