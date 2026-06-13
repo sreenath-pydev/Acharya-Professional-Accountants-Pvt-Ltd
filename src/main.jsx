@@ -4,9 +4,9 @@ import { HelmetProvider } from 'react-helmet-async';
 import App from './App';
 import './index.css';
 import 'aos/dist/aos.css';
-import AOS from 'aos';
+import { initAosObserver } from './utils/aosObserver';
 
-AOS.init({
+initAosObserver({
   duration: 800,
   once: true,
   offset: 100,

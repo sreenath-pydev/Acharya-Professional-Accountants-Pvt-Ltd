@@ -1,7 +1,5 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import SEO from '../common/SEO';
 
 import InternshipForm from '../sections/InternshipForm';
@@ -12,16 +10,6 @@ const CareersPage = () => {
   const location = useLocation();
 
   useEffect(() => {
-    /* =========================
-       AOS Init
-    ========================== */
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,
-      offset: 100,
-    });
-
     /* =========================
        Scroll Handling
     ========================== */

@@ -1,7 +1,3 @@
-import AOS from 'aos';
-import { useEffect } from 'react';
-import 'aos/dist/aos.css'; // Make sure to import AOS CSS
-
 const teamMembers = [
   { name: 'Sreehari C', role: 'Chairman & CEO', photo: '/teams_images/sreehari.webp' },
   { name: 'Rahul C', role: 'Managing Director', photo: '/teams_images/rahul.webp' },
@@ -22,18 +18,6 @@ const perks = [
 ];
 
 const PeopleCulture = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      offset: 120
-    });
-    return () => {
-      AOS.refresh();
-    };
-  }, []);
-
   return (
     <section id="people-culture" className="py-12 md:py-20 bg-graphite overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
@@ -92,7 +76,7 @@ const PeopleCulture = () => {
                   <div className="text-xl sm:text-2xl text-primary-accent">
                     <i className={`fas ${perk.icon}`}></i>
                   </div>
-                  <div className="font-semibold text-dark-bg text-sm sm:text-base md:text-lg">{perk.text}</div>
+                  <div className="font-semibold text-white text-sm sm:text-base md:text-lg">{perk.text}</div>
                 </div>
               ))}
             </div>

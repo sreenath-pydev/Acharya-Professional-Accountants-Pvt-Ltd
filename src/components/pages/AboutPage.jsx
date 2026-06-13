@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import AOS from 'aos';
 import { Helmet } from 'react-helmet-async';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -14,16 +13,6 @@ import PeopleCulture from '../sections/PeopleCulture';
 
 const AboutPage = () => {
   useEffect(() => {
-    /* =========================
-       AOS Init
-    ========================== */
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,
-      offset: 100,
-    });
-
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
     /* =========================
@@ -48,7 +37,6 @@ const AboutPage = () => {
 
     return () => {
       document.removeEventListener('click', handleAnchorClick);
-      AOS.refresh();
     };
   }, []);
 

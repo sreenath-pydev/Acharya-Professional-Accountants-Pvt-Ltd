@@ -1,6 +1,4 @@
 import { useState, useRef, useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const jobListings = [
@@ -75,36 +73,11 @@ const jobListings = [
     ]
   }
 ];
-
 const JobOpenings = () => {
   const [activeJob, setActiveJob] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [selectedJob, setSelectedJob] = useState('');
-  const [aosInitialized, setAosInitialized] = useState(false);
   const modalRef = useRef(null);
-
-  // Initialize AOS on component mount
-  useEffect(() => {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: false,
-      offset: 120,
-      delay: 50
-    });
-    setAosInitialized(true);
-
-    return () => {
-      AOS.refreshHard(); // Force refresh on unmount
-    };
-  }, []);
-
-  // Refresh AOS when job list changes or activeJob changes
-  useEffect(() => {
-    if (aosInitialized) {
-      AOS.refresh();
-    }
-  }, [activeJob, aosInitialized]);
 
   const toggleJob = (index) => {
     setActiveJob(activeJob === index ? null : index);
