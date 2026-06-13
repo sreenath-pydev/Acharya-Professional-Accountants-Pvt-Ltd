@@ -29,30 +29,51 @@ const Hero = () => {
   return (
     <>
       <style>{`
-        #home {
-          background-image: linear-gradient(120deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.25) 100%), url('/images/banner2_mobile.webp');
-          background-position: center 30px;
+        .hero-bg-img {
+          object-position: center 30px;
         }
         @media (min-width: 640px) {
-          #home {
-            background-image: linear-gradient(120deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.25) 100%), url('/images/banner2_tablet.webp');
-            background-position: center 60px;
+          .hero-bg-img {
+            object-position: center 60px;
           }
         }
         @media (min-width: 1024px) {
-          #home {
-            background-image: linear-gradient(120deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.25) 100%), url('/images/banner2_desktop.webp');
-            background-position: center 96px;
+          .hero-bg-img {
+            object-position: center 96px;
           }
         }
       `}</style>
       <section
         id="home"
-        className="relative overflow-hidden min-h-[90vh] flex items-center bg-cover"
+        className="relative overflow-hidden min-h-[90vh] flex items-center bg-graphite"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/72 via-black/40 to-transparent pointer-events-none" />
+        {/* Background Image using responsive picture tag */}
+        <picture className="absolute inset-0 w-full h-full pointer-events-none z-0">
+          <source media="(min-width: 1024px)" srcSet="/images/banner2_desktop.webp" />
+          <source media="(min-width: 640px)" srcSet="/images/banner2_tablet.webp" />
+          <img
+            src="/images/banner2_mobile.webp"
+            alt="Acharya accounting banner"
+            className="w-full h-full object-cover hero-bg-img"
+            loading="eager"
+            fetchpriority="high"
+            width="640"
+            height="360"
+          />
+        </picture>
 
-        <div className="container mx-auto px-5 md:px-12 lg:px-20 pt-32 pb-20 md:pt-40 md:pb-28 lg:pt-48 lg:pb-36 relative z-10">
+        {/* Gradient Overlay mirroring CSS background-image style */}
+        <div 
+          className="absolute inset-0 pointer-events-none z-10" 
+          style={{
+            backgroundImage: 'linear-gradient(120deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.25) 100%)'
+          }}
+        />
+
+        {/* Secondary overlay for dynamic visual lighting */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/72 via-black/40 to-transparent pointer-events-none z-10" />
+
+        <div className="container mx-auto px-5 md:px-12 lg:px-20 pt-32 pb-20 md:pt-40 md:pb-28 lg:pt-48 lg:pb-36 relative z-20">
           <div className="max-w-3xl space-y-6" data-aos="fade-right" data-aos-delay="120">
             <p className="text-primary-accent uppercase tracking-[0.25em] text-xs md:text-sm drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
               Acharya Professional Accountants
