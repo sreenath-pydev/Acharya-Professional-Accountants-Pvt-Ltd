@@ -20,6 +20,19 @@ const KasaragodPage = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, []);
 
+    const tickerItems = [
+        "GST Filing Kasaragod",
+        "Income Tax Consultant Kasaragod",
+        "Startup CA Kasaragod",
+        "Company Registration Kasaragod",
+        "ESOP Taxation Kasaragod",
+        "Audit Firm Kasaragod",
+        "Transfer Pricing Kasaragod",
+        "Bookkeeping Services Kasaragod",
+        "NRI Tax Filing Kasaragod",
+        "DPIIT Registration Kasaragod"
+    ];
+
     const services = [
         {
             num: "01",
@@ -329,6 +342,17 @@ const KasaragodPage = () => {
                         <span className="font-montserrat text-3xl md:text-4xl font-bold text-primary-accent block leading-none">ICAI</span>
                         <span className="text-xs text-silver-sand font-medium uppercase tracking-wider block mt-2">Registered CAs</span>
                     </div>
+                </div>
+            </div>
+
+            {/* TICKER */}
+            <div className="ticker border-y border-white/5 py-4 overflow-hidden bg-secondary-dark/30">
+                <div className="animate-marquee-custom">
+                    {[...tickerItems, ...tickerItems].map((item, idx) => (
+                        <span key={idx} className="flex items-center text-xs tracking-wider uppercase text-boulder gap-2.5 mx-6 whitespace-nowrap">
+                            <span className="text-primary-accent font-bold">●</span> {item}
+                        </span>
+                    ))}
                 </div>
             </div>
 
@@ -719,8 +743,9 @@ const KasaragodPage = () => {
                                         let slug = city.toLowerCase();
                                         if (city.includes('Delhi')) slug = 'delhi';
                                         else if (city.includes('Kochi')) slug = 'kochi';
-                                        else if (city.includes('Bengaluru')) slug = 'bengaluru';
+                                        else if (city.includes('Bengaluru')) slug = 'bangalore';
                                         else if (city.includes('Mangaluru')) slug = 'mangaluru';
+
                                         else slug = city.trim().toLowerCase().replace(/\s+/g, '-');
 
                                         return (

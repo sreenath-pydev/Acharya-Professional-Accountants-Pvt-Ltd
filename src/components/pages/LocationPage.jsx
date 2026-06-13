@@ -168,8 +168,9 @@ const LocationPage = ({ citySlugOverride }) => {
                                     let slug = city.toLowerCase();
                                     if (city.includes('Delhi')) slug = 'delhi';
                                     else if (city.includes('Kochi')) slug = 'kochi';
-                                    else if (city.includes('Bengaluru')) slug = 'bengaluru';
+                                    else if (city.includes('Bengaluru')) slug = 'bangalore';
                                     else if (city.includes('Mangaluru')) slug = 'mangaluru';
+
                                     else slug = city.trim().toLowerCase().replace(/\s+/g, '-');
 
                                     return (

@@ -20,6 +20,19 @@ const KochiPage = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, []);
 
+    const tickerItems = [
+        "GST Filing Kochi",
+        "Income Tax Consultant Kochi",
+        "Startup CA Kochi",
+        "Company Registration Kochi",
+        "ESOP Taxation Kochi",
+        "Audit Firm Kochi",
+        "Transfer Pricing Kochi",
+        "Bookkeeping Services Kochi",
+        "NRI Tax Filing Kochi",
+        "DPIIT Registration Kochi"
+    ];
+
     const features = [
         {
             num: "01",
@@ -340,10 +353,20 @@ const KochiPage = () => {
                         <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">NRI Tax</span>
                         <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Payroll & PF</span>
                         <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">RERA Compliance</span>
-                        <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">TDS Filing</span>
                     </div>
                 </div>
             </section>
+
+            {/* TICKER */}
+            <div className="ticker border-y border-white/5 py-4 overflow-hidden bg-secondary-dark/30">
+                <div className="animate-marquee-custom">
+                    {[...tickerItems, ...tickerItems].map((item, idx) => (
+                        <span key={idx} className="flex items-center text-xs tracking-wider uppercase text-boulder gap-2.5 mx-6 whitespace-nowrap">
+                            <span className="text-primary-accent font-bold">●</span> {item}
+                        </span>
+                    ))}
+                </div>
+            </div>
 
             {/* ABOUT SECTION */}
             <section id="about" className="py-20 border-t border-white/5 bg-secondary-dark/10">
@@ -733,8 +756,9 @@ const KochiPage = () => {
                                         let slug = city.toLowerCase();
                                         if (city.includes('Delhi')) slug = 'delhi';
                                         else if (city.includes('Kochi')) slug = 'kochi';
-                                        else if (city.includes('Bengaluru')) slug = 'bengaluru';
+                                        else if (city.includes('Bengaluru')) slug = 'bangalore';
                                         else if (city.includes('Mangaluru')) slug = 'mangaluru';
+
                                         else slug = city.trim().toLowerCase().replace(/\s+/g, '-');
 
                                         return (

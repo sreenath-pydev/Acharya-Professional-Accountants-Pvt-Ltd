@@ -200,7 +200,8 @@ const Footer = () => {
 
         <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
           {locationGroups.flatMap(group => group.cities).map((city, index) => {
-            const slug = city.trim().toLowerCase().replace(/\s+/g, '-');
+            let slug = city.trim().toLowerCase().replace(/\s+/g, '-');
+            if (slug === 'bengaluru') slug = 'bangalore';
             return (
               <Link
                 key={index}
@@ -212,6 +213,7 @@ const Footer = () => {
             )
           })}
         </div>
+
       </div>
 
       {/* End section  */}

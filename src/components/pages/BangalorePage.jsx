@@ -12,7 +12,7 @@ import {
     IconClock
 } from '../common/Icons';
 
-const PalakkadPage = () => {
+const BangalorePage = () => {
     useEffect(() => {
         setTimeout(() => {
             AOS.refresh();
@@ -20,194 +20,249 @@ const PalakkadPage = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, []);
 
-    const tickerItems = [
-        "GST Filing Palakkad",
-        "Income Tax Consultant Palakkad",
-        "Startup CA Palakkad",
-        "Company Registration Palakkad",
-        "ESOP Taxation Palakkad",
-        "Audit Firm Palakkad",
-        "Transfer Pricing Palakkad",
-        "Bookkeeping Services Palakkad",
-        "NRI Tax Filing Palakkad",
-        "DPIIT Registration Palakkad"
+    const miniStats = [
+        { num: "800+", label: "Bangalore Clients" },
+        { num: "15+", label: "Years Active" },
+        { num: "₹0", label: "Late Penalties" },
+        { num: "ICAI", label: "Registered CAs" }
     ];
 
-    const milestones = [
+    const tickerItems = [
+        "GST Filing Bangalore",
+        "Income Tax Consultant Bangalore",
+        "Startup CA Bangalore",
+        "Company Registration Bangalore",
+        "ESOP Taxation Bangalore",
+        "Audit Firm Bangalore",
+        "Transfer Pricing Bangalore",
+        "Bookkeeping Services Bangalore",
+        "NRI Tax Filing Bangalore",
+        "DPIIT Registration Bangalore"
+    ];
+
+    const pills = [
+        { text: "GST Filing", lit: true },
+        { text: "Income Tax", lit: true },
+        { text: "Startup Compliance", lit: true },
+        { text: "Company Registration", lit: true },
+        { text: "ESOP Taxation", lit: false },
+        { text: "Transfer Pricing", lit: false },
+        { text: "Statutory Audit", lit: false },
+        { text: "Bookkeeping", lit: false },
+        { text: "NRI Tax", lit: false },
+        { text: "Payroll & PF", lit: false },
+        { text: "DPIIT Recognition", lit: false },
+        { text: "Virtual CFO", lit: false }
+    ];
+
+    const proofCards = [
         {
-            year: "Our Promise",
-            title: "Senior CA on Every File",
-            desc: "All engagements — from a simple ITR to a full statutory audit — are handled and reviewed by an ICAI-qualified chartered accountant."
+            num: "800+",
+            title: "Bangalore Clients",
+            desc: "Across tech, startup, MSME, real estate and professional services sectors."
         },
         {
-            year: "Our Process",
-            title: "Compliance Calendar for Every Client",
-            desc: "We track every due date for your GST returns, TDS deposits, advance tax, and ROC filings — and complete them before the deadline, every time."
+            num: "15+",
+            title: "Years Active",
+            desc: "Over a decade of compliance experience serving Bangalore's business community."
         },
         {
-            year: "Our Reach",
-            title: "All of Palakkad District",
-            desc: "In-person consultations from our Palakkad office; full digital service for clients in Ottapalam, Shoranur, Chittur, Mannarkkad, and Alathur."
+            num: "100%",
+            title: "On-Time Filing",
+            desc: "Not a single client has ever paid a late filing penalty under our management."
         },
         {
-            year: "Our Pricing",
-            title: "Fixed Fee — Agreed Upfront",
-            desc: "We quote a flat fee before starting any engagement. No surprise bills mid-year, no extra charges for routine follow-up communications."
-        },
-        {
-            year: "Our Languages",
-            title: "Malayalam, Tamil & English",
-            desc: "Our team communicates fluently in all three — important in Palakkad's bilingual business environment."
+            num: "ICAI",
+            title: "Qualified CAs",
+            desc: "Every file reviewed and signed off by an ICAI-registered chartered accountant."
         }
     ];
 
     const services = [
         {
-            num: "01",
-            icon: "📊",
-            title: "GST Filing Services Palakkad",
-            intro: "We handle your GST from registration through every monthly, quarterly, and annual return — including GSTR-1, GSTR-3B, and GSTR-9. For businesses dealing with inter-state supplies on the Kerala–Tamil Nadu corridor, we ensure correct classification and ITC matching across state lines.",
-            tags: ["GST Registration", "GSTR-1 / 3B Filing", "GSTR-9 Annual Return", "GST Notice Reply", "ITC Reconciliation", "Inter-State GST Compliance"]
+            ico: "📊",
+            title: "GST Filing Services Bangalore",
+            desc: "We manage the complete GST lifecycle for Bangalore businesses — registration, monthly GSTR-1 and 3B filings, quarterly returns, GSTR-9 annual reconciliation, and department notice responses. For SaaS companies and software exporters, we handle LUT filings for zero-rated exports and GST on import of services under reverse charge.",
+            chips: ["GST Registration", "GSTR-1 / 3B", "GSTR-9 Annual", "LUT for Exporters", "RCM Compliance", "GST Notice Reply"]
         },
         {
-            num: "02",
-            icon: "🧾",
-            title: "Income Tax Consultant Palakkad",
-            intro: "We file ITRs for salaried employees, business owners, professionals, firms, and companies in Palakkad. Throughout the year, we provide advance tax planning, TDS compliance, and prompt responses to income tax notices — so no deadline or department query catches you unprepared.",
-            tags: ["ITR Filing — All Forms", "Advance Tax Planning", "TDS Filing & TAN", "Tax Audit Sec 44AB", "NRI Tax Filing", "IT Notice Response"]
+            ico: "🧾",
+            title: "Income Tax Consultant Bangalore",
+            desc: "We file income tax returns for Bangalore's salaried tech professionals (including those with RSUs, ESOPs, and foreign income), business owners, LLPs, and companies. Year-round tax planning, advance tax computation, TDS compliance, and full notice management — so no department query catches you off-guard.",
+            chips: ["ITR — All Categories", "RSU / ESOP Taxation", "Foreign Income Disclosure", "TDS Filing & TAN", "Advance Tax Planning", "IT Notice Response"]
         },
         {
-            num: "03",
-            icon: "🔍",
-            title: "Audit Firm in Palakkad",
-            intro: "We conduct statutory, internal, and tax audits for companies, partnership firms, trusts, and educational institutions in Palakkad. Our audit deliverables include the signed audit report, financial statements, and a management observations letter — giving directors and owners actionable findings, not just compliance paperwork.",
-            tags: ["Statutory Audit", "Internal Audit", "Tax Audit", "Trust & Institution Audit", "Financial Statements"]
+            ico: "🚀",
+            title: "Startup CA Services Bangalore",
+            desc: "We are a CA firm that understands Bangalore's startup lifecycle — from day-zero incorporation and DPIIT recognition through seed-round compliance, investor MIS, ESOP scheme setup, and Series A due diligence preparation. We work with founders who need a CA that speaks both accounting and startup.",
+            chips: ["DPIIT Recognition", "Startup Incorporation", "ESOP Scheme Setup", "Investor MIS Reports", "Due Diligence Support", "Founder Tax Planning"]
         },
         {
-            num: "04",
-            icon: "📒",
-            title: "Bookkeeping Services Palakkad",
-            intro: "We maintain your accounts every month — purchase and sales registers, bank reconciliation, expense categorisation, and monthly P&L — so your books are always current, clean, and ready for a bank loan review, tax assessment, or annual audit without a last-minute scramble.",
-            tags: ["Tally Accounting", "Monthly Bookkeeping", "Bank Reconciliation", "Payroll & Payslips", "PF & ESI Filing", "MIS & P&L Reports"]
+            ico: "🔍",
+            title: "Audit Firm in Bangalore",
+            desc: "We conduct statutory, internal, and tax audits for private limited companies, LLPs, and large partnership firms in Bangalore. Our audit deliverables are board-ready — signed report, financial statements, and a management letter with findings your leadership team can actually act on.",
+            chips: ["Statutory Audit", "Internal Audit", "Tax Audit Sec 44AB", "Transfer Pricing Audit", "Financial Statements"]
         },
         {
-            num: "05",
-            icon: "🏢",
-            title: "Company Registration Palakkad",
-            intro: "Starting a business in Palakkad? We handle the full setup — entity selection advice, director DSC and DIN, MCA name approval, Certificate of Incorporation, PAN and TAN, GST registration, and your first-year compliance calendar — so your business launches correctly from day one.",
-            tags: ["Pvt. Ltd. Registration", "LLP Registration", "MSME / Udyam", "Partnership Firm", "ROC & MCA Filing", "Startup Registration"]
+            ico: "🌐",
+            title: "Transfer Pricing & International Tax",
+            desc: "For Bangalore-based companies with subsidiaries, parent entities, or contract relationships overseas — we handle transfer pricing documentation (Form 3CEB), APA support, FEMA compliance for outward remittances, and income tax treaties. Essential for IT services firms, SaaS companies, and captive units.",
+            chips: ["TP Documentation", "Form 3CEB Filing", "FEMA Compliance", "Outward Remittance", "DTAA Benefits"]
         },
         {
-            num: "06",
-            icon: "💻",
-            title: "Online Accounting Services Palakkad",
-            intro: "Clients across Palakkad's wider district — from Mannarkkad to Alathur — access our full service range without visiting the office. Documents shared over WhatsApp, returns acknowledged same week, and monthly reports delivered by email. Distance doesn't reduce the quality of service.",
-            tags: ["Remote ITR Filing", "Digital GST Returns", "Cloud Bookkeeping", "Virtual CA Support", "WhatsApp Coordination"]
+            ico: "📒",
+            title: "Bookkeeping & Payroll Bangalore",
+            desc: "Monthly bookkeeping, payroll processing, and PF/ESI compliance for Bangalore companies — from a 5-person seed-stage startup to a 200-person growth-stage firm. We keep your books investor-grade and your payroll compliant, without you needing a full-time finance team on day one.",
+            chips: ["Monthly Bookkeeping", "Payroll Processing", "PF & ESI Filing", "Professional Tax", "MIS & P&L Reports", "Virtual CFO"]
         }
     ];
 
-    const benefits = [
+    const comparisonRows = [
         {
-            icon: "🎯",
-            title: "One CA Owns Your Account",
-            desc: "Every client in Palakkad is assigned a dedicated CA who handles all filings, responds to all queries, and is available directly by phone or WhatsApp. You never speak to someone who doesn't know your file."
+            metric: "Who handles your file",
+            us: "A dedicated, named CA — available by phone and WhatsApp",
+            typical: "Rotating junior staff; CA reviews only at submission"
         },
         {
-            icon: "🗓️",
-            title: "Filed Before the Due Date",
-            desc: "We work off a live compliance calendar for every client. GST returns, TDS deposits, advance tax instalments, ROC filings — all prepared and submitted ahead of schedule. Not once has a client of ours paid a late filing penalty."
+            metric: "GST filing turnaround",
+            us: "Filed 3–5 days before the due date, every month",
+            typical: "Often filed on the due date, sometimes after"
         },
         {
-            icon: "🗺️",
-            title: "Kerala–Tamil Nadu Border Expertise",
-            desc: "Palakkad businesses frequently deal across the state border — supply chains, contract labour, inter-state purchases. We handle the GST implications of cross-state transactions cleanly, including place of supply determinations and reverse charge mechanism compliance."
+            metric: "Startup & ESOP expertise",
+            us: "✓ DPIIT, ESOP schemes, RSU tax, fundraising compliance",
+            typical: "✗ Not covered or referred elsewhere",
+            isBoolean: true
         },
         {
-            icon: "🏭",
-            title: "Manufacturing & Trade Experience",
-            desc: "Rice mills, agro-processors, textile units, construction contractors, and MSME manufacturers make up a significant part of our Palakkad client base. We know the sector-specific GST rates, input credit structures, and TDS categories that apply to each — and apply them correctly, every filing."
+            metric: "Transfer pricing / international",
+            us: "✓ TP documentation, Form 3CEB, FEMA, DTAA in-house",
+            typical: "✗ Typically outsourced or not offered",
+            isBoolean: true
         },
         {
-            icon: "💬",
-            title: "Malayalam, Tamil & English",
-            desc: "Palakkad's business community spans both language communities. Our team communicates fluently in Malayalam, Tamil, and English — so nothing gets lost in translation when discussing your financials or explaining a tax position."
+            metric: "Pricing clarity",
+            us: "Fixed fee agreed before engagement starts — no surprises",
+            typical: "Hourly or variable billing; extras added at year-end"
         },
         {
-            icon: "📄",
-            title: "Flat-Fee, Transparent Pricing",
-            desc: "We agree on a fixed fee before any engagement begins. GST filing, bookkeeping retainer, annual audit — all quoted and invoiced at a pre-agreed rate. No escalations mid-year, no extra charges for routine follow-up."
+            metric: "Communication language",
+            us: "Kannada, Malayalam, Tamil, Hindi & English",
+            typical: "English only, or inconsistent"
+        },
+        {
+            metric: "Service scope",
+            us: "✓ GST, tax, audit, payroll, registration — one firm",
+            typical: "✗ Often specialised; other services referred out",
+            isBoolean: true
+        },
+        {
+            metric: "Digital / remote access",
+            us: "✓ Full service via WhatsApp & email — no office visit needed",
+            typical: "✗ Mostly in-person; digital workflows inconsistent",
+            isBoolean: true
         }
     ];
 
     const testimonials = [
         {
-            text: "We run a rice milling operation near Ottapalam. Acharya handles our full GST, payroll, and year-end audit. The team knows our sector — the filings are always correct and always on time.",
-            attr: "Krishnadas N. · Rice Miller, Ottapalam"
+            role: "SaaS Startup · Koramangala",
+            text: "We raised our seed round and needed a CA who understood cap tables, ESOP taxation, and investor reporting — not just GST. Acharya handled everything from incorporation to our first audit. They speak startup.",
+            author: "Aryan S.",
+            company: "Founder, SaaS Company, Koramangala"
         },
         {
-            text: "We do government contracts across Palakkad. Our TDS and GST used to be a mess every quarter. Since Acharya took over, we haven't received a single department notice. Complete peace of mind.",
-            attr: "Subramaniam R. · Civil Contractor, Palakkad Town"
+            role: "Tech Professional · Whitefield",
+            text: "I have RSUs from my US employer and rental income in Bangalore. My ITR used to take a consultant two months to file incorrectly. Acharya files it accurately within a week — FEMA disclosure, foreign tax credit, everything.",
+            author: "Priya N.",
+            company: "Senior Engineer, Whitefield"
         },
         {
-            text: "I have two textile shops in Shoranur. Acharya manages monthly bookkeeping, GST returns, and my personal income tax. Affordable, reliable, and they explain everything clearly in Malayalam.",
-            attr: "Meera V. · Textile Retailer, Shoranur"
+            role: "IT Services Firm · Electronic City",
+            text: "We have a subsidiary in Singapore and contract workers across India. Transfer pricing documentation, GSTR for software exports, and monthly payroll — Acharya manages it all. One firm, zero coordination gaps.",
+            author: "Venkatesh R.",
+            company: "Director, IT Services, Electronic City"
         }
     ];
 
     const areas = [
-        { title: "Palakkad Town", desc: "Full CA services — GST, income tax, audit, company registration — for businesses in the district headquarters." },
-        { title: "CA in Ottapalam", desc: "Accounting, GST and tax services for agro-businesses, traders and professionals in Ottapalam taluk." },
-        { title: "Tax Consultant Shoranur", desc: "GST filing, bookkeeping and income tax for retail businesses, garment traders and individuals in Shoranur." },
-        { title: "Accountant Chittur", desc: "Company registration, audit and tax compliance for manufacturing and industrial businesses in Chittur-Thathamangalam." },
-        { title: "CA in Mannarkkad", desc: "GST, bookkeeping and income tax services for businesses and individuals in Mannarkkad and surrounding areas." },
-        { title: "Alathur & Pattambi", desc: "Full compliance support — GST, payroll, and audit — for businesses in Alathur and Pattambi taluks." },
-        { title: "Malampuzha & Nemmara", desc: "Bookkeeping, tax filing and company registration for businesses across the eastern belt of Palakkad." },
-        { title: "All of Palakkad — Online", desc: "Full digital service for any client across Palakkad district — WhatsApp, email, and video consultations." }
+        {
+            title: "Koramangala",
+            desc: "Startup incorporation, DPIIT, ESOP, GST and ITR for founders and tech businesses in Bangalore's startup hub."
+        },
+        {
+            title: "Indiranagar",
+            desc: "Income tax, bookkeeping and GST for professionals, retail businesses and boutique firms in Indiranagar."
+        },
+        {
+            title: "HSR Layout",
+            desc: "CA services for tech professionals with RSUs, ESOPs, and NRI income — and for startups operating from HSR."
+        },
+        {
+            title: "Whitefield",
+            desc: "Income tax, transfer pricing, and payroll for IT park professionals and companies in Whitefield and ITPB."
+        },
+        {
+            title: "Electronic City",
+            desc: "Statutory audit, GST, and company compliance for IT services, BPO, and manufacturing firms in E-City."
+        },
+        {
+            title: "Bellandur & Sarjapur",
+            desc: "Accounting and tax services for tech professionals, startup employees, and growing businesses in Bellandur."
+        },
+        {
+            title: "MG Road & CBD",
+            desc: "Company registration, audit, and GST compliance for established businesses in Bangalore's commercial centre."
+        },
+        {
+            title: "All of Bangalore — Online",
+            desc: "Full digital service anywhere in Bangalore — WhatsApp, email, and video. No office visit needed for routine work."
+        }
     ];
 
     const faqs = [
         {
-            q: "Do you have an office in Palakkad?",
-            a: "Yes. We operate from our Palakkad office and are available for in-person consultations. We also serve clients across Ottapalam, Shoranur, Chittur, Mannarkkad, Alathur, Pattambi, and remote parts of the district entirely online — documents via WhatsApp, returns acknowledged and shared by email."
+            q: "Do you have a physical office in Bangalore?",
+            a: "Yes. We operate from our Bangalore office and are available for in-person consultations. We also provide a fully digital service for clients across Koramangala, Indiranagar, HSR Layout, Whitefield, Electronic City, Bellandur, and all other areas — all routine compliance handled via WhatsApp and email, no office visit required."
         },
         {
-            q: "My business buys and sells across the Kerala–Tamil Nadu border. Can you handle the GST?",
-            a: "Yes. Inter-state supply is a regular part of our work for Palakkad clients. We correctly classify inter-state vs intra-state supplies, handle IGST vs CGST/SGST accounting, manage place of supply determinations, and reconcile ITC claimed on inter-state purchases. If you have a separate registration in Tamil Nadu, we coordinate filings across both states."
+            q: "I work at a tech company in Bangalore and have RSUs from a US-listed employer. How do you handle my ITR?",
+            a: "RSU taxation is one of the most common and frequently mis-filed situations for Bangalore's tech professionals. We handle the full ITR including: RSU vesting income reported as perquisite, capital gains on subsequent sale (including DTAA benefit if applicable), Foreign Asset Schedule (Schedule FA) disclosure, and foreign tax credit claims for tax withheld by the US employer. We also ensure your Form 26AS and AIS match before filing to avoid scrutiny notices."
         },
         {
-            q: "Do you handle GST and accounts for rice mills and agro-processing businesses in Palakkad?",
-            a: "Yes. Agricultural commodities, processed food products, and agro-industrial outputs each have specific GST treatment — including exempted categories, 5% applicable items, and RCM on purchases from unregistered farmers. We apply the correct classification for every transaction, which directly protects your ITC claims and audit position."
+            q: "Can you help register my startup and get DPIIT recognition in Bangalore?",
+            a: "Yes. We handle the full startup setup — Private Limited Company or LLP incorporation on MCA, DPIIT recognition application (for income tax exemption under Section 80-IAC and angel tax exemption), GST registration, TAN and TDS setup, and ESOP scheme drafting if required. We also continue as your CA firm for monthly compliance, payroll, and investor reporting as you scale."
         },
         {
-            q: "I have a government construction contract in Palakkad. What TDS and GST compliance do I need?",
-            a: "Government contracts involve TDS deduction by the department (Section 194C for contractors), GST on works contract services (typically 12% with ITC restrictions), reverse charge on certain sub-contracts, and specific invoicing requirements. We manage all of this — TDS reconciliation, GST returns, subcontractor TDS, and the annual tax audit where applicable."
+            q: "My SaaS company exports software to clients overseas. What GST filings do I need?",
+            a: "Software and SaaS exports are classified as export of services under GST and are zero-rated, meaning you can supply without charging GST provided you file a Letter of Undertaking (LUT) at the start of each financial year. We file your LUT, handle GSTR-1 for zero-rated exports, ensure your ITC claims on domestic expenses are properly claimed, and manage RCM on any import of services (overseas subscriptions, cloud services, etc.)."
         },
         {
-            q: "Can you file income tax returns for both Tamil-speaking and Malayalam-speaking clients in Palakkad?",
-            a: "Yes. Our team communicates fluently in Malayalam, Tamil, and English. All our documentation and advisory communication is available in the language you prefer. This is particularly relevant for Palakkad clients near the Coimbatore border who are more comfortable conducting business discussions in Tamil."
+            q: "Do you handle transfer pricing documentation for companies with overseas entities?",
+            a: "Yes. For Bangalore companies with international related-party transactions — IT service agreements with overseas subsidiaries, software licensing to parent companies, shared service cost allocations, or inter-company loans — we prepare transfer pricing documentation, the accountant's report in Form 3CEB, and benchmarking analysis. We also handle FEMA compliance for outward remittances and overseas direct investments."
         },
         {
-            q: "How much does GST filing cost in Palakkad?",
-            a: "Our GST filing packages are fixed-fee and depend on your filing frequency (monthly or quarterly), the number of returns per year, and your transaction volume. We provide a precise quote during the first consultation. Packages for small businesses start affordably and scale with your business — there are no hidden charges for routine GSTR filings within the agreed scope."
+            q: "What does your GST filing service cost in Bangalore?",
+            a: "Our GST filing packages are fixed-fee and vary by filing frequency and transaction volume. A small business on quarterly QRMP scheme pays a different rate from a company filing monthly with high-volume B2B transactions. We provide a clear, itemised quote in the first consultation — no hidden charges, no variable billing. Contact us for pricing based on your specific GSTIN and transaction profile."
         },
         {
-            q: "Can you register my new company and also manage its ongoing compliance in Palakkad?",
-            a: "Yes. We handle incorporation end-to-end — entity type advice, name reservation, ROC filing, Certificate of Incorporation, PAN, TAN, and GST registration. Once incorporated, we continue as your CA firm for bookkeeping, GST returns, ITR, payroll, and statutory audit — so there is no handover gap between setup and ongoing compliance."
+            q: "Can you manage payroll and PF compliance for our Bangalore startup?",
+            a: "Yes. We process payroll for Bangalore companies of all sizes — from 5-person early-stage teams to 300-person growth-stage firms. This includes monthly payslip generation, TDS on salary (Form 24Q), PF and ESI filing, Professional Tax (Karnataka), and full-and-final settlement calculations for exits. We also handle ESOP exercise events and the tax withholding that applies on vesting and exercise."
         }
     ];
 
-    const palakkadAreas = [
-        "Palakkad Town", "Ottapalam", "Shoranur", "Chittur",
-        "Mannarkkad", "Alathur", "Pattambi", "Cherpulassery", "Kuzhalmannam", "Kollengode"
+    const bangaloreAreas = [
+        "Koramangala", "Indiranagar", "HSR Layout", "Whitefield", "Electronic City",
+        "Bellandur", "Sarjapur", "MG Road", "Jayanagar", "Malleshwaram", "Yelahanka", "Hebbal", "Marathahalli"
     ];
 
     return (
         <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28 overflow-x-hidden">
             <SEO
-                title="CA Firm in Palakkad | Chartered Accountant & Tax Services – Acharya Professional Accountants"
-                description="Acharya Professional Accountants – a trusted CA firm in Palakkad offering GST filing, income tax, audit, bookkeeping & company registration across Palakkad town, Ottapalam, Shoranur, Chittur and Mannarkkad."
-                keywords="CA firm in Palakkad, chartered accountant in Palakkad, GST filing Palakkad, income tax consultant Palakkad, audit firm Palakkad, accounting services Palakkad, company registration Palakkad, tax consultant Palakkad"
-                canonical="https://www.acharyaprofessionalaccountants.in/accounting-service-in-palakkad"
+                title="CA Firm in Bangalore | Chartered Accountant & Tax Services – Acharya Professional Accountants"
+                description="Acharya Professional Accountants – a trusted CA firm in Bangalore offering GST filing, income tax, startup compliance, ESOP taxation, transfer pricing, audit & company registration across Indiranagar, Koramangala, HSR Layout, Whitefield and Electronic City."
+                keywords="CA firm in Bangalore, chartered accountant in Bangalore, GST filing Bangalore, income tax consultant Bangalore, audit firm Bangalore, accounting services Bangalore, company registration Bangalore, startup CA Bangalore, ESOP tax Bangalore"
+                canonical="https://www.acharyaprofessionalaccountants.in/accounting-service-in-bangalore"
             />
 
             {/* Structured Schema Data */}
@@ -215,9 +270,9 @@ const PalakkadPage = () => {
                 {JSON.stringify({
                     "@context": "https://schema.org",
                     "@type": "AccountingService",
-                    "name": "Acharya Professional Accountants – Palakkad",
-                    "description": "CA firm in Palakkad offering GST filing, income tax, audit, bookkeeping and company registration across Palakkad district.",
-                    "url": "https://www.acharyaprofessionalaccountants.in/accounting-service-in-palakkad",
+                    "name": "Acharya Professional Accountants – Bangalore",
+                    "description": "CA firm in Bangalore offering GST filing, income tax, startup compliance, ESOP taxation, audit and company registration for tech companies, startups and professionals.",
+                    "url": "https://www.acharyaprofessionalaccountants.in/accounting-service-in-bangalore",
                     "telephone": ["+919562069434", "+919072118877"],
                     "email": "acharya.apa@gmail.com",
                     "address": {
@@ -229,14 +284,15 @@ const PalakkadPage = () => {
                         "addressCountry": "IN"
                     },
                     "areaServed": [
-                        {"@type": "City", "name": "Palakkad"},
-                        {"@type": "City", "name": "Ottapalam"},
-                        {"@type": "City", "name": "Shoranur"},
-                        {"@type": "City", "name": "Chittur"},
-                        {"@type": "City", "name": "Mannarkkad"},
-                        {"@type": "City", "name": "Alathur"}
+                        {"@type": "City", "name": "Bangalore"},
+                        {"@type": "City", "name": "Koramangala"},
+                        {"@type": "City", "name": "Indiranagar"},
+                        {"@type": "City", "name": "Whitefield"},
+                        {"@type": "City", "name": "Electronic City"},
+                        {"@type": "City", "name": "HSR Layout"},
+                        {"@type": "City", "name": "Bellandur"}
                     ],
-                    "serviceType": ["GST Filing", "Income Tax", "Audit", "Bookkeeping", "Company Registration"],
+                    "serviceType": ["GST Filing", "Income Tax", "Startup Compliance", "ESOP Taxation", "Transfer Pricing", "Audit", "Company Registration"],
                     "priceRange": "₹₹",
                     "openingHours": "Mo-Sa 09:00-18:00"
                 })}
@@ -244,26 +300,26 @@ const PalakkadPage = () => {
 
             {/* HERO SECTION */}
             <section className="container mx-auto px-5 md:px-12 lg:px-20 py-12 md:py-20 relative" data-aos="fade-up">
-                {/* Backdrop watermark text PLD */}
+                {/* Backdrop watermark text BLR */}
                 <div className="absolute top-1/2 left-4 -translate-y-1/2 font-montserrat text-[16vw] font-bold text-white/[0.01] pointer-events-none select-none z-0">
-                    PLD
+                    BLR
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch relative z-10">
                     {/* Left Info Column */}
-                    <div className="lg:col-span-7 flex flex-col justify-center space-y-6">
+                    <div className="lg:col-span-8 flex flex-col justify-center space-y-6">
                         <div className="flex items-center gap-3">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                ✦ ICAI Registered · Palakkad
+                                ✦ ICAI Registered · Bangalore
                             </span>
                         </div>
                         <h1 className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                             CA Firm in<br />
-                            <span className="italic text-primary-accent">Palakkad</span>
+                            <span className="italic text-primary-accent">Bangalore</span>
                         </h1>
                         <p className="text-lg text-boulder max-w-xl">
-                            We manage your GST, income tax, audit, and company compliance — completely and on time. Serving businesses and individuals across Palakkad district from our local office.
+                            We manage GST, income tax, company compliance, audit, and startup-specific financial services — for Bangalore's tech professionals, funded startups, and growing businesses. Completely and on time.
                         </p>
                         
                         <div className="flex flex-wrap gap-4 pt-4">
@@ -286,85 +342,31 @@ const PalakkadPage = () => {
                                 Our Services
                             </ScrollLink>
                         </div>
-
-                        <div className="flex flex-wrap gap-2 pt-6">
-                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">GST Filing</span>
-                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">Income Tax</span>
-                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">Audit & Assurance</span>
-                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Bookkeeping</span>
-                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Company Registration</span>
-                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Payroll & PF</span>
-                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">TDS Filing</span>
-                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Tax Planning</span>
-                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">NRI Tax</span>
-                        </div>
                     </div>
 
-                    {/* Right Service Table Card */}
-                    <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 md:p-10 flex flex-col justify-center relative overflow-hidden shadow-2xl">
-                        <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_70%_20%,rgba(229,161,69,0.4),transparent_50%)]" />
-
-                        <div className="relative z-10">
-                            <h3 className="font-montserrat text-lg font-bold text-white mb-6 pb-2 border-b border-white/5">
-                                Services We Provide
-                            </h3>
-                            <div className="space-y-4">
-                                {[
-                                    "GST Registration & Filing",
-                                    "Income Tax Return Filing",
-                                    "Statutory & Tax Audit",
-                                    "Company & LLP Registration",
-                                    "Bookkeeping & Payroll",
-                                    "TDS Filing & Compliance",
-                                    "NRI Tax & FEMA",
-                                    "Tax Notice Response"
-                                ].map((row, idx) => (
-                                    <div key={idx} className="flex justify-between items-center border-b border-white/5 pb-2.5 last:border-0 last:pb-0">
-                                        <span className="text-sm text-gray-300 font-medium">{row}</span>
-                                        <span className="text-[10px] uppercase tracking-wider font-semibold text-primary-accent bg-primary-accent/10 px-2 py-0.5 rounded">Active</span>
-                                    </div>
-                                ))}
+                    {/* Right Mini Stats Column */}
+                    <div className="lg:col-span-4 flex flex-col justify-center gap-4 relative">
+                        {miniStats.map((stat, index) => (
+                            <div 
+                                key={index} 
+                                className="bg-secondary-dark border border-white/5 rounded-2xl p-5 border-l-2 border-l-primary-accent hover:border-primary-accent/30 transition-colors shadow-xl"
+                            >
+                                <span className="font-montserrat text-2xl md:text-3xl font-bold text-primary-accent block leading-none">
+                                    {stat.num}
+                                </span>
+                                <span className="text-[10px] md:text-xs text-silver-sand font-medium uppercase tracking-wider block mt-1">
+                                    {stat.label}
+                                </span>
                             </div>
-                            <div className="border-t border-white/10 pt-6 mt-6 text-center text-xs text-boulder">
-                                First consultation free.{" "}
-                                <ScrollLink to="contact" smooth={true} duration={500} offset={-80} className="text-primary-accent font-semibold cursor-pointer hover:underline">
-                                    Talk to our CA →
-                                </ScrollLink>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            {/* STATS BAR */}
-            <div className="bg-secondary-dark/30 border-y border-white/5 py-10">
-                <div className="container mx-auto px-5 md:px-12 lg:px-20 grid grid-cols-2 md:grid-cols-5 gap-8">
-                    <div className="text-center">
-                        <span className="font-montserrat text-3xl md:text-4xl font-bold text-primary-accent block leading-none">550+</span>
-                        <span className="text-xs text-silver-sand font-medium uppercase tracking-wider block mt-2">Active Clients</span>
-                    </div>
-                    <div className="text-center">
-                        <span className="font-montserrat text-3xl md:text-4xl font-bold text-primary-accent block leading-none">13+</span>
-                        <span className="text-xs text-silver-sand font-medium uppercase tracking-wider block mt-2">Years in Palakkad</span>
-                    </div>
-                    <div className="text-center">
-                        <span className="font-montserrat text-3xl md:text-4xl font-bold text-primary-accent block leading-none">100%</span>
-                        <span className="text-xs text-silver-sand font-medium uppercase tracking-wider block mt-2">On-Time Filings</span>
-                    </div>
-                    <div className="text-center">
-                        <span className="font-montserrat text-3xl md:text-4xl font-bold text-primary-accent block leading-none">₹0</span>
-                        <span className="text-xs text-silver-sand font-medium uppercase tracking-wider block mt-2">Late Penalties</span>
-                    </div>
-                    <div className="text-center col-span-2 md:col-span-1">
-                        <span className="font-montserrat text-3xl md:text-4xl font-bold text-primary-accent block leading-none">ICAI</span>
-                        <span className="text-xs text-silver-sand font-medium uppercase tracking-wider block mt-2">Registered CAs</span>
-                    </div>
-                </div>
-            </div>
-
             {/* TICKER */}
             <div className="ticker border-y border-white/5 py-4 overflow-hidden bg-secondary-dark/30">
                 <div className="animate-marquee-custom">
+                    {/* Items loop */}
                     {[...tickerItems, ...tickerItems].map((item, idx) => (
                         <span key={idx} className="flex items-center text-xs tracking-wider uppercase text-boulder gap-2.5 mx-6 whitespace-nowrap">
                             <span className="text-primary-accent font-bold">●</span> {item}
@@ -373,30 +375,49 @@ const PalakkadPage = () => {
                 </div>
             </div>
 
+            {/* SERVICE PILLS */}
+            <div className="flex flex-wrap gap-2.5 justify-center py-6 px-5 md:px-12 lg:px-20 border-b border-white/5 bg-secondary-dark/30">
+                {pills.map((pill, idx) => (
+                    <span
+                        key={idx}
+                        className={`text-[10px] md:text-xs tracking-wider uppercase px-4 py-1.5 rounded-full border transition-all duration-300 ${
+                            pill.lit
+                                ? 'border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold shadow-sm shadow-primary-accent/10'
+                                : 'border-white/5 text-boulder bg-transparent hover:border-white/10'
+                        }`}
+                    >
+                        {pill.text}
+                    </span>
+                ))}
+            </div>
+
             {/* ABOUT SECTION */}
             <section id="about" className="py-20">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
+                    <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
+                        <div className="flex items-center gap-3 mb-4">
+                            <span className="w-8 h-[1px] bg-primary-accent"></span>
+                            <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
+                                Who We Are
+                            </span>
+                        </div>
+                        <h2 className="font-montserrat text-3xl md:text-4xl font-bold leading-tight">
+                            Your <span className="italic text-primary-accent">Chartered Accountant</span> in Bangalore
+                        </h2>
+                    </div>
+
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                         {/* Left description block */}
                         <div className="lg:col-span-7 space-y-6" data-aos="fade-right">
-                            <div className="flex items-center gap-3">
-                                <span className="w-8 h-[1px] bg-primary-accent"></span>
-                                <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                    Who We Are
-                                </span>
-                            </div>
-                            <h2 className="font-montserrat text-3xl md:text-4xl font-bold leading-tight">
-                                Your <span className="italic text-primary-accent">Chartered Accountant</span> in Palakkad
-                            </h2>
                             <div className="text-boulder space-y-4 text-base md:text-lg leading-relaxed">
                                 <p>
-                                    We are Acharya Professional Accountants — an ICAI-registered CA firm operating in Palakkad. We provide GST compliance, income tax filing, statutory audit, bookkeeping, and company registration to businesses and individuals across the district.
+                                    We are Acharya Professional Accountants — an ICAI-registered CA firm serving businesses and professionals across Bangalore. We provide GST compliance, income tax filing, startup financial services, statutory audit, and company registration — all from our Bangalore office, handled by qualified CAs who are directly reachable.
                                 </p>
                                 <p>
-                                    Our Palakkad clients include rice traders and agro-processing firms, textile and garment manufacturers, KSEB and PWD contractors, retail chains, schools and institutions, healthcare providers, and individual professionals. Whatever your sector, <strong className="text-white font-semibold">your engagement is led by a qualified CA from start to finish</strong> — no delegation to unqualified staff, no filing done without review.
+                                    Bangalore's professional landscape is unlike any other city in India — salaried tech employees with RSUs and ESOPs, seed-funded startups navigating DPIIT compliance, SaaS companies with overseas revenue and LUT filing obligations, and expat professionals with multi-country tax residency questions. <strong className="text-white font-semibold">We handle all of it.</strong> Our team stays current with the specific compliance demands of Bangalore's tech and startup ecosystem — not just generic tax filing.
                                 </p>
                                 <p>
-                                    We maintain a proactive compliance calendar for every client. You receive reminders, status updates, and copies of every filed return — so you are always informed and never caught off-guard by a due date or department notice.
+                                    Every engagement is assigned to a dedicated CA. You get one point of contact, consistent communication, and zero deadline misses — from your first GST return to your fifth fundraising round.
                                 </p>
                             </div>
                             <div className="pt-4">
@@ -412,21 +433,19 @@ const PalakkadPage = () => {
                             </div>
                         </div>
 
-                        {/* Right milestones timeline */}
-                        <div className="lg:col-span-5 border-l-2 border-white/5 pl-8 space-y-8 relative" data-aos="fade-left">
-                            {milestones.map((milestone, index) => (
-                                <div key={index} className="relative">
-                                    {/* Timeline point */}
-                                    <div className="absolute -left-[39px] top-1.5 w-3 h-3 rounded-full bg-primary-accent border-2 border-dark-bg"></div>
-                                    <span className="text-[10px] uppercase tracking-wider font-semibold text-primary-accent block mb-1">
-                                        {milestone.year}
+                        {/* Right proof cards grid */}
+                        <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4" data-aos="fade-left">
+                            {proofCards.map((proof, idx) => (
+                                <div
+                                    key={idx}
+                                    className="bg-secondary-dark border border-white/5 rounded-2xl p-6 hover:border-primary-accent/30 transition-colors relative overflow-hidden group shadow-xl"
+                                >
+                                    <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary-accent to-transparent"></div>
+                                    <span className="font-montserrat text-3xl font-bold text-primary-accent block mb-2">
+                                        {proof.num}
                                     </span>
-                                    <h4 className="font-montserrat text-sm font-bold text-white mb-1">
-                                        {milestone.title}
-                                    </h4>
-                                    <p className="text-boulder text-xs leading-relaxed">
-                                        {milestone.desc}
-                                    </p>
+                                    <h4 className="text-white font-bold text-sm mb-1.5 leading-tight">{proof.title}</h4>
+                                    <p className="text-boulder text-xs leading-relaxed">{proof.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -445,10 +464,10 @@ const PalakkadPage = () => {
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Accounting Services in <span className="italic text-primary-accent">Palakkad</span>
+                            Accounting Services in <span className="italic text-primary-accent">Bangalore</span>
                         </h2>
                         <p className="text-boulder text-lg">
-                            All services delivered from our Palakkad office — by your assigned CA, on your compliance schedule, with no hidden charges.
+                            Full-spectrum financial and compliance services — built for Bangalore's fast-moving professional and business environment.
                         </p>
                     </div>
 
@@ -462,27 +481,24 @@ const PalakkadPage = () => {
                             >
                                 <div>
                                     <div className="flex justify-between items-start mb-4">
-                                        <span className="font-montserrat text-sm font-semibold text-primary-accent/50 block">
-                                            {service.num}
-                                        </span>
                                         <span className="text-2xl rounded-lg bg-primary-accent/5 w-10 h-10 flex items-center justify-center border border-white/5">
-                                            {service.icon}
+                                            {service.ico}
                                         </span>
                                     </div>
                                     <h3 className="font-montserrat text-xl font-bold text-white mb-3 group-hover:text-primary-accent transition-colors">
                                         {service.title}
                                     </h3>
                                     <p className="text-boulder text-sm mb-6 leading-relaxed">
-                                        {service.intro}
+                                        {service.desc}
                                     </p>
                                 </div>
                                 <div className="flex flex-wrap gap-1.5 mt-auto pt-4 border-t border-white/5">
-                                    {service.tags.map((tag, idx) => (
+                                    {service.chips.map((chip, idx) => (
                                         <span
                                             key={idx}
                                             className="text-[10px] uppercase tracking-wider font-semibold text-silver-sand bg-white/5 px-2 py-1 rounded"
                                         >
-                                            {tag}
+                                            {chip}
                                         </span>
                                     ))}
                                 </div>
@@ -503,33 +519,47 @@ const PalakkadPage = () => {
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Why Palakkad Businesses Work With <span className="italic text-primary-accent">Acharya</span>
+                            Why Bangalore Businesses Choose <span className="italic text-primary-accent">Acharya</span>
                         </h2>
                         <p className="text-boulder text-lg">
-                            We have built our practice in Palakkad on one standard: every client's compliance is handled as if it were our own.
+                            A direct comparison — what we bring to every Bangalore client vs what the typical CA engagement looks like.
                         </p>
                     </div>
 
-                    {/* alternating benefit rows */}
-                    <div className="max-w-5xl rounded-2xl border border-white/5 overflow-hidden" data-aos="fade-up">
-                        {benefits.map((row, idx) => (
-                            <div
-                                key={idx}
-                                className="grid grid-cols-1 lg:grid-cols-12 gap-0 border-b border-white/5 last:border-0 hover:bg-white/[0.01] transition-colors"
-                            >
-                                <div className="lg:col-span-4 p-6 flex items-center gap-4 bg-secondary-dark/40 border-r border-white/5">
-                                    <div className="w-9 h-9 rounded bg-primary-accent/10 border border-primary-accent/30 flex items-center justify-center text-primary-accent text-lg flex-shrink-0">
-                                        {row.icon}
-                                    </div>
-                                    <h4 className="font-montserrat text-sm font-bold text-white leading-tight">
-                                        {row.title}
-                                    </h4>
-                                </div>
-                                <div className="lg:col-span-8 p-6 flex items-center text-xs md:text-sm text-boulder leading-relaxed">
-                                    {row.desc}
-                                </div>
-                            </div>
-                        ))}
+                    {/* comparison table */}
+                    <div className="overflow-x-auto rounded-2xl border border-white/5 bg-secondary-dark/40 shadow-2xl" data-aos="fade-up">
+                        <table className="w-full border-collapse">
+                            <thead>
+                                <tr className="bg-secondary-dark/80">
+                                    <th className="p-4 md:p-5 text-left text-xs uppercase tracking-wider font-semibold text-silver-sand border-b border-white/5 w-[28%]">
+                                        What Matters to You
+                                    </th>
+                                    <th className="p-4 md:p-5 text-left text-xs uppercase tracking-wider font-semibold text-primary-accent border-b border-white/5 w-[36%]">
+                                        ✦ Acharya Professional Accountants
+                                    </th>
+                                    <th className="p-4 md:p-5 text-left text-xs uppercase tracking-wider font-semibold text-silver-sand border-b border-white/5 w-[36%]">
+                                        Typical CA Firm
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {comparisonRows.map((row, idx) => (
+                                    <tr key={idx} className="border-b border-white/5 last:border-0 hover:bg-white/[0.01] transition-colors">
+                                        <td className="p-4 md:p-5 text-xs md:text-sm font-semibold text-white">
+                                            {row.metric}
+                                        </td>
+                                        <td className="p-4 md:p-5 text-xs md:text-sm text-gray-200">
+                                            {row.isBoolean ? (
+                                                <span className="text-primary-accent font-bold">{row.us}</span>
+                                            ) : row.us}
+                                        </td>
+                                        <td className="p-4 md:p-5 text-xs md:text-sm text-white/20">
+                                            {row.typical}
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
 
                     {/* Testimonials grid */}
@@ -541,7 +571,7 @@ const PalakkadPage = () => {
                             >
                                 <div>
                                     <div className="flex justify-between items-center mb-4 border-b border-white/5 pb-3">
-                                        <span className="text-xs text-primary-accent font-semibold">★★★★★</span>
+                                        <span className="text-xs text-primary-accent font-semibold">{t.role}</span>
                                         <span className="text-[9px] uppercase tracking-wider font-semibold text-primary-accent bg-primary-accent/15 px-2 py-0.5 rounded">
                                             Verified Client
                                         </span>
@@ -552,7 +582,10 @@ const PalakkadPage = () => {
                                 </div>
                                 <div className="mt-auto pt-3 border-t border-white/5">
                                     <span className="text-xs uppercase tracking-wider text-primary-accent font-semibold block">
-                                        {t.attr}
+                                        {t.author}
+                                    </span>
+                                    <span className="text-[10px] text-boulder block">
+                                        {t.company}
                                     </span>
                                 </div>
                             </div>
@@ -572,10 +605,10 @@ const PalakkadPage = () => {
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Serving All of <span className="italic text-primary-accent">Palakkad District</span>
+                            Serving All of <span className="italic text-primary-accent">Bangalore</span>
                         </h2>
                         <p className="text-boulder text-lg">
-                            Our CA services cover every taluk and town across Palakkad — in-person at our office and fully online for clients anywhere in the district.
+                            Our CA and accounting services are available across every major business and residential hub in Bangalore — in person and fully online.
                         </p>
                     </div>
 
@@ -610,7 +643,7 @@ const PalakkadPage = () => {
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Common Questions — <span className="italic text-primary-accent">CA Services in Palakkad</span>
+                            Common Questions — <span className="italic text-primary-accent">CA Services in Bangalore</span>
                         </h2>
                     </div>
 
@@ -646,7 +679,7 @@ const PalakkadPage = () => {
                         We Cover
                     </span>
                     <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                        {palakkadAreas.map((area) => (
+                        {bangaloreAreas.map((area) => (
                             <span
                                 key={area}
                                 className="bg-white/5 text-gray-300 text-xs px-3 py-1.5 rounded-full border border-white/5 hover:border-primary-accent/30 transition-colors cursor-default"
@@ -665,10 +698,10 @@ const PalakkadPage = () => {
                         {/* Contact details text */}
                         <div className="lg:col-span-7 flex flex-col justify-center space-y-6" data-aos="fade-right">
                             <h2 className="font-montserrat text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                                Speak to a <span className="italic text-primary-accent">Chartered Accountant</span> in Palakkad
+                                Speak to a <span className="italic text-primary-accent">Chartered Accountant</span> in Bangalore
                             </h2>
                             <p className="text-boulder text-lg max-w-xl">
-                                First consultation is free and without obligation. Bring your GST, income tax, audit, or registration question — we will give you a straight answer and a fixed-fee quote.
+                                First consultation is free and without obligation. GST, income tax, startup compliance, ESOP tax, audit or company registration — bring your question and we will give you a direct answer and a clear fee quote.
                             </p>
                             <div className="flex flex-wrap gap-4 pt-4">
                                 <a
@@ -723,7 +756,7 @@ const PalakkadPage = () => {
                                     <div>
                                         <h4 className="text-xs uppercase tracking-wider text-primary-accent font-bold mb-1">Office</h4>
                                         <p className="text-gray-200 text-sm leading-relaxed">
-                                            Palakkad, Kerala
+                                            Bangalore, Karnataka
                                         </p>
                                     </div>
                                 </div>
@@ -777,7 +810,6 @@ const PalakkadPage = () => {
                                         else if (city.includes('Kochi')) slug = 'kochi';
                                         else if (city.includes('Bengaluru')) slug = 'bangalore';
                                         else if (city.includes('Mangaluru')) slug = 'mangaluru';
-
                                         else slug = city.trim().toLowerCase().replace(/\s+/g, '-');
 
                                         return (
@@ -800,4 +832,4 @@ const PalakkadPage = () => {
     );
 };
 
-export default PalakkadPage;
+export default BangalorePage;

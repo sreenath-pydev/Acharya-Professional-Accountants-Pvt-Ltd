@@ -20,6 +20,19 @@ const KozhikodePage = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, []);
 
+    const tickerItems = [
+        "GST Filing Kozhikode",
+        "Income Tax Consultant Kozhikode",
+        "Startup CA Kozhikode",
+        "Company Registration Kozhikode",
+        "ESOP Taxation Kozhikode",
+        "Audit Firm Kozhikode",
+        "Transfer Pricing Kozhikode",
+        "Bookkeeping Services Kozhikode",
+        "NRI Tax Filing Kozhikode",
+        "DPIIT Registration Kozhikode"
+    ];
+
     const services = [
         {
             num: "01",
@@ -256,6 +269,17 @@ const KozhikodePage = () => {
                     </div>
                 </div>
             </section>
+
+            {/* TICKER */}
+            <div className="ticker border-y border-white/5 py-4 overflow-hidden bg-secondary-dark/30">
+                <div className="animate-marquee-custom">
+                    {[...tickerItems, ...tickerItems].map((item, idx) => (
+                        <span key={idx} className="flex items-center text-xs tracking-wider uppercase text-boulder gap-2.5 mx-6 whitespace-nowrap">
+                            <span className="text-primary-accent font-bold">●</span> {item}
+                        </span>
+                    ))}
+                </div>
+            </div>
 
             {/* SERVICES SECTION */}
             <section id="services" className="py-20 bg-secondary-dark/30 border-y border-white/5">
