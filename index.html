@@ -54,11 +54,10 @@
     content="Acharya Professional Accountants offers expert CA services, tax planning, GST filing, and audits across India." />
   <meta name="twitter:image" content="https://www.acharyaprofessionalaccountants.in/images/logo_dark.webp" />
 
-  <!-- Defer Analytics Scripts (GTM & GA4) for Performance Optimization -->
+  <!-- Defer Analytics Scripts (GTM) for Performance Optimization -->
   <script>
     (function () {
       var gtmId = '%VITE_GTM_ID%';
-      var gaId = 'G-7XL0JYX4CZ';
       var scriptsLoaded = false;
 
       function loadAnalytics() {
@@ -81,18 +80,6 @@
           j.async = true;
           j.src = 'https://www.googletagmanager.com/gtm.js?id=' + gtmId;
           f.parentNode.insertBefore(j, f);
-        }
-
-        // Load GA4
-        if (gaId) {
-          var script = document.createElement('script');
-          script.src = "https://www.googletagmanager.com/gtag/js?id=" + gaId;
-          script.async = true;
-          document.head.appendChild(script);
-
-          window.gtag = window.gtag || function () { dataLayer.push(arguments); };
-          window.gtag('js', new Date());
-          window.gtag('config', gaId);
         }
       }
 
