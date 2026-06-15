@@ -23,7 +23,6 @@ const PalakkadPage = () => {
     const tickerItems = [
         "GST Filing Palakkad",
         "Income Tax Consultant Palakkad",
-        "Startup CA Palakkad",
         "Company Registration Palakkad",
         "ESOP Taxation Palakkad",
         "Audit Firm Palakkad",
@@ -229,12 +228,12 @@ const PalakkadPage = () => {
                         "addressCountry": "IN"
                     },
                     "areaServed": [
-                        {"@type": "City", "name": "Palakkad"},
-                        {"@type": "City", "name": "Ottapalam"},
-                        {"@type": "City", "name": "Shoranur"},
-                        {"@type": "City", "name": "Chittur"},
-                        {"@type": "City", "name": "Mannarkkad"},
-                        {"@type": "City", "name": "Alathur"}
+                        { "@type": "City", "name": "Palakkad" },
+                        { "@type": "City", "name": "Ottapalam" },
+                        { "@type": "City", "name": "Shoranur" },
+                        { "@type": "City", "name": "Chittur" },
+                        { "@type": "City", "name": "Mannarkkad" },
+                        { "@type": "City", "name": "Alathur" }
                     ],
                     "serviceType": ["GST Filing", "Income Tax", "Audit", "Bookkeeping", "Company Registration"],
                     "priceRange": "₹₹",
@@ -265,7 +264,7 @@ const PalakkadPage = () => {
                         <p className="text-lg text-boulder max-w-xl">
                             We manage your GST, income tax, audit, and company compliance — completely and on time. Serving businesses and individuals across Palakkad district from our local office.
                         </p>
-                        
+
                         <div className="flex flex-wrap gap-4 pt-4">
                             <ScrollLink
                                 to="contact"

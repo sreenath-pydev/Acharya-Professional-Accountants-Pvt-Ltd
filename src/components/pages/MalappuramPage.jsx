@@ -23,7 +23,6 @@ const MalappuramPage = () => {
     const tickerItems = [
         "GST Filing Malappuram",
         "Income Tax Consultant Malappuram",
-        "Startup CA Malappuram",
         "Company Registration Malappuram",
         "ESOP Taxation Malappuram",
         "Audit Firm Malappuram",

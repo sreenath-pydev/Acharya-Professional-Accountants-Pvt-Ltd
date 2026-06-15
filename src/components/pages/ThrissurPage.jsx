@@ -23,7 +23,6 @@ const ThrissurPage = () => {
     const tickerItems = [
         "GST Filing Thrissur",
         "Income Tax Consultant Thrissur",
-        "Startup CA Thrissur",
         "Company Registration Thrissur",
         "ESOP Taxation Thrissur",
         "Audit Firm Thrissur",
@@ -397,7 +396,7 @@ const ThrissurPage = () => {
                                 <h3 className="font-montserrat text-lg font-bold text-white mb-2">
                                     {ind.name}
                                 </h3>
-                               <p className="text-boulder text-sm leading-relaxed">
+                                <p className="text-boulder text-sm leading-relaxed">
                                     {ind.desc}
                                 </p>
                             </div>

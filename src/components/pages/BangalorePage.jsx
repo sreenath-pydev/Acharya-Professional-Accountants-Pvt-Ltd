@@ -30,7 +30,6 @@ const BangalorePage = () => {
     const tickerItems = [
         "GST Filing Bangalore",
         "Income Tax Consultant Bangalore",
-        "Startup CA Bangalore",
         "Company Registration Bangalore",
         "ESOP Taxation Bangalore",
         "Audit Firm Bangalore",
@@ -284,13 +283,13 @@ const BangalorePage = () => {
                         "addressCountry": "IN"
                     },
                     "areaServed": [
-                        {"@type": "City", "name": "Bangalore"},
-                        {"@type": "City", "name": "Koramangala"},
-                        {"@type": "City", "name": "Indiranagar"},
-                        {"@type": "City", "name": "Whitefield"},
-                        {"@type": "City", "name": "Electronic City"},
-                        {"@type": "City", "name": "HSR Layout"},
-                        {"@type": "City", "name": "Bellandur"}
+                        { "@type": "City", "name": "Bangalore" },
+                        { "@type": "City", "name": "Koramangala" },
+                        { "@type": "City", "name": "Indiranagar" },
+                        { "@type": "City", "name": "Whitefield" },
+                        { "@type": "City", "name": "Electronic City" },
+                        { "@type": "City", "name": "HSR Layout" },
+                        { "@type": "City", "name": "Bellandur" }
                     ],
                     "serviceType": ["GST Filing", "Income Tax", "Startup Compliance", "ESOP Taxation", "Transfer Pricing", "Audit", "Company Registration"],
                     "priceRange": "₹₹",
@@ -321,7 +320,7 @@ const BangalorePage = () => {
                         <p className="text-lg text-boulder max-w-xl">
                             We manage GST, income tax, company compliance, audit, and startup-specific financial services — for Bangalore's tech professionals, funded startups, and growing businesses. Completely and on time.
                         </p>
-                        
+
                         <div className="flex flex-wrap gap-4 pt-4">
                             <ScrollLink
                                 to="contact"
@@ -347,8 +346,8 @@ const BangalorePage = () => {
                     {/* Right Mini Stats Column */}
                     <div className="lg:col-span-4 flex flex-col justify-center gap-4 relative">
                         {miniStats.map((stat, index) => (
-                            <div 
-                                key={index} 
+                            <div
+                                key={index}
                                 className="bg-secondary-dark border border-white/5 rounded-2xl p-5 border-l-2 border-l-primary-accent hover:border-primary-accent/30 transition-colors shadow-xl"
                             >
                                 <span className="font-montserrat text-2xl md:text-3xl font-bold text-primary-accent block leading-none">
@@ -380,11 +379,10 @@ const BangalorePage = () => {
                 {pills.map((pill, idx) => (
                     <span
                         key={idx}
-                        className={`text-[10px] md:text-xs tracking-wider uppercase px-4 py-1.5 rounded-full border transition-all duration-300 ${
-                            pill.lit
+                        className={`text-[10px] md:text-xs tracking-wider uppercase px-4 py-1.5 rounded-full border transition-all duration-300 ${pill.lit
                                 ? 'border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold shadow-sm shadow-primary-accent/10'
                                 : 'border-white/5 text-boulder bg-transparent hover:border-white/10'
-                        }`}
+                            }`}
                     >
                         {pill.text}
                     </span>

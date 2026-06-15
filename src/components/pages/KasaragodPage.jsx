@@ -23,7 +23,6 @@ const KasaragodPage = () => {
     const tickerItems = [
         "GST Filing Kasaragod",
         "Income Tax Consultant Kasaragod",
-        "Startup CA Kasaragod",
         "Company Registration Kasaragod",
         "ESOP Taxation Kasaragod",
         "Audit Firm Kasaragod",
@@ -212,11 +211,11 @@ const KasaragodPage = () => {
                         "addressCountry": "IN"
                     },
                     "areaServed": [
-                        {"@type": "City", "name": "Kasaragod"},
-                        {"@type": "City", "name": "Kanhangad"},
-                        {"@type": "City", "name": "Hosdurg"},
-                        {"@type": "City", "name": "Manjeshwar"},
-                        {"@type": "District", "name": "Kasaragod"}
+                        { "@type": "City", "name": "Kasaragod" },
+                        { "@type": "City", "name": "Kanhangad" },
+                        { "@type": "City", "name": "Hosdurg" },
+                        { "@type": "City", "name": "Manjeshwar" },
+                        { "@type": "District", "name": "Kasaragod" }
                     ],
                     "serviceType": ["GST Filing", "Income Tax", "Audit", "Bookkeeping", "Company Registration"],
                     "priceRange": "₹₹",
@@ -247,7 +246,7 @@ const KasaragodPage = () => {
                         <p className="text-lg text-boulder max-w-xl">
                             From GST registration to income tax filing, statutory audit to company formation — we manage every aspect of your financial compliance right here in Kasaragod.
                         </p>
-                        
+
                         <div className="flex flex-wrap gap-4 pt-4">
                             <ScrollLink
                                 to="contact"

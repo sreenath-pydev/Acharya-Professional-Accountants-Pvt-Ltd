@@ -23,7 +23,6 @@ const KozhikodePage = () => {
     const tickerItems = [
         "GST Filing Kozhikode",
         "Income Tax Consultant Kozhikode",
-        "Startup CA Kozhikode",
         "Company Registration Kozhikode",
         "ESOP Taxation Kozhikode",
         "Audit Firm Kozhikode",

@@ -23,7 +23,6 @@ const KochiPage = () => {
     const tickerItems = [
         "GST Filing Kochi",
         "Income Tax Consultant Kochi",
-        "Startup CA Kochi",
         "Company Registration Kochi",
         "ESOP Taxation Kochi",
         "Audit Firm Kochi",
@@ -260,12 +259,12 @@ const KochiPage = () => {
                         "addressCountry": "IN"
                     },
                     "areaServed": [
-                        {"@type": "City", "name": "Kochi"},
-                        {"@type": "City", "name": "Ernakulam"},
-                        {"@type": "City", "name": "Kakkanad"},
-                        {"@type": "City", "name": "Edapally"},
-                        {"@type": "City", "name": "Fort Kochi"},
-                        {"@type": "City", "name": "Aluva"}
+                        { "@type": "City", "name": "Kochi" },
+                        { "@type": "City", "name": "Ernakulam" },
+                        { "@type": "City", "name": "Kakkanad" },
+                        { "@type": "City", "name": "Edapally" },
+                        { "@type": "City", "name": "Fort Kochi" },
+                        { "@type": "City", "name": "Aluva" }
                     ],
                     "serviceType": ["GST Filing", "Income Tax", "Statutory Audit", "Bookkeeping", "Company Registration", "Virtual CFO"],
                     "priceRange": "₹₹",
@@ -288,12 +287,12 @@ const KochiPage = () => {
                         </span>
                         <span className="w-8 h-[1px] bg-primary-accent"></span>
                     </div>
-                    
+
                     <h1 className="font-montserrat text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
                         CA Firm in<br />
                         <span className="italic text-primary-accent">Kochi</span>
                     </h1>
-                    
+
                     <p className="text-lg md:text-xl text-boulder max-w-2xl mx-auto">
                         We handle GST, income tax, statutory audit, company registration, and financial compliance for businesses across Kochi — so you stay focused on growth while we keep you compliant.
                     </p>

@@ -4,12 +4,12 @@ import SEO from '../common/SEO';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import { locationGroups } from '../../data/locationData';
-import { 
-    IconCheck, 
-    IconPhone, 
-    IconEnvelope, 
-    IconMapMarker, 
-    IconClock 
+import {
+    IconCheck,
+    IconPhone,
+    IconEnvelope,
+    IconMapMarker,
+    IconClock
 } from '../common/Icons';
 
 const KannurPage = () => {
@@ -23,7 +23,6 @@ const KannurPage = () => {
     const tickerItems = [
         "GST Filing Kannur",
         "Income Tax Consultant Kannur",
-        "Startup CA Kannur",
         "Company Registration Kannur",
         "ESOP Taxation Kannur",
         "Audit Firm Kannur",
@@ -265,7 +264,7 @@ const KannurPage = () => {
                     <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 md:p-10 flex flex-col justify-between relative overflow-hidden shadow-2xl">
                         {/* Decorative background pulse */}
                         <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_70%_20%,rgba(229,161,69,0.4),transparent_50%)]" />
-                        
+
                         <div className="relative z-10 mb-8 md:mb-12">
                             <div className="w-10 h-1 bg-primary-accent mb-6 rounded-full"></div>
                             <span className="font-serif text-primary-accent text-5xl block -mb-4 opacity-50">"</span>
@@ -330,8 +329,8 @@ const KannurPage = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {services.map((service, index) => (
-                            <div 
-                                key={index} 
+                            <div
+                                key={index}
                                 className="bg-secondary-dark border border-white/5 rounded-2xl p-6 md:p-8 hover:border-primary-accent/30 transition-all duration-300 group hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-accent/5 flex flex-col justify-between"
                                 data-aos="fade-up"
                                 data-aos-delay={index * 50}
@@ -390,8 +389,8 @@ const KannurPage = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                         {industries.map((ind, index) => (
-                            <div 
-                                key={index} 
+                            <div
+                                key={index}
                                 className="bg-secondary-dark border border-white/5 rounded-2xl p-6 hover:border-primary-accent/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/5"
                                 data-aos="fade-up"
                                 data-aos-delay={index * 50}
@@ -428,8 +427,8 @@ const KannurPage = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {whyUs.map((item, index) => (
-                            <div 
-                                key={index} 
+                            <div
+                                key={index}
                                 className="bg-secondary-dark border border-white/5 rounded-2xl p-8 hover:border-primary-accent/30 transition-all duration-300 flex items-start gap-6"
                                 data-aos="fade-up"
                                 data-aos-delay={index * 50}
@@ -468,8 +467,8 @@ const KannurPage = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {testimonials.map((t, index) => (
-                            <div 
-                                key={index} 
+                            <div
+                                key={index}
                                 className="bg-secondary-dark border border-white/5 rounded-2xl p-8 relative overflow-hidden flex flex-col justify-between hover:border-primary-accent/30 transition-all duration-300"
                                 data-aos="fade-up"
                                 data-aos-delay={index * 50}
@@ -508,8 +507,8 @@ const KannurPage = () => {
 
                     <div className="max-w-4xl mx-auto space-y-4">
                         {faqs.map((faq, index) => (
-                            <details 
-                                key={index} 
+                            <details
+                                key={index}
                                 className="group bg-secondary-dark border border-white/5 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden"
                                 data-aos="fade-up"
                                 data-aos-delay={index * 30}
@@ -518,7 +517,7 @@ const KannurPage = () => {
                                     <span>{faq.q}</span>
                                     <span className="ml-4 flex-shrink-0 rounded-full border border-white/10 p-1.5 text-primary-accent transition group-open:rotate-45">
                                         <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4"/>
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
                                         </svg>
                                     </span>
                                 </summary>
@@ -544,8 +543,8 @@ const KannurPage = () => {
                                 Most people who contact us want to understand what they're missing or how to fix something that's already gone wrong. That conversation is free, and we'll be straight with you about whether we can actually help.
                             </p>
                             <div className="pt-2">
-                                <a 
-                                    href="tel:+919561694914" 
+                                <a
+                                    href="tel:+919561694914"
                                     className="bg-primary-accent text-dark-bg px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 inline-flex items-center gap-3 cursor-pointer"
                                 >
                                     Book a Free Call

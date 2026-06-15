@@ -23,7 +23,6 @@ const WayanadPage = () => {
     const tickerItems = [
         "GST Filing Wayanad",
         "Income Tax Consultant Wayanad",
-        "Startup CA Wayanad",
         "Company Registration Wayanad",
         "ESOP Taxation Wayanad",
         "Audit Firm Wayanad",
@@ -212,10 +211,10 @@ const WayanadPage = () => {
                         "addressCountry": "IN"
                     },
                     "areaServed": [
-                        {"@type": "City", "name": "Kalpetta"},
-                        {"@type": "City", "name": "Sultan Bathery"},
-                        {"@type": "City", "name": "Mananthavady"},
-                        {"@type": "District", "name": "Wayanad"}
+                        { "@type": "City", "name": "Kalpetta" },
+                        { "@type": "City", "name": "Sultan Bathery" },
+                        { "@type": "City", "name": "Mananthavady" },
+                        { "@type": "District", "name": "Wayanad" }
                     ],
                     "serviceType": ["GST Filing", "Income Tax", "Audit", "Bookkeeping", "Company Registration"],
                     "priceRange": "₹₹",
@@ -246,7 +245,7 @@ const WayanadPage = () => {
                         <p className="text-lg text-boulder max-w-xl">
                             We handle your GST, income tax, audit, and compliance — so you can focus entirely on running your business. Serving clients across Kalpetta, Sultan Bathery, Mananthavady, and all of Wayanad.
                         </p>
-                        
+
                         <div className="flex flex-wrap gap-4 pt-4">
                             <ScrollLink
                                 to="contact"
@@ -366,7 +365,7 @@ const WayanadPage = () => {
                             <h3 className="font-montserrat text-lg font-bold text-white mb-4 pb-2 border-b border-white/5">
                                 Our Client Promises
                             </h3>
-                            
+
                             <div className="flex items-start gap-4">
                                 <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">
                                     🏛️
