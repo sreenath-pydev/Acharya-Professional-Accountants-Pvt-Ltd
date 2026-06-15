@@ -55,6 +55,7 @@ function extractKeys(filePath) {
 // Dynamically add all dynamic sub-service and location routes
 const locationKeys = extractKeys(path.join(__dirname, 'src', 'data', 'locationData.js'));
 locationKeys.forEach(key => routes.push(`/accounting-service-in-${key}`));
+routes.push('/accounting-service-in-mangaluru');
 
 const gstKeys = extractKeys(path.join(__dirname, 'src', 'data', 'gstServices.jsx'));
 gstKeys.forEach(key => routes.push(`/services/gst/${key}`));
