@@ -1,4 +1,11 @@
 {
+    "redirects": [
+        {
+            "source": "/services/taxation/tax-audit",
+            "destination": "/services/auditing/tax-audit",
+            "permanent": true
+        }
+    ],
     "rewrites": [
         {
             "source": "/(.*)",

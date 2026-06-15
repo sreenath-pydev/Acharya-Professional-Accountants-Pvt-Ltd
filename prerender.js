@@ -20,7 +20,6 @@ const routes = [
     '/services/taxation/tds-tcs',
     '/services/taxation/tax-planning',
     '/services/taxation/notice-responses',
-    '/services/taxation/tax-audit',
     '/services/auditing',
     '/services/gst',
     '/services/business-consulting',

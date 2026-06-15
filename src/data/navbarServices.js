@@ -17,7 +17,7 @@ export const navbarServices = [
             { name: "Income Tax Filing", link: "/services/taxation" },
             { name: "Tax Planning", link: "/services/taxation/tax-planning" },
             { name: "TDS & TCS", link: "/services/taxation/tds-tcs" },
-            { name: "Tax Audit Support", link: "/services/taxation/tax-audit" },
+            { name: "Tax Audit Support", link: "/services/auditing/tax-audit" },
             { name: "Notice Responses", link: "/services/taxation/notice-responses" }
         ]
     },

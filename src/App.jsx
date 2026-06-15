@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import React, { Suspense, lazy } from 'react';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
@@ -61,7 +61,7 @@ function App() {
             <Route path="/services/taxation/tds-tcs" element={<ServiceTdsTcsPage />} />
             <Route path="/services/taxation/tax-planning" element={<ServiceTaxPlanningPage />} />
             <Route path="/services/taxation/notice-responses" element={<ServiceNoticeResponsesPage />} />
-            <Route path="/services/taxation/tax-audit" element={<ServiceTaxAuditPage />} />
+            <Route path="/services/taxation/tax-audit" element={<Navigate to="/services/auditing/tax-audit" replace />} />
             <Route path="/services/auditing" element={<ServiceAuditingPage />} />
             <Route path="/services/auditing/tax-audit" element={<ServiceTaxAuditPage />} />
             <Route path="/services/auditing/:serviceId" element={<AuditingServiceDetailPage />} />
