@@ -56,6 +56,7 @@ function extractKeys(filePath) {
 const locationKeys = extractKeys(path.join(__dirname, 'src', 'data', 'locationData.js'));
 locationKeys.forEach(key => routes.push(`/accounting-service-in-${key}`));
 routes.push('/accounting-service-in-mangaluru');
+routes.push('/accounting-service-in-coimbatore');
 
 const gstKeys = extractKeys(path.join(__dirname, 'src', 'data', 'gstServices.jsx'));
 gstKeys.forEach(key => routes.push(`/services/gst/${key}`));
@@ -69,7 +70,8 @@ mcaKeys.forEach(key => routes.push(`/services/advisory/${key}`));
 const loanKeys = extractKeys(path.join(__dirname, 'src', 'data', 'loanDetails.js'));
 loanKeys.forEach(key => routes.push(`/services/business-loans/${key}`));
 
-console.log(`Loaded ${routes.length} total routes for pre-rendering.`);
+const uniqueRoutes = Array.from(new Set(routes));
+console.log(`Loaded ${uniqueRoutes.length} total routes for pre-rendering.`);
 
 async function prerender() {
     console.log('Starting pre-rendering...');
@@ -112,7 +114,7 @@ async function prerender() {
     console.log('Server started, rendering routes...');
     const baseUrl = 'http://localhost:4173';
 
-    for (const route of routes) {
+    for (const route of uniqueRoutes) {
         try {
             console.log(`Rendering ${route}...`);
             await page.goto(`${baseUrl}${route}`, { waitUntil: 'networkidle0' });
