@@ -291,7 +291,7 @@ const HyderabadPage = () => {
             </script>
 
             {/* HERO SECTION */}
-            <section className="container mx-auto px-5 md:px-12 lg:px-20 py-12 md:py-20 relative" data-aos="fade-up">
+            <section className="container mx-auto px-5 md:px-12 lg:px-20 py-12 md:py-20 relative animate-fade-in" data-aos="fade-up">
                 {/* Backdrop watermark text HYD */}
                 <div className="absolute top-1/2 left-4 -translate-y-1/2 font-montserrat text-[16vw] font-bold text-white/[0.01] pointer-events-none select-none z-0">
                     HYD
@@ -299,7 +299,7 @@ const HyderabadPage = () => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch relative z-10">
                     {/* Left Info Column */}
-                    <div className="lg:col-span-8 flex flex-col justify-center space-y-6">
+                    <div className="lg:col-span-7 flex flex-col justify-center space-y-6">
                         <div className="flex items-center gap-3">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
@@ -331,26 +331,52 @@ const HyderabadPage = () => {
                                 offset={-80}
                                 className="border-2 border-primary-accent text-primary-accent bg-transparent px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 cursor-pointer text-center"
                             >
-                                Our Services
+                                View All Services
                             </Link>
+                        </div>
+
+                        <div className="flex flex-wrap gap-2 pt-6">
+                            {pills.map((pill, idx) => (
+                                <span
+                                    key={idx}
+                                    className={`text-[10px] md:text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border transition-all duration-300 ${pill.lit
+                                            ? 'border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold'
+                                            : 'border-white/5 text-boulder bg-transparent'
+                                        }`}
+                                >
+                                    {pill.text}
+                                </span>
+                            ))}
                         </div>
                     </div>
 
-                    {/* Right side-rail info badges */}
-                    <div className="lg:col-span-4 flex flex-col justify-center gap-4 relative">
-                        {railBadges.map((badge, index) => (
-                            <div
-                                key={index}
-                                className="bg-secondary-dark border border-white/5 rounded-2xl p-5 border-l-2 border-l-primary-accent hover:border-primary-accent/30 transition-colors shadow-xl"
-                            >
-                                <span className="text-primary-accent uppercase tracking-[0.1em] text-xs font-semibold block">
-                                    {badge.label}
-                                </span>
-                                <span className="text-xs text-boulder block mt-1.5 leading-relaxed">
-                                    {badge.text}
-                                </span>
+                    {/* Right Stats Column */}
+                    <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 md:p-10 flex flex-col justify-center relative overflow-hidden shadow-2xl">
+                        {/* Decorative background pulse */}
+                        <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_70%_20%,rgba(229,161,69,0.4),transparent_50%)]" />
+
+                        <div className="relative z-10 grid grid-cols-2 gap-y-12 md:gap-y-16 gap-x-8 md:gap-x-12">
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">750+</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Active Clients</span>
                             </div>
-                        ))}
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">14+</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Years Active</span>
+                            </div>
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">100%</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">On-Time Filings</span>
+                            </div>
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">₹0</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Late Penalties</span>
+                            </div>
+                            <div className="col-span-2 border-t border-white/10 pt-6 mt-2">
+                                <span className="font-montserrat text-3xl font-bold text-primary-accent block leading-none">ICAI Registered</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-2">Chartered Accountants</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -366,55 +392,21 @@ const HyderabadPage = () => {
                 </div>
             </div>
 
-            {/* SERVICE PILLS */}
-            <div className="flex flex-wrap gap-2.5 justify-center py-6 px-5 md:px-12 lg:px-20 border-b border-white/5 bg-secondary-dark/30">
-                {pills.map((pill, idx) => (
-                    <span
-                        key={idx}
-                        className={`text-[10px] md:text-xs tracking-wider uppercase px-4 py-1.5 rounded-full border transition-all duration-300 ${pill.lit
-                                ? 'border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold shadow-sm shadow-primary-accent/10'
-                                : 'border-white/5 text-boulder bg-transparent hover:border-white/10'
-                            }`}
-                    >
-                        {pill.text}
-                    </span>
-                ))}
-            </div>
-
-            {/* NUMBERS STATS BAND */}
-            <section className="bg-secondary-dark/40 py-8 border-b border-white/5">
-                <div className="container mx-auto px-5 md:px-12 lg:px-20 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                    {miniStats.map((stat, idx) => (
-                        <div key={idx} className="p-4 border-r last:border-0 border-white/5">
-                            <span className="font-montserrat text-3xl font-bold text-primary-accent block leading-none">
-                                {stat.num}
-                            </span>
-                            <span className="text-[10px] md:text-xs text-silver-sand font-medium uppercase tracking-wider block mt-2">
-                                {stat.label}
-                            </span>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
             {/* ABOUT SECTION */}
-            <section id="about" className="py-20">
+            <section id="about" className="py-20 border-t border-white/5 bg-secondary-dark/10">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
-                    <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
-                        <div className="flex items-center gap-3 mb-4">
-                            <span className="w-8 h-[1px] bg-primary-accent"></span>
-                            <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Who We Are
-                            </span>
-                        </div>
-                        <h2 className="font-montserrat text-3xl md:text-4xl font-bold leading-tight">
-                            Your <span className="italic text-primary-accent">Chartered Accountant</span> in Hyderabad
-                        </h2>
-                    </div>
-
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                        {/* Left description block */}
+                        {/* Left intro text */}
                         <div className="lg:col-span-7 space-y-6" data-aos="fade-right">
+                            <div className="flex items-center gap-3">
+                                <span className="w-8 h-[1px] bg-primary-accent"></span>
+                                <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
+                                    Who We Are
+                                </span>
+                            </div>
+                            <h2 className="font-montserrat text-3xl md:text-4xl font-bold leading-tight">
+                                Your <span className="italic text-primary-accent">Chartered Accountant</span> in Hyderabad
+                            </h2>
                             <div className="text-boulder space-y-4 text-base md:text-lg leading-relaxed">
                                 <p>
                                     We are Acharya Professional Accountants — an ICAI-registered CA firm operating in Hyderabad. We provide GST compliance, income tax filing, statutory audit, RERA-related accounting, export compliance for pharma and biotech companies, NRI tax services, bookkeeping, and company registration — all delivered by qualified CAs assigned directly to your account.
@@ -432,33 +424,48 @@ const HyderabadPage = () => {
                                     smooth={true}
                                     duration={500}
                                     offset={-80}
-                                    className="bg-primary-accent text-dark-bg px-8 py-3.5 rounded-full font-semibold hover:-translate-y-1 transition-all duration-300 inline-flex items-center gap-2 cursor-pointer"
+                                    className="inline-flex items-center bg-primary-accent text-dark-bg px-8 py-3.5 rounded-full font-semibold hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                                 >
-                                    Talk to Our CA <span className="text-lg">→</span>
+                                    Talk to Our CA <span className="ml-2">→</span>
                                 </Link>
                             </div>
                         </div>
 
-                        {/* Right values details card */}
-                        <div className="lg:col-span-5 space-y-4" data-aos="fade-left">
-                            <div className="bg-secondary-dark border border-white/5 rounded-3xl p-8 space-y-6 shadow-2xl">
-                                <h4 className="font-montserrat font-bold text-white text-lg pb-3 border-b border-white/5">
-                                    What Defines Our Hyderabad Practice
-                                </h4>
-                                <ul className="space-y-4">
-                                    {values.map((v, idx) => (
-                                        <li key={idx} className="flex items-start gap-3 text-sm text-boulder">
-                                            <span className="text-primary-accent mt-1 flex-shrink-0">
-                                                <IconCheck className="w-4 h-4" />
-                                            </span>
-                                            <div>
-                                                <strong className="text-white font-semibold block">{v.title}</strong>
-                                                <span className="text-xs text-silver-sand leading-relaxed mt-0.5 block">{v.desc}</span>
-                                            </div>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
+                        {/* Right pillars column */}
+                        <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 space-y-6 shadow-xl" data-aos="fade-left">
+                            <h3 className="font-montserrat text-lg font-bold text-white mb-4 pb-2 border-b border-white/5">
+                                What Defines Our Hyderabad Practice
+                            </h3>
+
+                            <ul className="space-y-4">
+                                {values.map((v, idx) => (
+                                    <li key={idx} className="flex items-start gap-3 text-sm text-boulder">
+                                        <span className="text-primary-accent mt-1 flex-shrink-0">
+                                            <IconCheck className="w-4.5 h-4.5" />
+                                        </span>
+                                        <div>
+                                            <strong className="text-white font-bold text-sm block">{v.title}</strong>
+                                            <span className="text-xs text-boulder leading-relaxed mt-0.5 block">{v.desc}</span>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+
+                            <h3 className="font-montserrat text-lg font-bold text-white mt-8 mb-4 pb-2 border-b border-white/5">
+                                Sectors We Serve in Hyderabad
+                            </h3>
+
+                            <ul className="space-y-4">
+                                {railBadges.map((badge, idx) => (
+                                    <li key={idx} className="flex items-start gap-3 text-sm text-boulder">
+                                        <span className="text-primary-accent mt-1 flex-shrink-0 font-bold">◆</span>
+                                        <div>
+                                            <strong className="text-white font-bold text-sm block">{badge.label}</strong>
+                                            <span className="text-xs text-boulder leading-relaxed mt-0.5 block">{badge.text}</span>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -492,6 +499,9 @@ const HyderabadPage = () => {
                             >
                                 <div>
                                     <div className="flex justify-between items-start mb-4">
+                                        <span className="font-montserrat text-sm font-semibold text-primary-accent/50 block">
+                                            {String(index + 1).padStart(2, '0')}
+                                        </span>
                                         <span className="text-2xl rounded-lg bg-primary-accent/5 w-10 h-10 flex items-center justify-center border border-white/5">
                                             {service.ico}
                                         </span>
@@ -504,12 +514,12 @@ const HyderabadPage = () => {
                                     </p>
                                 </div>
                                 <div className="flex flex-wrap gap-1.5 mt-auto pt-4 border-t border-white/5">
-                                    {service.chips.map((chip, idx) => (
+                                    {service.chips.map((tag, idx) => (
                                         <span
                                             key={idx}
                                             className="text-[10px] uppercase tracking-wider font-semibold text-silver-sand bg-white/5 px-2 py-1 rounded"
                                         >
-                                            {chip}
+                                            {tag}
                                         </span>
                                     ))}
                                 </div>
@@ -520,7 +530,7 @@ const HyderabadPage = () => {
             </section>
 
             {/* WHY CHOOSE US SECTION */}
-            <section id="why-us" className="py-20 bg-secondary-dark/10 border-b border-white/5">
+            <section id="why-us" className="py-20">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
                         <div className="flex items-center gap-3 mb-4">
@@ -532,73 +542,68 @@ const HyderabadPage = () => {
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
                             What Changes When You Work With <span className="italic text-primary-accent">Acharya</span>
                         </h2>
-                        <p className="text-boulder text-lg">
-                            A direct look at what shifts for Hyderabad businesses once we take over their compliance.
-                        </p>
                     </div>
 
-                    {/* comparison table */}
-                    <div className="overflow-x-auto rounded-2xl border border-white/5 bg-secondary-dark/40 shadow-2xl" data-aos="fade-up">
-                        <table className="w-full border-collapse">
-                            <thead>
-                                <tr className="bg-secondary-dark/80">
-                                    <th className="p-4 md:p-5 text-left text-xs uppercase tracking-wider font-semibold text-silver-sand border-b border-white/5 w-[45%]">
-                                        Before
-                                    </th>
-                                    <th className="p-4 md:p-5 text-left text-xs uppercase tracking-wider font-semibold text-primary-accent border-b border-white/5 w-[10%] text-center">
-                                        →
-                                    </th>
-                                    <th className="p-4 md:p-5 text-left text-xs uppercase tracking-wider font-semibold text-silver-sand border-b border-white/5 w-[45%]">
-                                        After
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {comparisonRows.map((row, idx) => (
-                                    <tr key={idx} className="border-b border-white/5 last:border-0 hover:bg-white/[0.01] transition-colors">
-                                        <td className="p-4 md:p-5 text-xs md:text-sm text-boulder leading-relaxed">
-                                            {row.before}
-                                        </td>
-                                        <td className="p-4 md:p-5 text-xs md:text-sm text-primary-accent font-bold text-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                        {/* Comparison Table */}
+                        <div className="lg:col-span-7 overflow-x-auto rounded-2xl border border-white/5 bg-secondary-dark/40 shadow-2xl" data-aos="fade-right">
+                            <table className="w-full border-collapse">
+                                <thead>
+                                    <tr className="bg-secondary-dark/80">
+                                        <th className="p-4 text-left text-xs uppercase tracking-wider font-semibold text-silver-sand border-b border-white/5">
+                                            Before
+                                        </th>
+                                        <th className="p-4 text-left text-xs uppercase tracking-wider font-semibold text-primary-accent border-b border-white/5 text-center">
                                             →
-                                        </td>
-                                        <td className="p-4 md:p-5 text-xs md:text-sm text-white font-semibold leading-relaxed">
-                                            {row.after}
-                                        </td>
+                                        </th>
+                                        <th className="p-4 text-left text-xs uppercase tracking-wider font-semibold text-silver-sand border-b border-white/5">
+                                            After
+                                        </th>
                                     </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
+                                </thead>
+                                <tbody>
+                                    {comparisonRows.map((row, idx) => (
+                                        <tr key={idx} className="border-b border-white/5 last:border-0 hover:bg-white/[0.01] transition-colors">
+                                            <td className="p-4 text-xs text-boulder leading-relaxed">
+                                                {row.before}
+                                            </td>
+                                            <td className="p-4 text-xs text-primary-accent font-bold text-center">
+                                                →
+                                            </td>
+                                            <td className="p-4 text-xs text-white font-semibold leading-relaxed">
+                                                {row.after}
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
 
-                    {/* Testimonials grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16" data-aos="fade-up">
-                        {testimonials.map((t, index) => (
-                            <div
-                                key={index}
-                                className="bg-secondary-dark border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-primary-accent/30 transition-all duration-300"
-                            >
-                                <div>
-                                    <div className="flex justify-between items-center mb-4 border-b border-white/5 pb-3">
-                                        <span className="text-xs text-primary-accent font-semibold">{t.role}</span>
-                                        <span className="text-[9px] uppercase tracking-wider font-semibold text-primary-accent bg-primary-accent/15 px-2 py-0.5 rounded">
-                                            Verified Client
+                        {/* Testimonials stack */}
+                        <div className="lg:col-span-5 space-y-6" data-aos="fade-left">
+                            {testimonials.map((t, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-secondary-dark border border-white/5 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between hover:border-primary-accent/30 transition-all duration-300"
+                                    style={{ borderLeft: index === 1 ? '3px solid #e5a145' : '1px solid rgba(255,255,255,0.05)' }}
+                                >
+                                    <span className="font-serif text-primary-accent/10 text-7xl absolute -top-4 -left-2 select-none pointer-events-none">
+                                        “
+                                    </span>
+                                    <p className="text-gray-300 text-sm leading-relaxed mb-4 pt-4 italic relative z-10">
+                                        {t.text}
+                                    </p>
+                                    <div className="border-t border-white/5 pt-3 mt-auto">
+                                        <span className="text-xs uppercase tracking-wider text-primary-accent font-semibold leading-relaxed block">
+                                            {t.author}
+                                        </span>
+                                        <span className="text-[10px] text-boulder block">
+                                            {t.company}
                                         </span>
                                     </div>
-                                    <p className="text-gray-300 text-sm leading-relaxed mb-6 italic">
-                                        "{t.text}"
-                                    </p>
                                 </div>
-                                <div className="mt-auto pt-3 border-t border-white/5">
-                                    <span className="text-xs uppercase tracking-wider text-primary-accent font-semibold block">
-                                        {t.author}
-                                    </span>
-                                    <span className="text-[10px] text-boulder block">
-                                        {t.company}
-                                    </span>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -784,7 +789,7 @@ const HyderabadPage = () => {
                                 </div>
                             </div>
 
-                            {/* Map Embed matching standard look */}
+                            {/* Map Embed */}
                             <div className="h-64 rounded-3xl overflow-hidden shadow-2xl border border-white/5">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3077.6841848514887!2d75.8030430737993!3d11.2358719889422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6596ca4d1cb11%3A0xa76f81f9ba68fee1!2sAcharya%20professional%20accountants%20pvt%20ltd!5e1!3m2!1sen!2sin!4v1750755342483!5m2!1sen!2sin"

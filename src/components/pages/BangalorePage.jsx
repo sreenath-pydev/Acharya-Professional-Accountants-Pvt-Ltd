@@ -20,13 +20,6 @@ const BangalorePage = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, []);
 
-    const miniStats = [
-        { num: "800+", label: "Bangalore Clients" },
-        { num: "15+", label: "Years Active" },
-        { num: "₹0", label: "Late Penalties" },
-        { num: "ICAI", label: "Registered CAs" }
-    ];
-
     const tickerItems = [
         "GST Filing Bangalore",
         "Income Tax Consultant Bangalore",
@@ -54,26 +47,31 @@ const BangalorePage = () => {
         { text: "Virtual CFO", lit: false }
     ];
 
-    const proofCards = [
+    const promises = [
         {
-            num: "800+",
-            title: "Bangalore Clients",
-            desc: "Across tech, startup, MSME, real estate and professional services sectors."
+            icon: "🏛️",
+            title: "Senior CA on Every File",
+            desc: "All engagements are led and reviewed directly by ICAI-registered chartered accountants. No delegation to junior assistants."
         },
         {
-            num: "15+",
-            title: "Years Active",
-            desc: "Over a decade of compliance experience serving Bangalore's business community."
+            icon: "🚀",
+            title: "Startup & ESOP Specialist",
+            desc: "DPIIT registration, ESOP schemes, RSU tax, transfer pricing, and fundraising support — handled in-house."
         },
         {
-            num: "100%",
-            title: "On-Time Filing",
-            desc: "Not a single client has ever paid a late filing penalty under our management."
+            icon: "📅",
+            title: "Zero Missed Deadlines",
+            desc: "We run a live compliance calendar for every client. Returns are filed with time to spare — zero penalty record."
         },
         {
-            num: "ICAI",
-            title: "Qualified CAs",
-            desc: "Every file reviewed and signed off by an ICAI-registered chartered accountant."
+            icon: "🔒",
+            title: "Transparent Fixed Pricing",
+            desc: "No hourly bills or surprise year-end invoices. You know the exact compliance cost before our work starts."
+        },
+        {
+            icon: "💬",
+            title: "Multilingual Support",
+            desc: "Active communication in Kannada, Malayalam, Tamil, Hindi, and English to match Bangalore's diverse ecosystem."
         }
     ];
 
@@ -245,8 +243,8 @@ const BangalorePage = () => {
             a: "Our GST filing packages are fixed-fee and vary by filing frequency and transaction volume. A small business on quarterly QRMP scheme pays a different rate from a company filing monthly with high-volume B2B transactions. We provide a clear, itemised quote in the first consultation — no hidden charges, no variable billing. Contact us for pricing based on your specific GSTIN and transaction profile."
         },
         {
-            q: "Can you manage payroll and PF compliance for our Bangalore startup?",
-            a: "Yes. We process payroll for Bangalore companies of all sizes — from 5-person early-stage teams to 300-person growth-stage firms. This includes monthly payslip generation, TDS on salary (Form 24Q), PF and ESI filing, Professional Tax (Karnataka), and full-and-final settlement calculations for exits. We also handle ESOP exercise events and the tax withholding that applies on vesting and exercise."
+            q: "Can you register my new company and also manage its ongoing compliance in Palakkad?",
+            a: "Yes. We handle incorporation end-to-end — entity type advice, name reservation, ROC filing, Certificate of Incorporation, PAN, TAN, and GST registration. Once incorporated, we continue as your CA firm for bookkeeping, GST returns, ITR, payroll, and statutory audit — so there is no handover gap between setup and ongoing compliance."
         }
     ];
 
@@ -306,7 +304,7 @@ const BangalorePage = () => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch relative z-10">
                     {/* Left Info Column */}
-                    <div className="lg:col-span-8 flex flex-col justify-center space-y-6">
+                    <div className="lg:col-span-7 flex flex-col justify-center space-y-6">
                         <div className="flex items-center gap-3">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
@@ -338,26 +336,37 @@ const BangalorePage = () => {
                                 offset={-80}
                                 className="border-2 border-primary-accent text-primary-accent bg-transparent px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 cursor-pointer text-center"
                             >
-                                Our Services
+                                View All Services
                             </ScrollLink>
                         </div>
                     </div>
 
-                    {/* Right Mini Stats Column */}
-                    <div className="lg:col-span-4 flex flex-col justify-center gap-4 relative">
-                        {miniStats.map((stat, index) => (
-                            <div
-                                key={index}
-                                className="bg-secondary-dark border border-white/5 rounded-2xl p-5 border-l-2 border-l-primary-accent hover:border-primary-accent/30 transition-colors shadow-xl"
-                            >
-                                <span className="font-montserrat text-2xl md:text-3xl font-bold text-primary-accent block leading-none">
-                                    {stat.num}
-                                </span>
-                                <span className="text-[10px] md:text-xs text-silver-sand font-medium uppercase tracking-wider block mt-1">
-                                    {stat.label}
-                                </span>
+                    {/* Right Stats Column */}
+                    <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 md:p-10 flex flex-col justify-center relative overflow-hidden shadow-2xl">
+                        <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_70%_20%,rgba(229,161,69,0.4),transparent_50%)]" />
+
+                        <div className="relative z-10 grid grid-cols-2 gap-y-12 md:gap-y-16 gap-x-8 md:gap-x-12">
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">800+</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Active Clients</span>
                             </div>
-                        ))}
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">15+</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Years in Bangalore</span>
+                            </div>
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">100%</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">On-Time Filing</span>
+                            </div>
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">₹0</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Penalty Record</span>
+                            </div>
+                            <div className="col-span-2 border-t border-white/10 pt-6 mt-2">
+                                <span className="font-montserrat text-3xl font-bold text-primary-accent block leading-none">ICAI Registered</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-2">Chartered Accountants</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -365,7 +374,6 @@ const BangalorePage = () => {
             {/* TICKER */}
             <div className="ticker border-y border-white/5 py-4 overflow-hidden bg-secondary-dark/30">
                 <div className="animate-marquee-custom">
-                    {/* Items loop */}
                     {[...tickerItems, ...tickerItems].map((item, idx) => (
                         <span key={idx} className="flex items-center text-xs tracking-wider uppercase text-boulder gap-2.5 mx-6 whitespace-nowrap">
                             <span className="text-primary-accent font-bold">●</span> {item}
@@ -389,24 +397,21 @@ const BangalorePage = () => {
                 ))}
             </div>
 
-            {/* ABOUT SECTION */}
-            <section id="about" className="py-20">
+            {/* WHO WE ARE (ABOUT) SECTION */}
+            <section id="about" className="py-20 bg-secondary-dark/10 border-t border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
-                    <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
-                        <div className="flex items-center gap-3 mb-4">
-                            <span className="w-8 h-[1px] bg-primary-accent"></span>
-                            <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Who We Are
-                            </span>
-                        </div>
-                        <h2 className="font-montserrat text-3xl md:text-4xl font-bold leading-tight">
-                            Your <span className="italic text-primary-accent">Chartered Accountant</span> in Bangalore
-                        </h2>
-                    </div>
-
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                        {/* Left description block */}
+                        {/* Left Content column */}
                         <div className="lg:col-span-7 space-y-6" data-aos="fade-right">
+                            <div className="flex items-center gap-3">
+                                <span className="w-8 h-[1px] bg-primary-accent"></span>
+                                <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
+                                    Who We Are
+                                </span>
+                            </div>
+                            <h2 className="font-montserrat text-3xl md:text-4xl font-bold leading-tight">
+                                Your <span className="italic text-primary-accent">Chartered Accountant</span> in Bangalore
+                            </h2>
                             <div className="text-boulder space-y-4 text-base md:text-lg leading-relaxed">
                                 <p>
                                     We are Acharya Professional Accountants — an ICAI-registered CA firm serving businesses and professionals across Bangalore. We provide GST compliance, income tax filing, startup financial services, statutory audit, and company registration — all from our Bangalore office, handled by qualified CAs who are directly reachable.
@@ -424,26 +429,30 @@ const BangalorePage = () => {
                                     smooth={true}
                                     duration={500}
                                     offset={-80}
-                                    className="bg-primary-accent text-dark-bg px-8 py-3.5 rounded-full font-semibold hover:-translate-y-1 transition-all duration-300 inline-flex items-center gap-2 cursor-pointer"
+                                    className="inline-flex items-center bg-primary-accent text-dark-bg px-8 py-3.5 rounded-full font-semibold hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                                 >
-                                    Talk to Our CA <span className="text-lg">→</span>
+                                    Talk to Our CA <span className="ml-2">→</span>
                                 </ScrollLink>
                             </div>
                         </div>
 
-                        {/* Right proof cards grid */}
-                        <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4" data-aos="fade-left">
-                            {proofCards.map((proof, idx) => (
-                                <div
-                                    key={idx}
-                                    className="bg-secondary-dark border border-white/5 rounded-2xl p-6 hover:border-primary-accent/30 transition-colors relative overflow-hidden group shadow-xl"
-                                >
-                                    <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary-accent to-transparent"></div>
-                                    <span className="font-montserrat text-3xl font-bold text-primary-accent block mb-2">
-                                        {proof.num}
-                                    </span>
-                                    <h4 className="text-white font-bold text-sm mb-1.5 leading-tight">{proof.title}</h4>
-                                    <p className="text-boulder text-xs leading-relaxed">{proof.desc}</p>
+                        {/* Right pillars column */}
+                        <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 space-y-6 shadow-xl" data-aos="fade-left">
+                            <h3 className="font-montserrat text-lg font-bold text-white mb-4 pb-2 border-b border-white/5">
+                                Our Key Strengths
+                            </h3>
+
+                            {promises.map((feat, idx) => (
+                                <div key={idx} className="flex items-start gap-4">
+                                    <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">
+                                        {feat.icon}
+                                    </div>
+                                    <div>
+                                        <h4 className="text-white font-bold text-sm mb-1">{feat.title}</h4>
+                                        <p className="text-boulder text-xs leading-relaxed">
+                                            {feat.desc}
+                                        </p>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -458,7 +467,7 @@ const BangalorePage = () => {
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                What We Do
+                                Our Services
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
@@ -479,6 +488,9 @@ const BangalorePage = () => {
                             >
                                 <div>
                                     <div className="flex justify-between items-start mb-4">
+                                        <span className="font-montserrat text-sm font-semibold text-primary-accent/50 block">
+                                            {`0${index + 1}`}
+                                        </span>
                                         <span className="text-2xl rounded-lg bg-primary-accent/5 w-10 h-10 flex items-center justify-center border border-white/5">
                                             {service.ico}
                                         </span>
@@ -491,12 +503,12 @@ const BangalorePage = () => {
                                     </p>
                                 </div>
                                 <div className="flex flex-wrap gap-1.5 mt-auto pt-4 border-t border-white/5">
-                                    {service.chips.map((chip, idx) => (
+                                    {service.chips.map((tag, idx) => (
                                         <span
                                             key={idx}
                                             className="text-[10px] uppercase tracking-wider font-semibold text-silver-sand bg-white/5 px-2 py-1 rounded"
                                         >
-                                            {chip}
+                                            {tag}
                                         </span>
                                     ))}
                                 </div>
@@ -506,7 +518,7 @@ const BangalorePage = () => {
                 </div>
             </section>
 
-            {/* WHY CHOOSE US SECTION */}
+            {/* WHY CHOOSE US */}
             <section id="why-us" className="py-20 bg-secondary-dark/10 border-b border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
@@ -519,13 +531,13 @@ const BangalorePage = () => {
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
                             Why Bangalore Businesses Choose <span className="italic text-primary-accent">Acharya</span>
                         </h2>
-                        <p className="text-boulder text-lg">
+                        <p className="text-boulder text-lg mb-8">
                             A direct comparison — what we bring to every Bangalore client vs what the typical CA engagement looks like.
                         </p>
                     </div>
 
                     {/* comparison table */}
-                    <div className="overflow-x-auto rounded-2xl border border-white/5 bg-secondary-dark/40 shadow-2xl" data-aos="fade-up">
+                    <div className="overflow-x-auto rounded-2xl border border-white/5 bg-secondary-dark/40 shadow-2xl mb-12" data-aos="fade-up">
                         <table className="w-full border-collapse">
                             <thead>
                                 <tr className="bg-secondary-dark/80">
@@ -546,12 +558,12 @@ const BangalorePage = () => {
                                         <td className="p-4 md:p-5 text-xs md:text-sm font-semibold text-white">
                                             {row.metric}
                                         </td>
-                                        <td className="p-4 md:p-5 text-xs md:text-sm text-gray-200">
+                                        <td className="p-4 md:p-5 text-xs md:text-sm text-gray-200 font-medium">
                                             {row.isBoolean ? (
-                                                <span className="text-primary-accent font-bold">{row.us}</span>
+                                                <span className="text-primary-accent font-semibold">{row.us}</span>
                                             ) : row.us}
                                         </td>
-                                        <td className="p-4 md:p-5 text-xs md:text-sm text-white/20">
+                                        <td className="p-4 md:p-5 text-xs md:text-sm text-white/30">
                                             {row.typical}
                                         </td>
                                     </tr>
@@ -560,29 +572,25 @@ const BangalorePage = () => {
                         </table>
                     </div>
 
-                    {/* Testimonials grid */}
+                    {/* Testimonials stack */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16" data-aos="fade-up">
                         {testimonials.map((t, index) => (
                             <div
                                 key={index}
-                                className="bg-secondary-dark border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-primary-accent/30 transition-all duration-300"
+                                className="bg-secondary-dark border border-white/5 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between hover:border-primary-accent/30 transition-all duration-300"
+                                style={{ borderLeft: index === 1 ? '3px solid #e5a145' : '1px solid rgba(255,255,255,0.05)' }}
                             >
-                                <div>
-                                    <div className="flex justify-between items-center mb-4 border-b border-white/5 pb-3">
-                                        <span className="text-xs text-primary-accent font-semibold">{t.role}</span>
-                                        <span className="text-[9px] uppercase tracking-wider font-semibold text-primary-accent bg-primary-accent/15 px-2 py-0.5 rounded">
-                                            Verified Client
-                                        </span>
-                                    </div>
-                                    <p className="text-gray-300 text-sm leading-relaxed mb-6 italic">
-                                        "{t.text}"
-                                    </p>
-                                </div>
-                                <div className="mt-auto pt-3 border-t border-white/5">
-                                    <span className="text-xs uppercase tracking-wider text-primary-accent font-semibold block">
+                                <span className="font-serif text-primary-accent/10 text-7xl absolute -top-4 -left-2 select-none pointer-events-none">
+                                    “
+                                </span>
+                                <p className="text-gray-300 text-sm leading-relaxed mb-4 pt-4 italic relative z-10">
+                                    {t.text}
+                                </p>
+                                <div className="border-t border-white/5 pt-3 mt-auto">
+                                    <span className="text-xs uppercase tracking-wider text-primary-accent font-semibold leading-relaxed block">
                                         {t.author}
                                     </span>
-                                    <span className="text-[10px] text-boulder block">
+                                    <span className="text-[10px] text-boulder block mt-0.5">
                                         {t.company}
                                     </span>
                                 </div>
@@ -599,14 +607,14 @@ const BangalorePage = () => {
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Where We Work
+                                Coverage
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Serving All of <span className="italic text-primary-accent">Bangalore</span>
+                            We Serve All of <span className="italic text-primary-accent">Bangalore</span>
                         </h2>
                         <p className="text-boulder text-lg">
-                            Our CA and accounting services are available across every major business and residential hub in Bangalore — in person and fully online.
+                            Our CA and accounting services reach every town and commercial district across Bangalore — in person and fully online.
                         </p>
                     </div>
 
@@ -618,10 +626,10 @@ const BangalorePage = () => {
                                 data-aos="fade-up"
                                 data-aos-delay={index * 50}
                             >
-                                <h3 className="font-montserrat text-sm font-bold text-primary-accent mb-2 leading-tight">
+                                <h3 className="font-montserrat text-lg font-bold text-primary-accent mb-2">
                                     {area.title}
                                 </h3>
-                                <p className="text-boulder text-xs leading-relaxed">
+                                <p className="text-boulder text-sm leading-relaxed">
                                     {area.desc}
                                 </p>
                             </div>
@@ -706,7 +714,7 @@ const BangalorePage = () => {
                                     href="tel:+919562069434"
                                     className="bg-primary-accent text-dark-bg px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 inline-flex items-center gap-3 cursor-pointer"
                                 >
-                                    📞 Call Now
+                                    📞 Call Us Now
                                 </a>
                                 <a
                                     href="https://wa.me/919446369434"
@@ -754,7 +762,9 @@ const BangalorePage = () => {
                                     <div>
                                         <h4 className="text-xs uppercase tracking-wider text-primary-accent font-bold mb-1">Office</h4>
                                         <p className="text-gray-200 text-sm leading-relaxed">
-                                            Bangalore, Karnataka
+                                            1st Floor, Palace Arcade,<br />
+                                            Palace Road, Mankavu,<br />
+                                            Kozhikode, Kerala 673002
                                         </p>
                                     </div>
                                 </div>
@@ -773,7 +783,7 @@ const BangalorePage = () => {
                                 </div>
                             </div>
 
-                            {/* Map Embed matching standard look */}
+                            {/* Map Embed */}
                             <div className="h-64 rounded-3xl overflow-hidden shadow-2xl border border-white/5">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3077.6841848514887!2d75.8030430737993!3d11.2358719889422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6596ca4d1cb11%3A0xa76f81f9ba68fee1!2sAcharya%20professional%20accountants%20pvt%20ltd!5e1!3m2!1sen!2sin!4v1750755342483!5m2!1sen!2sin"
@@ -788,8 +798,8 @@ const BangalorePage = () => {
                 </div>
             </section>
 
-            {/* OTHER LOCATIONS LINKS */}
-            <section className="py-16 border-t border-white/5 bg-secondary-dark/10">
+            {/* OTHER LOCATIONS */}
+            <section className="py-16 border-t border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20" data-aos="fade-up">
                     <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-8 text-center">
                         Other Locations We Serve

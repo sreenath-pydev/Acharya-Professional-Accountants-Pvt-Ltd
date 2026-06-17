@@ -47,7 +47,8 @@ const ThrissurPage = () => {
                 "GST refund applications — exporters and inverted duty cases",
                 "Departmental representation for audits, notices, and assessments"
             ],
-            note: null
+            note: null,
+            tags: ["GST Registration", "GSTR-1 / 3B", "GSTR-9 Annual", "GST Notice Reply", "ITC Reconciliation"]
         },
         {
             num: "02",
@@ -63,7 +64,8 @@ const ThrissurPage = () => {
                 "Income tax notice response — Sections 143(1), 143(2), 148, and 139(9)",
                 "NRI income tax filing — rental income, property gains, foreign remittances"
             ],
-            note: "Thrissur has high real estate transaction volume — plots, apartments near Swaraj Round, and commercial buildings along MG Road. All trigger capital gains and TDS obligations requiring correct handling from both buyer and seller."
+            note: "Thrissur has high real estate transaction volume — plots, apartments near Swaraj Round, and commercial buildings along MG Road. All trigger capital gains and TDS obligations requiring correct handling from both buyer and seller.",
+            tags: ["ITR Filing", "Tax Planning", "TDS Filing", "NRI Tax Filing", "Tax Audit", "Notice Response"]
         },
         {
             num: "03",
@@ -79,7 +81,8 @@ const ThrissurPage = () => {
                 "Year-end finalization with schedules for statutory audit",
                 "Project reports and financials for bank loans and working capital"
             ],
-            note: "For jewellery businesses and traders with high inventory value, we maintain separate stock registers and reconcile monthly against the books — so the audit doesn't surface surprises at year end."
+            note: "For jewellery businesses and traders with high inventory value, we maintain separate stock registers and reconcile monthly against the books — so the audit doesn't surface surprises at year end.",
+            tags: ["Tally Accounting", "Bank Reconciliation", "Payroll", "PF & ESI Filing", "MIS Reports"]
         },
         {
             num: "04",
@@ -94,7 +97,8 @@ const ThrissurPage = () => {
                 "Stock audit — gold inventory, production records, raw material and finished goods",
                 "Concurrent audit support for bank branches in Thrissur district"
             ],
-            note: "For Thrissur's jewellery manufacturers, stock audit is the most critical compliance activity — reconciling physical gold against purchase records, job work orders, sales, and GST filings. We conduct these with the rigour the sector demands."
+            note: "For Thrissur's jewellery manufacturers, stock audit is the most critical compliance activity — reconciling physical gold against purchase records, job work orders, sales, and GST filings. We conduct these with the rigour the sector demands.",
+            tags: ["Statutory Audit", "Internal Audit", "Tax Audit", "Audit & Assurance", "Financial Statements"]
         },
         {
             num: "05",
@@ -110,26 +114,39 @@ const ThrissurPage = () => {
                 "Director changes, share transfer, and charge creation filings",
                 "Section 8 company and trust registration for charitable institutions"
             ],
-            note: "Thrissur has a large number of family-owned jewellery and trading businesses being formalised — for bank credit or to bring in the next generation as formal partners. We handle both the registration and the accounting clean-up that comes with it."
+            note: "Thrissur has a large number of family-owned jewellery and trading businesses being formalised — for bank credit or to bring in the next generation as formal partners. We handle both the registration and the accounting clean-up that comes with it.",
+            tags: ["Pvt. Ltd. Registration", "LLP Registration", "MSME / Udyam", "Startup Registration", "ROC Filing"]
         }
     ];
 
     const industries = [
         { icon: "💍", name: "Gold & Jewellery Manufacturers", desc: "Manufacturing units in Thrissur, Ollur, and Cherpu — job work accounting, stock reconciliation, correct GST rate structure, and annual tax audit." },
-        { icon: "🏪", name: "Jewellery Retailers & Wholesalers", desc: "Retail showrooms across Thrissur and Guruvayur — high-value inventory, consignment transactions, hallmarking compliance, and GST obligations." },
+        { icon: "🏪", name: "Jewellery Showrooms", desc: "Retail showrooms across Thrissur and Guruvayur — high-value inventory, consignment transactions, hallmarking compliance, and GST obligations." },
         { icon: "🏗️", name: "Real Estate & Builders", desc: "GST on construction — 5% for residential without ITC, 12% for commercial. Project bookkeeping, sub-contractor TDS, and JDA tax implications." },
-        { icon: "🌿", name: "Rubber & Agricultural Businesses", desc: "Chalakudy and Irinjalakuda — TDS on Rubber Board payments, agricultural income treatment, and partnership firm accounting." },
+        { icon: "🌿", name: "Rubber & Agriculture", desc: "Chalakudy and Irinjalakuda — TDS on Rubber Board payments, agricultural income tax treatment, and partnership firm accounting." },
         { icon: "🏥", name: "Healthcare & Hospitals", desc: "Private hospitals, dental chains, diagnostic centres — audit, payroll, and careful navigation of GST exemptions on healthcare services." },
         { icon: "🎓", name: "Educational Institutions", desc: "Schools, colleges, and training institutes — staff payroll, fee income accounting, and ROC compliance for registered bodies." },
         { icon: "✈️", name: "NRI Families & Investors", desc: "ITR filing, property transaction compliance, 15CA/15CB certificates, and FEMA filings — fully remote for Thrissur-linked NRI families." },
-        { icon: "🛕", name: "Temple Trusts & Religious Institutions", desc: "Devaswom-type bodies and charitable trusts — Section 12A/80G registration, annual compliance, statutory audit, and ITR filing." }
+        { icon: "🛕", name: "Temple Trusts & Charities", desc: "Devaswom-type bodies and charitable trusts — Section 12A/80G registration, annual compliance, statutory audit, and ITR filing." }
     ];
 
     const whyUs = [
-        { title: "Sector depth, not generic practice", desc: "Gold jewellery accounting, rubber business TDS, real estate GST, temple trust compliance — we've handled enough of each to know exactly where errors happen and how to prevent them before they become notices." },
-        { title: "Reachable across the district", desc: "Thrissur city, Guruvayur, Chalakudy, Irinjalakuda, Kunnamkulam, Kodungallur — we work remotely with clients across the district and visit when the engagement requires it." },
-        { title: "No black box", desc: "Every return we file, every liability we compute — you see it before it's submitted and understand what it means. We don't work silently and send you a bill at the end of the month." },
-        { title: "We take on messy books", desc: "Businesses running on rough numbers, missing purchase records, or incorrect GST filings for years — we start with a clear assessment of what exists, not assumptions about what should." }
+        {
+            title: "Sector Depth, Not Generic Practice",
+            desc: "Gold jewellery accounting, rubber business TDS, real estate GST, temple trust compliance — we've handled enough of each to know exactly where errors happen and how to prevent them before they become notices."
+        },
+        {
+            title: "Reachable Across the District",
+            desc: "Thrissur city, Guruvayur, Chalakudy, Irinjalakuda, Kunnamkulam, Kodungallur — we work remotely with clients across the district and visit when the engagement requires it."
+        },
+        {
+            title: "No Black Box",
+            desc: "Every return we file, every liability we compute — you see it before it's submitted and understand what it means. We don't work silently and send you a bill at the end of the month."
+        },
+        {
+            title: "We Take on Messy Books",
+            desc: "Businesses running on rough numbers, missing purchase records, or incorrect GST filings for years — we start with a clear assessment of what exists, not assumptions about what should."
+        }
     ];
 
     const testimonials = [
@@ -144,6 +161,33 @@ const ThrissurPage = () => {
         {
             text: "We run a rubber processing business in Chalakudy. The accounts were always last-minute and our ITR had errors from two years back. Acharya cleaned up the books, corrected the past filings, and now handles everything monthly. We don't think about compliance anymore.",
             attr: "Proprietor · Rubber processing business, Chalakudy"
+        }
+    ];
+
+    const areas = [
+        {
+            title: "CA in Thrissur City",
+            desc: "Gold jewellery manufacturing audits, wholesale trader GST, and corporate accounting support."
+        },
+        {
+            title: "Accountant in Guruvayur",
+            desc: "GST, tax filings, and audit compliance for hotels, hospitality, and temple-linked commerce."
+        },
+        {
+            title: "Tax Consultant in Chalakudy",
+            desc: "Dedicated GST filing, rubber business TDS, and NRI asset taxation support."
+        },
+        {
+            title: "Irinjalakuda & Kunnamkulam",
+            desc: "Partnership firm accounting, company setup, and local merchant bookkeeping compliance."
+        },
+        {
+            title: "Ollur Jewellery Hub",
+            desc: "Specialized stock auditing and job work reconciliations for gold ornament makers."
+        },
+        {
+            title: "All of Thrissur — Online",
+            desc: "Coordinate entirely online with document transfers over WhatsApp and digital filing alerts."
         }
     ];
 
@@ -223,22 +267,17 @@ const ThrissurPage = () => {
                         <div className="flex items-center gap-3">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Thrissur · Est. 2015
+                                ✦ ICAI Registered · Thrissur
                             </span>
                         </div>
                         <h1 className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                            CA &amp; Accounting<br />
-                            Services in<br />
+                            CA Firm in<br />
                             <span className="italic text-primary-accent">Thrissur</span>
                         </h1>
-                        <div className="text-lg text-boulder max-w-xl space-y-4">
-                            <p>
-                                We provide CA and accounting services for businesses across Thrissur district — GST filing, income tax, bookkeeping, audit, payroll, and company compliance.
-                            </p>
-                            <p>
-                                Thrissur has a business profile unlike any other district in Kerala. The gold and jewellery trade, real estate activity, temple-linked commerce in Guruvayur, rubber businesses in Chalakudy — each creates specific compliance requirements a generalist approach handles poorly.
-                            </p>
-                        </div>
+                        <p className="text-lg text-boulder max-w-xl">
+                            Specialized gold jewellery bookkeeping, rubber trade tax planning, real estate construction GST, and audits. Serving Swaraj Round, Guruvayur, and Chalakudy.
+                        </p>
+
                         <div className="flex flex-wrap gap-4 pt-4">
                             <ScrollLink
                                 to="contact"
@@ -247,7 +286,7 @@ const ThrissurPage = () => {
                                 offset={-80}
                                 className="bg-primary-accent text-dark-bg px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 cursor-pointer text-center"
                             >
-                                Get a Free Consultation
+                                Book Free Consultation
                             </ScrollLink>
                             <ScrollLink
                                 to="services"
@@ -256,32 +295,46 @@ const ThrissurPage = () => {
                                 offset={-80}
                                 className="border-2 border-primary-accent text-primary-accent bg-transparent px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 cursor-pointer text-center"
                             >
-                                Our Services
+                                View All Services
                             </ScrollLink>
+                        </div>
+
+                        <div className="flex flex-wrap gap-2 pt-6">
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">GST Filing</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">Income Tax</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">Audit & Assurance</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Bookkeeping</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Company Registration</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Payroll & PF</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">NRI Tax</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">TDS Filing</span>
                         </div>
                     </div>
 
                     {/* Right Stats Column */}
                     <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 md:p-10 flex flex-col justify-center relative overflow-hidden shadow-2xl">
-                        {/* Decorative background pulse */}
                         <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_70%_20%,rgba(229,161,69,0.4),transparent_50%)]" />
 
                         <div className="relative z-10 grid grid-cols-2 gap-y-12 md:gap-y-16 gap-x-8 md:gap-x-12">
                             <div>
-                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">10+</span>
-                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Years in practice</span>
-                            </div>
-                            <div>
                                 <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">500+</span>
-                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Clients across Kerala</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Active Clients</span>
                             </div>
                             <div>
-                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">ICAI</span>
-                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Registered firm</span>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">10+</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Years in Thrissur</span>
                             </div>
                             <div>
-                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">All</span>
-                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Thrissur district covered</span>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">100%</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">On-Time Filing</span>
+                            </div>
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">₹0</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Penalty Record</span>
+                            </div>
+                            <div className="col-span-2 border-t border-white/10 pt-6 mt-2">
+                                <span className="font-montserrat text-3xl font-bold text-primary-accent block leading-none">ICAI Registered</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-2">Chartered Accountants</span>
                             </div>
                         </div>
                     </div>
@@ -299,6 +352,105 @@ const ThrissurPage = () => {
                 </div>
             </div>
 
+            {/* WHO WE ARE (ABOUT) SECTION */}
+            <section id="about" className="py-20 bg-secondary-dark/10 border-t border-white/5">
+                <div className="container mx-auto px-5 md:px-12 lg:px-20">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                        {/* Left Content column */}
+                        <div className="lg:col-span-7 space-y-6" data-aos="fade-right">
+                            <div className="flex items-center gap-3">
+                                <span className="w-8 h-[1px] bg-primary-accent"></span>
+                                <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
+                                    Who We Are
+                                </span>
+                            </div>
+                            <h2 className="font-montserrat text-3xl md:text-4xl font-bold leading-tight">
+                                Your <span className="italic text-primary-accent">Chartered Accountant</span> in Thrissur
+                            </h2>
+                            <div className="text-boulder space-y-4 text-base md:text-lg leading-relaxed">
+                                <p>
+                                    We are Acharya Professional Accountants — a professional CA firm providing reliable accounting, tax planning, GST filing, audit, and company registration support in Thrissur. We understand the specific regional business landscape, with deep experience advising the gold manufacturing sector, rubber processors, and real estate builders.
+                                </p>
+                                <p>
+                                    Whether you need to file your GST returns before the deadline, register your new company, respond to an income tax notice, or simply get your books in order before year-end — <strong className="text-white font-semibold">we handle it all under one roof</strong>, with qualified CAs who are directly accessible to you.
+                                </p>
+                                <p>
+                                    We work with sole traders, MSMEs, partnership firms, private limited companies, wholesalers, and NRI clients. If you have a financial compliance need in Thrissur, we are the team to call.
+                                </p>
+                            </div>
+                            <div className="pt-4">
+                                <ScrollLink
+                                    to="contact"
+                                    smooth={true}
+                                    duration={500}
+                                    offset={-80}
+                                    className="inline-flex items-center bg-primary-accent text-dark-bg px-8 py-3.5 rounded-full font-semibold hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                                >
+                                    Talk to Our CA <span className="ml-2">→</span>
+                                </ScrollLink>
+                            </div>
+                        </div>
+
+                        {/* Right pillars column */}
+                        <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 space-y-6 shadow-xl" data-aos="fade-left">
+                            <h3 className="font-montserrat text-lg font-bold text-white mb-4 pb-2 border-b border-white/5">
+                                Our Client Promises
+                            </h3>
+
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">🏛️</div>
+                                <div>
+                                    <h4 className="text-white font-bold text-sm mb-1">ICAI-Qualified CAs</h4>
+                                    <p className="text-boulder text-xs leading-relaxed">
+                                        All engagements are led by ICAI-registered chartered accountants. No delegation to unqualified staff.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">📍</div>
+                                <div>
+                                    <h4 className="text-white font-bold text-sm mb-1">Based in Thrissur district</h4>
+                                    <p className="text-boulder text-xs leading-relaxed">
+                                        Active support from Swaraj Round to Chalakudy. Walk in, call, or WhatsApp — we are always reachable in Malayalam or English.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">📅</div>
+                                <div>
+                                    <h4 className="text-white font-bold text-sm mb-1">Deadline-Driven Process</h4>
+                                    <p className="text-boulder text-xs leading-relaxed">
+                                        Every client file has a compliance calendar. We file before the due date — you never pay a late fee.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">🔒</div>
+                                <div>
+                                    <h4 className="text-white font-bold text-sm mb-1">Confidential & Secure</h4>
+                                    <p className="text-boulder text-xs leading-relaxed">
+                                        Your financial data stays private. We follow strict document handling and data security protocols.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">💬</div>
+                                <div>
+                                    <h4 className="text-white font-bold text-sm mb-1">Jargon-Free Advice</h4>
+                                    <p className="text-boulder text-xs leading-relaxed">
+                                        We explain your tax position in plain language so you always know where you stand — no confusing accounting-speak.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* SERVICES SECTION */}
             <section id="services" className="py-20 bg-secondary-dark/30 border-y border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
@@ -306,14 +458,14 @@ const ThrissurPage = () => {
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                What we do
+                                Our Services
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Our CA &amp; Accounting Services in Thrissur
+                            Accounting Services in <span className="italic text-primary-accent">Thrissur</span>
                         </h2>
                         <p className="text-boulder text-lg">
-                            Sector-specific compliance handled by qualified CAs — not a one-size-fits-all practice.
+                            We offer a complete range of financial and compliance services — all delivered by qualified CAs, tailored to the scale of your business.
                         </p>
                     </div>
 
@@ -346,39 +498,49 @@ const ThrissurPage = () => {
                                                 <span className="text-primary-accent mt-0.5 flex-shrink-0">
                                                     <IconCheck className="w-4 h-4" />
                                                 </span>
-                                                <span>{item}</span>
+                                                <span className="text-xs leading-relaxed text-boulder">{item}</span>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
                                 {service.note && (
                                     <div className="border-l-2 border-primary-accent pl-4 py-2 mt-4 bg-primary-accent/5 rounded-r-xl">
-                                        <p className="text-xs text-boulder italic leading-relaxed">
+                                        <p className="text-[11px] text-boulder italic leading-relaxed">
                                             {service.note}
                                         </p>
                                     </div>
                                 )}
+                                <div className="flex flex-wrap gap-1.5 mt-auto pt-4 border-t border-white/5">
+                                    {service.tags.map((tag, idx) => (
+                                        <span
+                                            key={idx}
+                                            className="text-[10px] uppercase tracking-wider font-semibold text-silver-sand bg-white/5 px-2 py-1 rounded"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* WHO WE SERVE */}
+            {/* WHO WE WORK WITH (INDUSTRIES) */}
             <section className="py-20">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Who we work with
+                                Industries served
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Businesses We Serve in Thrissur
+                            Who We Work With in Thrissur
                         </h2>
                         <p className="text-boulder text-lg">
-                            The business types we handle most often across Thrissur district.
+                            The business types we handle most often across Thrissur district:
                         </p>
                     </div>
 
@@ -406,79 +568,98 @@ const ThrissurPage = () => {
             </section>
 
             {/* WHY CHOOSE US */}
-            <section className="py-20 bg-secondary-dark/30 border-y border-white/5">
+            <section id="why-us" className="py-20 bg-secondary-dark/30 border-y border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Why Acharya PA
+                                Why Us
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Why Thrissur Businesses Work With Us
+                            Why Clients Choose Our <span className="italic text-primary-accent">CA Firm in Thrissur</span>
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {whyUs.map((item, index) => (
-                            <div
-                                key={index}
-                                className="bg-secondary-dark border border-white/5 rounded-2xl p-8 hover:border-primary-accent/30 transition-all duration-300 flex items-start gap-6"
-                                data-aos="fade-up"
-                                data-aos-delay={index * 50}
-                            >
-                                <span className="font-montserrat text-4xl font-bold text-primary-accent/20 flex-shrink-0 leading-none">
-                                    {index + 1 < 10 ? `0${index + 1}` : index + 1}
-                                </span>
-                                <div>
-                                    <h3 className="font-montserrat text-lg font-bold text-white mb-2">
-                                        {item.title}
-                                    </h3>
-                                    <p className="text-boulder text-sm leading-relaxed">
-                                        {item.desc}
-                                    </p>
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                        {/* Why us list */}
+                        <div className="lg:col-span-7 space-y-8" data-aos="fade-right">
+                            {whyUs.map((item, index) => (
+                                <div key={index} className="flex gap-6 items-start hover:translate-x-1 transition-transform duration-300">
+                                    <span className="font-montserrat text-3xl md:text-4xl font-bold text-primary-accent/30 leading-none">
+                                        {index + 1 < 10 ? `0${index + 1}` : index + 1}
+                                    </span>
+                                    <div>
+                                        <h3 className="font-montserrat text-lg font-bold text-white mb-2">
+                                            {item.title}
+                                        </h3>
+                                        <p className="text-boulder text-sm leading-relaxed">
+                                            {item.desc}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
+
+                        {/* Testimonials stack */}
+                        <div className="lg:col-span-5 space-y-6" data-aos="fade-left">
+                            {testimonials.map((t, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-secondary-dark border border-white/5 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between hover:border-primary-accent/30 transition-all duration-300"
+                                    style={{ borderLeft: index === 1 ? '3px solid #e5a145' : '1px solid rgba(255,255,255,0.05)' }}
+                                >
+                                    <span className="font-serif text-primary-accent/10 text-7xl absolute -top-4 -left-2 select-none pointer-events-none">
+                                        “
+                                    </span>
+                                    <p className="text-gray-300 text-sm leading-relaxed mb-4 pt-4 italic relative z-10">
+                                        {t.text}
+                                    </p>
+                                    <div className="border-t border-white/5 pt-3 mt-auto">
+                                        <span className="text-xs uppercase tracking-wider text-primary-accent font-semibold leading-relaxed block">
+                                            {t.attr}
+                                        </span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* TESTIMONIALS */}
-            <section className="py-20">
+            {/* AREAS COVERED SECTION */}
+            <section id="areas" className="py-20 bg-secondary-dark/30 border-y border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                From our clients
+                                Coverage
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            What Our Clients Say
+                            We Serve All of <span className="italic text-primary-accent">Thrissur</span>
                         </h2>
+                        <p className="text-boulder text-lg">
+                            Our CA services reach every corner of Thrissur district — fully online for remote clients and in person across key towns:
+                        </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {testimonials.map((t, index) => (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {areas.map((area, index) => (
                             <div
                                 key={index}
-                                className="bg-secondary-dark border border-white/5 rounded-2xl p-8 relative overflow-hidden flex flex-col justify-between hover:border-primary-accent/30 transition-all duration-300"
+                                className="bg-secondary-dark border border-white/5 rounded-2xl p-6 hover:border-primary-accent/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                                 data-aos="fade-up"
                                 data-aos-delay={index * 50}
                             >
-                                <span className="font-serif text-primary-accent/10 text-8xl absolute -top-4 -left-2 select-none pointer-events-none">
-                                    “
-                                </span>
-                                <p className="text-gray-300 text-sm leading-relaxed mb-6 pt-4 italic relative z-10">
-                                    {t.text}
+                                <h3 className="font-montserrat text-lg font-bold text-primary-accent mb-2">
+                                    {area.title}
+                                </h3>
+                                <p className="text-boulder text-sm leading-relaxed">
+                                    {area.desc}
                                 </p>
-                                <div className="border-t border-white/5 pt-4 mt-auto">
-                                    <span className="text-xs uppercase tracking-wider text-primary-accent font-semibold leading-relaxed block">
-                                        {t.attr}
-                                    </span>
-                                </div>
                             </div>
                         ))}
                     </div>
@@ -486,17 +667,17 @@ const ThrissurPage = () => {
             </section>
 
             {/* FAQ SECTION */}
-            <section className="py-20 bg-secondary-dark/30 border-y border-white/5">
+            <section id="faq" className="py-20">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Common questions
+                                FAQ
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Frequently Asked Questions
+                            Common Questions — <span className="italic text-primary-accent">CA Services Thrissur</span>
                         </h2>
                     </div>
 
@@ -525,7 +706,7 @@ const ThrissurPage = () => {
                 </div>
             </section>
 
-            {/* LOCATIONS STRIP */}
+            {/* WE COVER STRIP */}
             <section className="py-8 bg-secondary-dark/40 border-t border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20 flex flex-col md:flex-row items-center gap-4">
                     <span className="text-primary-accent uppercase tracking-[0.2em] text-xs font-bold whitespace-nowrap">
@@ -544,25 +725,32 @@ const ThrissurPage = () => {
                 </div>
             </section>
 
-            {/* CTA SECTION & OFFICE INFO */}
-            <section id="contact" className="py-20">
+            {/* CTA SECTION & CONTACT INFO */}
+            <section id="contact" className="py-20 border-t border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                         {/* Contact details text */}
                         <div className="lg:col-span-7 flex flex-col justify-center space-y-6" data-aos="fade-right">
                             <h2 className="font-montserrat text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                                Talk to a CA —<br />No Obligation
+                                Speak to a <span className="italic text-primary-accent">Chartered Accountant</span> in Thrissur
                             </h2>
                             <p className="text-boulder text-lg max-w-xl">
-                                Whether it's a gold business GST issue, a property transaction, a tax notice, or you just want to know where your compliance stands — call us. The first conversation is free.
+                                Free first consultation. Bring your GST, tax, audit, or registration question — we will give you a straight answer and a clear quote, no obligations.
                             </p>
-                            <div className="pt-2">
+                            <div className="flex flex-wrap gap-4 pt-4">
                                 <a
                                     href="tel:+919561694914"
                                     className="bg-primary-accent text-dark-bg px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 inline-flex items-center gap-3 cursor-pointer"
                                 >
-                                    Book a Free Consultation
-                                    <span className="text-lg">→</span>
+                                    📞 Call Us Now
+                                </a>
+                                <a
+                                    href="https://wa.me/919446369434"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="border-2 border-primary-accent text-primary-accent bg-transparent px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 cursor-pointer text-center"
+                                >
+                                    💬 WhatsApp
                                 </a>
                             </div>
                         </div>
@@ -623,7 +811,7 @@ const ThrissurPage = () => {
                                 </div>
                             </div>
 
-                            {/* Map Embed matching standard look */}
+                            {/* Map Embed */}
                             <div className="h-64 rounded-3xl overflow-hidden shadow-2xl border border-white/5">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3077.6841848514887!2d75.8030430737993!3d11.2358719889422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6596ca4d1cb11%3A0xa76f81f9ba68fee1!2sAcharya%20professional%20accountants%20pvt%20ltd!5e1!3m2!1sen!2sin!4v1750755342483!5m2!1sen!2sin"
@@ -638,7 +826,7 @@ const ThrissurPage = () => {
                 </div>
             </section>
 
-            {/* OTHER LOCATIONS LINKS */}
+            {/* OTHER LOCATIONS */}
             <section className="py-16 border-t border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20" data-aos="fade-up">
                     <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-8 text-center">
@@ -658,7 +846,6 @@ const ThrissurPage = () => {
                                         else if (city.includes('Kochi')) slug = 'kochi';
                                         else if (city.includes('Bengaluru')) slug = 'bangalore';
                                         else if (city.includes('Mangaluru')) slug = 'mangaluru';
-
                                         else slug = city.trim().toLowerCase().replace(/\s+/g, '-');
 
                                         return (

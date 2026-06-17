@@ -35,26 +35,31 @@ const PalakkadPage = () => {
     const milestones = [
         {
             year: "Our Promise",
+            icon: "🏛️",
             title: "Senior CA on Every File",
             desc: "All engagements — from a simple ITR to a full statutory audit — are handled and reviewed by an ICAI-qualified chartered accountant."
         },
         {
             year: "Our Process",
+            icon: "📅",
             title: "Compliance Calendar for Every Client",
             desc: "We track every due date for your GST returns, TDS deposits, advance tax, and ROC filings — and complete them before the deadline, every time."
         },
         {
             year: "Our Reach",
+            icon: "📍",
             title: "All of Palakkad District",
             desc: "In-person consultations from our Palakkad office; full digital service for clients in Ottapalam, Shoranur, Chittur, Mannarkkad, and Alathur."
         },
         {
             year: "Our Pricing",
+            icon: "🔒",
             title: "Fixed Fee — Agreed Upfront",
             desc: "We quote a flat fee before starting any engagement. No surprise bills mid-year, no extra charges for routine follow-up communications."
         },
         {
             year: "Our Languages",
+            icon: "💬",
             title: "Malayalam, Tamil & English",
             desc: "Our team communicates fluently in all three — important in Palakkad's bilingual business environment."
         }
@@ -160,7 +165,6 @@ const PalakkadPage = () => {
         { title: "Accountant Chittur", desc: "Company registration, audit and tax compliance for manufacturing and industrial businesses in Chittur-Thathamangalam." },
         { title: "CA in Mannarkkad", desc: "GST, bookkeeping and income tax services for businesses and individuals in Mannarkkad and surrounding areas." },
         { title: "Alathur & Pattambi", desc: "Full compliance support — GST, payroll, and audit — for businesses in Alathur and Pattambi taluks." },
-        { title: "Malampuzha & Nemmara", desc: "Bookkeeping, tax filing and company registration for businesses across the eastern belt of Palakkad." },
         { title: "All of Palakkad — Online", desc: "Full digital service for any client across Palakkad district — WhatsApp, email, and video consultations." }
     ];
 
@@ -243,9 +247,9 @@ const PalakkadPage = () => {
 
             {/* HERO SECTION */}
             <section className="container mx-auto px-5 md:px-12 lg:px-20 py-12 md:py-20 relative" data-aos="fade-up">
-                {/* Backdrop watermark text PLD */}
+                {/* Backdrop watermark text PKD */}
                 <div className="absolute top-1/2 left-4 -translate-y-1/2 font-montserrat text-[16vw] font-bold text-white/[0.01] pointer-events-none select-none z-0">
-                    PLD
+                    PKD
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch relative z-10">
@@ -282,7 +286,7 @@ const PalakkadPage = () => {
                                 offset={-80}
                                 className="border-2 border-primary-accent text-primary-accent bg-transparent px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 cursor-pointer text-center"
                             >
-                                Our Services
+                                View All Services
                             </ScrollLink>
                         </div>
 
@@ -299,67 +303,35 @@ const PalakkadPage = () => {
                         </div>
                     </div>
 
-                    {/* Right Service Table Card */}
+                    {/* Right Stats Column */}
                     <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 md:p-10 flex flex-col justify-center relative overflow-hidden shadow-2xl">
                         <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_70%_20%,rgba(229,161,69,0.4),transparent_50%)]" />
 
-                        <div className="relative z-10">
-                            <h3 className="font-montserrat text-lg font-bold text-white mb-6 pb-2 border-b border-white/5">
-                                Services We Provide
-                            </h3>
-                            <div className="space-y-4">
-                                {[
-                                    "GST Registration & Filing",
-                                    "Income Tax Return Filing",
-                                    "Statutory & Tax Audit",
-                                    "Company & LLP Registration",
-                                    "Bookkeeping & Payroll",
-                                    "TDS Filing & Compliance",
-                                    "NRI Tax & FEMA",
-                                    "Tax Notice Response"
-                                ].map((row, idx) => (
-                                    <div key={idx} className="flex justify-between items-center border-b border-white/5 pb-2.5 last:border-0 last:pb-0">
-                                        <span className="text-sm text-gray-300 font-medium">{row}</span>
-                                        <span className="text-[10px] uppercase tracking-wider font-semibold text-primary-accent bg-primary-accent/10 px-2 py-0.5 rounded">Active</span>
-                                    </div>
-                                ))}
+                        <div className="relative z-10 grid grid-cols-2 gap-y-12 md:gap-y-16 gap-x-8 md:gap-x-12">
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">550+</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Active Clients</span>
                             </div>
-                            <div className="border-t border-white/10 pt-6 mt-6 text-center text-xs text-boulder">
-                                First consultation free.{" "}
-                                <ScrollLink to="contact" smooth={true} duration={500} offset={-80} className="text-primary-accent font-semibold cursor-pointer hover:underline">
-                                    Talk to our CA →
-                                </ScrollLink>
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">13+</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Years in Palakkad</span>
+                            </div>
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">100%</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">On-Time Filing</span>
+                            </div>
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">₹0</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Penalty Record</span>
+                            </div>
+                            <div className="col-span-2 border-t border-white/10 pt-6 mt-2">
+                                <span className="font-montserrat text-3xl font-bold text-primary-accent block leading-none">ICAI Registered</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-2">Chartered Accountants</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-            {/* STATS BAR */}
-            <div className="bg-secondary-dark/30 border-y border-white/5 py-10">
-                <div className="container mx-auto px-5 md:px-12 lg:px-20 grid grid-cols-2 md:grid-cols-5 gap-8">
-                    <div className="text-center">
-                        <span className="font-montserrat text-3xl md:text-4xl font-bold text-primary-accent block leading-none">550+</span>
-                        <span className="text-xs text-silver-sand font-medium uppercase tracking-wider block mt-2">Active Clients</span>
-                    </div>
-                    <div className="text-center">
-                        <span className="font-montserrat text-3xl md:text-4xl font-bold text-primary-accent block leading-none">13+</span>
-                        <span className="text-xs text-silver-sand font-medium uppercase tracking-wider block mt-2">Years in Palakkad</span>
-                    </div>
-                    <div className="text-center">
-                        <span className="font-montserrat text-3xl md:text-4xl font-bold text-primary-accent block leading-none">100%</span>
-                        <span className="text-xs text-silver-sand font-medium uppercase tracking-wider block mt-2">On-Time Filings</span>
-                    </div>
-                    <div className="text-center">
-                        <span className="font-montserrat text-3xl md:text-4xl font-bold text-primary-accent block leading-none">₹0</span>
-                        <span className="text-xs text-silver-sand font-medium uppercase tracking-wider block mt-2">Late Penalties</span>
-                    </div>
-                    <div className="text-center col-span-2 md:col-span-1">
-                        <span className="font-montserrat text-3xl md:text-4xl font-bold text-primary-accent block leading-none">ICAI</span>
-                        <span className="text-xs text-silver-sand font-medium uppercase tracking-wider block mt-2">Registered CAs</span>
-                    </div>
-                </div>
-            </div>
 
             {/* TICKER */}
             <div className="ticker border-y border-white/5 py-4 overflow-hidden bg-secondary-dark/30">
@@ -372,11 +344,11 @@ const PalakkadPage = () => {
                 </div>
             </div>
 
-            {/* ABOUT SECTION */}
-            <section id="about" className="py-20">
+            {/* WHO WE ARE (ABOUT) SECTION */}
+            <section id="about" className="py-20 bg-secondary-dark/10 border-t border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                        {/* Left description block */}
+                        {/* Left Content column */}
                         <div className="lg:col-span-7 space-y-6" data-aos="fade-right">
                             <div className="flex items-center gap-3">
                                 <span className="w-8 h-[1px] bg-primary-accent"></span>
@@ -404,28 +376,30 @@ const PalakkadPage = () => {
                                     smooth={true}
                                     duration={500}
                                     offset={-80}
-                                    className="bg-primary-accent text-dark-bg px-8 py-3.5 rounded-full font-semibold hover:-translate-y-1 transition-all duration-300 inline-flex items-center gap-2 cursor-pointer"
+                                    className="inline-flex items-center bg-primary-accent text-dark-bg px-8 py-3.5 rounded-full font-semibold hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                                 >
-                                    Talk to Our CA <span className="text-lg">→</span>
+                                    Talk to Our CA <span className="ml-2">→</span>
                                 </ScrollLink>
                             </div>
                         </div>
 
-                        {/* Right milestones timeline */}
-                        <div className="lg:col-span-5 border-l-2 border-white/5 pl-8 space-y-8 relative" data-aos="fade-left">
+                        {/* Right pillars column */}
+                        <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 space-y-6 shadow-xl" data-aos="fade-left">
+                            <h3 className="font-montserrat text-lg font-bold text-white mb-4 pb-2 border-b border-white/5">
+                                Our Promises & Milestones
+                            </h3>
+
                             {milestones.map((milestone, index) => (
-                                <div key={index} className="relative">
-                                    {/* Timeline point */}
-                                    <div className="absolute -left-[39px] top-1.5 w-3 h-3 rounded-full bg-primary-accent border-2 border-dark-bg"></div>
-                                    <span className="text-[10px] uppercase tracking-wider font-semibold text-primary-accent block mb-1">
-                                        {milestone.year}
-                                    </span>
-                                    <h4 className="font-montserrat text-sm font-bold text-white mb-1">
-                                        {milestone.title}
-                                    </h4>
-                                    <p className="text-boulder text-xs leading-relaxed">
-                                        {milestone.desc}
-                                    </p>
+                                <div key={index} className="flex items-start gap-4">
+                                    <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">
+                                        {milestone.icon}
+                                    </div>
+                                    <div>
+                                        <h4 className="text-white font-bold text-sm mb-1">{milestone.title}</h4>
+                                        <p className="text-boulder text-xs leading-relaxed">
+                                            {milestone.desc}
+                                        </p>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -440,7 +414,7 @@ const PalakkadPage = () => {
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                What We Do
+                                Our Services
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
@@ -491,71 +465,63 @@ const PalakkadPage = () => {
                 </div>
             </section>
 
-            {/* WHY CHOOSE US SECTION */}
-            <section id="why-us" className="py-20 bg-secondary-dark/10 border-b border-white/5">
+            {/* WHY CHOOSE US */}
+            <section id="why-us" className="py-20 bg-secondary-dark/30 border-y border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Why Choose Us
+                                Why Us
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Why Palakkad Businesses Work With <span className="italic text-primary-accent">Acharya</span>
+                            Why Clients Choose Our <span className="italic text-primary-accent">CA Firm in Palakkad</span>
                         </h2>
-                        <p className="text-boulder text-lg">
-                            We have built our practice in Palakkad on one standard: every client's compliance is handled as if it were our own.
-                        </p>
                     </div>
 
-                    {/* alternating benefit rows */}
-                    <div className="max-w-5xl rounded-2xl border border-white/5 overflow-hidden" data-aos="fade-up">
-                        {benefits.map((row, idx) => (
-                            <div
-                                key={idx}
-                                className="grid grid-cols-1 lg:grid-cols-12 gap-0 border-b border-white/5 last:border-0 hover:bg-white/[0.01] transition-colors"
-                            >
-                                <div className="lg:col-span-4 p-6 flex items-center gap-4 bg-secondary-dark/40 border-r border-white/5">
-                                    <div className="w-9 h-9 rounded bg-primary-accent/10 border border-primary-accent/30 flex items-center justify-center text-primary-accent text-lg flex-shrink-0">
-                                        {row.icon}
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                        {/* Why us list */}
+                        <div className="lg:col-span-7 space-y-8" data-aos="fade-right">
+                            {benefits.map((item, index) => (
+                                <div key={index} className="flex gap-6 items-start hover:translate-x-1 transition-transform duration-300">
+                                    <span className="font-montserrat text-3xl md:text-4xl font-bold text-primary-accent/30 leading-none">
+                                        {index + 1 < 10 ? `0${index + 1}` : index + 1}
+                                    </span>
+                                    <div>
+                                        <h3 className="font-montserrat text-lg font-bold text-white mb-2">
+                                            {item.title}
+                                        </h3>
+                                        <p className="text-boulder text-sm leading-relaxed">
+                                            {item.desc}
+                                        </p>
                                     </div>
-                                    <h4 className="font-montserrat text-sm font-bold text-white leading-tight">
-                                        {row.title}
-                                    </h4>
                                 </div>
-                                <div className="lg:col-span-8 p-6 flex items-center text-xs md:text-sm text-boulder leading-relaxed">
-                                    {row.desc}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                            ))}
+                        </div>
 
-                    {/* Testimonials grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16" data-aos="fade-up">
-                        {testimonials.map((t, index) => (
-                            <div
-                                key={index}
-                                className="bg-secondary-dark border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-primary-accent/30 transition-all duration-300"
-                            >
-                                <div>
-                                    <div className="flex justify-between items-center mb-4 border-b border-white/5 pb-3">
-                                        <span className="text-xs text-primary-accent font-semibold">★★★★★</span>
-                                        <span className="text-[9px] uppercase tracking-wider font-semibold text-primary-accent bg-primary-accent/15 px-2 py-0.5 rounded">
-                                            Verified Client
+                        {/* Testimonials stack */}
+                        <div className="lg:col-span-5 space-y-6" data-aos="fade-left">
+                            {testimonials.map((t, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-secondary-dark border border-white/5 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between hover:border-primary-accent/30 transition-all duration-300"
+                                    style={{ borderLeft: index === 1 ? '3px solid #e5a145' : '1px solid rgba(255,255,255,0.05)' }}
+                                >
+                                    <span className="font-serif text-primary-accent/10 text-7xl absolute -top-4 -left-2 select-none pointer-events-none">
+                                        “
+                                    </span>
+                                    <p className="text-gray-300 text-sm leading-relaxed mb-4 pt-4 italic relative z-10">
+                                        {t.text}
+                                    </p>
+                                    <div className="border-t border-white/5 pt-3 mt-auto">
+                                        <span className="text-xs uppercase tracking-wider text-primary-accent font-semibold leading-relaxed block">
+                                            {t.attr}
                                         </span>
                                     </div>
-                                    <p className="text-gray-300 text-sm leading-relaxed mb-6 italic">
-                                        "{t.text}"
-                                    </p>
                                 </div>
-                                <div className="mt-auto pt-3 border-t border-white/5">
-                                    <span className="text-xs uppercase tracking-wider text-primary-accent font-semibold block">
-                                        {t.attr}
-                                    </span>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -567,18 +533,18 @@ const PalakkadPage = () => {
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Where We Work
+                                Coverage
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Serving All of <span className="italic text-primary-accent">Palakkad District</span>
+                            We Serve All of <span className="italic text-primary-accent">Palakkad District</span>
                         </h2>
                         <p className="text-boulder text-lg">
                             Our CA services cover every taluk and town across Palakkad — in-person at our office and fully online for clients anywhere in the district.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {areas.map((area, index) => (
                             <div
                                 key={index}
@@ -586,10 +552,10 @@ const PalakkadPage = () => {
                                 data-aos="fade-up"
                                 data-aos-delay={index * 50}
                             >
-                                <h3 className="font-montserrat text-sm font-bold text-primary-accent mb-2 leading-tight">
+                                <h3 className="font-montserrat text-lg font-bold text-primary-accent mb-2">
                                     {area.title}
                                 </h3>
-                                <p className="text-boulder text-xs leading-relaxed">
+                                <p className="text-boulder text-sm leading-relaxed">
                                     {area.desc}
                                 </p>
                             </div>
@@ -667,14 +633,14 @@ const PalakkadPage = () => {
                                 Speak to a <span className="italic text-primary-accent">Chartered Accountant</span> in Palakkad
                             </h2>
                             <p className="text-boulder text-lg max-w-xl">
-                                First consultation is free and without obligation. Bring your GST, income tax, audit, or registration question — we will give you a straight answer and a fixed-fee quote.
+                                Free first consultation. Bring your GST, tax, audit, or registration question — we will give you a straight answer and a clear quote, no obligations.
                             </p>
                             <div className="flex flex-wrap gap-4 pt-4">
                                 <a
                                     href="tel:+919562069434"
                                     className="bg-primary-accent text-dark-bg px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 inline-flex items-center gap-3 cursor-pointer"
                                 >
-                                    📞 Call Now
+                                    📞 Call Us Now
                                 </a>
                                 <a
                                     href="https://wa.me/919446369434"
@@ -722,7 +688,9 @@ const PalakkadPage = () => {
                                     <div>
                                         <h4 className="text-xs uppercase tracking-wider text-primary-accent font-bold mb-1">Office</h4>
                                         <p className="text-gray-200 text-sm leading-relaxed">
-                                            Palakkad, Kerala
+                                            1st Floor, Palace Arcade,<br />
+                                            Palace Road, Mankavu,<br />
+                                            Kozhikode, Kerala 673002
                                         </p>
                                     </div>
                                 </div>
@@ -741,7 +709,7 @@ const PalakkadPage = () => {
                                 </div>
                             </div>
 
-                            {/* Map Embed matching standard look */}
+                            {/* Map Embed */}
                             <div className="h-64 rounded-3xl overflow-hidden shadow-2xl border border-white/5">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3077.6841848514887!2d75.8030430737993!3d11.2358719889422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6596ca4d1cb11%3A0xa76f81f9ba68fee1!2sAcharya%20professional%20accountants%20pvt%20ltd!5e1!3m2!1sen!2sin!4v1750755342483!5m2!1sen!2sin"
@@ -756,8 +724,8 @@ const PalakkadPage = () => {
                 </div>
             </section>
 
-            {/* OTHER LOCATIONS LINKS */}
-            <section className="py-16 border-t border-white/5 bg-secondary-dark/10">
+            {/* OTHER LOCATIONS */}
+            <section className="py-16 border-t border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20" data-aos="fade-up">
                     <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-8 text-center">
                         Other Locations We Serve
@@ -776,7 +744,6 @@ const PalakkadPage = () => {
                                         else if (city.includes('Kochi')) slug = 'kochi';
                                         else if (city.includes('Bengaluru')) slug = 'bangalore';
                                         else if (city.includes('Mangaluru')) slug = 'mangaluru';
-
                                         else slug = city.trim().toLowerCase().replace(/\s+/g, '-');
 
                                         return (

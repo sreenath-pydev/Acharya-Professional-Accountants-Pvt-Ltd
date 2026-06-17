@@ -209,85 +209,89 @@ const ChennaiPage = () => {
             </script>
 
             {/* HERO SECTION */}
-            <section className="container mx-auto px-5 md:px-12 lg:px-20 py-12 md:py-20 relative text-center flex flex-col items-center" data-aos="fade-up">
+            <section className="container mx-auto px-5 md:px-12 lg:px-20 py-12 md:py-20 relative" data-aos="fade-up">
                 {/* Backdrop watermark text MAA */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-montserrat text-[16vw] font-bold text-white/[0.01] pointer-events-none select-none z-0">
+                <div className="absolute top-1/2 left-4 -translate-y-1/2 font-montserrat text-[16vw] font-bold text-white/[0.01] pointer-events-none select-none z-0">
                     MAA
                 </div>
 
-                <div className="relative z-10 max-w-4xl space-y-6">
-                    <div className="flex items-center justify-center gap-3">
-                        <span className="w-8 h-[1px] bg-primary-accent"></span>
-                        <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                            ✦ ICAI Registered · Chennai
-                        </span>
-                        <span className="w-8 h-[1px] bg-primary-accent"></span>
-                    </div>
-
-                    <h1 className="font-montserrat text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                        CA Firm in<br />
-                        <span className="italic text-primary-accent">Chennai</span>
-                    </h1>
-
-                    <p className="text-lg md:text-xl text-boulder max-w-2xl mx-auto">
-                        We manage GST, income tax, statutory audit and ROC compliance for IT companies, startups, manufacturers and exporters across Chennai — with a dedicated CA, a fixed annual fee, and zero missed deadlines.
-                    </p>
-
-                    <div className="flex flex-wrap gap-4 pt-4 justify-center">
-                        <ScrollLink
-                            to="contact"
-                            smooth={true}
-                            duration={500}
-                            offset={-80}
-                            className="bg-primary-accent text-dark-bg px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 cursor-pointer text-center"
-                        >
-                            Book Free Consultation
-                        </ScrollLink>
-                        <ScrollLink
-                            to="services"
-                            smooth={true}
-                            duration={500}
-                            offset={-80}
-                            className="border-2 border-primary-accent text-primary-accent bg-transparent px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 cursor-pointer text-center"
-                        >
-                            Explore Services
-                        </ScrollLink>
-                    </div>
-
-                    {/* METRIC BAR */}
-                    <div className="grid grid-cols-2 md:grid-cols-5 gap-4 bg-secondary-dark/60 border border-white/5 rounded-2xl p-6 max-w-3xl mx-auto mt-12 relative overflow-hidden shadow-2xl">
-                        <div className="text-center">
-                            <span className="font-montserrat text-2xl md:text-3xl font-bold text-primary-accent block leading-none">900+</span>
-                            <span className="text-[10px] md:text-xs text-silver-sand font-medium uppercase tracking-wider block mt-2">Active Clients</span>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch relative z-10">
+                    {/* Left Info Column */}
+                    <div className="lg:col-span-7 flex flex-col justify-center space-y-6">
+                        <div className="flex items-center gap-3">
+                            <span className="w-8 h-[1px] bg-primary-accent"></span>
+                            <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
+                                ✦ ICAI Registered · Chennai
+                            </span>
                         </div>
-                        <div className="text-center border-l border-white/5 md:border-l-0">
-                            <span className="font-montserrat text-2xl md:text-3xl font-bold text-primary-accent block leading-none">16+</span>
-                            <span className="text-[10px] md:text-xs text-silver-sand font-medium uppercase tracking-wider block mt-2">Years Active</span>
+                        <h1 className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                            CA Firm in<br />
+                            <span className="italic text-primary-accent">Chennai</span>
+                        </h1>
+                        <p className="text-lg text-boulder max-w-xl">
+                            We manage GST, income tax, statutory audit and ROC compliance for IT companies, startups, manufacturers and exporters across Chennai — with a dedicated CA, a fixed annual fee, and zero missed deadlines.
+                        </p>
+
+                        <div className="flex flex-wrap gap-4 pt-4">
+                            <ScrollLink
+                                to="contact"
+                                smooth={true}
+                                duration={500}
+                                offset={-80}
+                                className="bg-primary-accent text-dark-bg px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 cursor-pointer text-center"
+                            >
+                                Book Free Consultation
+                            </ScrollLink>
+                            <ScrollLink
+                                to="services"
+                                smooth={true}
+                                duration={500}
+                                offset={-80}
+                                className="border-2 border-primary-accent text-primary-accent bg-transparent px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 cursor-pointer text-center"
+                            >
+                                View All Services
+                            </ScrollLink>
                         </div>
-                        <div className="text-center border-t border-white/5 md:border-t-0 md:border-l border-white/5">
-                            <span className="font-montserrat text-2xl md:text-3xl font-bold text-primary-accent block leading-none">100%</span>
-                            <span className="text-[10px] md:text-xs text-silver-sand font-medium uppercase tracking-wider block mt-2">On-Time Filings</span>
-                        </div>
-                        <div className="text-center border-t border-white/5 border-l border-white/5 md:border-t-0">
-                            <span className="font-montserrat text-2xl md:text-3xl font-bold text-primary-accent block leading-none">₹0</span>
-                            <span className="text-[10px] md:text-xs text-silver-sand font-medium uppercase tracking-wider block mt-2">Late Penalties</span>
-                        </div>
-                        <div className="text-center border-t border-white/5 col-span-2 md:col-span-1 md:border-t-0 md:border-l border-white/5">
-                            <span className="font-montserrat text-2xl md:text-3xl font-bold text-primary-accent block leading-none">ICAI</span>
-                            <span className="text-[10px] md:text-xs text-silver-sand font-medium uppercase tracking-wider block mt-2">Registered</span>
+
+                        <div className="flex flex-wrap gap-2 pt-6">
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">GST Filing</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">Income Tax</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">Audit & Assurance</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">Startup Compliance</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Company Registration</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">NRI Tax & FEMA</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Bookkeeping</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Payroll & PF/ESI</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">TDS Filing</span>
                         </div>
                     </div>
 
-                    <div className="flex flex-wrap gap-2 justify-center pt-8">
-                        <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">GST Filing</span>
-                        <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">Income Tax</span>
-                        <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">Audit & Assurance</span>
-                        <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">Startup Compliance</span>
-                        <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Company Registration</span>
-                        <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">NRI Tax & FEMA</span>
-                        <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Bookkeeping</span>
-                        <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Payroll & PF/ESI</span>
-                        <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">TDS Filing</span>
+                    {/* Right Stats Column */}
+                    <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 md:p-10 flex flex-col justify-center relative overflow-hidden shadow-2xl">
+                        <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_70%_20%,rgba(229,161,69,0.4),transparent_50%)]" />
+
+                        <div className="relative z-10 grid grid-cols-2 gap-y-12 md:gap-y-16 gap-x-8 md:gap-x-12">
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">900+</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Active Clients</span>
+                            </div>
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">16+</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Years in Chennai</span>
+                            </div>
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">100%</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">On-Time Filing</span>
+                            </div>
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">₹0</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Penalty Record</span>
+                            </div>
+                            <div className="col-span-2 border-t border-white/10 pt-6 mt-2">
+                                <span className="font-montserrat text-3xl font-bold text-primary-accent block leading-none">ICAI Registered</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-2">Chartered Accountants</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -303,11 +307,11 @@ const ChennaiPage = () => {
                 </div>
             </div>
 
-            {/* ABOUT SECTION */}
-            <section id="about" className="py-20 border-t border-white/5 bg-secondary-dark/10">
+            {/* WHO WE ARE (ABOUT) SECTION */}
+            <section id="about" className="py-20 bg-secondary-dark/10 border-t border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                        {/* Left intro text */}
+                        {/* Left Content column */}
                         <div className="lg:col-span-7 space-y-6" data-aos="fade-right">
                             <div className="flex items-center gap-3">
                                 <span className="w-8 h-[1px] bg-primary-accent"></span>
@@ -329,11 +333,22 @@ const ChennaiPage = () => {
                                     We communicate in Tamil, Telugu, Hindi and English — whichever language helps you discuss your finances most clearly.
                                 </p>
                             </div>
+                            <div className="pt-4">
+                                <ScrollLink
+                                    to="contact"
+                                    smooth={true}
+                                    duration={500}
+                                    offset={-80}
+                                    className="inline-flex items-center bg-primary-accent text-dark-bg px-8 py-3.5 rounded-full font-semibold hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                                >
+                                    Talk to Our CA <span className="ml-2">→</span>
+                                </ScrollLink>
+                            </div>
                         </div>
 
-                        {/* Right lists column */}
-                        <div className="lg:col-span-5 grid grid-cols-1 gap-6" data-aos="fade-left">
-                            <div className="bg-secondary-dark border border-white/5 rounded-2xl p-6 hover:border-primary-accent/30 transition-colors relative overflow-hidden">
+                        {/* Right pillars column */}
+                        <div className="lg:col-span-5 space-y-6" data-aos="fade-left">
+                            <div className="bg-secondary-dark border border-white/5 rounded-3xl p-6 hover:border-primary-accent/30 transition-colors relative overflow-hidden shadow-xl">
                                 <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary-accent to-transparent"></div>
                                 <h3 className="text-white font-bold text-sm mb-3">What Every Client Gets</h3>
                                 <ul className="space-y-2 text-boulder text-xs">
@@ -354,7 +369,7 @@ const ChennaiPage = () => {
                                 </ul>
                             </div>
 
-                            <div className="bg-secondary-dark border border-white/5 rounded-2xl p-6 hover:border-primary-accent/30 transition-colors relative overflow-hidden">
+                            <div className="bg-secondary-dark border border-white/5 rounded-3xl p-6 hover:border-primary-accent/30 transition-colors relative overflow-hidden shadow-xl">
                                 <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary-accent to-transparent"></div>
                                 <h3 className="text-white font-bold text-sm mb-3">Sectors We Serve in Chennai</h3>
                                 <ul className="space-y-2 text-boulder text-xs">
@@ -387,7 +402,7 @@ const ChennaiPage = () => {
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                What We Do
+                                Our Services
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
@@ -399,7 +414,7 @@ const ChennaiPage = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {services.map((svc, index) => (
+                        {services.map((service, index) => (
                             <div
                                 key={index}
                                 className="bg-secondary-dark border border-white/5 rounded-2xl p-6 md:p-8 hover:border-primary-accent/30 transition-all duration-300 group hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-accent/5 flex flex-col justify-between"
@@ -409,21 +424,21 @@ const ChennaiPage = () => {
                                 <div>
                                     <div className="flex justify-between items-start mb-4">
                                         <span className="font-montserrat text-sm font-semibold text-primary-accent/50 block">
-                                            {svc.num}
+                                            {service.num}
                                         </span>
                                         <span className="text-2xl rounded-lg bg-primary-accent/5 w-10 h-10 flex items-center justify-center border border-white/5">
-                                            {svc.icon}
+                                            {service.icon}
                                         </span>
                                     </div>
                                     <h3 className="font-montserrat text-xl font-bold text-white mb-3 group-hover:text-primary-accent transition-colors">
-                                        {svc.title}
+                                        {service.title}
                                     </h3>
                                     <p className="text-boulder text-sm mb-6 leading-relaxed">
-                                        {svc.intro}
+                                        {service.intro}
                                     </p>
                                 </div>
                                 <div className="flex flex-wrap gap-1.5 mt-auto pt-4 border-t border-white/5">
-                                    {svc.tags.map((tag, idx) => (
+                                    {service.tags.map((tag, idx) => (
                                         <span
                                             key={idx}
                                             className="text-[10px] uppercase tracking-wider font-semibold text-silver-sand bg-white/5 px-2 py-1 rounded"
@@ -438,63 +453,63 @@ const ChennaiPage = () => {
                 </div>
             </section>
 
-            {/* WHY CHOOSE US SECTION */}
-            <section id="why-us" className="py-20">
+            {/* WHY CHOOSE US */}
+            <section id="why-us" className="py-20 bg-secondary-dark/30 border-y border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                How We Work
+                                Why Us
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Our Process — From First Call to <span className="italic text-primary-accent">Filed Return</span>
+                            Why Clients Choose Our <span className="italic text-primary-accent">CA Firm in Chennai</span>
                         </h2>
-                        <p className="text-boulder text-lg">
-                            Every Chennai client moves through the same structured onboarding and compliance process — so nothing is missed, nothing is late, and you always know where things stand.
-                        </p>
                     </div>
 
-                    <div className="max-w-4xl space-y-8" data-aos="fade-up">
-                        {whyUs.map((item) => (
-                            <div key={item.num} className="flex gap-6 items-start border-b border-white/5 pb-8 last:border-0 hover:translate-x-1 transition-transform duration-300">
-                                <span className="font-montserrat text-3xl md:text-4xl font-bold text-primary-accent/30 leading-none">
-                                    {item.num}
-                                </span>
-                                <div>
-                                    <h3 className="font-montserrat text-lg font-bold text-white mb-2">
-                                        {item.title}
-                                    </h3>
-                                    <p className="text-boulder text-sm leading-relaxed">
-                                        {item.desc}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Testimonials Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16" data-aos="fade-up">
-                        {testimonials.map((t, index) => (
-                            <div
-                                key={index}
-                                className="bg-secondary-dark border border-white/5 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between hover:border-primary-accent/30 transition-all duration-300"
-                                style={{ borderBottom: '3px solid #e5a145' }}
-                            >
-                                <span className="font-serif text-primary-accent/10 text-7xl absolute -top-4 -left-2 select-none pointer-events-none">
-                                    “
-                                </span>
-                                <p className="text-gray-300 text-sm leading-relaxed mb-4 pt-4 italic relative z-10">
-                                    {t.text}
-                                </p>
-                                <div className="border-t border-white/5 pt-3 mt-auto">
-                                    <span className="text-xs uppercase tracking-wider text-primary-accent font-semibold leading-relaxed block">
-                                        {t.attr}
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                        {/* Why us list */}
+                        <div className="lg:col-span-7 space-y-8" data-aos="fade-right">
+                            {whyUs.map((item, index) => (
+                                <div key={index} className="flex gap-6 items-start hover:translate-x-1 transition-transform duration-300">
+                                    <span className="font-montserrat text-3xl md:text-4xl font-bold text-primary-accent/30 leading-none">
+                                        {item.num}
                                     </span>
+                                    <div>
+                                        <h3 className="font-montserrat text-lg font-bold text-white mb-2">
+                                            {item.title}
+                                        </h3>
+                                        <p className="text-boulder text-sm leading-relaxed">
+                                            {item.desc}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
+
+                        {/* Testimonials stack */}
+                        <div className="lg:col-span-5 space-y-6" data-aos="fade-left">
+                            {testimonials.map((t, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-secondary-dark border border-white/5 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between hover:border-primary-accent/30 transition-all duration-300"
+                                    style={{ borderLeft: index === 1 ? '3px solid #e5a145' : '1px solid rgba(255,255,255,0.05)' }}
+                                >
+                                    <span className="font-serif text-primary-accent/10 text-7xl absolute -top-4 -left-2 select-none pointer-events-none">
+                                        “
+                                    </span>
+                                    <p className="text-gray-300 text-sm leading-relaxed mb-4 pt-4 italic relative z-10">
+                                        {t.text}
+                                    </p>
+                                    <div className="border-t border-white/5 pt-3 mt-auto">
+                                        <span className="text-xs uppercase tracking-wider text-primary-accent font-semibold leading-relaxed block">
+                                            {t.attr}
+                                        </span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -510,10 +525,10 @@ const ChennaiPage = () => {
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Serving All of <span className="italic text-primary-accent">Chennai & the Metro Region</span>
+                            We Serve All of <span className="italic text-primary-accent">Chennai District</span>
                         </h2>
                         <p className="text-boulder text-lg">
-                            Our CA services cover every major business corridor across Chennai — in person where useful, and fully online for clients anywhere in the metro region.
+                            Our CA and accounting services reach every commercial corridor across Chennai — in person and fully online.
                         </p>
                     </div>
 
@@ -661,7 +676,9 @@ const ChennaiPage = () => {
                                     <div>
                                         <h4 className="text-xs uppercase tracking-wider text-primary-accent font-bold mb-1">Office</h4>
                                         <p className="text-gray-200 text-sm leading-relaxed">
-                                            Chennai, Tamil Nadu
+                                            1st Floor, Palace Arcade,<br />
+                                            Palace Road, Mankavu,<br />
+                                            Kozhikode, Kerala 673002
                                         </p>
                                     </div>
                                 </div>
@@ -695,8 +712,8 @@ const ChennaiPage = () => {
                 </div>
             </section>
 
-            {/* OTHER LOCATIONS LINKS */}
-            <section className="py-16 border-t border-white/5 bg-secondary-dark/10">
+            {/* OTHER LOCATIONS */}
+            <section className="py-16 border-t border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20" data-aos="fade-up">
                     <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-8 text-center">
                         Other Locations We Serve
@@ -715,7 +732,6 @@ const ChennaiPage = () => {
                                         else if (city.includes('Kochi')) slug = 'kochi';
                                         else if (city.includes('Bengaluru')) slug = 'bangalore';
                                         else if (city.includes('Mangaluru')) slug = 'mangaluru';
-
                                         else slug = city.trim().toLowerCase().replace(/\s+/g, '-');
 
                                         return (

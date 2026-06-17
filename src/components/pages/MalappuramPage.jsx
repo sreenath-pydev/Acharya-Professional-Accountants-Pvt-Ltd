@@ -45,7 +45,8 @@ const MalappuramPage = () => {
                 "E-invoicing setup for applicable businesses",
                 "GST notice response and departmental representation"
             ],
-            note: "If your ITC claims don't match GSTR-2B, or you've received a mismatch notice, we sort it out — and put systems in place so it doesn't recur."
+            note: "If your ITC claims don't match GSTR-2B, or you've received a mismatch notice, we sort it out — and put systems in place so it doesn't recur.",
+            tags: ["GST Registration", "GSTR-1 / 3B", "GSTR-9 Annual", "GST Notice Reply", "ITC Reconciliation"]
         },
         {
             num: "02",
@@ -60,7 +61,8 @@ const MalappuramPage = () => {
                 "RBI filing for property purchases and investments",
                 "Power of Attorney-based accounting — fully remote"
             ],
-            note: "Most of our NRI clients in Malappuram never need to visit our office. Filings, reports, and queries are all handled remotely."
+            note: "Most of our NRI clients in Malappuram never need to visit our office. Filings, reports, and queries are all handled remotely.",
+            tags: ["15CA / 15CB", "FEMA Compliance", "ITR for NRIs", "TDS on Property", "Capital Gains"]
         },
         {
             num: "03",
@@ -74,7 +76,8 @@ const MalappuramPage = () => {
                 "Notice response — Sections 143(1), 143(2), 148",
                 "PAN and TAN applications"
             ],
-            note: "We also advise on tax-efficient structuring for Gulf returnees setting up businesses — a decision that affects your tax liability for years ahead."
+            note: "We also advise on tax-efficient structuring for Gulf returnees setting up businesses — a decision that affects your tax liability for years ahead.",
+            tags: ["ITR Filing", "Tax Planning", "TDS Filing", "Notice Response", "Advance Tax"]
         },
         {
             num: "04",
@@ -89,7 +92,8 @@ const MalappuramPage = () => {
                 "Year-end accounts finalization",
                 "Accounts preparation for bank loan applications"
             ],
-            note: "If your books are currently unreconciled or running on rough estimates — we take over without disruption and bring them up to standard within the first quarter."
+            note: "If your books are currently unreconciled or running on rough estimates — we take over without disruption and bring them up to standard within the first quarter.",
+            tags: ["Tally Books", "Reconciliation", "MIS Reports", "P&L Statements", "Loan Processing"]
         },
         {
             num: "05",
@@ -103,7 +107,8 @@ const MalappuramPage = () => {
                 "Stock audit for businesses with large inventory",
                 "Bank audit support"
             ],
-            note: "We work with trading companies, manufacturing units, clinics, and schools across the district. The audit report you get is one you can use, not just file."
+            note: "We work with trading companies, manufacturing units, clinics, and schools across the district. The audit report you get is one you can use, not just file.",
+            tags: ["Statutory Audit", "Tax Audit", "GST Audit", "Internal Controls", "Stock Audit"]
         },
         {
             num: "06",
@@ -117,7 +122,8 @@ const MalappuramPage = () => {
                 "MCA compliance for active companies",
                 "MSME / Udyam registration"
             ],
-            note: "Before registering, we advise on the right structure for your business. Getting this right from day one saves you compliance cost and tax for years."
+            note: "Before registering, we advise on the right structure for your business. Getting this right from day one saves you compliance cost and tax for years.",
+            tags: ["Pvt Ltd Setup", "LLP Setup", "ROC Compliance", "Udyam", "MCA Filing"]
         }
     ];
 
@@ -133,10 +139,26 @@ const MalappuramPage = () => {
     ];
 
     const whyUs = [
-        { num: "01", title: "We're accessible from anywhere in the district", desc: "Our Kozhikode office is reachable from Manjeri in under an hour. For most clients, we work remotely — calls, WhatsApp, and digital documents. For audits, we visit." },
-        { num: "02", title: "We explain what we're doing", desc: "You'll know what's being filed, when, and why. We don't work silently in the background and send you a bill at the end of the month." },
-        { num: "03", title: "We fix what others left behind", desc: "If your previous accountant stopped responding or left your books in disarray, we've seen it before. We start with a compliance review — no judgment, just a clear picture of where things stand." },
-        { num: "04", title: "Fixed-fee pricing", desc: "We quote before we start. The scope, the fee, and the deliverables are agreed upfront. No per-filing surprises, no scope creep billing." }
+        {
+            num: "01",
+            title: "Accessible From Anywhere in the District",
+            desc: "Our Kozhikode office is reachable from Manjeri in under an hour. For most clients, we work remotely — calls, WhatsApp, and digital documents. For audits, we visit."
+        },
+        {
+            num: "02",
+            title: "We Explain What We're Doing",
+            desc: "You'll know what's being filed, when, and why. We don't work silently in the background and send you a bill at the end of the month."
+        },
+        {
+            num: "03",
+            title: "We Fix What Others Left Behind",
+            desc: "If your previous accountant stopped responding or left your books in disarray, we've seen it before. We start with a compliance review — no judgment, just a clear picture of where things stand."
+        },
+        {
+            num: "04",
+            title: "Fixed-Fee Pricing",
+            desc: "We quote before we start. The scope, the fee, and the deliverables are agreed upfront. No per-filing surprises, no scope creep billing."
+        }
     ];
 
     const testimonials = [
@@ -151,6 +173,33 @@ const MalappuramPage = () => {
         {
             text: "I came back from Qatar and wanted to start a trading business in Manjeri. Acharya helped me decide between a proprietorship and a private limited company, handled the registration, and set up the books. Straightforward from day one.",
             attr: "Gulf Returnee · Business Owner, Manjeri"
+        }
+    ];
+
+    const areas = [
+        {
+            title: "CA in Manjeri",
+            desc: "GST return filing, bookkeeping, tax planning, and startup company registration for local commercial operators."
+        },
+        {
+            title: "Accountant in Perinthalmanna",
+            desc: "Accounting, bookkeeping, and audit support for wholesale traders and local commercial shops."
+        },
+        {
+            title: "Tax Consultant in Tirur",
+            desc: "Dedicated GST filing, advance tax planning, and textile export tax documentation compliance."
+        },
+        {
+            title: "Kottakkal & Nilambur",
+            desc: "Statutory audits, ROC filings, and tax advisory for healthcare businesses and local traders."
+        },
+        {
+            title: "Gulf NRI Asset Services",
+            desc: "FEMA compliance, NRO/NRE transfers, and property asset taxation handled remotely over WhatsApp."
+        },
+        {
+            title: "All of Malappuram — Online",
+            desc: "Full digital CA support, documents via email/WhatsApp, with zero travel required."
         }
     ];
 
@@ -194,29 +243,6 @@ const MalappuramPage = () => {
                 canonical="https://www.acharyaprofessionalaccountants.in/accounting-service-in-malappuram"
             />
 
-            {/* Structured Schema Data */}
-            <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "AccountingService",
-                    "name": "Acharya Professional Accountants",
-                    "description": "CA firm offering GST, income tax, audit, and bookkeeping services in Malappuram, Kerala",
-                    "url": "https://www.acharyaprofessionalaccountants.in/accounting-service-in-malappuram",
-                    "telephone": ["+919561694914", "+919012118877"],
-                    "email": "acharya.apa@gmail.com",
-                    "address": {
-                        "@type": "PostalAddress",
-                        "streetAddress": "1st Floor, Palace Arcade, Palace Road, Mankavu",
-                        "addressLocality": "Kozhikode",
-                        "addressRegion": "Kerala",
-                        "postalCode": "673002",
-                        "addressCountry": "IN"
-                    },
-                    "areaServed": malappuramAreas,
-                    "openingHours": "Mo-Sa 09:00-18:00"
-                })}
-            </script>
-
             {/* HERO SECTION */}
             <section className="container mx-auto px-5 md:px-12 lg:px-20 py-12 md:py-20 relative" data-aos="fade-up">
                 {/* Backdrop watermark text MLP */}
@@ -230,22 +256,17 @@ const MalappuramPage = () => {
                         <div className="flex items-center gap-3">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Malappuram · ICAI Registered · Est. 2015
+                                ✦ ICAI Registered · Malappuram
                             </span>
                         </div>
                         <h1 className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                            CA &amp; Accounting<br />
-                            Services in<br />
+                            CA Firm in<br />
                             <span className="italic text-primary-accent">Malappuram</span>
                         </h1>
-                        <div className="text-lg text-boulder max-w-xl space-y-4">
-                            <p>
-                                We work with businesses, traders, professionals, and NRI families across Malappuram district — handling their accounting, GST, income tax, and compliance so they don't have to.
-                            </p>
-                            <p>
-                                Whether you run a wholesale trading firm in Perinthalmanna, a clinic in Tirur, a textile business in Manjeri, or manage property income from abroad — we know what your compliance looks like and we handle it properly.
-                            </p>
-                        </div>
+                        <p className="text-lg text-boulder max-w-xl">
+                            Expert GST, NRI taxation, company registration, and bookkeeping. Serving wholesale merchants, Gulf returnees, and clinics across Manjeri, Perinthalmanna, and Tirur.
+                        </p>
+
                         <div className="flex flex-wrap gap-4 pt-4">
                             <ScrollLink
                                 to="contact"
@@ -254,7 +275,7 @@ const MalappuramPage = () => {
                                 offset={-80}
                                 className="bg-primary-accent text-dark-bg px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 cursor-pointer text-center"
                             >
-                                Get a Free Consultation
+                                Book Free Consultation
                             </ScrollLink>
                             <ScrollLink
                                 to="services"
@@ -263,32 +284,46 @@ const MalappuramPage = () => {
                                 offset={-80}
                                 className="border-2 border-primary-accent text-primary-accent bg-transparent px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 cursor-pointer text-center"
                             >
-                                Our Services
+                                View All Services
                             </ScrollLink>
+                        </div>
+
+                        <div className="flex flex-wrap gap-2 pt-6">
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">GST Filing</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">Income Tax</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">Audit & Assurance</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Bookkeeping</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Company Registration</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Payroll & PF</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">NRI Tax</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">TDS Filing</span>
                         </div>
                     </div>
 
                     {/* Right Stats Column */}
                     <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 md:p-10 flex flex-col justify-center relative overflow-hidden shadow-2xl">
-                        {/* Decorative background pulse */}
                         <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_70%_20%,rgba(229,161,69,0.4),transparent_50%)]" />
 
                         <div className="relative z-10 grid grid-cols-2 gap-y-12 md:gap-y-16 gap-x-8 md:gap-x-12">
                             <div>
-                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">10+</span>
-                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Years in practice</span>
-                            </div>
-                            <div>
                                 <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">500+</span>
-                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Clients across Kerala</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Active Clients</span>
                             </div>
                             <div>
-                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">ICAI</span>
-                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Registered firm</span>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">10+</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Years in Malappuram</span>
                             </div>
                             <div>
-                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">All</span>
-                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Malappuram covered</span>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">100%</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">On-Time Filing</span>
+                            </div>
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">₹0</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Penalty Record</span>
+                            </div>
+                            <div className="col-span-2 border-t border-white/10 pt-6 mt-2">
+                                <span className="font-montserrat text-3xl font-bold text-primary-accent block leading-none">ICAI Registered</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-2">Chartered Accountants</span>
                             </div>
                         </div>
                     </div>
@@ -306,6 +341,105 @@ const MalappuramPage = () => {
                 </div>
             </div>
 
+            {/* WHO WE ARE (ABOUT) SECTION */}
+            <section id="about" className="py-20 bg-secondary-dark/10 border-t border-white/5">
+                <div className="container mx-auto px-5 md:px-12 lg:px-20">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                        {/* Left Content column */}
+                        <div className="lg:col-span-7 space-y-6" data-aos="fade-right">
+                            <div className="flex items-center gap-3">
+                                <span className="w-8 h-[1px] bg-primary-accent"></span>
+                                <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
+                                    Who We Are
+                                </span>
+                            </div>
+                            <h2 className="font-montserrat text-3xl md:text-4xl font-bold leading-tight">
+                                Your <span className="italic text-primary-accent">Chartered Accountant</span> in Malappuram
+                            </h2>
+                            <div className="text-boulder space-y-4 text-base md:text-lg leading-relaxed">
+                                <p>
+                                    We are Acharya Professional Accountants — a professional CA firm providing reliable accounting, tax planning, GST filing, audit, and company registration support in Malappuram. We understand the specific regional business landscape, with deep experience advising wholesale traders, returnees starting fresh, and families with assets in the Gulf.
+                                </p>
+                                <p>
+                                    Whether you need to file your GST returns before the deadline, register your new company, respond to an income tax notice, or simply get your books in order before year-end — <strong className="text-white font-semibold">we handle it all under one roof</strong>, with qualified CAs who are directly accessible to you.
+                                </p>
+                                <p>
+                                    We work with sole traders, MSMEs, partnership firms, private limited companies, wholesalers, and NRI clients. If you have a financial compliance need in Malappuram, we are the team to call.
+                                </p>
+                            </div>
+                            <div className="pt-4">
+                                <ScrollLink
+                                    to="contact"
+                                    smooth={true}
+                                    duration={500}
+                                    offset={-80}
+                                    className="inline-flex items-center bg-primary-accent text-dark-bg px-8 py-3.5 rounded-full font-semibold hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                                >
+                                    Talk to Our CA <span className="ml-2">→</span>
+                                </ScrollLink>
+                            </div>
+                        </div>
+
+                        {/* Right pillars column */}
+                        <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 space-y-6 shadow-xl" data-aos="fade-left">
+                            <h3 className="font-montserrat text-lg font-bold text-white mb-4 pb-2 border-b border-white/5">
+                                Our Client Promises
+                            </h3>
+
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">🏛️</div>
+                                <div>
+                                    <h4 className="text-white font-bold text-sm mb-1">ICAI-Qualified CAs</h4>
+                                    <p className="text-boulder text-xs leading-relaxed">
+                                        All engagements are led by ICAI-registered chartered accountants. No delegation to unqualified staff.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">📍</div>
+                                <div>
+                                    <h4 className="text-white font-bold text-sm mb-1">Active Malappuram Support</h4>
+                                    <p className="text-boulder text-xs leading-relaxed">
+                                        Our office is reachable from Manjeri in under an hour. Walk in, call, or WhatsApp — we are always reachable in Malayalam or English.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">📅</div>
+                                <div>
+                                    <h4 className="text-white font-bold text-sm mb-1">Deadline-Driven Process</h4>
+                                    <p className="text-boulder text-xs leading-relaxed">
+                                        Every client file has a compliance calendar. We file before the due date — you never pay a late fee.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">🔒</div>
+                                <div>
+                                    <h4 className="text-white font-bold text-sm mb-1">Confidential & Secure</h4>
+                                    <p className="text-boulder text-xs leading-relaxed">
+                                        Your financial data stays private. We follow strict document handling and data security protocols.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">💬</div>
+                                <div>
+                                    <h4 className="text-white font-bold text-sm mb-1">Jargon-Free Advice</h4>
+                                    <p className="text-boulder text-xs leading-relaxed">
+                                        We explain your tax position in plain language so you always know where you stand — no confusing accounting-speak.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* SERVICES SECTION */}
             <section id="services" className="py-20 bg-secondary-dark/30 border-y border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
@@ -313,14 +447,14 @@ const MalappuramPage = () => {
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                What we do
+                                Our Services
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Our CA &amp; Accounting Services in Malappuram
+                            Accounting Services in <span className="italic text-primary-accent">Malappuram</span>
                         </h2>
                         <p className="text-boulder text-lg">
-                            Handled by qualified CAs — not outsourced to a junior team.
+                            We offer a complete range of financial and compliance services — all delivered by qualified CAs, tailored to the scale of your business.
                         </p>
                     </div>
 
@@ -333,9 +467,14 @@ const MalappuramPage = () => {
                                 data-aos-delay={index * 50}
                             >
                                 <div>
-                                    <span className="font-montserrat text-sm font-semibold text-primary-accent/50 block mb-4">
-                                        {service.num}
-                                    </span>
+                                    <div className="flex justify-between items-start mb-4">
+                                        <span className="font-montserrat text-sm font-semibold text-primary-accent/50 block">
+                                            {service.num}
+                                        </span>
+                                        <span className="text-2xl rounded-lg bg-primary-accent/5 w-10 h-10 flex items-center justify-center border border-white/5">
+                                            {index === 0 ? "📊" : index === 1 ? "🧾" : index === 2 ? "📒" : index === 3 ? "🔍" : index === 4 ? "🏢" : "💻"}
+                                        </span>
+                                    </div>
                                     <h3 className="font-montserrat text-xl font-bold text-white mb-3 group-hover:text-primary-accent transition-colors">
                                         {service.title}
                                     </h3>
@@ -348,39 +487,49 @@ const MalappuramPage = () => {
                                                 <span className="text-primary-accent mt-0.5 flex-shrink-0">
                                                     <IconCheck className="w-4 h-4" />
                                                 </span>
-                                                <span>{item}</span>
+                                                <span className="text-xs leading-relaxed text-boulder">{item}</span>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
                                 {service.note && (
                                     <div className="border-l-2 border-primary-accent pl-4 py-2 mt-4 bg-primary-accent/5 rounded-r-xl">
-                                        <p className="text-xs text-boulder italic leading-relaxed">
+                                        <p className="text-[11px] text-boulder italic leading-relaxed">
                                             {service.note}
                                         </p>
                                     </div>
                                 )}
+                                <div className="flex flex-wrap gap-1.5 mt-auto pt-4 border-t border-white/5">
+                                    {service.tags.map((tag, idx) => (
+                                        <span
+                                            key={idx}
+                                            className="text-[10px] uppercase tracking-wider font-semibold text-silver-sand bg-white/5 px-2 py-1 rounded"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* WHO WE WORK WITH */}
+            {/* WHO WE WORK WITH (INDUSTRIES) */}
             <section className="py-20">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Who we work with
+                                Industries served
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Businesses We Serve in Malappuram
+                            Who We Work With in Malappuram
                         </h2>
                         <p className="text-boulder text-lg">
-                            We work across most sectors in the district. The business types we handle most often.
+                            We work across most industries in the Malappuram district. A few of the business types we handle most often:
                         </p>
                     </div>
 
@@ -408,79 +557,98 @@ const MalappuramPage = () => {
             </section>
 
             {/* WHY CHOOSE US */}
-            <section className="py-20 bg-secondary-dark/30 border-y border-white/5">
+            <section id="why-us" className="py-20 bg-secondary-dark/30 border-y border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Why Acharya PA
+                                Why Us
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Why Businesses in Malappuram Work With Us
+                            Why Clients Choose Our <span className="italic text-primary-accent">CA Firm in Malappuram</span>
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {whyUs.map((item, index) => (
-                            <div
-                                key={index}
-                                className="bg-secondary-dark border border-white/5 rounded-2xl p-8 hover:border-primary-accent/30 transition-all duration-300 flex items-start gap-6"
-                                data-aos="fade-up"
-                                data-aos-delay={index * 50}
-                            >
-                                <span className="font-montserrat text-4xl font-bold text-primary-accent/20 flex-shrink-0 leading-none">
-                                    {item.num}
-                                </span>
-                                <div>
-                                    <h3 className="font-montserrat text-lg font-bold text-white mb-2">
-                                        {item.title}
-                                    </h3>
-                                    <p className="text-boulder text-sm leading-relaxed">
-                                        {item.desc}
-                                    </p>
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                        {/* Why us list */}
+                        <div className="lg:col-span-7 space-y-8" data-aos="fade-right">
+                            {whyUs.map((item) => (
+                                <div key={item.num} className="flex gap-6 items-start hover:translate-x-1 transition-transform duration-300">
+                                    <span className="font-montserrat text-3xl md:text-4xl font-bold text-primary-accent/30 leading-none">
+                                        {item.num}
+                                    </span>
+                                    <div>
+                                        <h3 className="font-montserrat text-lg font-bold text-white mb-2">
+                                            {item.title}
+                                        </h3>
+                                        <p className="text-boulder text-sm leading-relaxed">
+                                            {item.desc}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
+
+                        {/* Testimonials stack */}
+                        <div className="lg:col-span-5 space-y-6" data-aos="fade-left">
+                            {testimonials.map((t, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-secondary-dark border border-white/5 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between hover:border-primary-accent/30 transition-all duration-300"
+                                    style={{ borderLeft: index === 1 ? '3px solid #e5a145' : '1px solid rgba(255,255,255,0.05)' }}
+                                >
+                                    <span className="font-serif text-primary-accent/10 text-7xl absolute -top-4 -left-2 select-none pointer-events-none">
+                                        “
+                                    </span>
+                                    <p className="text-gray-300 text-sm leading-relaxed mb-4 pt-4 italic relative z-10">
+                                        {t.text}
+                                    </p>
+                                    <div className="border-t border-white/5 pt-3 mt-auto">
+                                        <span className="text-xs uppercase tracking-wider text-primary-accent font-semibold leading-relaxed block">
+                                            {t.attr}
+                                        </span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* TESTIMONIALS */}
-            <section className="py-20">
+            {/* AREAS COVERED SECTION */}
+            <section id="areas" className="py-20 bg-secondary-dark/30 border-y border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                From our clients
+                                Coverage
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            What Our Clients Say
+                            We Serve All of <span className="italic text-primary-accent">Malappuram</span>
                         </h2>
+                        <p className="text-boulder text-lg">
+                            Our CA services reach every corner of Malappuram district — fully online for remote clients and in person across key towns:
+                        </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {testimonials.map((t, index) => (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {areas.map((area, index) => (
                             <div
                                 key={index}
-                                className="bg-secondary-dark border border-white/5 rounded-2xl p-8 relative overflow-hidden flex flex-col justify-between hover:border-primary-accent/30 transition-all duration-300"
+                                className="bg-secondary-dark border border-white/5 rounded-2xl p-6 hover:border-primary-accent/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                                 data-aos="fade-up"
                                 data-aos-delay={index * 50}
                             >
-                                <span className="font-serif text-primary-accent/10 text-8xl absolute -top-4 -left-2 select-none pointer-events-none">
-                                    “
-                                </span>
-                                <p className="text-gray-300 text-sm leading-relaxed mb-6 pt-4 italic relative z-10">
-                                    {t.text}
+                                <h3 className="font-montserrat text-lg font-bold text-primary-accent mb-2">
+                                    {area.title}
+                                </h3>
+                                <p className="text-boulder text-sm leading-relaxed">
+                                    {area.desc}
                                 </p>
-                                <div className="border-t border-white/5 pt-4 mt-auto">
-                                    <span className="text-xs uppercase tracking-wider text-primary-accent font-semibold leading-relaxed block">
-                                        {t.attr}
-                                    </span>
-                                </div>
                             </div>
                         ))}
                     </div>
@@ -488,17 +656,17 @@ const MalappuramPage = () => {
             </section>
 
             {/* FAQ SECTION */}
-            <section className="py-20 bg-secondary-dark/30 border-y border-white/5">
+            <section id="faq" className="py-20">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Common questions
+                                FAQ
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Frequently Asked Questions
+                            Common Questions — <span className="italic text-primary-accent">CA Services Malappuram</span>
                         </h2>
                     </div>
 
@@ -527,11 +695,11 @@ const MalappuramPage = () => {
                 </div>
             </section>
 
-            {/* LOCATIONS STRIP */}
+            {/* WE COVER STRIP */}
             <section className="py-8 bg-secondary-dark/40 border-t border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20 flex flex-col md:flex-row items-center gap-4">
                     <span className="text-primary-accent uppercase tracking-[0.2em] text-xs font-bold whitespace-nowrap">
-                        We Serve
+                        We Cover
                     </span>
                     <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                         {malappuramAreas.map((area) => (
@@ -546,25 +714,32 @@ const MalappuramPage = () => {
                 </div>
             </section>
 
-            {/* CTA SECTION & OFFICE INFO */}
-            <section id="contact" className="py-20">
+            {/* CTA SECTION & CONTACT INFO */}
+            <section id="contact" className="py-20 border-t border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                         {/* Contact details text */}
                         <div className="lg:col-span-7 flex flex-col justify-center space-y-6" data-aos="fade-right">
                             <h2 className="font-montserrat text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                                Talk to a CA —<br />No Obligation
+                                Speak to a <span className="italic text-primary-accent">Chartered Accountant</span> in Malappuram
                             </h2>
                             <p className="text-boulder text-lg max-w-xl">
-                                Whether it's a GST issue, a tax notice, a backlog to clear, or just wanting to understand your current compliance position — call us. The first conversation is free.
+                                Free first consultation. Bring your GST, tax, audit, or registration question — we will give you a straight answer and a clear quote, no obligations.
                             </p>
-                            <div className="pt-2">
+                            <div className="flex flex-wrap gap-4 pt-4">
                                 <a
                                     href="tel:+919561694914"
                                     className="bg-primary-accent text-dark-bg px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 inline-flex items-center gap-3 cursor-pointer"
                                 >
-                                    Book a Free Consultation
-                                    <span className="text-lg">→</span>
+                                    📞 Call Us Now
+                                </a>
+                                <a
+                                    href="https://wa.me/919446369434"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="border-2 border-primary-accent text-primary-accent bg-transparent px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 cursor-pointer text-center"
+                                >
+                                    💬 WhatsApp
                                 </a>
                             </div>
                         </div>
@@ -625,7 +800,7 @@ const MalappuramPage = () => {
                                 </div>
                             </div>
 
-                            {/* Map Embed matching standard look */}
+                            {/* Map Embed */}
                             <div className="h-64 rounded-3xl overflow-hidden shadow-2xl border border-white/5">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3077.6841848514887!2d75.8030430737993!3d11.2358719889422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6596ca4d1cb11%3A0xa76f81f9ba68fee1!2sAcharya%20professional%20accountants%20pvt%20ltd!5e1!3m2!1sen!2sin!4v1750755342483!5m2!1sen!2sin"
@@ -640,7 +815,7 @@ const MalappuramPage = () => {
                 </div>
             </section>
 
-            {/* OTHER LOCATIONS LINKS */}
+            {/* OTHER LOCATIONS */}
             <section className="py-16 border-t border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20" data-aos="fade-up">
                     <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-8 text-center">
@@ -660,7 +835,6 @@ const MalappuramPage = () => {
                                         else if (city.includes('Kochi')) slug = 'kochi';
                                         else if (city.includes('Bengaluru')) slug = 'bangalore';
                                         else if (city.includes('Mangaluru')) slug = 'mangaluru';
-
                                         else slug = city.trim().toLowerCase().replace(/\s+/g, '-');
 
                                         return (

@@ -45,7 +45,8 @@ const KozhikodePage = () => {
                 "E-invoicing setup",
                 "GST notice response and representation"
             ],
-            note: "Businesses that file GSTR-3B but never reconcile it with their purchase register build up ITC mismatches over years. We catch these before they become a department problem."
+            note: "Businesses that file GSTR-3B but never reconcile it with their purchase register build up ITC mismatches over years. We catch these before they become a department problem.",
+            tags: ["GST Registration", "GSTR-1 / 3B", "GSTR-9 Annual", "GST Notice Reply", "ITC Reconciliation"]
         },
         {
             num: "02",
@@ -59,7 +60,8 @@ const KozhikodePage = () => {
                 "Response to income tax notices and scrutiny assessments",
                 "PAN and TAN applications"
             ],
-            note: "Common mistake: mixing personal and business expenses. This causes disallowances during assessments. Proper bookkeeping prevents it from the start."
+            note: "Common mistake: mixing personal and business expenses. This causes disallowances during assessments. Proper bookkeeping prevents it from the start.",
+            tags: ["ITR Filing", "Tax Planning", "TDS Filing", "NRI Tax Filing", "Tax Audit", "Notice Response"]
         },
         {
             num: "03",
@@ -73,7 +75,8 @@ const KozhikodePage = () => {
                 "MIS reports for business decisions",
                 "Year-end accounts finalization"
             ],
-            note: "Most clients see a cleaner picture of their business within the first three months — without disrupting how they currently work."
+            note: "Most clients see a cleaner picture of their business within the first three months — without disrupting how they currently work.",
+            tags: ["Tally Accounting", "Bank Reconciliation", "Payroll", "PF & ESI Filing", "MIS Reports"]
         },
         {
             num: "04",
@@ -87,7 +90,8 @@ const KozhikodePage = () => {
                 "Stock audit for businesses with large inventory",
                 "Bank audit support"
             ],
-            note: "We conduct audits across manufacturing, trading, healthcare, and services — not just for compliance, but to give owners a report they can actually use."
+            note: "We conduct audits across manufacturing, trading, healthcare, and services — not just for compliance, but to give owners a report they can actually use.",
+            tags: ["Statutory Audit", "Internal Audit", "Tax Audit", "Audit & Assurance", "Financial Statements"]
         },
         {
             num: "05",
@@ -101,7 +105,8 @@ const KozhikodePage = () => {
                 "ROC filing — annual returns, director changes",
                 "MCA compliance for existing companies"
             ],
-            note: "Business structure affects your tax liability, your ability to raise funds, and your personal liability exposure. Worth getting right from day one."
+            note: "Business structure affects your tax liability, your ability to raise funds, and your personal liability exposure. Worth getting right from day one.",
+            tags: ["Pvt. Ltd. Registration", "LLP Registration", "MSME / Udyam", "Startup Registration", "ROC Filing"]
         },
         {
             num: "06",
@@ -115,7 +120,8 @@ const KozhikodePage = () => {
                 "Payslip generation",
                 "Form 16 issuance"
             ],
-            note: null
+            note: null,
+            tags: ["PF & ESI Filing", "Payroll Processing", "Form 16", "Professional Tax"]
         }
     ];
 
@@ -130,10 +136,26 @@ const KozhikodePage = () => {
     ];
 
     const whyUs = [
-        { num: "01", title: "We're in Kozhikode", desc: "Not a remote firm operating from Bengaluru or Delhi. Our office is in Mankavu — and we meet clients in person when that's what they need." },
-        { num: "02", title: "No rotating relationship managers", desc: "The CA or senior accountant who handles your file is who you actually talk to. Not a helpdesk ticket system." },
-        { num: "03", title: "We flag problems early", desc: "Most tax notices are predictable. We catch the issues during filing, not after the fact when options are limited." },
-        { num: "04", title: "We don't work with everyone", desc: "We take on clients we can actually serve well. If your business needs something outside our expertise, we'll tell you honestly." }
+        {
+            num: "01",
+            title: "We're in Kozhikode",
+            desc: "Not a remote firm operating from Bengaluru or Delhi. Our office is in Mankavu — and we meet clients in person when that's what they need."
+        },
+        {
+            num: "02",
+            title: "No Rotating Relationship Managers",
+            desc: "The CA or senior accountant who handles your file is who you actually talk to. Not a helpdesk ticket system."
+        },
+        {
+            num: "03",
+            title: "We Flag Problems Early",
+            desc: "Most tax notices are predictable. We catch the issues during filing, not after the fact when options are limited."
+        },
+        {
+            num: "04",
+            title: "We Don't Work with Everyone",
+            desc: "We take on clients we can actually serve well. If your business needs something outside our expertise, we'll tell you honestly."
+        }
     ];
 
     const testimonials = [
@@ -151,6 +173,33 @@ const KozhikodePage = () => {
         }
     ];
 
+    const areas = [
+        {
+            title: "CA in Mankavu",
+            desc: "Our main head office is located in Mankavu, Kozhikode, providing convenient walk-in support and full in-person consultations."
+        },
+        {
+            title: "SM Street & Mavoor Road",
+            desc: "Comprehensive accounting and GST compliance support for retail traders and merchant businesses in the business hubs."
+        },
+        {
+            title: "Kallai Timber & Industrial Zone",
+            desc: "Statutory audits, cost records, and tax filings for timber operators and local manufacturers."
+        },
+        {
+            title: "Vadakara & Koyilandy",
+            desc: "GST returns, NRI taxation advice, and business registration for clients across Northern Kozhikode district."
+        },
+        {
+            title: "Feroke & Ramanattukara",
+            desc: "Bookkeeping and payroll management for tile factories, trading houses, and clay processing units."
+        },
+        {
+            title: "All of Kozhikode — Online",
+            desc: "Remote consulting via WhatsApp, documents via email, and zero-travel digital compliance workflows."
+        }
+    ];
+
     const faqs = [
         {
             q: "What does it cost to hire a CA firm in Kozhikode?",
@@ -162,7 +211,7 @@ const KozhikodePage = () => {
         },
         {
             q: "Can you work with businesses outside Kozhikode city?",
-            a: "Yes. We work with clients across Kozhikode district — including Kalpetta, Vadakara, Koyilandy, and Feroke — and also with NRI clients managing Kerala-based businesses from abroad. Most work is done remotely; we visit for audits when needed."
+            a: "Yes. We work with clients across Kozhikode district — including Vadakara, Koyilandy, Ramanattukara, and Feroke — and also with NRI clients managing Kerala-based businesses from abroad. Most work is done remotely; we visit for audits when needed."
         },
         {
             q: "How quickly can you take over if my previous accountant left?",
@@ -178,6 +227,10 @@ const KozhikodePage = () => {
         }
     ];
 
+    const kozhikodeAreas = [
+        "Mankavu", "Mavoor Road", "SM Street", "Kallai", "Vadakara", "Koyilandy", "Feroke", "Ramanattukara", "Kallai Road"
+    ];
+
     return (
         <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28 overflow-x-hidden">
             <SEO
@@ -187,29 +240,29 @@ const KozhikodePage = () => {
             />
 
             {/* HERO SECTION */}
-            <section className="container mx-auto px-5 md:px-12 lg:px-20 py-12 md:py-20" data-aos="fade-up">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+            <section className="container mx-auto px-5 md:px-12 lg:px-20 py-12 md:py-20 relative" data-aos="fade-up">
+                {/* Backdrop watermark text KKD */}
+                <div className="absolute top-1/2 left-4 -translate-y-1/2 font-montserrat text-[16vw] font-bold text-white/[0.01] pointer-events-none select-none z-0">
+                    KKD
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch relative z-10">
                     {/* Left Info Column */}
                     <div className="lg:col-span-7 flex flex-col justify-center space-y-6">
                         <div className="flex items-center gap-3">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Kozhikode · Est. 2015
+                                ✦ ICAI Registered · Kozhikode
                             </span>
                         </div>
                         <h1 className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                            CA &amp; Accounting<br />
-                            Services in<br />
+                            CA Firm in<br />
                             <span className="italic text-primary-accent">Kozhikode</span>
                         </h1>
-                        <div className="text-lg text-boulder max-w-xl space-y-4">
-                            <p>
-                                We are a Kozhikode-based CA firm. Our office is in Mankavu, our clients are across the city and district, and we've been doing this since 2015.
-                            </p>
-                            <p>
-                                We handle GST filing, income tax, bookkeeping, audit, payroll, and company compliance — from small proprietorships in Mavoor Road filing their first GST return to established trading companies in Kallai managing multi-state transactions.
-                            </p>
-                        </div>
+                        <p className="text-lg text-boulder max-w-xl">
+                            We handle GST filing, income tax, bookkeeping, audit, payroll, and company compliance — from small proprietorships in Mavoor Road to established trading companies in Kallai.
+                        </p>
+
                         <div className="flex flex-wrap gap-4 pt-4">
                             <ScrollLink
                                 to="contact"
@@ -218,7 +271,7 @@ const KozhikodePage = () => {
                                 offset={-80}
                                 className="bg-primary-accent text-dark-bg px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 cursor-pointer text-center"
                             >
-                                Get a Free Consultation
+                                Book Free Consultation
                             </ScrollLink>
                             <ScrollLink
                                 to="services"
@@ -227,42 +280,46 @@ const KozhikodePage = () => {
                                 offset={-80}
                                 className="border-2 border-primary-accent text-primary-accent bg-transparent px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 cursor-pointer text-center"
                             >
-                                Our Services
+                                View All Services
                             </ScrollLink>
+                        </div>
+
+                        <div className="flex flex-wrap gap-2 pt-6">
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">GST Filing</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">Income Tax</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">Audit & Assurance</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Bookkeeping</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Company Registration</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Payroll & PF</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">NRI Tax</span>
+                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">TDS Filing</span>
                         </div>
                     </div>
 
-                    {/* Right Quote & Stats Column */}
-                    <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 md:p-10 flex flex-col justify-between relative overflow-hidden shadow-2xl">
-                        {/* Decorative background pulse */}
+                    {/* Right Stats Column */}
+                    <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 md:p-10 flex flex-col justify-center relative overflow-hidden shadow-2xl">
                         <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_70%_20%,rgba(229,161,69,0.4),transparent_50%)]" />
 
-                        <div className="relative z-10 mb-8 md:mb-12">
-                            <div className="w-10 h-1 bg-primary-accent mb-6 rounded-full"></div>
-                            <p className="font-montserrat text-lg md:text-xl italic text-gray-200 leading-relaxed mb-4">
-                                "We were running three retail shops and handling GST ourselves. Acharya's team resolved it within two weeks and cleaned up two years of filings."
-                            </p>
-                            <span className="text-xs uppercase tracking-widest text-primary-accent font-semibold block">
-                                Garment trader, SM Street · Kozhikode
-                            </span>
-                        </div>
-
-                        <div className="relative z-10 grid grid-cols-2 gap-6 pt-6 border-t border-white/10">
+                        <div className="relative z-10 grid grid-cols-2 gap-y-12 md:gap-y-16 gap-x-8 md:gap-x-12">
                             <div>
-                                <span className="font-montserrat text-3xl font-bold text-primary-accent block">10+</span>
-                                <span className="text-xs text-silver-sand font-medium uppercase tracking-wider block mt-1">Years in practice</span>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">500+</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Active Clients</span>
                             </div>
                             <div>
-                                <span className="font-montserrat text-3xl font-bold text-primary-accent block">500+</span>
-                                <span className="text-xs text-silver-sand font-medium uppercase tracking-wider block mt-1">Businesses served</span>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">10+</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Years in Kozhikode</span>
                             </div>
                             <div>
-                                <span className="font-montserrat text-3xl font-bold text-primary-accent block">ICAI</span>
-                                <span className="text-xs text-silver-sand font-medium uppercase tracking-wider block mt-1">Registered firm</span>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">100%</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">On-Time Filing</span>
                             </div>
                             <div>
-                                <span className="font-montserrat text-3xl font-bold text-primary-accent block">In-Person</span>
-                                <span className="text-xs text-silver-sand font-medium uppercase tracking-wider block mt-1">Mankavu office</span>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">₹0</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Penalty Record</span>
+                            </div>
+                            <div className="col-span-2 border-t border-white/10 pt-6 mt-2">
+                                <span className="font-montserrat text-3xl font-bold text-primary-accent block leading-none">ICAI Registered</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-2">Chartered Accountants</span>
                             </div>
                         </div>
                     </div>
@@ -280,6 +337,105 @@ const KozhikodePage = () => {
                 </div>
             </div>
 
+            {/* WHO WE ARE (ABOUT) SECTION */}
+            <section id="about" className="py-20 bg-secondary-dark/10 border-t border-white/5">
+                <div className="container mx-auto px-5 md:px-12 lg:px-20">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                        {/* Left Content column */}
+                        <div className="lg:col-span-7 space-y-6" data-aos="fade-right">
+                            <div className="flex items-center gap-3">
+                                <span className="w-8 h-[1px] bg-primary-accent"></span>
+                                <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
+                                    Who We Are
+                                </span>
+                            </div>
+                            <h2 className="font-montserrat text-3xl md:text-4xl font-bold leading-tight">
+                                Your <span className="italic text-primary-accent">Chartered Accountant</span> in Kozhikode
+                            </h2>
+                            <div className="text-boulder space-y-4 text-base md:text-lg leading-relaxed">
+                                <p>
+                                    We are Acharya Professional Accountants — a CA firm operating in Kozhikode, providing accounting, tax, and compliance services to businesses and individuals across the district. Our main office is located here in Mankavu, and we've been serving the local trade ecosystem since 2015.
+                                </p>
+                                <p>
+                                    Whether you need to file your GST returns before the deadline, register your new company, respond to an income tax notice, or simply get your books in order before year-end — <strong className="text-white font-semibold">we handle it all under one roof</strong>, with qualified CAs who are directly accessible to you.
+                                </p>
+                                <p>
+                                    We work with sole traders, MSMEs, partnership firms, private limited companies, wholesalers, restaurants, and NRI clients. If you have a financial compliance need in Kozhikode, our doors are always open.
+                                </p>
+                            </div>
+                            <div className="pt-4">
+                                <ScrollLink
+                                    to="contact"
+                                    smooth={true}
+                                    duration={500}
+                                    offset={-80}
+                                    className="inline-flex items-center bg-primary-accent text-dark-bg px-8 py-3.5 rounded-full font-semibold hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                                >
+                                    Talk to Our CA <span className="ml-2">→</span>
+                                </ScrollLink>
+                            </div>
+                        </div>
+
+                        {/* Right pillars column */}
+                        <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 space-y-6 shadow-xl" data-aos="fade-left">
+                            <h3 className="font-montserrat text-lg font-bold text-white mb-4 pb-2 border-b border-white/5">
+                                Our Client Promises
+                            </h3>
+
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">🏛️</div>
+                                <div>
+                                    <h4 className="text-white font-bold text-sm mb-1">ICAI-Qualified CAs</h4>
+                                    <p className="text-boulder text-xs leading-relaxed">
+                                        All engagements are led by ICAI-registered chartered accountants. No delegation to unqualified staff.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">📍</div>
+                                <div>
+                                    <h4 className="text-white font-bold text-sm mb-1">Based in Kozhikode</h4>
+                                    <p className="text-boulder text-xs leading-relaxed">
+                                        Our office is in Mankavu. Walk in, call, or WhatsApp — we are always reachable in Malayalam or English.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">📅</div>
+                                <div>
+                                    <h4 className="text-white font-bold text-sm mb-1">Deadline-Driven Process</h4>
+                                    <p className="text-boulder text-xs leading-relaxed">
+                                        Every client file has a compliance calendar. We file before the due date — you never pay a late fee.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">🔒</div>
+                                <div>
+                                    <h4 className="text-white font-bold text-sm mb-1">Confidential & Secure</h4>
+                                    <p className="text-boulder text-xs leading-relaxed">
+                                        Your financial data stays private. We follow strict document handling and data security protocols.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">💬</div>
+                                <div>
+                                    <h4 className="text-white font-bold text-sm mb-1">Jargon-Free Advice</h4>
+                                    <p className="text-boulder text-xs leading-relaxed">
+                                        We explain your tax position in plain language so you always know where you stand — no confusing accounting-speak.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* SERVICES SECTION */}
             <section id="services" className="py-20 bg-secondary-dark/30 border-y border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
@@ -287,14 +443,14 @@ const KozhikodePage = () => {
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                What we do
+                                Our Services
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Our CA &amp; Accounting Services in Kozhikode
+                            Accounting Services in <span className="italic text-primary-accent">Kozhikode</span>
                         </h2>
                         <p className="text-boulder text-lg">
-                            From GST filing to statutory audit — handled by qualified CAs, not outsourced to a junior team.
+                            We offer a complete range of financial and compliance services — all delivered by qualified CAs, tailored to the scale of your business.
                         </p>
                     </div>
 
@@ -307,9 +463,14 @@ const KozhikodePage = () => {
                                 data-aos-delay={index * 50}
                             >
                                 <div>
-                                    <span className="font-montserrat text-sm font-semibold text-primary-accent/50 block mb-4">
-                                        {service.num}
-                                    </span>
+                                    <div className="flex justify-between items-start mb-4">
+                                        <span className="font-montserrat text-sm font-semibold text-primary-accent/50 block">
+                                            {service.num}
+                                        </span>
+                                        <span className="text-2xl rounded-lg bg-primary-accent/5 w-10 h-10 flex items-center justify-center border border-white/5">
+                                            {index === 0 ? "📊" : index === 1 ? "🧾" : index === 2 ? "📒" : index === 3 ? "🔍" : index === 4 ? "🏢" : "💻"}
+                                        </span>
+                                    </div>
                                     <h3 className="font-montserrat text-xl font-bold text-white mb-3 group-hover:text-primary-accent transition-colors">
                                         {service.title}
                                     </h3>
@@ -322,18 +483,28 @@ const KozhikodePage = () => {
                                                 <span className="text-primary-accent mt-0.5 flex-shrink-0">
                                                     <IconCheck className="w-4 h-4" />
                                                 </span>
-                                                <span>{item}</span>
+                                                <span className="text-xs leading-relaxed text-boulder">{item}</span>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
                                 {service.note && (
                                     <div className="border-l-2 border-primary-accent pl-4 py-2 mt-4 bg-primary-accent/5 rounded-r-xl">
-                                        <p className="text-xs text-boulder italic leading-relaxed">
+                                        <p className="text-[11px] text-boulder italic leading-relaxed">
                                             {service.note}
                                         </p>
                                     </div>
                                 )}
+                                <div className="flex flex-wrap gap-1.5 mt-auto pt-4 border-t border-white/5">
+                                    {service.tags.map((tag, idx) => (
+                                        <span
+                                            key={idx}
+                                            className="text-[10px] uppercase tracking-wider font-semibold text-silver-sand bg-white/5 px-2 py-1 rounded"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -354,7 +525,7 @@ const KozhikodePage = () => {
                             Who We Work With in Kozhikode
                         </h2>
                         <p className="text-boulder text-lg">
-                            We work across most industries in the Kozhikode district. A few of the business types we handle most often.
+                            We work across most industries in the Kozhikode district. A few of the business types we handle most often:
                         </p>
                     </div>
 
@@ -382,79 +553,98 @@ const KozhikodePage = () => {
             </section>
 
             {/* WHY CHOOSE US */}
-            <section className="py-20 bg-secondary-dark/30 border-y border-white/5">
+            <section id="why-us" className="py-20 bg-secondary-dark/30 border-y border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Why Acharya PA
+                                Why Us
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Why Businesses in Kozhikode Work With Us
+                            Why Clients Choose Our <span className="italic text-primary-accent">CA Firm in Kozhikode</span>
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {whyUs.map((item, index) => (
-                            <div
-                                key={index}
-                                className="bg-secondary-dark border border-white/5 rounded-2xl p-8 hover:border-primary-accent/30 transition-all duration-300 flex items-start gap-6"
-                                data-aos="fade-up"
-                                data-aos-delay={index * 50}
-                            >
-                                <span className="font-montserrat text-4xl font-bold text-primary-accent/20 flex-shrink-0 leading-none">
-                                    {item.num}
-                                </span>
-                                <div>
-                                    <h3 className="font-montserrat text-lg font-bold text-white mb-2">
-                                        {item.title}
-                                    </h3>
-                                    <p className="text-boulder text-sm leading-relaxed">
-                                        {item.desc}
-                                    </p>
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                        {/* Why us list */}
+                        <div className="lg:col-span-7 space-y-8" data-aos="fade-right">
+                            {whyUs.map((item) => (
+                                <div key={item.num} className="flex gap-6 items-start hover:translate-x-1 transition-transform duration-300">
+                                    <span className="font-montserrat text-3xl md:text-4xl font-bold text-primary-accent/30 leading-none">
+                                        {item.num}
+                                    </span>
+                                    <div>
+                                        <h3 className="font-montserrat text-lg font-bold text-white mb-2">
+                                            {item.title}
+                                        </h3>
+                                        <p className="text-boulder text-sm leading-relaxed">
+                                            {item.desc}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
+
+                        {/* Testimonials stack */}
+                        <div className="lg:col-span-5 space-y-6" data-aos="fade-left">
+                            {testimonials.map((t, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-secondary-dark border border-white/5 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between hover:border-primary-accent/30 transition-all duration-300"
+                                    style={{ borderLeft: index === 1 ? '3px solid #e5a145' : '1px solid rgba(255,255,255,0.05)' }}
+                                >
+                                    <span className="font-serif text-primary-accent/10 text-7xl absolute -top-4 -left-2 select-none pointer-events-none">
+                                        “
+                                    </span>
+                                    <p className="text-gray-300 text-sm leading-relaxed mb-4 pt-4 italic relative z-10">
+                                        {t.text}
+                                    </p>
+                                    <div className="border-t border-white/5 pt-3 mt-auto">
+                                        <span className="text-xs uppercase tracking-wider text-primary-accent font-semibold leading-relaxed block">
+                                            {t.attr}
+                                        </span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* TESTIMONIALS */}
-            <section className="py-20">
+            {/* AREAS COVERED SECTION */}
+            <section id="areas" className="py-20 bg-secondary-dark/30 border-y border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                From our clients
+                                Coverage
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Trusted by Businesses Across Kozhikode
+                            We Serve All of <span className="italic text-primary-accent">Kozhikode</span>
                         </h2>
+                        <p className="text-boulder text-lg">
+                            Our CA services reach every corner of Kozhikode district — in person at our Mankavu office and online.
+                        </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {testimonials.map((t, index) => (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {areas.map((area, index) => (
                             <div
                                 key={index}
-                                className="bg-secondary-dark border border-white/5 rounded-2xl p-8 relative overflow-hidden flex flex-col justify-between hover:border-primary-accent/30 transition-all duration-300"
+                                className="bg-secondary-dark border border-white/5 rounded-2xl p-6 hover:border-primary-accent/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                                 data-aos="fade-up"
                                 data-aos-delay={index * 50}
                             >
-                                <span className="font-serif text-primary-accent/10 text-8xl absolute -top-4 -left-2 select-none pointer-events-none">
-                                    “
-                                </span>
-                                <p className="text-gray-300 text-sm leading-relaxed mb-6 pt-4 italic relative z-10">
-                                    {t.text}
+                                <h3 className="font-montserrat text-lg font-bold text-primary-accent mb-2">
+                                    {area.title}
+                                </h3>
+                                <p className="text-boulder text-sm leading-relaxed">
+                                    {area.desc}
                                 </p>
-                                <div className="border-t border-white/5 pt-4 mt-auto">
-                                    <span className="text-xs uppercase tracking-wider text-primary-accent font-semibold leading-relaxed block">
-                                        {t.attr}
-                                    </span>
-                                </div>
                             </div>
                         ))}
                     </div>
@@ -462,17 +652,17 @@ const KozhikodePage = () => {
             </section>
 
             {/* FAQ SECTION */}
-            <section className="py-20 bg-secondary-dark/30 border-y border-white/5">
+            <section id="faq" className="py-20">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Common questions
+                                FAQ
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Frequently Asked Questions
+                            Common Questions — <span className="italic text-primary-accent">CA Services Kozhikode</span>
                         </h2>
                     </div>
 
@@ -501,25 +691,51 @@ const KozhikodePage = () => {
                 </div>
             </section>
 
-            {/* CTA SECTION & OFFICE INFO */}
-            <section id="contact" className="py-20">
+            {/* WE COVER STRIP */}
+            <section className="py-8 bg-secondary-dark/40 border-t border-white/5">
+                <div className="container mx-auto px-5 md:px-12 lg:px-20 flex flex-col md:flex-row items-center gap-4">
+                    <span className="text-primary-accent uppercase tracking-[0.2em] text-xs font-bold whitespace-nowrap">
+                        We Cover
+                    </span>
+                    <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                        {kozhikodeAreas.map((area) => (
+                            <span
+                                key={area}
+                                className="bg-white/5 text-gray-300 text-xs px-3 py-1.5 rounded-full border border-white/5 hover:border-primary-accent/30 transition-colors cursor-default"
+                            >
+                                {area}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA SECTION & CONTACT INFO */}
+            <section id="contact" className="py-20 border-t border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                         {/* Contact details text */}
                         <div className="lg:col-span-7 flex flex-col justify-center space-y-6" data-aos="fade-right">
                             <h2 className="font-montserrat text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                                Talk to a CA in Kozhikode —<br />No Obligation
+                                Speak to a <span className="italic text-primary-accent">Chartered Accountant</span> in Kozhikode
                             </h2>
                             <p className="text-boulder text-lg max-w-xl">
-                                Most people who call us first want to understand what they're missing. We're comfortable with that conversation. If we can help, we'll tell you how. If you're better served by someone else, we'll tell you that too.
+                                Free first consultation. Bring your GST, tax, audit, or registration question — we will give you a straight answer and a clear quote, no obligations.
                             </p>
-                            <div className="pt-2">
+                            <div className="flex flex-wrap gap-4 pt-4">
                                 <a
                                     href="tel:+919561694914"
                                     className="bg-primary-accent text-dark-bg px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 inline-flex items-center gap-3 cursor-pointer"
                                 >
-                                    Book a Free Consultation
-                                    <span className="text-lg">→</span>
+                                    📞 Call Us Now
+                                </a>
+                                <a
+                                    href="https://wa.me/919446369434"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="border-2 border-primary-accent text-primary-accent bg-transparent px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 cursor-pointer text-center"
+                                >
+                                    💬 WhatsApp
                                 </a>
                             </div>
                         </div>
@@ -580,7 +796,7 @@ const KozhikodePage = () => {
                                 </div>
                             </div>
 
-                            {/* Map Embed matching standard look */}
+                            {/* Map Embed */}
                             <div className="h-64 rounded-3xl overflow-hidden shadow-2xl border border-white/5">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3077.6841848514887!2d75.8030430737993!3d11.2358719889422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6596ca4d1cb11%3A0xa76f81f9ba68fee1!2sAcharya%20professional%20accountants%20pvt%20ltd!5e1!3m2!1sen!2sin!4v1750755342483!5m2!1sen!2sin"
@@ -595,7 +811,7 @@ const KozhikodePage = () => {
                 </div>
             </section>
 
-            {/* OTHER LOCATIONS LINKS */}
+            {/* OTHER LOCATIONS */}
             <section className="py-16 border-t border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20" data-aos="fade-up">
                     <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-8 text-center">

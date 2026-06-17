@@ -280,15 +280,15 @@ const MumbaiPage = () => {
             </script>
 
             {/* HERO SECTION */}
-            <section className="container mx-auto px-5 md:px-12 lg:px-20 py-12 md:py-20 relative" data-aos="fade-up">
-                {/* Backdrop watermark text MUM */}
+            <section className="container mx-auto px-5 md:px-12 lg:px-20 py-12 md:py-20 relative animate-fade-in" data-aos="fade-up">
+                {/* Backdrop watermark text BOM */}
                 <div className="absolute top-1/2 left-4 -translate-y-1/2 font-montserrat text-[16vw] font-bold text-white/[0.01] pointer-events-none select-none z-0">
-                    MUM
+                    BOM
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch relative z-10">
                     {/* Left Info Column */}
-                    <div className="lg:col-span-8 flex flex-col justify-center space-y-6">
+                    <div className="lg:col-span-7 flex flex-col justify-center space-y-6">
                         <div className="flex items-center gap-3">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
@@ -320,26 +320,52 @@ const MumbaiPage = () => {
                                 offset={-80}
                                 className="border-2 border-primary-accent text-primary-accent bg-transparent px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 cursor-pointer text-center"
                             >
-                                Our Services
+                                View All Services
                             </Link>
+                        </div>
+
+                        <div className="flex flex-wrap gap-2 pt-6">
+                            {pills.map((pill, idx) => (
+                                <span
+                                    key={idx}
+                                    className={`text-[10px] md:text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border transition-all duration-300 ${pill.lit
+                                            ? 'border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold'
+                                            : 'border-white/5 text-boulder bg-transparent'
+                                        }`}
+                                >
+                                    {pill.text}
+                                </span>
+                            ))}
                         </div>
                     </div>
 
-                    {/* Right Mini Stats Column */}
-                    <div className="lg:col-span-4 flex flex-col justify-center gap-4 relative">
-                        {miniStats.map((stat, index) => (
-                            <div
-                                key={index}
-                                className="bg-secondary-dark border border-white/5 rounded-2xl p-5 border-l-2 border-l-primary-accent hover:border-primary-accent/30 transition-colors shadow-xl"
-                            >
-                                <span className="font-montserrat text-2xl md:text-3xl font-bold text-primary-accent block leading-none">
-                                    {stat.num}
-                                </span>
-                                <span className="text-[10px] md:text-xs text-silver-sand font-medium uppercase tracking-wider block mt-1">
-                                    {stat.label}
-                                </span>
+                    {/* Right Stats Column */}
+                    <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 md:p-10 flex flex-col justify-center relative overflow-hidden shadow-2xl">
+                        {/* Decorative background pulse */}
+                        <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_70%_20%,rgba(229,161,69,0.4),transparent_50%)]" />
+
+                        <div className="relative z-10 grid grid-cols-2 gap-y-12 md:gap-y-16 gap-x-8 md:gap-x-12">
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">1000+</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Active Clients</span>
                             </div>
-                        ))}
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">17+</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Years Active</span>
+                            </div>
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">100%</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">On-Time Filings</span>
+                            </div>
+                            <div>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">₹0</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Late Penalties</span>
+                            </div>
+                            <div className="col-span-2 border-t border-white/10 pt-6 mt-2">
+                                <span className="font-montserrat text-3xl font-bold text-primary-accent block leading-none">ICAI Registered</span>
+                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-2">Chartered Accountants</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -355,39 +381,21 @@ const MumbaiPage = () => {
                 </div>
             </div>
 
-            {/* SERVICE PILLS */}
-            <div className="flex flex-wrap gap-2.5 justify-center py-6 px-5 md:px-12 lg:px-20 border-b border-white/5 bg-secondary-dark/30">
-                {pills.map((pill, idx) => (
-                    <span
-                        key={idx}
-                        className={`text-[10px] md:text-xs tracking-wider uppercase px-4 py-1.5 rounded-full border transition-all duration-300 ${pill.lit
-                                ? 'border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold shadow-sm shadow-primary-accent/10'
-                                : 'border-white/5 text-boulder bg-transparent hover:border-white/10'
-                            }`}
-                    >
-                        {pill.text}
-                    </span>
-                ))}
-            </div>
-
             {/* ABOUT SECTION */}
-            <section id="about" className="py-20">
+            <section id="about" className="py-20 border-t border-white/5 bg-secondary-dark/10">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
-                    <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
-                        <div className="flex items-center gap-3 mb-4">
-                            <span className="w-8 h-[1px] bg-primary-accent"></span>
-                            <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Who We Are
-                            </span>
-                        </div>
-                        <h2 className="font-montserrat text-3xl md:text-4xl font-bold leading-tight">
-                            Your <span className="italic text-primary-accent">Chartered Accountant</span> in Mumbai
-                        </h2>
-                    </div>
-
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                        {/* Left description block */}
+                        {/* Left intro text */}
                         <div className="lg:col-span-7 space-y-6" data-aos="fade-right">
+                            <div className="flex items-center gap-3">
+                                <span className="w-8 h-[1px] bg-primary-accent"></span>
+                                <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
+                                    Who We Are
+                                </span>
+                            </div>
+                            <h2 className="font-montserrat text-3xl md:text-4xl font-bold leading-tight">
+                                Your <span className="italic text-primary-accent">Chartered Accountant</span> in Mumbai
+                            </h2>
                             <div className="text-boulder space-y-4 text-base md:text-lg leading-relaxed">
                                 <p>
                                     We are Acharya Professional Accountants — an ICAI-registered CA firm operating in Mumbai. We provide GST compliance, income tax filing, statutory audit, HNI wealth and tax planning, NRI tax services, bookkeeping, and company registration — handled by qualified CAs directly accountable to you.
@@ -405,28 +413,66 @@ const MumbaiPage = () => {
                                     smooth={true}
                                     duration={500}
                                     offset={-80}
-                                    className="bg-primary-accent text-dark-bg px-8 py-3.5 rounded-full font-semibold hover:-translate-y-1 transition-all duration-300 inline-flex items-center gap-2 cursor-pointer"
+                                    className="inline-flex items-center bg-primary-accent text-dark-bg px-8 py-3.5 rounded-full font-semibold hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                                 >
-                                    Talk to Our CA <span className="text-lg">→</span>
+                                    Talk to Our CA <span className="ml-2">→</span>
                                 </Link>
                             </div>
                         </div>
 
-                        {/* Right proof cards grid */}
-                        <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4" data-aos="fade-left">
-                            {proofCards.map((proof, idx) => (
-                                <div
-                                    key={idx}
-                                    className="bg-secondary-dark border border-white/5 rounded-2xl p-6 hover:border-primary-accent/30 transition-colors relative overflow-hidden group shadow-xl"
-                                >
-                                    <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary-accent to-transparent"></div>
-                                    <span className="font-montserrat text-3xl font-bold text-primary-accent block mb-2">
-                                        {proof.num}
-                                    </span>
-                                    <h4 className="text-white font-bold text-sm mb-1.5 leading-tight">{proof.title}</h4>
-                                    <p className="text-boulder text-xs leading-relaxed">{proof.desc}</p>
+                        {/* Right pillars column */}
+                        <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 space-y-6 shadow-xl" data-aos="fade-left">
+                            <h3 className="font-montserrat text-lg font-bold text-white mb-4 pb-2 border-b border-white/5">
+                                Our Track Record
+                            </h3>
+
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">
+                                    👥
                                 </div>
-                            ))}
+                                <div>
+                                    <h4 className="text-white font-bold text-sm mb-1">1000+ Mumbai Clients</h4>
+                                    <p className="text-boulder text-xs leading-relaxed">
+                                        Across BFSI, fintech, corporate offices, trading houses, HNI family offices, and professionals.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">
+                                    📅
+                                </div>
+                                <div>
+                                    <h4 className="text-white font-bold text-sm mb-1">17+ Years Active</h4>
+                                    <p className="text-boulder text-xs leading-relaxed">
+                                        Over a decade and a half of dedicated compliance experience serving Mumbai's business community.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">
+                                    ⏱️
+                                </div>
+                                <div>
+                                    <h4 className="text-white font-bold text-sm mb-1">100% On-Time Filing</h4>
+                                    <p className="text-boulder text-xs leading-relaxed">
+                                        Not a single client has ever paid a late filing penalty under our compliance management.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">
+                                    🏛️
+                                </div>
+                                <div>
+                                    <h4 className="text-white font-bold text-sm mb-1">ICAI Registered CAs</h4>
+                                    <p className="text-boulder text-xs leading-relaxed">
+                                        All compliance filings structured and reviewed directly by ICAI-registered CAs.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -460,6 +506,9 @@ const MumbaiPage = () => {
                             >
                                 <div>
                                     <div className="flex justify-between items-start mb-4">
+                                        <span className="font-montserrat text-sm font-semibold text-primary-accent/50 block">
+                                            {String(index + 1).padStart(2, '0')}
+                                        </span>
                                         <span className="text-2xl rounded-lg bg-primary-accent/5 w-10 h-10 flex items-center justify-center border border-white/5">
                                             {service.ico}
                                         </span>
@@ -472,12 +521,12 @@ const MumbaiPage = () => {
                                     </p>
                                 </div>
                                 <div className="flex flex-wrap gap-1.5 mt-auto pt-4 border-t border-white/5">
-                                    {service.chips.map((chip, idx) => (
+                                    {service.chips.map((tag, idx) => (
                                         <span
                                             key={idx}
                                             className="text-[10px] uppercase tracking-wider font-semibold text-silver-sand bg-white/5 px-2 py-1 rounded"
                                         >
-                                            {chip}
+                                            {tag}
                                         </span>
                                     ))}
                                 </div>
@@ -488,7 +537,7 @@ const MumbaiPage = () => {
             </section>
 
             {/* WHY CHOOSE US SECTION */}
-            <section id="why-us" className="py-20 bg-secondary-dark/10 border-b border-white/5">
+            <section id="why-us" className="py-20">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
                         <div className="flex items-center gap-3 mb-4">
@@ -500,75 +549,68 @@ const MumbaiPage = () => {
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
                             Why Mumbai Clients Choose <span className="italic text-primary-accent">Acharya</span>
                         </h2>
-                        <p className="text-boulder text-lg">
-                            A look at what makes our Mumbai practice different — for businesses and families with complex financial lives.
-                        </p>
                     </div>
 
-                    {/* comparison table */}
-                    <div className="overflow-x-auto rounded-2xl border border-white/5 bg-secondary-dark/40 shadow-2xl" data-aos="fade-up">
-                        <table className="w-full border-collapse">
-                            <thead>
-                                <tr className="bg-secondary-dark/80">
-                                    <th className="p-4 md:p-5 text-left text-xs uppercase tracking-wider font-semibold text-silver-sand border-b border-white/5 w-[28%]">
-                                        What Matters to You
-                                    </th>
-                                    <th className="p-4 md:p-5 text-left text-xs uppercase tracking-wider font-semibold text-primary-accent border-b border-white/5 w-[36%]">
-                                        ✦ Acharya Professional Accountants
-                                    </th>
-                                    <th className="p-4 md:p-5 text-left text-xs uppercase tracking-wider font-semibold text-silver-sand border-b border-white/5 w-[36%]">
-                                        Typical CA Firm
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {comparisonRows.map((row, idx) => (
-                                    <tr key={idx} className="border-b border-white/5 last:border-0 hover:bg-white/[0.01] transition-colors">
-                                        <td className="p-4 md:p-5 text-xs md:text-sm font-semibold text-white">
-                                            {row.metric}
-                                        </td>
-                                        <td className="p-4 md:p-5 text-xs md:text-sm text-gray-200">
-                                            {row.isBoolean ? (
-                                                <span className="text-primary-accent font-bold">{row.us}</span>
-                                            ) : row.us}
-                                        </td>
-                                        <td className="p-4 md:p-5 text-xs md:text-sm text-white/20">
-                                            {row.typical}
-                                        </td>
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                        {/* Comparison Table */}
+                        <div className="lg:col-span-7 overflow-x-auto rounded-2xl border border-white/5 bg-secondary-dark/40 shadow-2xl" data-aos="fade-right">
+                            <table className="w-full border-collapse">
+                                <thead>
+                                    <tr className="bg-secondary-dark/80">
+                                        <th className="p-4 text-left text-xs uppercase tracking-wider font-semibold text-silver-sand border-b border-white/5">
+                                            What Matters
+                                        </th>
+                                        <th className="p-4 text-left text-xs uppercase tracking-wider font-semibold text-primary-accent border-b border-white/5">
+                                            ✦ Acharya
+                                        </th>
+                                        <th className="p-4 text-left text-xs uppercase tracking-wider font-semibold text-silver-sand border-b border-white/5">
+                                            Typical CA Firm
+                                        </th>
                                     </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
+                                </thead>
+                                <tbody>
+                                    {comparisonRows.map((row, idx) => (
+                                        <tr key={idx} className="border-b border-white/5 last:border-0 hover:bg-white/[0.01] transition-colors">
+                                            <td className="p-4 text-xs font-semibold text-white">
+                                                {row.metric}
+                                            </td>
+                                            <td className="p-4 text-xs text-gray-200">
+                                                {row.us}
+                                            </td>
+                                            <td className="p-4 text-xs text-white/20">
+                                                {row.typical}
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
 
-                    {/* Testimonials grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16" data-aos="fade-up">
-                        {testimonials.map((t, index) => (
-                            <div
-                                key={index}
-                                className="bg-secondary-dark border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-primary-accent/30 transition-all duration-300"
-                            >
-                                <div>
-                                    <div className="flex justify-between items-center mb-4 border-b border-white/5 pb-3">
-                                        <span className="text-xs text-primary-accent font-semibold">{t.role}</span>
-                                        <span className="text-[9px] uppercase tracking-wider font-semibold text-primary-accent bg-primary-accent/15 px-2 py-0.5 rounded">
-                                            Verified Client
+                        {/* Testimonials stack */}
+                        <div className="lg:col-span-5 space-y-6" data-aos="fade-left">
+                            {testimonials.map((t, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-secondary-dark border border-white/5 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between hover:border-primary-accent/30 transition-all duration-300"
+                                    style={{ borderLeft: index === 1 ? '3px solid #e5a145' : '1px solid rgba(255,255,255,0.05)' }}
+                                >
+                                    <span className="font-serif text-primary-accent/10 text-7xl absolute -top-4 -left-2 select-none pointer-events-none">
+                                        “
+                                    </span>
+                                    <p className="text-gray-300 text-sm leading-relaxed mb-4 pt-4 italic relative z-10">
+                                        {t.text}
+                                    </p>
+                                    <div className="border-t border-white/5 pt-3 mt-auto">
+                                        <span className="text-xs uppercase tracking-wider text-primary-accent font-semibold leading-relaxed block">
+                                            {t.author}
+                                        </span>
+                                        <span className="text-[10px] text-boulder block">
+                                            {t.company}
                                         </span>
                                     </div>
-                                    <p className="text-gray-300 text-sm leading-relaxed mb-6 italic">
-                                        "{t.text}"
-                                    </p>
                                 </div>
-                                <div className="mt-auto pt-3 border-t border-white/5">
-                                    <span className="text-xs uppercase tracking-wider text-primary-accent font-semibold block">
-                                        {t.author}
-                                    </span>
-                                    <span className="text-[10px] text-boulder block">
-                                        {t.company}
-                                    </span>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -754,7 +796,7 @@ const MumbaiPage = () => {
                                 </div>
                             </div>
 
-                            {/* Map Embed matching standard look */}
+                            {/* Map Embed */}
                             <div className="h-64 rounded-3xl overflow-hidden shadow-2xl border border-white/5">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3077.6841848514887!2d75.8030430737993!3d11.2358719889422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6596ca4d1cb11%3A0xa76f81f9ba68fee1!2sAcharya%20professional%20accountants%20pvt%20ltd!5e1!3m2!1sen!2sin!4v1750755342483!5m2!1sen!2sin"
