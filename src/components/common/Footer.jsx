@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { locationGroups } from '../../data/locationData';
 import {
   IconChevronRight,
@@ -14,6 +14,7 @@ import {
 } from './Icons';
 
 const Footer = () => {
+  const location = useLocation();
   const [isSubscribed, setIsSubscribed] = useState(false);
 
   const handleSubscribe = (e) => {
