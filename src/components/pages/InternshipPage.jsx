@@ -40,6 +40,66 @@ const InternshipPage = () => {
             </section>
 
             {/* =========================
+          FYUGP Internship Stats
+      ========================== */}
+            <section
+                className="py-16 bg-secondary-dark/30 border-y border-white/5 mb-16"
+                data-aos="fade-up"
+                data-aos-delay="50"
+            >
+                <div className="container mx-auto px-5 md:px-12 lg:px-20">
+                    <div className="bg-secondary-dark border border-primary-accent/15 rounded-3xl p-8 md:p-10 text-center relative overflow-hidden shadow-2xl mb-12">
+                        <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_70%_20%,rgba(229,161,69,0.3),transparent_50%)]"></div>
+                        <span className="text-primary-accent uppercase tracking-[0.2em] text-xs font-semibold block mb-2">
+                            Trusted by Students Across Kerala
+                        </span>
+                        <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">
+                            1,800+ Students
+                        </span>
+                        <span className="text-white text-lg md:text-xl font-semibold mt-3 block">
+                            Successfully Completed Their FYUGP Internship (2025–26)
+                        </span>
+                        <div className="w-16 h-[2px] bg-primary-accent my-4 mx-auto"></div>
+                        <p className="text-boulder text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+                            Acharya Professional Accountants is proud to have successfully guided and trained more than 1,800+ students through their FYUGP (Four-Year Undergraduate Programme) Internship during the academic year 2025–26.
+                        </p>
+                    </div>
+
+                    <div className="mb-12">
+                        <h3 className="font-montserrat text-xl md:text-2xl font-bold text-white mb-6 text-center lg:text-left">
+                            Through our structured internship programs, students gained practical exposure in:
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div className="bg-secondary-dark border border-white/5 rounded-full px-6 py-3.5 flex items-center gap-3 text-white text-sm">
+                                <span className="w-6 h-6 rounded-full bg-primary-accent/20 flex items-center justify-center text-primary-accent text-xs flex-shrink-0">✓</span>
+                                <span>Accounting and Bookkeeping</span>
+                            </div>
+                            <div className="bg-secondary-dark border border-white/5 rounded-full px-6 py-3.5 flex items-center gap-3 text-white text-sm">
+                                <span className="w-6 h-6 rounded-full bg-primary-accent/20 flex items-center justify-center text-primary-accent text-xs flex-shrink-0">✓</span>
+                                <span>GST and Taxation Basics</span>
+                            </div>
+                            <div className="bg-secondary-dark border border-white/5 rounded-full px-6 py-3.5 flex items-center gap-3 text-white text-sm">
+                                <span className="w-6 h-6 rounded-full bg-primary-accent/20 flex items-center justify-center text-primary-accent text-xs flex-shrink-0">✓</span>
+                                <span>Finance and Business Operations</span>
+                            </div>
+                            <div className="bg-secondary-dark border border-white/5 rounded-full px-6 py-3.5 flex items-center gap-3 text-white text-sm">
+                                <span className="w-6 h-6 rounded-full bg-primary-accent/20 flex items-center justify-center text-primary-accent text-xs flex-shrink-0">✓</span>
+                                <span>Audit Support Activities</span>
+                            </div>
+                            <div className="bg-secondary-dark border border-white/5 rounded-full px-6 py-3.5 flex items-center gap-3 text-white text-sm">
+                                <span className="w-6 h-6 rounded-full bg-primary-accent/20 flex items-center justify-center text-primary-accent text-xs flex-shrink-0">✓</span>
+                                <span>Professional Documentation</span>
+                            </div>
+                            <div className="bg-secondary-dark border border-white/5 rounded-full px-6 py-3.5 flex items-center gap-3 text-white text-sm">
+                                <span className="w-6 h-6 rounded-full bg-primary-accent/20 flex items-center justify-center text-primary-accent text-xs flex-shrink-0">✓</span>
+                                <span>Workplace Ethics and Compliance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* =========================
           Internship Section (Degree/PG)
       ========================== */}
             <section
