@@ -5,6 +5,7 @@ import SEO from '../common/SEO';
 import Hero from '../sections/Hero';
 import About from '../sections/About';
 import Services from '../sections/Services';
+import TopCities from '../sections/TopCities';
 import TaxCalculatorTeaser from '../sections/TaxCalculatorTeaser';
 import CoursesTeaser from '../sections/CoursesTeaser';
 import CareersTeaser from '../sections/CareersTeaser';
@@ -33,6 +34,7 @@ const Home = () => {
       <Hero />
       <About />
       <Services />
+      <TopCities />
       <TaxCalculatorTeaser />
       <CoursesTeaser />
       <CareersTeaser />
