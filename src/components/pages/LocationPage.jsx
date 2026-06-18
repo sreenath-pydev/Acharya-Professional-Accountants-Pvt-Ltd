@@ -4,6 +4,7 @@ import SEO from '../common/SEO';
 import { Link, useParams } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import { locationGroups, cityContent } from '../../data/locationData';
+import AnimatedCounter from '../common/AnimatedCounter';
 import {
     IconCheck,
     IconPhone,
@@ -172,19 +173,19 @@ const LocationPage = ({ citySlugOverride }) => {
                         <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_70%_20%,rgba(229,161,69,0.4),transparent_50%)]" />
                         <div className="relative z-10 grid grid-cols-2 gap-y-12 md:gap-y-16 gap-x-8 md:gap-x-12">
                             <div>
-                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">500+</span>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none"><AnimatedCounter value={500} suffix="+" /></span>
                                 <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Active Clients</span>
                             </div>
                             <div>
-                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">10+</span>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none"><AnimatedCounter value={10} suffix="+" /></span>
                                 <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Years in {cityData.name}</span>
                             </div>
                             <div>
-                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">100%</span>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none"><AnimatedCounter value={100} suffix="%" /></span>
                                 <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">On-Time Filing</span>
                             </div>
                             <div>
-                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">₹0</span>
+                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none"><AnimatedCounter value={0} prefix="₹" /></span>
                                 <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Penalty Record</span>
                             </div>
                             <div className="col-span-2 border-t border-white/10 pt-6 mt-2">
