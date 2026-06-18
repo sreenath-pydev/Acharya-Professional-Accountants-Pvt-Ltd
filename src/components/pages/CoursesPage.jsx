@@ -109,7 +109,7 @@ const CoursesPage = () => {
     'TDS Filing',
     'GCC VAT',
     'Practical Accounting Exposure',
-    '2 Months Internship',
+    '1 Months Internship',
     'Industry Recognized Certificates'
   ];
 
@@ -167,7 +167,7 @@ const CoursesPage = () => {
               </div>
               <div>
                 <p className="text-xs text-boulder uppercase">Internship</p>
-                <p className="font-bold text-sm">2 Months FREE Internship</p>
+                <p className="font-bold text-sm">1 Months FREE Internship</p>
               </div>
             </div>
 
@@ -177,7 +177,7 @@ const CoursesPage = () => {
               </div>
               <div>
                 <p className="text-xs text-boulder uppercase">Total Exposure</p>
-                <p className="font-bold text-sm">6 Months Total Exposure</p>
+                <p className="font-bold text-sm">5 Months Total Exposure</p>
               </div>
             </div>
           </div>
@@ -223,7 +223,7 @@ const CoursesPage = () => {
             <div className="text-primary-accent text-2xl">
               <FaBriefcase />
             </div>
-            <h4 className="text-white font-bold text-lg">2-Month Internship Certificate</h4>
+            <h4 className="text-white font-bold text-lg">1-Month Internship Certificate</h4>
             <p className="text-boulder text-sm">Issued upon completion of practical office internship at Acharya Professional Accountants.</p>
           </div>
 
@@ -231,7 +231,7 @@ const CoursesPage = () => {
             <div className="text-primary-accent text-2xl">
               <FaFileSignature />
             </div>
-            <h4 className="text-white font-bold text-lg">6-Month Experience Certificate</h4>
+            <h4 className="text-white font-bold text-lg">5-Month Experience Certificate</h4>
             <p className="text-boulder text-sm">In Audit & Taxation representing your combined training and internship workflows.</p>
           </div>
         </div>
