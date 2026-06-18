@@ -31,9 +31,7 @@ const MCAServiceDetailPage = lazy(() => import('./components/pages/MCAServiceDet
 const LoanSupportPage = lazy(() => import('./components/pages/LoanSupportPage'));
 const LoanDetailPage = lazy(() => import('./components/pages/LoanDetailPage'));
 const CoursesPage = lazy(() => import('./components/pages/CoursesPage'));
-const CourseGlobalProPage = lazy(() => import('./components/pages/CourseGlobalProPage'));
-const CourseCProPage = lazy(() => import('./components/pages/CourseCProPage'));
-const CourseCPATPage = lazy(() => import('./components/pages/CourseCPATPage'));
+
 const CareersPage = lazy(() => import('./components/pages/CareersPage'));
 const InternshipPage = lazy(() => import('./components/pages/InternshipPage'));
 const ContactPage = lazy(() => import('./components/pages/ContactPage'));
@@ -73,9 +71,9 @@ function App() {
             <Route path="/services/business-loans" element={<LoanSupportPage />} />
             <Route path="/services/business-loans/:loanSlug" element={<LoanDetailPage />} />
             <Route path="/courses" element={<CoursesPage />} />
-            <Route path="/courses/globalpro" element={<CourseGlobalProPage />} />
-            <Route path="/courses/c-pro" element={<CourseCProPage />} />
-            <Route path="/courses/c-pat" element={<CourseCPATPage />} />
+            <Route path="/courses/globalpro" element={<Navigate to="/courses" replace />} />
+            <Route path="/courses/c-pro" element={<Navigate to="/courses" replace />} />
+            <Route path="/courses/c-pat" element={<Navigate to="/courses" replace />} />
             <Route path="/careers" element={<CareersPage />} />
             <Route path="/Internship" element={<InternshipPage />} />
             <Route path="/contact" element={<ContactPage />} />
