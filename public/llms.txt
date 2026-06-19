@@ -1,0 +1,25 @@
+# Acharya Professional Accountants
+
+> Acharya Professional Accountants Pvt Ltd is a premium accounting and financial consultancy firm based in Mankave, Kozhikode, Kerala.
+
+## Services
+
+- [Accounting Services](https://www.acharyaprofessionalaccountants.in/services/accounting) - Expert bookkeeping, accounts management, and outsourced accounting.
+- [Taxation Services](https://www.acharyaprofessionalaccountants.in/services/taxation) - Direct and indirect tax planning, return filing, and corporate advisory.
+- [Auditing Services](https://www.acharyaprofessionalaccountants.in/services/auditing) - Internal, statutory, and compliance audits for companies.
+- [GST Services](https://www.acharyaprofessionalaccountants.in/services/gst) - Goods and Services Tax registration, compliance, and filing.
+- [Business Consulting](https://www.acharyaprofessionalaccountants.in/services/business-consulting) - Professional consultancy for startup formulation and company registration.
+- [Financial Advisory](https://www.acharyaprofessionalaccountants.in/services/advisory) - Financial management advisory and investment support.
+- [Business Loans](https://www.acharyaprofessionalaccountants.in/services/business-loans) - Support for raising corporate debt, preparing project reports, and financial liaison.
+
+## Education & Training
+
+- [Courses](https://www.acharyaprofessionalaccountants.in/courses) - Professional courses in practical accounting (CPAT, SAP, Tally Prime, GST, Corporate Accounting).
+- [Internship](https://www.acharyaprofessionalaccountants.in/Internship) - Hands-on corporate internships for accounting aspirants.
+
+## Company Info & Tools
+
+- [About Us](https://www.acharyaprofessionalaccountants.in/about) - Learn about our mission, vision, history, and founder Sreehari C.
+- [Careers](https://www.acharyaprofessionalaccountants.in/careers) - Work with us as an accountant or trainer.
+- [Tax Calculator](https://www.acharyaprofessionalaccountants.in/calculator) - Online utility to calculate income tax on individual or business income.
+- [Contact Us](https://www.acharyaprofessionalaccountants.in/contact) - Contact address, telephone numbers, emails, and enquiry form.

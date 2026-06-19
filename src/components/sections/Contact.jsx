@@ -161,16 +161,17 @@ const Contact = () => {
               <h3 className="text-white text-xl mb-5">Connect With Us</h3>
               <div className="flex gap-4">
                 {[
-                  { icon: 'fa-linkedin-in', url: 'https://www.linkedin.com/company/acharyaprofessionalaccountants/posts/?feedView=all' },
-                  ///{ icon: 'twitter', url: '#' },
-                  { icon: 'fa-facebook-f', url: 'https://www.facebook.com/APAinCLT' },
-                  { icon: 'fa-instagram', url: 'https://www.instagram.com/acharya_professional_accounts?utm_source=ig_web_button_share_sheet&igsh=MTJhMXk5YzNxYnUxZQ==' }
+                  { icon: 'fa-linkedin-in', url: 'https://www.linkedin.com/company/acharyaprofessionalaccountants/posts/?feedView=all', label: 'LinkedIn' },
+                  ///{ icon: 'twitter', url: '#', label: 'Twitter' },
+                  { icon: 'fa-facebook-f', url: 'https://www.facebook.com/APAinCLT', label: 'Facebook' },
+                  { icon: 'fa-instagram', url: 'https://www.instagram.com/acharya_professional_accounts?utm_source=ig_web_button_share_sheet&igsh=MTJhMXk5YzNxYnUxZQ==', label: 'Instagram' }
                 ].map((social, index) => (
                   <a
                     key={index}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={social.label}
                     className="w-12 h-12 bg-dark-bg rounded-full flex items-center justify-center text-primary-accent text-lg hover:bg-primary-accent hover:text-dark-bg hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300"
                   >
                     <DynamicFaIcon name={social.icon} />
