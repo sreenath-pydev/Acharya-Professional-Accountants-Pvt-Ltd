@@ -5,30 +5,47 @@ const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
   const { pathname, hash } = useLocation();
 
-  // Handle scroll visibility for the button
+  // Handle scroll visibility for the button using high-performance IntersectionObserver sentinel
   useEffect(() => {
-    let ticking = false;
-    const toggleVisibility = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          setIsVisible(window.scrollY > 300);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
+    let sentinel = document.getElementById('scroll-sentinel');
+    if (!sentinel) {
+      sentinel = document.createElement('div');
+      sentinel.id = 'scroll-sentinel';
+      sentinel.style.position = 'absolute';
+      sentinel.style.top = '0px';
+      sentinel.style.left = '0px';
+      sentinel.style.height = '1px';
+      sentinel.style.width = '1px';
+      sentinel.style.pointerEvents = 'none';
+      sentinel.style.opacity = '0';
+      document.body.prepend(sentinel);
+    }
 
-    window.addEventListener('scroll', toggleVisibility, { passive: true });
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // If the sentinel is intersecting, we are at the top (< 300px scroll), so hide button
+        setIsVisible(!entry.isIntersecting);
+      },
+      {
+        root: null, // viewport
+        rootMargin: '300px 0px 0px 0px', // trigger visibility after scrolling 300px
+      }
+    );
+
+    observer.observe(sentinel);
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   // Handle automatic scrolling on route changes
   useEffect(() => {
-    // If no hash, scroll to top
+    // If no hash, scroll to top instantly (better UX and avoids forced reflow)
     if (!hash) {
       window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: 'auto'
       });
     }
     // If hash exists, scroll to element after short delay
@@ -46,7 +63,8 @@ const ScrollToTop = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
+      _isScrollToTopButton: true
     });
   };
 
