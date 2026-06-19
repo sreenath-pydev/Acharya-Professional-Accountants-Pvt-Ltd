@@ -1,30 +1,9 @@
-import { useEffect } from 'react';
 import { Link } from 'react-scroll';
 
 const Hero = () => {
   const backgroundImage = '/images/banner2_desktop.webp';
 
-  useEffect(() => {
-    // #region agent log
-    fetch('http://127.0.0.1:7242/ingest/b3b42c29-c332-42fc-91c6-eaf1da4ef6ad', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        sessionId: 'debug-session',
-        runId: 'run1',
-        hypothesisId: 'H1',
-        location: 'Hero.jsx:useEffect',
-        message: 'Hero background configuration',
-        data: {
-          backgroundImage,
-          isVideo: backgroundImage.includes('.mp4'),
-          isWebp: backgroundImage.includes('.webp') || backgroundImage.includes('.png')
-        },
-        timestamp: Date.now()
-      })
-    }).catch(() => { });
-    // #endregion
-  }, [backgroundImage]);
+
 
   return (
     <>

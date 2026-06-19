@@ -6,8 +6,9 @@ import ScrollToTop from './components/common/ScrollToTop';
 import LoadingSpinner from './components/common/LoadingSpinner';
 import AnalyticsTracker from './components/common/AnalyticsTracker';
 
+import Home from './components/pages/Home';
+
 // Lazy loaded pages
-const Home = lazy(() => import('./components/pages/Home'));
 const AboutPage = lazy(() => import('./components/pages/AboutPage'));
 const ServicesPage = lazy(() => import('./components/pages/ServicesPage'));
 const ServiceAccountingPage = lazy(() => import('./components/pages/ServiceAccountingPage'));
