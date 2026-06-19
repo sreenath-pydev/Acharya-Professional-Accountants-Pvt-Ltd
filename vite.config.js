@@ -7,6 +7,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://vite.dev/config/
 export default defineConfig({
+  esbuild: {
+    pure: ['console.log', 'console.info', 'console.debug', 'console.trace'],
+  },
   resolve: {
     alias: [
       { find: /^aos$/, replacement: path.resolve(__dirname, './src/utils/aosObserver.js') }
