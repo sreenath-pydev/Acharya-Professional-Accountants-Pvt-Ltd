@@ -100,6 +100,7 @@ const CoursesPage = () => {
   ];
 
   const features = [
+    '100% Offline Classroom Training',
     'Real Company Data Training',
     'Live GST Filing',
     'Tally Prime Training',
@@ -135,8 +136,11 @@ const CoursesPage = () => {
             <FaStar className="text-xs" /> FLAGSHIP PROGRAM
           </span>
 
-          <h1 className="font-montserrat text-3xl md:text-5xl lg:text-6xl font-bold mt-6 mb-4 leading-tight">
-            C-PAT – Certified Professional Accounting Training
+          <h1 className="font-montserrat text-3xl md:text-5xl lg:text-6xl font-bold mt-6 mb-4 leading-tight flex flex-wrap items-center gap-3 md:gap-4">
+            <span>C-PAT – Certified Professional Accounting Training</span>
+            <span className="inline-flex items-center bg-primary-accent/5 border border-primary-accent text-primary-accent text-xs md:text-sm font-extrabold px-3.5 py-1 rounded-full uppercase tracking-wider whitespace-nowrap shadow-[0_0_10px_rgba(229,161,69,0.1)]">
+              100% Offline Classroom Training
+            </span>
           </h1>
 
           <p className="text-lg md:text-xl text-boulder max-w-3xl leading-relaxed mb-8">
