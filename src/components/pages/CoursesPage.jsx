@@ -139,7 +139,7 @@ const CoursesPage = () => {
           <h1 className="font-montserrat text-3xl md:text-5xl lg:text-6xl font-bold mt-6 mb-4 leading-tight flex flex-wrap items-center gap-3 md:gap-4">
             <span>C-PAT – Certified Professional Accounting Training</span>
             <span className="inline-flex items-center bg-primary-accent/5 border border-primary-accent text-primary-accent text-xs md:text-sm font-extrabold px-3.5 py-1 rounded-full uppercase tracking-wider whitespace-nowrap shadow-[0_0_10px_rgba(229,161,69,0.1)]">
-              100% Offline Classroom Training
+              📍 100% OFFLINE CLASSROOM TRAINING – KOZHIKODE
             </span>
           </h1>
 
@@ -154,7 +154,7 @@ const CoursesPage = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 max-w-4xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 max-w-4xl">
             <div className="bg-secondary-dark/50 border border-white/5 rounded-xl p-4 flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent flex-shrink-0">
                 <FaClock />
@@ -184,25 +184,40 @@ const CoursesPage = () => {
                 <p className="font-bold text-sm">5 Months Total Exposure</p>
               </div>
             </div>
+
+            <div className="bg-secondary-dark/50 border border-white/5 rounded-xl p-4 flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent flex-shrink-0 text-lg">
+                📍
+              </div>
+              <div>
+                <p className="text-xs text-boulder uppercase">Location</p>
+                <p className="font-bold text-sm">Kozhikode (Palace Road)</p>
+              </div>
+            </div>
           </div>
 
-          <div className="flex flex-wrap gap-4 items-center">
-            <a
-              href="https://wa.me/919562069434?text=Hi%20Acharya,%20I%20am%20interested%20in%20enrolling%20in%20the%20C-PAT%20course."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex justify-center items-center gap-2 bg-primary-accent text-dark-bg font-bold px-8 py-4 rounded-full hover:bg-korma transition-all duration-300 shadow-lg shadow-primary-accent/25"
-            >
-              <span>Enroll Now</span>
-              <FaArrowRight />
-            </a>
+          <div className="flex flex-col gap-3">
+            <div className="flex flex-wrap gap-4 items-center">
+              <a
+                href="https://wa.me/919562069434?text=Hi%20Acharya,%20I%20am%20interested%20in%20enrolling%20in%20the%20C-PAT%20course."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex justify-center items-center gap-2 bg-primary-accent text-dark-bg font-bold px-8 py-4 rounded-full hover:bg-korma transition-all duration-300 shadow-lg shadow-primary-accent/25"
+              >
+                <span>Enroll Now</span>
+                <FaArrowRight />
+              </a>
 
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="inline-flex justify-center items-center border border-white/20 bg-white/5 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/10 hover:border-white/40 transition-all duration-300"
-            >
-              Download Syllabus
-            </button>
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="inline-flex justify-center items-center border border-white/20 bg-white/5 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+              >
+                Download Syllabus
+              </button>
+            </div>
+            <p className="text-xs md:text-sm text-boulder italic mt-1">
+              Classroom located at Palace Road, Mankave, Kozhikode
+            </p>
           </div>
         </div>
       </section>
@@ -348,6 +363,83 @@ const CoursesPage = () => {
             <span>Enroll Today</span>
             <FaArrowRight />
           </a>
+        </div>
+      </section>
+
+      {/* ===== CONTACT INFO & GOOGLE MAP ===== */}
+      <section className="container mx-auto px-4 md:px-20 mb-16" data-aos="fade-up">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          {/* Contact Info Block */}
+          <div className="lg:col-span-6 bg-secondary-dark border border-white/5 rounded-3xl p-8 space-y-6 shadow-2xl">
+            <h3 className="font-montserrat text-2xl font-bold mb-4 relative inline-block text-white">
+              Contact Info
+              <span className="absolute left-0 bottom-[-8px] w-12 h-[3px] bg-primary-accent"></span>
+            </h3>
+            
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent flex-shrink-0 text-lg">
+                  📍
+                </div>
+                <div>
+                  <h4 className="text-xs uppercase tracking-wider text-primary-accent font-bold mb-1">Office Address</h4>
+                  <p className="text-gray-200 text-sm leading-relaxed">
+                    1st Floor, Palace Arcade, Palace Road, Mankave, Kozhikode, Kerala 673007
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent flex-shrink-0">
+                  <FaPhoneAlt className="text-sm" />
+                </div>
+                <div>
+                  <h4 className="text-xs uppercase tracking-wider text-primary-accent font-bold mb-1">Phone</h4>
+                  <p className="text-gray-200 text-sm leading-relaxed">
+                    <a href="tel:+919562069434" className="hover:text-primary-accent transition-colors">+91 9562 06 9434</a><br />
+                    <a href="tel:+917025546914" className="hover:text-primary-accent transition-colors">+91 7025 54 6914</a><br />
+                    <a href="tel:+919072118877" className="hover:text-primary-accent transition-colors">+91 9072 11 8877</a>
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent flex-shrink-0 text-lg">
+                  ✉️
+                </div>
+                <div>
+                  <h4 className="text-xs uppercase tracking-wider text-primary-accent font-bold mb-1">Email</h4>
+                  <p className="text-gray-200 text-sm leading-relaxed">
+                    <a href="mailto:acharya.apa@gmail.com" className="hover:text-primary-accent transition-colors">acharya.apa@gmail.com</a><br />
+                    <a href="mailto:apa@acharya-professional-accountants.in" className="hover:text-primary-accent transition-colors">apa@acharya-professional-accountants.in</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Google Map Section */}
+          <div className="lg:col-span-6 bg-secondary-dark border border-white/5 rounded-3xl p-8 flex flex-col justify-between h-full min-h-[320px] shadow-2xl">
+            <div className="flex-grow rounded-2xl overflow-hidden shadow-xl border border-white/5 h-64 relative">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3077.6841848514887!2d75.8030430737993!3d11.2358719889422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6596ca4d1cb11%3A0xa76f81f9ba68fee1!2sAcharya%20professional%20accountants%20pvt%20ltd!5e1!3m2!1sen!2sin!4v1750755342483!5m2!1sen!2sin"
+                className="w-full h-full border-0 filter grayscale-30 contrast-110"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div className="text-right mt-4">
+              <a
+                href="https://www.google.com/maps/dir//Acharya+professional+accountants+pvt+ltd,+1st+Floor,+Palace+Arcade,+Palace+Road,+Mankave,+Kozhikode,+Kerala+673007/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-accent hover:underline text-sm inline-flex items-center gap-1.5 font-bold"
+              >
+                📍 Get Directions <FaArrowRight className="text-xs" />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
