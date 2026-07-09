@@ -3,26 +3,158 @@ import React from 'react';
 
 export const auditingServices = {
     'statutory-audit': {
-        title: 'Statutory Audit',
-        seoTitle: 'Statutory Audit Services in Kerala',
-        seoDescription: 'Expert statutory audit services ensuring compliance with the Companies Act, 2013 and accounting standards (Ind AS / IFRS).',
-        keywords: 'statutory audit, company audit, financial statement audit, audit firm kerala, acharya auditing',
-        icon: 'fa-balance-scale',
+        title: 'Statutory Audit Services',
+        seoTitle: 'Statutory Audit Services | Acharya Professional Accountants',
+        seoDescription: 'Independent statutory audit services ensuring Companies Act 2013 compliance, accounting standards (AS/Ind AS) alignment, and stakeholder financial assurance.',
+        keywords: 'statutory audit, company audit compliance, companies act 2013 audit, financial statement transparency, independent assurance',
+        icon: 'fa-scale-balanced',
         content: (
             <>
-                <p className="mb-4">
-                    Statutory audits are not just a compliance requirement but a critical examination of your financial health. At Acharya Professional Accountants, we conduct rigorous statutory audits for private limited companies, public companies, and LLPs in accordance with the Companies Act, 2013, and applicable accounting standards (AS/Ind AS).
+                <p className="mb-6">
+                    Independent assurance, regulatory compliance, and stakeholder confidence —
+                    delivered with precision and integrity for Private Limited Companies,
+                    Public Limited Companies, LLPs, startups, and growing businesses.
                 </p>
-                <h3 className="text-xl font-bold text-white mb-3">Our Statutory Audit Process</h3>
-                <ul className="list-disc list-inside space-y-2 mb-6 ml-4">
-                    <li><strong>Planning & Risk Assessment:</strong> Understanding your business environment and identifying key risk areas.</li>
-                    <li><strong>Internal Control Testing:</strong> Evaluating the effectiveness of your internal financial controls.</li>
-                    <li><strong>Substantive Testing:</strong> Verifying balances, transactions, and disclosures in the financial statements.</li>
-                    <li><strong>Reporting:</strong> Issuing an independent auditor's report that adds credibility to your financial statements.</li>
-                </ul>
-                <p>
-                    We ensure that your financial statements present a true and fair view of your business affairs, providing assurance to shareholders, regulators, lenders, and other stakeholders.
-                </p>
+
+                {/* Why Statutory Audit Matters */}
+                <div className="mb-10">
+                    <h3 className="text-2xl font-bold text-white mb-6">Why Statutory Audit Matters</h3>
+                    <p className="mb-6 text-boulder text-base">
+                        A statutory audit is more than a compliance requirement — it is an essential
+                        tool for strengthening financial accountability and business credibility.
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Regulatory Compliance</h4>
+                            <p className="text-sm text-boulder">Ensure adherence to the Companies Act, 2013, applicable accounting standards, and statutory reporting requirements.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Enhanced Financial Transparency</h4>
+                            <p className="text-sm text-boulder">Improve the accuracy and reliability of financial information shared with shareholders, regulators, lenders, and investors.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Increased Investor Confidence</h4>
+                            <p className="text-sm text-boulder">Demonstrate a commitment to transparent financial reporting and responsible corporate governance.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Better Corporate Governance</h4>
+                            <p className="text-sm text-boulder">Strengthen oversight, accountability, and decision-making processes across the organization.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Improved Internal Controls</h4>
+                            <p className="text-sm text-boulder">Identify weaknesses in financial processes and recommend practical improvements to reduce operational and financial risks.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Reduced Risk of Financial Misstatements</h4>
+                            <p className="text-sm text-boulder">Detect material errors, omissions, or inconsistencies that may impact the integrity of financial statements.</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Audit Process */}
+                <div className="mb-10">
+                    <h3 className="text-2xl font-bold text-white mb-6">Our Statutory Audit Process</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">1</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Planning &amp; Risk Assessment</h5>
+                                <p className="text-xs text-boulder">Understanding your business, industry risks, and regulatory obligations to develop a customized audit strategy.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">2</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Evaluation of Internal Controls</h5>
+                                <p className="text-xs text-boulder">Assessing the design and effectiveness of your internal control framework to identify weaknesses and gaps.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">3</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Substantive Audit Procedures</h5>
+                                <p className="text-xs text-boulder">Detailed testing of transactions, account balances, and documentation to obtain sufficient audit evidence.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">4</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Financial Statement Review</h5>
+                                <p className="text-xs text-boulder">Ensuring compliance with AS, Ind AS, disclosure requirements, and consistency of accounting policies.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">5</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Independent Audit Reporting</h5>
+                                <p className="text-xs text-boulder">Issuing a professional auditor's report with our opinion, key findings, and recommendations for improvement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Why Choose Us */}
+                <div className="mb-10">
+                    <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Experienced Audit Professionals</h5>
+                            <p className="text-xs text-boulder">Qualified experts with extensive experience across diverse industries.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Industry-Specific Expertise</h5>
+                            <p className="text-xs text-boulder">Deep knowledge of sector-specific accounting, compliance, and reporting.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Risk-Based Audit Methodology</h5>
+                            <p className="text-xs text-boulder">Focused audit procedures that enhance effectiveness and efficiency.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Timely Completion</h5>
+                            <p className="text-xs text-boulder">Well-planned engagements that minimize disruptions to your business.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Strong Compliance Focus</h5>
+                            <p className="text-xs text-boulder">Commitment to meeting all statutory and regulatory obligations.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Confidentiality &amp; Integrity</h5>
+                            <p className="text-xs text-boulder">Highest standards of professional ethics, independence, and data security.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Personalized Client Support</h5>
+                            <p className="text-xs text-boulder">Responsive communication and practical guidance throughout the audit process.</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Industries We Serve */}
+                <div className="mb-10 bg-secondary-dark/30 border border-white/5 rounded-2xl p-6 text-center">
+                    <h3 className="text-xl font-bold text-white mb-4">Industries We Serve</h3>
+                    <div className="flex flex-wrap gap-2 justify-center">
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Manufacturing</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Trading &amp; Distribution</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Information Technology</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Healthcare &amp; Medical Services</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Construction &amp; Infrastructure</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Professional Services</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">E-commerce Businesses</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Startups &amp; Emerging Enterprises</span>
+                    </div>
+                </div>
+
+                {/* Partner Benefits */}
+                <div className="mb-10">
+                    <h3 className="text-xl font-bold text-white mb-4">Benefits of Working With Us</h3>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 list-none pl-0">
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> True &amp; fair financial reporting</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Improved statutory compliance</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Stronger corporate governance</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Enhanced stakeholder confidence</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Professional audit support &amp; guidance</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Actionable business insights</li>
+                    </ul>
+                </div>
             </>
         )
     },
