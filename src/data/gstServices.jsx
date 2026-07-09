@@ -104,16 +104,288 @@ export const gstServices = {
     // 2. RETURN FILING & COMPLIANCE (Hub)
     // ==========================================
     'return-filing-compliance': {
-        title: 'GST Return Filing & Periodic Compliance',
-        seoTitle: 'Monthly GST Return Filing & GSTR-9 Annual Return Services',
-        seoDescription: 'Expert filing of GSTR-1, GSTR-3B, Nil Returns, and Annual Returns (GSTR-9/9C). Accurate, timely, and notice-free compliance.',
-        keywords: 'gst return filing, gstr 1, gstr 3b, gstr 9 annual return, gstr 9c audit, nil gst return',
+        title: 'GST Audit & Compliance Review Services',
+        seoTitle: 'GST Audit & Compliance Review Services | Acharya',
+        seoDescription: 'Proactive GST compliance is no longer optional — it is a business imperative. Our independent GST audits and compliance reviews help you stay ahead of risks, protect ITC, and avoid interest and penalties.',
+        keywords: 'gst audit, gst compliance review, input tax credit verification, gst health check, gst reconciliation, books vs gst returns',
         icon: 'fa-calendar-check',
         content: (
             <>
-                <p className="mb-4">
-                    Timely filing is the heart of GST compliance. Delays lead to late fees, interest, and credit blockage for your customers. We ensure your returns are filed accurately and on time.
+                <p className="mb-6">
+                    Proactive GST compliance is no longer optional — it is a business imperative. Errors in
+                    GST returns, Input Tax Credit claims, invoicing, e-way bills, and reconciliations can
+                    trigger tax demands, penalties, notices, and business disruptions. Our independent
+                    GST audits and compliance reviews help you stay ahead of risks.
                 </p>
+
+                {/* About Section */}
+                <div className="bg-secondary-dark/50 border border-primary-accent/10 rounded-2xl p-6 mb-8">
+                    <h3 className="text-xl font-bold text-white mb-4">Comprehensive GST Audit &amp; Compliance Review</h3>
+                    <p className="mb-4 text-boulder text-base">
+                        Acharya Professional Accountants provides comprehensive GST Audit and Compliance Review
+                        Services designed to help businesses evaluate, monitor, and improve their GST compliance
+                        posture. Our independent reviews go beyond statutory requirements — we identify hidden
+                        risks, optimize Input Tax Credit, and strengthen internal controls to reduce future tax
+                        exposure.
+                    </p>
+                    <p className="font-semibold text-white mb-3 text-base">Our service offerings include:</p>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 list-none mb-4 pl-0">
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> GST Compliance Review
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> GST Health Check
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> GST Reconciliation Review
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> Input Tax Credit Verification
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> GST Risk Assessment
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> GST Return Review
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> GST Advisory Support
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> Department Notice Assistance
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> GST Process Improvement
+                        </li>
+                    </ul>
+                    <p className="text-boulder text-base">
+                        Our team of GST specialists combines deep technical expertise with practical business
+                        understanding to deliver actionable recommendations that improve compliance, reduce
+                        risks, and enhance overall tax efficiency.
+                    </p>
+                </div>
+
+                {/* Business Value Cards */}
+                <div className="mb-10">
+                    <h3 className="text-2xl font-bold text-white mb-6">How GST Audit Helps Your Business</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Reduce GST Risks</h4>
+                            <p className="text-sm text-boulder">Identify compliance gaps, mismatches, and reporting errors before they escalate into tax disputes, demands, or penalties.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Protect Input Tax Credit (ITC)</h4>
+                            <p className="text-sm text-boulder">Ensure eligible credits are claimed correctly, prevent ITC losses, and optimize your tax position through thorough verification.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Avoid Interest and Penalties</h4>
+                            <p className="text-sm text-boulder">Detect reporting errors, late filings, and classification issues early to minimize exposure to interest, penalties, and regulatory actions.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Improve Cash Flow Management</h4>
+                            <p className="text-sm text-boulder">Optimize GST processes, improve tax planning, and ensure timely refunds and credits to support working capital efficiency.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Strengthen Internal Controls</h4>
+                            <p className="text-sm text-boulder">Enhance invoicing, reconciliations, documentation, and reporting procedures to build a robust compliance framework.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Increase Compliance Confidence</h4>
+                            <p className="text-sm text-boulder">Be prepared for departmental scrutiny, audits, and investigations with well-documented records and clear compliance positions.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Improve Decision Making</h4>
+                            <p className="text-sm text-boulder">Provide management with accurate GST-related information and insights for strategic planning and business growth.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Build Business Credibility</h4>
+                            <p className="text-sm text-boulder">Demonstrate strong governance and regulatory compliance to stakeholders, lenders, investors, and business partners.</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Audit Process */}
+                <div className="mb-10">
+                    <h3 className="text-2xl font-bold text-white mb-6">Our GST Audit &amp; Compliance Review Process</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">1</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Understanding Business Operations</h5>
+                                <p className="text-xs text-boulder">Review of business model, supply chain, nature of taxable transactions, and industry-specific GST implications.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">2</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">GST Risk Assessment</h5>
+                                <p className="text-xs text-boulder">Identification of high-risk transactions, review of GST classifications, taxability assessment, and compliance gap analysis.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">3</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">GST Reconciliation Review</h5>
+                                <p className="text-xs text-boulder">Books vs GST returns reconciliation, GSTR-1 review, GSTR-3B review, purchase reconciliation, and ITC reconciliation.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">4</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Input Tax Credit Verification</h5>
+                                <p className="text-xs text-boulder">Eligibility review, vendor compliance verification, ITC optimization opportunities, and documentation checks.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">5</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Compliance Testing</h5>
+                                <p className="text-xs text-boulder">Invoice verification, e-way bill review, reverse charge compliance, place of supply validation, and GST payment verification.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">6</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Reporting &amp; Recommendations</h5>
+                                <p className="text-xs text-boulder">Detailed findings report, risk observations, corrective action recommendations, and a compliance improvement roadmap.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Why Choose Us */}
+                <div className="mb-10">
+                    <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">GST Specialists</h5>
+                            <p className="text-xs text-boulder">Dedicated professionals with extensive GST expertise and practical industry experience.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Industry-Specific Experience</h5>
+                            <p className="text-xs text-boulder">Deep understanding of sector-specific GST challenges across manufacturing, trading, services, and more.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Practical Compliance Solutions</h5>
+                            <p className="text-xs text-boulder">Recommendations that are commercially practical, implementable, and aligned with business goals.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Risk-Focused Approach</h5>
+                            <p className="text-xs text-boulder">Identification of hidden compliance exposures and proactive mitigation strategies.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Timely Reviews</h5>
+                            <p className="text-xs text-boulder">Proactive support before notices and assessments arise, ensuring you stay ahead of compliance deadlines.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Technology-Driven Analysis</h5>
+                            <p className="text-xs text-boulder">Efficient reconciliation and compliance review processes powered by modern tools and analytics.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Confidentiality &amp; Integrity</h5>
+                            <p className="text-xs text-boulder">Protection of sensitive financial and tax information with the highest professional standards.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Personalized Client Support</h5>
+                            <p className="text-xs text-boulder">Dedicated guidance and ongoing compliance assistance throughout the engagement.</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Industries We Serve */}
+                <div className="mb-10 bg-secondary-dark/30 border border-white/5 rounded-2xl p-6 text-center">
+                    <h3 className="text-xl font-bold text-white mb-4">Industries We Serve</h3>
+                    <div className="flex flex-wrap gap-2 justify-center">
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Manufacturing</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Trading &amp; Distribution</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Information Technology</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Healthcare</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Construction &amp; Real Estate</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Logistics &amp; Transportation</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Hospitality</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">E-commerce</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Professional Services</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Startups &amp; Emerging Businesses</span>
+                    </div>
+                </div>
+
+                {/* Partner Benefits */}
+                <div className="mb-10">
+                    <h3 className="text-xl font-bold text-white mb-4">Benefits of Working With Us</h3>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 list-none pl-0">
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Reduced GST compliance risks</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Improved Input Tax Credit management</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Better GST governance</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Stronger internal controls</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Accurate GST reporting</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Reduced risk of notices and penalties</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Enhanced compliance confidence</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Improved tax efficiency</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Practical business-focused recommendations</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Professional GST advisory support</li>
+                    </ul>
+                </div>
+
+                {/* FAQs */}
+                <div className="mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h3>
+                    <div className="space-y-4">
+                        <details className="group border-b border-white/10 pb-4 cursor-pointer">
+                            <summary className="flex justify-between items-center font-bold text-white group-hover:text-primary-accent transition-colors list-none">
+                                <span>What is a GST Compliance Review?</span>
+                                <span className="transition-transform group-open:rotate-180 text-primary-accent">▼</span>
+                            </summary>
+                            <p className="mt-3 text-boulder text-sm leading-relaxed">
+                                A GST Compliance Review is an independent assessment of your GST processes, returns, reconciliations, and documentation to identify gaps, risks, and opportunities for improvement. It helps businesses strengthen compliance and reduce exposure to penalties and notices.
+                            </p>
+                        </details>
+                        <details className="group border-b border-white/10 pb-4 cursor-pointer">
+                            <summary className="flex justify-between items-center font-bold text-white group-hover:text-primary-accent transition-colors list-none">
+                                <span>Is GST Audit mandatory?</span>
+                                <span className="transition-transform group-open:rotate-180 text-primary-accent">▼</span>
+                            </summary>
+                            <p className="mt-3 text-boulder text-sm leading-relaxed">
+                                GST Audit under Section 65 of the CGST Act is conducted by tax authorities. However, proactive businesses voluntarily engage independent GST compliance reviews to identify risks early, protect Input Tax Credit, and ensure readiness for departmental scrutiny.
+                            </p>
+                        </details>
+                        <details className="group border-b border-white/10 pb-4 cursor-pointer">
+                            <summary className="flex justify-between items-center font-bold text-white group-hover:text-primary-accent transition-colors list-none">
+                                <span>How often should businesses conduct GST reviews?</span>
+                                <span className="transition-transform group-open:rotate-180 text-primary-accent">▼</span>
+                            </summary>
+                            <p className="mt-3 text-boulder text-sm leading-relaxed">
+                                We recommend at least one comprehensive GST review annually, with periodic health checks (quarterly or half-yearly) for high-volume businesses. Regular reviews help detect issues early, maintain accurate records, and adapt to changing regulations.
+                            </p>
+                        </details>
+                        <details className="group border-b border-white/10 pb-4 cursor-pointer">
+                            <summary className="flex justify-between items-center font-bold text-white group-hover:text-primary-accent transition-colors list-none">
+                                <span>What are the common GST compliance risks?</span>
+                                <span className="transition-transform group-open:rotate-180 text-primary-accent">▼</span>
+                            </summary>
+                            <p className="mt-3 text-boulder text-sm leading-relaxed">
+                                Common risks include ITC mismatches, incorrect GSTR-1 / GSTR-3B filings, classification errors, missing invoices, e-way bill non-compliance, reverse charge omissions, and reconciliation gaps between books and returns.
+                            </p>
+                        </details>
+                        <details className="group border-b border-white/10 pb-4 cursor-pointer">
+                            <summary className="flex justify-between items-center font-bold text-white group-hover:text-primary-accent transition-colors list-none">
+                                <span>How can GST reviews help protect Input Tax Credit?</span>
+                                <span className="transition-transform group-open:rotate-180 text-primary-accent">▼</span>
+                            </summary>
+                            <p className="mt-3 text-boulder text-sm leading-relaxed">
+                                GST reviews verify vendor compliance, reconcile purchase records with GSTR-2A/2B, identify missing invoices, and ensure that eligible ITC is claimed correctly. This prevents ITC reversals, interest, and penalties due to non-compliant suppliers.
+                            </p>
+                        </details>
+                        <details className="group border-b border-white/10 pb-4 cursor-pointer">
+                            <summary className="flex justify-between items-center font-bold text-white group-hover:text-primary-accent transition-colors list-none">
+                                <span>How can GST audits help during departmental assessments?</span>
+                                <span className="transition-transform group-open:rotate-180 text-primary-accent">▼</span>
+                            </summary>
+                            <p className="mt-3 text-boulder text-sm leading-relaxed">
+                                Well-documented GST audits provide a clear compliance trail, accurate reconciliations, and robust supporting documentation. This simplifies responses to departmental queries, scrutiny notices, and audit assessments, reducing the risk of adverse outcomes.
+                            </p>
+                        </details>
+                    </div>
+                </div>
             </>
         ),
         subServices: [
