@@ -78,6 +78,14 @@ const AnalyticsTracker = () => {
         page_title: document.title
       });
     }
+
+    // Track GA4 pageview
+    if (window.gtag) {
+      window.gtag('config', 'G-7XL0JYX4CZ', {
+        page_path: path,
+        page_title: document.title
+      });
+    }
   }, [location, isGtmValid]);
 
   return null;
