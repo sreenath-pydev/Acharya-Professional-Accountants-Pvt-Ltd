@@ -3,16 +3,313 @@ export const gstServices = {
     // 1. REGISTRATION & PROFILE MANAGEMENT (Hub)
     // ==========================================
     'registration-profile-management': {
-        title: 'GST Registration & Profile Management',
-        seoTitle: 'GST Registration, Amendment & Cancellation Services in Kerala',
-        seoDescription: 'Complete GST profile management: New Registration, Amendments (Address/Partners), Cancellation, Revocation, and Migration services.',
-        keywords: 'gst registration, gst amendment, gst cancellation, revocation of gst, gst migration, additional place of business',
+        title: 'GST Registration & Profile Management Services',
+        seoTitle: 'GST Registration & Profile Management Services | Acharya',
+        seoDescription: 'Professional GST Registration & Profile Management Services. Fast GST registration, core/non-core amendments, cancellation, and revocation services.',
+        keywords: 'GST Registration Services, GST Registration, GST Consultant, GST Registration Online, GST Compliance, GST Profile Management, GST Advisory Services, GST Registration for Businesses, GST Registration Consultant, GST Compliance Support, GST Portal Management, GST Amendment Services, GST Registration Assistance, GST Registration for Startups',
         icon: 'fa-id-card',
         content: (
             <>
-                <p className="mb-4">
-                    Managing your GST profile is a lifecycle process—from the day you start business to the day you wind up or expand. We handle all interaction with the GST portal regarding your registration status.
+                <p className="mb-6">
+                    GST Registration is a critical step for businesses seeking legal compliance,
+                    credibility, seamless operations, and sustainable growth. Incorrect registrations,
+                    outdated GST profiles, compliance gaps, or delayed updates can lead to tax
+                    compliance issues, penalties, loss of input tax credit, and business interruptions.
+                    Our expert GST Registration and Profile Management services ensure seamless
+                    compliance and operational readiness.
                 </p>
+
+                {/* Special Offer Card */}
+                <div className="bg-gradient-to-r from-emerald-500/10 to-green-500/10 border-2 border-green-500/30 rounded-2xl p-6 mb-8 flex flex-col sm:flex-row justify-between items-center gap-6">
+                    <div>
+                        <div className="inline-flex items-center gap-1.5 bg-green-500 text-dark-bg font-bold text-xs px-2.5 py-1 rounded-full uppercase tracking-wider mb-2">
+                            Limited Time Offer
+                        </div>
+                        <h4 className="text-xl font-bold text-white mb-1">New GST Registration @ Just ₹499!</h4>
+                        <p className="text-sm text-boulder font-medium">Get your business GST registered with complete documentation and online filing.</p>
+                    </div>
+                    <a 
+                        href="https://wa.me/919446369434?text=Hi,%20I%20want%20to%20register%20for%20GST%20at%20₹499" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="bg-green-500 hover:bg-green-600 text-dark-bg font-bold py-3 px-6 rounded-full transition-all duration-300 flex items-center gap-2 whitespace-nowrap"
+                    >
+                        <i className="fab fa-whatsapp text-lg"></i> Chat on WhatsApp
+                    </a>
+                </div>
+
+                {/* About Section */}
+                <div className="bg-secondary-dark/50 border border-primary-accent/10 rounded-2xl p-6 mb-8">
+                    <h3 className="text-xl font-bold text-white mb-4">Comprehensive GST Registration &amp; Profile Management</h3>
+                    <p className="mb-4 text-boulder text-base">
+                        Acharya Professional Accountants provides comprehensive GST Registration and
+                        Profile Management Services to help businesses obtain, manage, update, and maintain
+                        GST registrations and profiles. Our team works with you to ensure accurate
+                        information, timely filings, and proactive compliance management — from initial
+                        registration through ongoing profile maintenance.
+                    </p>
+                    <p className="font-semibold text-white mb-3 text-base">Our service offerings include:</p>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 list-none mb-4 pl-0">
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> New GST Registration
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> GST Registration for Startups
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> GST Registration for E-commerce
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> GST Amendment Services
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> Business Address Changes
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> Additional Place of Business
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> Authorized Signatory Updates
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> Trade Name Modifications
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> GST Cancellation &amp; Revocation
+                        </li>
+                    </ul>
+                    <p className="text-boulder text-base">
+                        Our objective is to ensure accuracy, regulatory compliance, efficient processing,
+                        and proactive support — enabling businesses to focus on growth while we manage
+                        their GST compliance.
+                    </p>
+                </div>
+
+                {/* Business Value Cards */}
+                <div className="mb-10">
+                    <h3 className="text-2xl font-bold text-white mb-6">How GST Registration helps your business</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Establishes Legal Tax Compliance</h4>
+                            <p className="text-sm text-boulder">Provides legal recognition under GST laws and enables businesses to operate with confidence and regulatory certainty.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Enhances Business Credibility</h4>
+                            <p className="text-sm text-boulder">Builds trust among customers, vendors, suppliers, lenders, and investors by demonstrating regulatory compliance.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Enables Input Tax Credit Benefits</h4>
+                            <p className="text-sm text-boulder">Allows businesses to claim eligible tax credits, reducing costs, improving profitability, and enhancing cash flow.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Supports Business Expansion</h4>
+                            <p className="text-sm text-boulder">Facilitates interstate trade, online selling, vendor registrations, and corporate partnerships across India.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Improves Vendor &amp; Customer Relations</h4>
+                            <p className="text-sm text-boulder">Many businesses prefer working with GST-registered suppliers and service providers, enhancing partnership opportunities.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Facilitates Funding &amp; Due Diligence</h4>
+                            <p className="text-sm text-boulder">Strengthen financial credibility during loan applications, investor evaluations, and business assessments.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Supports Tender Participation</h4>
+                            <p className="text-sm text-boulder">Many tenders require active GST registration and accurate compliance records, opening new business opportunities.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Strengthens Compliance Management</h4>
+                            <p className="text-sm text-boulder">Ensures accurate business information is maintained across government platforms, reducing compliance risks.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Reduces Regulatory Risks</h4>
+                            <p className="text-sm text-boulder">Minimizes penalties, notices, registration issues, and compliance disruptions through proactive management.</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Audit Process */}
+                <div className="mb-10">
+                    <h3 className="text-2xl font-bold text-white mb-6">Our GST Registration &amp; Profile Management Process</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">1</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Business Assessment</h5>
+                                <p className="text-xs text-boulder">Understanding business activities, registration eligibility review, turnover assessment, industry-specific GST requirements, and growth objectives.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">2</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Documentation &amp; Filing</h5>
+                                <p className="text-xs text-boulder">Gathering required records, PAN and Aadhaar validation, business structure documentation, online filing, and application tracking.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">3</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Query Resolution</h5>
+                                <p className="text-xs text-boulder">Addressing any queries or requests for additional information raised by the GST authorities to ensure smooth approval.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">4</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Registration Approval</h5>
+                                <p className="text-xs text-boulder">Verification of registration certificate, GSTIN validation, portal activation, and compliance onboarding.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">5</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Profile Amendments</h5>
+                                <p className="text-xs text-boulder">Handling updates to core and non-core fields, business changes, partner updates, and principal place of business changes.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">6</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Ongoing Portal Management</h5>
+                                <p className="text-xs text-boulder">Portal compliance monitoring, registration updates, cancellation or revocation management, and compliance advisory support.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Why Choose Us */}
+                <div className="mb-10">
+                    <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Experienced Indirect Tax Professionals</h5>
+                            <p className="text-xs text-boulder">A team with years of specialized practice in GST registrations, returns, and notices response.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Practical Compliance Focus</h5>
+                            <p className="text-xs text-boulder">Our solutions map seamlessly onto actual business processes, making reporting straightforward.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Risk-Based Audit and Review</h5>
+                            <p className="text-xs text-boulder">Proactively audit entries and profile fields to eliminate mismatch flags.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Customized Compliance Plans</h5>
+                            <p className="text-xs text-boulder">Tailored setups depending on registration type, scheme choices, and business volume.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Technology-Driven Solutions</h5>
+                            <p className="text-xs text-boulder">Leveraging advanced client portals and file trackers for maximum visibility.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Confidentiality &amp; Security</h5>
+                            <p className="text-xs text-boulder">Strict policies protecting your sensitive corporate documentation and portal credentials.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Timely Registration &amp; Updates</h5>
+                            <p className="text-xs text-boulder">Strict tracking of filing dates and quick coordination with departments on pending core amendments.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Dedicated Customer Support</h5>
+                            <p className="text-xs text-boulder">Fast resolution of billing system errors or e-invoice queries from a dedicated team.</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Industries We Serve */}
+                <div className="mb-10 bg-secondary-dark/30 border border-white/5 rounded-2xl p-6 text-center">
+                    <h3 className="text-xl font-bold text-white mb-4">Industries We Serve</h3>
+                    <div className="flex flex-wrap gap-2 justify-center">
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Manufacturing</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Trading &amp; Distribution</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Information Technology</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Healthcare</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Construction &amp; Real Estate</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Professional Services</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">E-commerce</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Logistics &amp; Transportation</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Hospitality</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Startups &amp; Emerging Businesses</span>
+                    </div>
+                </div>
+
+                {/* Partner Benefits */}
+                <div className="mb-10">
+                    <h3 className="text-xl font-bold text-white mb-4">Benefits of Working With Us</h3>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 list-none pl-0">
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> 100% compliant registrations</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Up-to-date business profiles</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Reduced risk of penalties and notices</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Improved cash flow</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Better vendor relationships</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Enhanced corporate credibility</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Smooth business operations</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Time and resource savings</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Dedicated client assistance</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Access to indirect tax advisors</li>
+                    </ul>
+                </div>
+
+                {/* FAQs */}
+                <div className="mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h3>
+                    <div className="space-y-4">
+                        <details className="group border-b border-white/10 pb-4 cursor-pointer">
+                            <summary className="flex justify-between items-center font-bold text-white group-hover:text-primary-accent transition-colors list-none">
+                                <span>What is GST Registration?</span>
+                                <span className="transition-transform group-open:rotate-180 text-primary-accent">▼</span>
+                            </summary>
+                            <p className="mt-3 text-boulder text-sm leading-relaxed">
+                                GST Registration is the process by which a business obtains a unique Goods and Services Tax Identification Number (GSTIN) from tax authorities. It is mandatory for businesses with a turnover exceeding the threshold limits, or those engaged in interstate transactions.
+                            </p>
+                        </details>
+                        <details className="group border-b border-white/10 pb-4 cursor-pointer">
+                            <summary className="flex justify-between items-center font-bold text-white group-hover:text-primary-accent transition-colors list-none">
+                                <span>Who is required to register for GST?</span>
+                                <span className="transition-transform group-open:rotate-180 text-primary-accent">▼</span>
+                            </summary>
+                            <p className="mt-3 text-boulder text-sm leading-relaxed">
+                                Businesses with an annual turnover exceeding ₹40 Lakhs (for Goods supplier) or ₹20 Lakhs (for Service providers) in most states are required to register. Businesses performing interstate sales, e-commerce supply, or those needing to pass Input Tax Credit to buyers must register regardless of turnover.
+                            </p>
+                        </details>
+                        <details className="group border-b border-white/10 pb-4 cursor-pointer">
+                            <summary className="flex justify-between items-center font-bold text-white group-hover:text-primary-accent transition-colors list-none">
+                                <span>What are core vs non-core GST amendments?</span>
+                                <span className="transition-transform group-open:rotate-180 text-primary-accent">▼</span>
+                            </summary>
+                            <p className="mt-3 text-boulder text-sm leading-relaxed">
+                                Core fields are critical registration details like legal/trade name, principal place of business address, and details of partners/directors. Changing these fields requires approval from tax officers. Non-core fields include minor updates like bank accounts, HSN codes, or contact numbers, which auto-approve instantly.
+                            </p>
+                        </details>
+                        <details className="group border-b border-white/10 pb-4 cursor-pointer">
+                            <summary className="flex justify-between items-center font-bold text-white group-hover:text-primary-accent transition-colors list-none">
+                                <span>What happens if a business operates without GST registration?</span>
+                                <span className="transition-transform group-open:rotate-180 text-primary-accent">▼</span>
+                            </summary>
+                            <p className="mt-3 text-boulder text-sm leading-relaxed">
+                                Operating without registration when legally required is an offence under the GST Act. It can attract severe penalties (100% of tax due or ₹10,000, whichever is higher), confiscation of goods/vehicles in transit, and blocks on legal trading.
+                            </p>
+                        </details>
+                        <details className="group border-b border-white/10 pb-4 cursor-pointer">
+                            <summary className="flex justify-between items-center font-bold text-white group-hover:text-primary-accent transition-colors list-none">
+                                <span>Can a GST registration be cancelled or surrendered?</span>
+                                <span className="transition-transform group-open:rotate-180 text-primary-accent">▼</span>
+                            </summary>
+                            <p className="mt-3 text-boulder text-sm leading-relaxed">
+                                Yes. If you close your business, transfer operations, or no longer meet threshold requirements, you can apply online to cancel your registration. You must reverse ITC on closing stock and file a Final Return (GSTR-10) to finalize closure.
+                            </p>
+                        </details>
+                        <details className="group border-b border-white/10 pb-4 cursor-pointer">
+                            <summary className="flex justify-between items-center font-bold text-white group-hover:text-primary-accent transition-colors list-none">
+                                <span>How does profile management reduce compliance risks?</span>
+                                <span className="transition-transform group-open:rotate-180 text-primary-accent">▼</span>
+                            </summary>
+                            <p className="mt-3 text-boulder text-sm leading-relaxed">
+                                Keeping your profile accurate prevents system-generated mismatch notices. For instance, declaring bank account details correctly ensures GST refunds are successfully deposited and prevents suspension notices under Rule 10A.
+                            </p>
+                        </details>
+                    </div>
+                </div>
             </>
         ),
         subServices: [
