@@ -685,27 +685,295 @@ export const auditingServices = {
         )
     },
     'rectification-audit-queries': {
-        title: 'Rectification of Audit Queries',
-        seoTitle: 'Audit Query Resolution and Rectification Services',
-        seoDescription: 'Expert assistance in resolving and rectifying complex audit queries raised by statutory or tax auditors.',
-        keywords: 'audit queries, audit objections, finding rectification, accounting correction, compliance fix',
+        title: 'Audit Query Rectification & Audit Observation Resolution Services',
+        seoTitle: 'Audit Query Rectification & Audit Observation Resolution Services | Acharya',
+        seoDescription: 'Professional Audit Query Rectification & Audit Observation Resolution Services by Acharya Professional Accountants. Resolve audit findings, strengthen compliance, and reduce risks.',
+        keywords: 'Audit Query Rectification Services, Audit Observation Resolution, Audit Compliance Support, Audit Issue Resolution, Audit Response Management, Financial Audit Support, Compliance Rectification Services, Audit Findings Resolution, Internal Audit Compliance, Statutory Audit Support, Audit Risk Management, Corporate Compliance Services',
         icon: 'fa-clipboard-check',
         content: (
             <>
-                <p className="mb-4">
-                    Receiving a long list of audit observations or queries can be overwhelming. Some queries may stem from valid errors, while others may be due to a lack of explanation. We help you systematically address, rectify, and reply to audit queries to close the audit cleanly.
+                <p className="mb-6">
+                    Unresolved audit queries and observations can expose your business to compliance
+                    risks, financial reporting concerns, governance weaknesses, and stakeholder
+                    scrutiny. Our Audit Query Rectification Services help you analyze, respond to,
+                    and resolve audit findings promptly — strengthening controls, improving compliance,
+                    and building stakeholder confidence.
                 </p>
-                <h3 className="text-xl font-bold text-white mb-3">Our Approach</h3>
-                <ul className="list-disc list-inside space-y-2 mb-6 ml-4">
-                    <li><strong>Root Cause Analysis:</strong> Understanding why the query was raised—is it a process gap, a documentation miss, or an accounting error?</li>
-                    <li><strong>Corrective Action:</strong> Passing necessary rectification entries in the books to fix financial errors.</li>
-                    <li><strong>Justification Preparation:</strong> Drafting technical replies citing relevant accounting standards or tax laws to justify your position.</li>
-                    <li><strong>Process Improvement:</strong> Suggesting controls to ensure the same observation does not recur in future audits.</li>
-                </ul>
-                <p>
-                    We ensure that your audit report is as clean as possible, devoid of serious qualifications or adverse remarks.
-                </p>
+
+                {/* About Section */}
+                <div className="bg-secondary-dark/50 border border-primary-accent/10 rounded-2xl p-6 mb-8">
+                    <h3 className="text-xl font-bold text-white mb-4">Comprehensive Audit Query Rectification &amp; Observation Resolution</h3>
+                    <p className="mb-4 text-boulder text-base">
+                        Acharya Professional Accountants provides comprehensive Audit Query Rectification
+                        and Audit Observation Resolution Services to help businesses address audit findings
+                        raised during Statutory Audits, Internal Audits, Tax Audits, GST Reviews, Bank Audits,
+                        Stock Audits, Compliance Reviews, and Regulatory Inspections. Our team works with
+                        you to understand each observation, identify root causes, develop corrective action
+                        plans, and respond effectively to auditors.
+                    </p>
+                    <p className="font-semibold text-white mb-3 text-base">Our service offerings include:</p>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 list-none mb-4 pl-0">
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> Audit Query Analysis
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> Audit Observation Resolution
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> Compliance Gap Assessment
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> Documentation Rectification
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> Financial Reporting Corrections
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> Internal Control Improvements
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> Audit Response Preparation
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> Corrective Action Planning
+                        </li>
+                        <li className="flex items-center gap-2 text-boulder text-base">
+                            <span className="text-primary-accent font-bold">✓</span> Management Advisory Support
+                        </li>
+                    </ul>
+                    <p className="text-boulder text-base">
+                        Our objective is to help businesses achieve sustainable compliance improvements
+                        — not temporary fixes. We transform audit findings into opportunities for process
+                        enhancement, stronger controls, and better governance.
+                    </p>
+                </div>
+
+                {/* Business Value Cards */}
+                <div className="mb-10">
+                    <h3 className="text-2xl font-bold text-white mb-6">How Audit Query Rectification Helps Your Business</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Reduces Compliance Risks</h4>
+                            <p className="text-sm text-boulder">Addresses audit observations before they escalate into regulatory concerns, penalties, or legal issues.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Improves Financial Accuracy</h4>
+                            <p className="text-sm text-boulder">Corrects reporting deficiencies and strengthens the reliability of financial statements and disclosures.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Strengthens Internal Controls</h4>
+                            <p className="text-sm text-boulder">Identifies process weaknesses and implements corrective measures to prevent recurrence.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Prevents Recurring Issues</h4>
+                            <p className="text-sm text-boulder">Addresses root causes instead of repeatedly correcting symptoms, ensuring lasting compliance improvements.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Enhances Corporate Governance</h4>
+                            <p className="text-sm text-boulder">Supports transparency, accountability, and better management oversight across the organization.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Builds Stakeholder Confidence</h4>
+                            <p className="text-sm text-boulder">Demonstrates commitment to compliance, financial integrity, and responsible governance.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Improves Audit Outcomes</h4>
+                            <p className="text-sm text-boulder">Facilitates smoother future audits and reduces audit disruptions, delays, and additional queries.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Supports Regulatory Readiness</h4>
+                            <p className="text-sm text-boulder">Strengthens preparedness for inspections, reviews, and compliance assessments by regulators.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Drives Operational Improvements</h4>
+                            <p className="text-sm text-boulder">Transforms audit findings into opportunities for business process enhancement and efficiency gains.</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Audit Query Rectification Process */}
+                <div className="mb-10">
+                    <h3 className="text-2xl font-bold text-white mb-6">Our Audit Query Rectification Process</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">1</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Audit Observation Assessment</h5>
+                                <p className="text-xs text-boulder">Review of audit findings, classification of observations, materiality assessment, and risk prioritization.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">2</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Root Cause Analysis</h5>
+                                <p className="text-xs text-boulder">Identification of underlying issues, process gap evaluation, documentation deficiencies, and internal control weaknesses.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">3</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Compliance &amp; Documentation Review</h5>
+                                <p className="text-xs text-boulder">Verification of supporting records, regulatory compliance assessment, documentation corrections, and evidence gathering.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">4</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Corrective Action Planning</h5>
+                                <p className="text-xs text-boulder">Resolution strategies, process improvement recommendations, control enhancement measures, and responsibility allocation.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">5</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Audit Response Support</h5>
+                                <p className="text-xs text-boulder">Drafting responses to auditors, preparing supporting documentation, clarification support, and management representation assistance.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">6</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Monitoring &amp; Closure</h5>
+                                <p className="text-xs text-boulder">Implementation review, resolution tracking, compliance verification, and audit closure support.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Why Choose Us */}
+                <div className="mb-10">
+                    <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Experienced Audit &amp; Compliance Professionals</h5>
+                            <p className="text-xs text-boulder">Strong expertise in handling audit observations across statutory, internal, tax, GST, and regulatory reviews.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Practical Resolution Approach</h5>
+                            <p className="text-xs text-boulder">Focus on workable, business-oriented solutions that deliver sustainable compliance improvements.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Risk-Based Methodology</h5>
+                            <p className="text-xs text-boulder">Prioritization of high-impact compliance matters to address the most critical issues first.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Strong Regulatory Knowledge</h5>
+                            <p className="text-xs text-boulder">Deep understanding of audit and compliance requirements across multiple regulatory frameworks.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Process Improvement Focus</h5>
+                            <p className="text-xs text-boulder">Transforming audit findings into long-term business improvements and operational efficiencies.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Confidentiality &amp; Integrity</h5>
+                            <p className="text-xs text-boulder">Secure handling of sensitive business information with the highest professional standards.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Timely Resolution Support</h5>
+                            <p className="text-xs text-boulder">Prompt assistance to avoid delays, escalation, and regulatory scrutiny.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Personalized Client Engagement</h5>
+                            <p className="text-xs text-boulder">Dedicated support throughout the resolution process, tailored to each business's unique needs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Industries We Serve */}
+                <div className="mb-10 bg-secondary-dark/30 border border-white/5 rounded-2xl p-6 text-center">
+                    <h3 className="text-xl font-bold text-white mb-4">Industries We Serve</h3>
+                    <div className="flex flex-wrap gap-2 justify-center">
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Manufacturing</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Trading &amp; Distribution</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Information Technology</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Healthcare</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Construction &amp; Real Estate</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Professional Services</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">E-commerce</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Logistics</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Hospitality</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Startups &amp; Emerging Businesses</span>
+                    </div>
+                </div>
+
+                {/* Partner Benefits */}
+                <div className="mb-10">
+                    <h3 className="text-xl font-bold text-white mb-4">Benefits of Working With Us</h3>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 list-none pl-0">
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Faster audit query resolution</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Reduced compliance exposure</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Improved financial reporting quality</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Stronger internal controls</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Better governance practices</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Enhanced stakeholder confidence</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Reduced audit recurrence issues</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Improved audit preparedness</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Professional compliance support</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Actionable business improvement insights</li>
+                    </ul>
+                </div>
+
+                {/* FAQs */}
+                <div className="mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h3>
+                    <div className="space-y-4">
+                        <details className="group border-b border-white/10 pb-4 cursor-pointer">
+                            <summary className="flex justify-between items-center font-bold text-white group-hover:text-primary-accent transition-colors list-none">
+                                <span>What is Audit Query Rectification?</span>
+                                <span className="transition-transform group-open:rotate-180 text-primary-accent">▼</span>
+                            </summary>
+                            <p className="mt-3 text-boulder text-sm leading-relaxed">
+                                Audit Query Rectification refers to the professional process of analyzing, responding to, and resolving queries and observations raised by auditors during statutory, internal, tax, GST, or regulatory audits. It involves root cause analysis, corrective action planning, and ensuring sustainable compliance improvements.
+                            </p>
+                        </details>
+                        <details className="group border-b border-white/10 pb-4 cursor-pointer">
+                            <summary className="flex justify-between items-center font-bold text-white group-hover:text-primary-accent transition-colors list-none">
+                                <span>Why is it important to resolve audit observations promptly?</span>
+                                <span className="transition-transform group-open:rotate-180 text-primary-accent">▼</span>
+                            </summary>
+                            <p className="mt-3 text-boulder text-sm leading-relaxed">
+                                Unresolved audit observations can escalate into regulatory concerns, penalties, financial reporting issues, and stakeholder distrust. Prompt resolution demonstrates commitment to compliance, reduces business risks, and ensures smoother future audits.
+                            </p>
+                        </details>
+                        <details className="group border-b border-white/10 pb-4 cursor-pointer">
+                            <summary className="flex justify-between items-center font-bold text-white group-hover:text-primary-accent transition-colors list-none">
+                                <span>What types of audit queries can be addressed?</span>
+                                <span className="transition-transform group-open:rotate-180 text-primary-accent">▼</span>
+                            </summary>
+                            <p className="mt-3 text-boulder text-sm leading-relaxed">
+                                Our services address queries raised during Statutory Audits, Internal Audits, Tax Audits, GST Reviews, Bank Audits, Stock Audits, Compliance Reviews, and Regulatory Inspections. We handle observations related to financial reporting, documentation, controls, compliance, and operational processes.
+                            </p>
+                        </details>
+                        <details className="group border-b border-white/10 pb-4 cursor-pointer">
+                            <summary className="flex justify-between items-center font-bold text-white group-hover:text-primary-accent transition-colors list-none">
+                                <span>How can unresolved audit findings affect a business?</span>
+                                <span className="transition-transform group-open:rotate-180 text-primary-accent">▼</span>
+                            </summary>
+                            <p className="mt-3 text-boulder text-sm leading-relaxed">
+                                Unresolved audit findings can lead to regulatory penalties, financial restatements, increased audit costs, operational disruptions, loss of stakeholder confidence, and reputational damage. They may also result in heightened scrutiny from regulators and lenders.
+                            </p>
+                        </details>
+                        <details className="group border-b border-white/10 pb-4 cursor-pointer">
+                            <summary className="flex justify-between items-center font-bold text-white group-hover:text-primary-accent transition-colors list-none">
+                                <span>How does audit rectification improve internal controls?</span>
+                                <span className="transition-transform group-open:rotate-180 text-primary-accent">▼</span>
+                            </summary>
+                            <p className="mt-3 text-boulder text-sm leading-relaxed">
+                                Audit rectification involves identifying root causes of issues and implementing corrective measures. This strengthens internal controls, enhances documentation practices, and improves monitoring mechanisms — reducing the likelihood of recurring compliance issues.
+                            </p>
+                        </details>
+                        <details className="group border-b border-white/10 pb-4 cursor-pointer">
+                            <summary className="flex justify-between items-center font-bold text-white group-hover:text-primary-accent transition-colors list-none">
+                                <span>How can professional support help resolve audit issues effectively?</span>
+                                <span className="transition-transform group-open:rotate-180 text-primary-accent">▼</span>
+                            </summary>
+                            <p className="mt-3 text-boulder text-sm leading-relaxed">
+                                Professional support provides expertise in analyzing audit findings, identifying root causes, preparing responses, and implementing corrective actions. Experienced advisors help businesses address observations comprehensively, reduce compliance risks, and build stronger governance frameworks.
+                            </p>
+                        </details>
+                    </div>
+                </div>
             </>
         )
-    }
+    },
 };
