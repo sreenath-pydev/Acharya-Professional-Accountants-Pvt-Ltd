@@ -341,26 +341,245 @@ export const auditingServices = {
         )
     },
     'tax-audit': {
-        title: 'Tax Audit (u/s 44AB)',
-        seoTitle: 'Tax Audit Services under Section 44AB',
-        seoDescription: 'Professional tax audit services for businesses and professionals exceeding turnover limits under the Income Tax Act.',
-        keywords: 'tax audit, section 44ab, income tax audit, form 3cd, tax compliance audit',
+        title: 'Tax Audit Services',
+        seoTitle: 'Tax Audit Services under Section 44AB | Acharya Professional Accountants',
+        seoDescription: 'Expert Tax Audit services under Section 44AB of the Income Tax Act. Ensure compliance, accurate Form 3CD reporting, and mitigate tax risks.',
+        keywords: 'tax audit section 44ab, income tax audit, form 3ca 3cb 3cd, corporate tax compliance, cbdt guidelines',
         icon: 'fa-file-invoice',
         content: (
             <>
-                <p className="mb-4">
-                    Under Section 44AB of the Income Tax Act, 1961, businesses and professionals exceeding specified turnover limits are required to get their accounts audited by a Chartered Accountant. This 'Tax Audit' ensures that the books of accounts are properly maintained and that taxable income is computed correctly.
+                <p className="mb-6">
+                    Ensure accurate tax reporting, regulatory compliance, and risk mitigation with
+                    professional Tax Audit services. Our expert team helps you avoid penalties,
+                    strengthen tax governance, and maintain confidence with tax authorities.
                 </p>
-                <h3 className="text-xl font-bold text-white mb-3">Our Tax Audit Scope</h3>
-                <ul className="list-disc list-inside space-y-2 mb-6 ml-4">
-                    <li><strong>Verification of Books:</strong> Detailed checking of vouchers, ledgers, and books of accounts for accuracy.</li>
-                    <li><strong>Compliance Check:</strong> Ensuring adherence to TDS/TCS provisions, payment of statutory dues, and other tax laws.</li>
-                    <li><strong>Form 3CD Preparation:</strong> Comprehensive reporting of required particulars in Form 3CD with accurate disclosures.</li>
-                    <li><strong>Disallowance Identification:</strong> Identifying expenses inadmissible under the Income Tax Act to determine correct taxable profit.</li>
-                </ul>
-                <p>
-                    We help you navigate the complexities of tax laws, ensuring timely filing of the tax audit report to avoid heavy penalties and scrutiny.
-                </p>
+
+                {/* About Section */}
+                <div className="bg-secondary-dark/50 border border-primary-accent/10 rounded-2xl p-6 mb-8">
+                    <h3 className="text-xl font-bold text-white mb-4">Comprehensive Tax Audit Services</h3>
+                    <p className="mb-4 text-boulder text-base">
+                        Acharya Professional Accountants provides comprehensive Tax Audit Services under Section 44AB of the Income Tax Act, 1961. We assist businesses and professionals in meeting statutory obligations with precision and reliability. Our services cover the entire spectrum of tax audit requirements, ensuring full compliance with Income Tax provisions, CBDT guidelines, and applicable regulations.
+                    </p>
+                    <p className="mb-4 text-white font-semibold text-base">Our assistance includes:</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-4 mb-4">
+                        <div className="flex items-center gap-2 text-boulder text-sm"><span className="text-primary-accent font-bold">✓</span> Tax Audit under Section 44AB</div>
+                        <div className="flex items-center gap-2 text-boulder text-sm"><span className="text-primary-accent font-bold">✓</span> Form 3CA / 3CB Certification</div>
+                        <div className="flex items-center gap-2 text-boulder text-sm"><span className="text-primary-accent font-bold">✓</span> Form 3CD Reporting</div>
+                        <div className="flex items-center gap-2 text-boulder text-sm"><span className="text-primary-accent font-bold">✓</span> Review of Books of Accounts</div>
+                        <div className="flex items-center gap-2 text-boulder text-sm"><span className="text-primary-accent font-bold">✓</span> Compliance Verification</div>
+                        <div className="flex items-center gap-2 text-boulder text-sm"><span className="text-primary-accent font-bold">✓</span> Tax Position Assessment</div>
+                        <div className="flex items-center gap-2 text-boulder text-sm"><span className="text-primary-accent font-bold">✓</span> Reporting &amp; Documentation</div>
+                        <div className="flex items-center gap-2 text-boulder text-sm"><span className="text-primary-accent font-bold">✓</span> Income Tax Compliance Advisory</div>
+                    </div>
+                    <p className="text-boulder text-base">
+                        We adhere to the highest professional standards, maintaining independence, confidentiality, and technical excellence throughout every engagement.
+                    </p>
+                </div>
+
+                {/* Who is Required */}
+                <div className="mb-10">
+                    <h3 className="text-2xl font-bold text-white mb-6">Who is Required to Conduct a Tax Audit?</h3>
+                    <p className="mb-6 text-boulder text-base">
+                        Understanding the threshold and conditions that trigger the tax audit obligation.
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Businesses</h4>
+                            <p className="text-sm text-boulder">Turnover exceeding the prescribed limit under Section 44AB (currently ₹1 crore, and up to ₹10 crores in cash-free digital transaction cases).</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Professionals</h4>
+                            <p className="text-sm text-boulder">Gross receipts exceeding the prescribed limit (currently ₹50 lakh, and up to ₹75 lakhs in cash-free cases) under Section 44AB.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Presumptive Taxation Cases</h4>
+                            <p className="text-sm text-boulder">Applicability under Sections 44AD, 44ADA, and 44AE – conditions triggering tax audit if the income declared is lower than the prescribed rates.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Other Applicable Scenarios</h4>
+                            <p className="text-sm text-boulder">Cases requiring mandatory audit as per specific Income Tax provisions, including loss declarations and special circumstances.</p>
+                        </div>
+                    </div>
+                    <div className="mt-6 bg-secondary-dark/20 border border-white/5 rounded-xl p-4 flex gap-3 items-center">
+                        <span className="text-primary-accent text-lg">🛈</span>
+                        <p className="text-xs text-boulder">Eligibility and applicability depend on prevailing tax laws and amendments. Consult our experts for personalized guidance.</p>
+                    </div>
+                </div>
+
+                {/* Why Tax Audit Matters */}
+                <div className="mb-10">
+                    <h3 className="text-2xl font-bold text-white mb-6">Why Tax Audit Matters</h3>
+                    <p className="mb-6 text-boulder text-base">
+                        Beyond compliance – a strategic tool for better financial governance and risk management.
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Regulatory Compliance</h4>
+                            <p className="text-sm text-boulder">Ensures adherence to Income Tax Act requirements, reducing the risk of penalties and legal consequences.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Accurate Tax Reporting</h4>
+                            <p className="text-sm text-boulder">Improves correctness of tax disclosures and reporting, building trust with tax authorities.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Reduced Tax Risks</h4>
+                            <p className="text-sm text-boulder">Identifies potential non-compliance and reporting gaps, allowing timely corrective action.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Better Financial Discipline</h4>
+                            <p className="text-sm text-boulder">Strengthens accounting and record‑keeping practices, supporting overall financial health.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Smoother Tax Assessments</h4>
+                            <p className="text-sm text-boulder">Facilitates efficient handling of income tax scrutiny and assessments with well‑documented records.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Enhanced Business Credibility</h4>
+                            <p className="text-sm text-boulder">Demonstrates transparency and sound governance, strengthening stakeholder confidence.</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Audit Process */}
+                <div className="mb-10">
+                    <h3 className="text-2xl font-bold text-white mb-6">Our Tax Audit Process</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">1</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Understanding Business Operations</h5>
+                                <p className="text-xs text-boulder">Review of business model, revenue streams, industry-specific tax considerations, and accounting systems.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">2</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Risk Assessment &amp; Compliance Review</h5>
+                                <p className="text-xs text-boulder">Identification of tax-sensitive transactions, review of tax positions, and assessment of compliance risks.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">3</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Verification of Books and Records</h5>
+                                <p className="text-xs text-boulder">Review of accounting records, verification of expenses and deductions, examination of supporting documents, and reconciliation.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">4</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Tax Audit Reporting</h5>
+                                <p className="text-xs text-boulder">Preparation of Form 3CA or 3CB, detailed Form 3CD reporting, and documentation of observations and disclosures.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">5</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Final Review &amp; Submission Support</h5>
+                                <p className="text-xs text-boulder">Finalization of audit report, management discussions, filing support, and readiness for tax authorities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Why Choose Us */}
+                <div className="mb-10">
+                    <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Experienced Tax Professionals</h5>
+                            <p className="text-xs text-boulder">Extensive expertise in direct taxation and compliance, with a focus on quality and accuracy.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Industry-Specific Knowledge</h5>
+                            <p className="text-xs text-boulder">Understanding of sector-specific tax challenges, ensuring relevant and tailored advice.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Risk-Focused Approach</h5>
+                            <p className="text-xs text-boulder">Proactive identification of tax exposures and reporting gaps to mitigate risks effectively.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Timely Audit Completion</h5>
+                            <p className="text-xs text-boulder">Meeting statutory deadlines efficiently without compromising on quality.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Regulatory Compliance Expertise</h5>
+                            <p className="text-xs text-boulder">Alignment with the latest tax laws, CBDT guidelines, and reporting requirements.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Confidentiality &amp; Professional Integrity</h5>
+                            <p className="text-xs text-boulder">Protection of sensitive financial information with the highest ethical standards.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Personalized Advisory Support</h5>
+                            <p className="text-xs text-boulder">Dedicated guidance throughout the audit process, with responsive client service.</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Industries We Serve */}
+                <div className="mb-10 bg-secondary-dark/30 border border-white/5 rounded-2xl p-6 text-center">
+                    <h3 className="text-xl font-bold text-white mb-4">Industries We Serve</h3>
+                    <div className="flex flex-wrap gap-2 justify-center">
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Manufacturing</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Trading</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Information Technology</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Healthcare</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Construction &amp; Real Estate</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Professional Services</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">E-commerce</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Logistics &amp; Transportation</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Hospitality</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Startups &amp; Emerging Businesses</span>
+                    </div>
+                </div>
+
+                {/* Partner Benefits */}
+                <div className="mb-10">
+                    <h3 className="text-xl font-bold text-white mb-4">Benefits of Working With Us</h3>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 list-none pl-0">
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Accurate tax audit reporting</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Improved tax compliance</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Reduced risk of penalties</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Better tax governance</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Stronger documentation and record keeping</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Enhanced credibility with tax authorities</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Timely statutory compliance</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Professional support during assessments</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Actionable tax and compliance insights</li>
+                    </ul>
+                </div>
+
+                {/* FAQ Accordion */}
+                <div className="mb-10">
+                    <h3 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h3>
+                    <div className="space-y-4">
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5">
+                            <h5 className="font-bold text-white mb-2 text-sm">What is a Tax Audit under Section 44AB?</h5>
+                            <p className="text-xs text-boulder">Section 44AB of the Income Tax Act, 1961 mandates a tax audit for businesses and professionals whose turnover or gross receipts exceed specified limits. It requires the taxpayer to get their accounts audited by a Chartered Accountant and submit the audit report in prescribed forms.</p>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5">
+                            <h5 className="font-bold text-white mb-2 text-sm">Who is required to undergo a tax audit?</h5>
+                            <p className="text-xs text-boulder">Businesses with turnover exceeding the prescribed limit (₹1 crore, or up to ₹10 crores in cash-free digital transaction cases) and professionals with gross receipts exceeding ₹50 lakh are required to conduct a tax audit. Presumptive taxation cases may also trigger audit if income declared is lower than prescribed.</p>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5">
+                            <h5 className="font-bold text-white mb-2 text-sm">What forms are used for tax audit reporting?</h5>
+                            <p className="text-xs text-boulder">Form 3CA (for audit of accounts of a person carrying on business or profession who is required to get accounts audited under any other law), Form 3CB (for audit of accounts in cases where no other audit is statutory), and Form 3CD (the detailed statement of particulars).</p>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5">
+                            <h5 className="font-bold text-white mb-2 text-sm">What is Form 3CD?</h5>
+                            <p className="text-xs text-boulder">Form 3CD is the detailed statement of particulars required to be furnished along with the tax audit report. It includes information on tax-related items, deductions, compliance details, and other disclosures prescribed by the Income Tax Act.</p>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5">
+                            <h5 className="font-bold text-white mb-2 text-sm">What are the consequences of non-compliance?</h5>
+                            <p className="text-xs text-boulder">Failure to conduct a tax audit when required can result in a penalty of 0.5% of turnover or gross receipts, subject to a maximum of ₹1.5 lakh. Non-compliance may also invite scrutiny, interest, and other legal consequences.</p>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5">
+                            <h5 className="font-bold text-white mb-2 text-sm">How can professional tax audit services help businesses?</h5>
+                            <p className="text-xs text-boulder">Professional tax audit services ensure accurate reporting, reduce the risk of penalties, improve tax governance, and provide peace of mind. Expert advisors help identify risks, strengthen compliance, and support smooth tax assessments.</p>
+                        </div>
+                    </div>
+                </div>
             </>
         )
     },
