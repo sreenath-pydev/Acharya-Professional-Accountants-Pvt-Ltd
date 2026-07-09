@@ -27,26 +27,184 @@ export const auditingServices = {
         )
     },
     'internal-audit': {
-        title: 'Internal Audit',
-        seoTitle: 'Internal Audit & Risk Advisory Services',
-        seoDescription: 'Comprehensive internal audit services to evaluate internal controls, risk management, and operational efficiency.',
-        keywords: 'internal audit, risk advisory, internal controls, process audit, operational audit',
-        icon: 'fa-search-dollar',
+        title: 'Internal Audit Services',
+        seoTitle: 'Internal Audit Services | Acharya Professional Accountants',
+        seoDescription: 'Professional internal audit services to evaluate internal controls, improve operational efficiency, manage risks, and ensure regulatory compliance.',
+        keywords: 'internal audit, internal controls review, process audit, operational efficiency, compliance audit, corporate governance',
+        icon: 'fa-shield-halved',
         content: (
             <>
-                <p className="mb-4">
-                    Internal auditing is an independent, objective assurance and consulting activity designed to add value and improve an organization's operations. Our internal audit services go beyond simple tick-box compliance to provide strategic insights that help you achieve your business objectives.
+                <p className="mb-6">
+                    Strengthening controls, managing risks, and driving better business performance —
+                    delivered with independence, objectivity, and a focus on creating measurable value
+                    for Private Limited Companies, LLPs, startups, and growing enterprises.
                 </p>
-                <h3 className="text-xl font-bold text-white mb-3">Key Focus Areas</h3>
-                <ul className="list-disc list-inside space-y-2 mb-6 ml-4">
-                    <li><strong>Process Optimization:</strong> Reviewing standard operating procedures (SOPs) to eliminate inefficiencies and bottlenecks.</li>
-                    <li><strong>Risk Management:</strong> Identifying operational, financial, and compliance risks and recommending mitigation strategies.</li>
-                    <li><strong>Fraud Prevention:</strong> Implementing robust controls to detect and prevent fraud and revenue leakage.</li>
-                    <li><strong>Governance:</strong> enhancing the corporate governance framework to ensure accountability and transparency.</li>
-                </ul>
-                <p>
-                    Whether outsourced or co-sourced, our internal audit team works as a partner to your management, providing actionable recommendations to strengthen your business.
-                </p>
+
+                {/* About Section */}
+                <div className="bg-secondary-dark/50 border border-primary-accent/10 rounded-2xl p-6 mb-8">
+                    <h3 className="text-xl font-bold text-white mb-4">About Our Internal Audit Services</h3>
+                    <p className="mb-4 text-boulder text-base">
+                        Acharya Professional Accountants delivers professional Internal Audit Services tailored to the unique needs of businesses across various industries. Our objective is not merely to identify gaps or compliance issues but to provide practical recommendations that strengthen business operations and create measurable value.
+                    </p>
+                    <p className="mb-4 text-boulder text-base">
+                        As a trusted audit and advisory firm, we evaluate your organization's internal controls, risk management practices, governance structures, and operational processes. Through a systematic and independent review process, we help management identify vulnerabilities, improve accountability, and optimize business performance.
+                    </p>
+                    <p className="text-boulder text-base">
+                        Our audits are conducted using a risk-based methodology aligned with industry best practices, ensuring that audit efforts are focused on areas that have the greatest impact on business objectives and stakeholder confidence.
+                    </p>
+                </div>
+
+                {/* Business Value Cards */}
+                <div className="mb-10">
+                    <h3 className="text-2xl font-bold text-white mb-6">How Internal Audit Helps Your Business</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Strengthens Internal Controls</h4>
+                            <p className="text-sm text-boulder">Effective internal controls are essential for safeguarding assets, ensuring accurate reporting, and preventing operational disruptions. Our Internal Control Review helps identify weaknesses and recommend improvements that enhance control effectiveness.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Improves Operational Efficiency</h4>
+                            <p className="text-sm text-boulder">Businesses often experience hidden inefficiencies that increase costs and reduce productivity. Internal audits identify process bottlenecks, duplication of effort, and operational gaps, helping organizations streamline workflows and improve resource utilization.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Enhances Risk Management</h4>
+                            <p className="text-sm text-boulder">A proactive approach to risk management is critical in today's competitive landscape. We perform detailed Business Risk Assessments to identify operational, financial, compliance, and strategic risks before they affect organizational performance.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Supports Regulatory Compliance</h4>
+                            <p className="text-sm text-boulder">Regulatory requirements continue to evolve across industries. Our Compliance Audit procedures help ensure adherence to applicable laws, regulations, policies, and internal procedures, reducing the risk of non-compliance penalties.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Prevents Fraud and Errors</h4>
+                            <p className="text-sm text-boulder">Weak controls can expose businesses to fraud, financial losses, and reputational damage. Internal audits help identify control vulnerabilities and strengthen fraud prevention mechanisms throughout the organization.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Improves Decision-Making</h4>
+                            <p className="text-sm text-boulder">Our audit findings provide management with reliable insights, enabling informed decisions based on accurate information and risk-based recommendations.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h4 className="font-bold text-primary-accent mb-2 text-base">Strengthens Corporate Governance</h4>
+                            <p className="text-sm text-boulder">Strong governance frameworks foster accountability, transparency, and stakeholder trust. Internal audits support effective oversight and help organizations align governance practices with business objectives.</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Audit Process */}
+                <div className="mb-10">
+                    <h3 className="text-2xl font-bold text-white mb-6">Our Internal Audit Process</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">1</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Understanding the Business Environment</h5>
+                                <p className="text-xs text-boulder">Comprehensive review of your organization's structure, operations, critical functions, and industry-specific challenges to tailor our audit procedures.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">2</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Risk Assessment &amp; Audit Planning</h5>
+                                <p className="text-xs text-boulder">Identify key business risks, evaluate existing controls, and develop a risk-based audit plan that prioritizes high-impact operational areas.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">3</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Internal Control Evaluation</h5>
+                                <p className="text-xs text-boulder">Assess policies, procedures, segregation of duties, authorization processes, and monitoring mechanisms to strengthen accountability and reduce risk.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">4</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Process &amp; Compliance Review</h5>
+                                <p className="text-xs text-boulder">Examine operational workflows, regulatory compliance, and policy adherence to identify inefficiencies, gaps, and opportunities for improvement.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">5</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Audit Findings &amp; Recommendations</h5>
+                                <p className="text-xs text-boulder">Deliver clear, actionable observations with root cause analysis, business impact assessment, and practical recommendations for corrective action.</p>
+                            </div>
+                        </div>
+                        <div className="bg-secondary-dark/30 border border-white/5 rounded-xl p-5 flex gap-4">
+                            <div className="w-8 h-8 rounded-full bg-primary-accent text-dark-bg font-bold flex items-center justify-center flex-shrink-0 text-sm">6</div>
+                            <div>
+                                <h5 className="font-bold text-white mb-1 text-sm">Reporting &amp; Management Support</h5>
+                                <p className="text-xs text-boulder">Comprehensive audit reports, management presentations, implementation monitoring, and follow-up reviews to ensure sustained improvement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Why Choose Us */}
+                <div className="mb-10">
+                    <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Experienced Internal Audit Professionals</h5>
+                            <p className="text-xs text-boulder">Our team consists of qualified professionals with extensive experience in audit, risk advisory, and compliance reviews.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Risk-Based Audit Approach</h5>
+                            <p className="text-xs text-boulder">We focus audit efforts on areas that have the highest impact on business performance and risk exposure.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Industry-Specific Expertise</h5>
+                            <p className="text-xs text-boulder">We understand the operational and regulatory challenges faced by businesses across diverse sectors.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Action-Oriented Recommendations</h5>
+                            <p className="text-xs text-boulder">Our recommendations are practical, achievable, and designed to improve business outcomes and drive continuous improvement.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Commitment to Quality</h5>
+                            <p className="text-xs text-boulder">Every engagement is conducted with professionalism, objectivity, and technical excellence.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Confidentiality &amp; Integrity</h5>
+                            <p className="text-xs text-boulder">We maintain the highest standards of ethics, confidentiality, and independence throughout the engagement.</p>
+                        </div>
+                        <div className="bg-secondary-dark/40 border border-white/5 rounded-xl p-5 hover:border-primary-accent/30 transition-all duration-300">
+                            <h5 className="font-bold text-white mb-1 text-sm">Personalized Client Service</h5>
+                            <p className="text-xs text-boulder">We work closely with management teams to provide customized solutions aligned with business goals.</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Industries We Serve */}
+                <div className="mb-10 bg-secondary-dark/30 border border-white/5 rounded-2xl p-6 text-center">
+                    <h3 className="text-xl font-bold text-white mb-4">Industries We Serve</h3>
+                    <div className="flex flex-wrap gap-2 justify-center">
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Manufacturing</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Trading &amp; Distribution</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Information Technology</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Healthcare</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Construction &amp; Infrastructure</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Professional Services</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Retail &amp; E-commerce</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Logistics &amp; Supply Chain</span>
+                        <span className="bg-secondary-dark border border-white/10 px-4 py-2 rounded-full text-xs text-boulder hover:border-primary-accent/40 hover:text-white transition-all">Startups &amp; Emerging Businesses</span>
+                    </div>
+                </div>
+
+                {/* Partner Benefits */}
+                <div className="mb-10">
+                    <h3 className="text-xl font-bold text-white mb-4">Benefits of Working With Us</h3>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 list-none pl-0">
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Stronger internal controls</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Reduced business risks</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Improved compliance management</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Enhanced operational efficiency</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Better corporate governance</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Increased stakeholder confidence</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Fraud prevention and detection</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Cost optimization opportunities</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Improved financial &amp; operational reporting</li>
+                        <li className="flex items-center gap-2 text-boulder text-base"><span className="text-primary-accent font-bold">✓</span> Actionable insights for business growth</li>
+                    </ul>
+                </div>
             </>
         )
     },
