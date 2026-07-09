@@ -20,6 +20,14 @@ const LocationPage = ({ citySlugOverride }) => {
     const normalizedSlug = citySlug ? citySlug.toLowerCase() : 'kozhikode';
     const cityData = cityContent[normalizedSlug];
 
+    const noindexCities = [
+        'ajmer', 'anantapur', 'bengaluru', 'bangalore', 'chennai', 'coimbatore', 'delhi', 
+        'faridabad', 'hyderabad', 'jodhpur', 'kochi', 'kottayam', 'mumbai', 'palakkad', 
+        'surat', 'thrissur', 'visakhapatnam', 'rajkot', 'noida', 'cuttack', 'pune', 
+        'manjeri', 'mangaluru', 'mangalore', 'nagpur', 'ahmedabad'
+    ];
+    const shouldNoindex = noindexCities.includes(normalizedSlug);
+
     useEffect(() => {
         setTimeout(() => {
             AOS.refresh();
@@ -30,6 +38,11 @@ const LocationPage = ({ citySlugOverride }) => {
     if (!cityData) {
         return (
             <div className="min-h-screen pt-32 text-center text-white bg-dark-bg">
+                <SEO
+                    title="Location Not Found | Acharya Professional Accountants"
+                    description="We are expanding our services to this location. Contact us for professional accounting services."
+                    robots="noindex,follow"
+                />
                 <h1 className="text-3xl font-bold">Location Not Found</h1>
                 <p className="mt-4">We are expanding our services. Please contact us for support.</p>
                 <Link to="/contact" className="inline-block mt-6 bg-primary-accent px-6 py-2 rounded-full text-white">Contact Us</Link>
@@ -123,6 +136,7 @@ const LocationPage = ({ citySlugOverride }) => {
                 title={cityData.metaTitle}
                 description={cityData.metaDescription}
                 canonical={`https://www.acharyaprofessionalaccountants.in/accounting-service-in-${cityData.slug}`}
+                robots={shouldNoindex ? "noindex,follow" : undefined}
             />
 
             {/* HERO SECTION */}

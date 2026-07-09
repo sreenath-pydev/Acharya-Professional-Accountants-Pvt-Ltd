@@ -118,7 +118,7 @@ const CoursesPage = () => {
     <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28 pb-10">
       <SEO
         title="Best Practical Accounting & GST Course in Kozhikode | Acharya"
-        description="Enroll in C-PAT - Certified Professional Accounting Training. 4 months practical training + 2 months free internship in GST, Income Tax, Tally, and Auditing."
+        description="Enroll in C-PAT - Certified Professional Accounting Training. 4 months practical training + 1 months free internship in GST, Income Tax, Tally, and Auditing."
         canonical="https://www.acharyaprofessionalaccountants.in/courses"
       />
       <style>{`
@@ -375,7 +375,7 @@ const CoursesPage = () => {
               Contact Info
               <span className="absolute left-0 bottom-[-8px] w-12 h-[3px] bg-primary-accent"></span>
             </h3>
-            
+
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent flex-shrink-0 text-lg">

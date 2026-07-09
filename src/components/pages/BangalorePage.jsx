@@ -261,6 +261,7 @@ const BangalorePage = () => {
                 description="Acharya Professional Accountants – a trusted CA firm in Bangalore offering GST filing, income tax, startup compliance, ESOP taxation, transfer pricing, audit & company registration across Indiranagar, Koramangala, HSR Layout, Whitefield and Electronic City."
                 keywords="CA firm in Bangalore, chartered accountant in Bangalore, GST filing Bangalore, income tax consultant Bangalore, audit firm Bangalore, accounting services Bangalore, company registration Bangalore, startup CA Bangalore, ESOP tax Bangalore"
                 canonical="https://www.acharyaprofessionalaccountants.in/accounting-service-in-bangalore"
+                robots="noindex,follow"
             />
 
             {/* Structured Schema Data */}

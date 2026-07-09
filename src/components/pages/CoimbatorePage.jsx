@@ -175,6 +175,7 @@ const CoimbatorePage = () => {
                 description="Acharya Professional Accountants – a trusted CA firm in Coimbatore offering GST filing, income tax, audit, bookkeeping & company registration for textile mills, pump and foundry manufacturers, exporters and educational institutions across Coimbatore, Tirupur, Peelamedu, Saravanampatti and Pollachi."
                 keywords="CA firm in Coimbatore, chartered accountant in Coimbatore, GST filing Coimbatore, income tax consultant Coimbatore, audit firm Coimbatore, accounting services Coimbatore, company registration Coimbatore, NRI tax Coimbatore, GST consultant Coimbatore"
                 canonical="https://www.acharyaprofessionalaccountants.in/accounting-service-in-coimbatore"
+                robots="noindex,follow"
             />
 
             {/* Structured Schema Data */}

@@ -212,6 +212,7 @@ const PalakkadPage = () => {
                 description="Acharya Professional Accountants – a trusted CA firm in Palakkad offering GST filing, income tax, audit, bookkeeping & company registration across Palakkad town, Ottapalam, Shoranur, Chittur and Mannarkkad."
                 keywords="CA firm in Palakkad, chartered accountant in Palakkad, GST filing Palakkad, income tax consultant Palakkad, audit firm Palakkad, accounting services Palakkad, company registration Palakkad, tax consultant Palakkad"
                 canonical="https://www.acharyaprofessionalaccountants.in/accounting-service-in-palakkad"
+                robots="noindex,follow"
             />
 
             {/* Structured Schema Data */}

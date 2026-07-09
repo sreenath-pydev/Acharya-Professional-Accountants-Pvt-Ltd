@@ -175,6 +175,7 @@ const ChennaiPage = () => {
                 description="Acharya Professional Accountants – a trusted CA firm in Chennai offering GST filing, income tax, audit, bookkeeping & company registration for IT companies, startups, manufacturers, exporters and NRI clients across Chennai, Tambaram, Ambattur, OMR and Sriperumbudur."
                 keywords="CA firm in Chennai, chartered accountant in Chennai, GST filing Chennai, income tax consultant Chennai, audit firm Chennai, accounting services Chennai, company registration Chennai, NRI tax Chennai, GST consultant Chennai"
                 canonical="https://www.acharyaprofessionalaccountants.in/accounting-service-in-chennai"
+                robots="noindex,follow"
             />
 
             {/* Structured Schema Data */}

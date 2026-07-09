@@ -257,6 +257,7 @@ const HyderabadPage = () => {
                 description="Acharya Professional Accountants – a trusted CA firm in Hyderabad offering GST filing, income tax, statutory audit, RERA compliance, pharma export GST and company registration across HITEC City, Gachibowli, Banjara Hills and Kukatpally."
                 keywords="CA firm in Hyderabad, chartered accountant in Hyderabad, GST filing Hyderabad, income tax consultant Hyderabad, audit firm Hyderabad, accounting services Hyderabad, company registration Hyderabad, RERA Hyderabad, NRI tax Hyderabad"
                 canonical="https://www.acharyaprofessionalaccountants.in/accounting-service-in-hyderabad"
+                robots="noindex,follow"
             />
 
             {/* Structured Schema Data */}

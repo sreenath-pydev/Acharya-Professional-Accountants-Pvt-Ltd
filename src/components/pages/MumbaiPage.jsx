@@ -246,6 +246,7 @@ const MumbaiPage = () => {
                 description="Acharya Professional Accountants – a leading CA firm in Mumbai offering GST filing, income tax, statutory audit, HNI tax planning, listed company compliance and company registration across BKC, Andheri, Lower Parel and Thane."
                 keywords="CA firm in Mumbai, chartered accountant in Mumbai, GST filing Mumbai, income tax consultant Mumbai, audit firm Mumbai, accounting services Mumbai, company registration Mumbai, HNI tax planning Mumbai, NRI tax Mumbai"
                 canonical="https://www.acharyaprofessionalaccountants.in/accounting-service-in-mumbai"
+                robots="noindex,follow"
             />
 
             {/* Structured Schema Data */}

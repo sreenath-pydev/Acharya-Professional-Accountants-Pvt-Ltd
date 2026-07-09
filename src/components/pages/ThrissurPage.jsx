@@ -230,6 +230,7 @@ const ThrissurPage = () => {
                 title="CA & Accounting Firm in Thrissur - Tax & GST Experts | Acharya"
                 description="Acharya provides complete CA and accounting services in Thrissur. We handle your daily bookkeeping, GST returns, income tax filings, and statutory audits."
                 canonical="https://www.acharyaprofessionalaccountants.in/accounting-service-in-thrissur"
+                robots="noindex,follow"
             />
 
             {/* Structured Schema Data */}

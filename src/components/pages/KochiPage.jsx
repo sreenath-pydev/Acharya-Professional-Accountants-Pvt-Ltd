@@ -243,6 +243,7 @@ const KochiPage = () => {
                 description="Acharya Professional Accountants – a leading CA firm in Kochi offering GST filing, income tax, statutory audit, company registration & CFO services for startups, MSMEs and corporates across Ernakulam, Kakkanad and Fort Kochi."
                 keywords="CA firm in Kochi, chartered accountant in Kochi, GST filing Kochi, income tax consultant Kochi, audit firm Kochi, accounting services Kochi, company registration Kochi, CA Ernakulam"
                 canonical="https://www.acharyaprofessionalaccountants.in/accounting-service-in-kochi"
+                robots="noindex,follow"
             />
 
             {/* Structured Schema Data */}
