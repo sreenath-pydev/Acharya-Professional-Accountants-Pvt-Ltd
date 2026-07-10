@@ -24,6 +24,7 @@ const ServiceNoticeResponsesPage = lazy(() => import('./components/pages/Service
 const ServiceTaxAuditPage = lazy(() => import('./components/pages/ServiceTaxAuditPage'));
 const ServiceAuditingPage = lazy(() => import('./components/pages/ServiceAuditingPage'));
 const AuditingServiceDetailPage = lazy(() => import('./components/pages/AuditingServiceDetailPage'));
+const ServiceInternalAuditPage = lazy(() => import('./components/pages/ServiceInternalAuditPage'));
 const ServiceGstPage = lazy(() => import('./components/pages/ServiceGstPage'));
 const GSTServiceDetailPage = lazy(() => import('./components/pages/GSTServiceDetailPage'));
 const ServiceBusinessConsultingPage = lazy(() => import('./components/pages/ServiceBusinessConsultingPage'));
@@ -63,6 +64,7 @@ function App() {
             <Route path="/services/taxation/tax-audit" element={<Navigate to="/services/auditing/tax-audit" replace />} />
             <Route path="/services/auditing" element={<ServiceAuditingPage />} />
             <Route path="/services/auditing/tax-audit" element={<ServiceTaxAuditPage />} />
+            <Route path="/services/auditing/internal-audit" element={<ServiceInternalAuditPage />} />
             <Route path="/services/auditing/:serviceId" element={<AuditingServiceDetailPage />} />
             <Route path="/services/gst" element={<ServiceGstPage />} />
             <Route path="/services/gst/:serviceId" element={<GSTServiceDetailPage />} />
