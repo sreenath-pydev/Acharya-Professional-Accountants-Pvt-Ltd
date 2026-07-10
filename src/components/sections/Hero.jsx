@@ -9,7 +9,7 @@ const Hero = () => {
     <>
       <style>{`
         .hero-bg-img {
-          object-position: center 30px;
+          object-position: 73% 48%;
         }
         @media (min-width: 640px) {
           .hero-bg-img {
@@ -52,7 +52,7 @@ const Hero = () => {
         {/* Secondary overlay for dynamic visual lighting */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/72 via-black/40 to-transparent pointer-events-none z-10" />
 
-        <div className="container mx-auto px-5 md:px-12 lg:px-20 pt-32 pb-20 md:pt-40 md:pb-28 lg:pt-48 lg:pb-36 relative z-20">
+        <div className="container mx-auto px-5 md:px-12 lg:px-20 pt-32 pb-[360px] md:pb-28 lg:pb-36 relative z-20">
           <div className="max-w-3xl space-y-6" data-aos="fade-right" data-aos-delay="120">
             <p className="text-primary-accent uppercase tracking-[0.25em] text-xs md:text-sm drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
               Acharya Professional Accountants
