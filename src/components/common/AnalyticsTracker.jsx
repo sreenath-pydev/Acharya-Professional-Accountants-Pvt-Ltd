@@ -6,7 +6,7 @@ const GTM_ID = import.meta.env.VITE_GTM_ID;
 const AnalyticsTracker = () => {
   const location = useLocation();
 
-  const isGtmValid = GTM_ID && GTM_ID !== 'GTM-NHQBRDLJ';
+  const isGtmValid = GTM_ID && GTM_ID !== 'GTM-XXXXXXX';
 
   // 1. Initialize dataLayer placeholder immediately on mount
   useEffect(() => {
