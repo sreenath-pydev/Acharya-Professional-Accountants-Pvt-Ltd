@@ -115,7 +115,7 @@ const CoursesPage = () => {
   ];
 
   return (
-    <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28 pb-10">
+    <main className="relative z-10 font-inter text-white bg-transparent pt-24 md:pt-28 pb-10">
       <SEO
         title="Best Practical Accounting & GST Course in Kozhikode | Acharya"
         description="Enroll in C-PAT - Certified Professional Accounting Training. 4 months practical training + 1 months free internship in GST, Income Tax, Tally, and Auditing."
@@ -129,7 +129,7 @@ const CoursesPage = () => {
 
       {/* ===== C-PAT FEATURED HERO ===== */}
       <section className="container mx-auto px-4 md:px-20 mb-14" data-aos="fade-up">
-        <div className="relative overflow-hidden bg-gradient-to-br from-secondary-dark to-dark-bg border border-primary-accent/15 rounded-3xl p-8 md:p-12 shadow-2xl">
+        <div className="relative overflow-hidden bg-gradient-to-br from-secondary-dark/45 to-dark-bg/25 backdrop-blur-md border border-primary-accent/15 rounded-3xl p-8 md:p-12 shadow-2xl">
           <div className="absolute top-0 right-0 p-32 bg-primary-accent/5 rounded-full blur-3xl pointer-events-none"></div>
 
           <span className="inline-flex items-center gap-2 bg-primary-accent text-dark-bg font-extrabold uppercase tracking-wider text-xs px-4 py-1.5 rounded-full">

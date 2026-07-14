@@ -11,7 +11,7 @@ const LoanSupportPage = () => {
     }, []);
 
     return (
-        <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
+        <main className="relative z-10 font-inter text-white bg-transparent pt-24 md:pt-28">
             <SEO
                 title="Business Loan Assistance & Project Reports | Acharya"
                 description="Get expert guidance on a business loan from Acharya Professional Accountants, covering eligibility, documentation, and approvals for seamless funding."
@@ -67,7 +67,7 @@ const LoanSupportPage = () => {
             </section>
 
             {/* Loan Types Section */}
-            <section className="bg-secondary-dark/50 py-16" data-aos="fade-up">
+            <section className="relative z-10 bg-secondary-dark/50 backdrop-blur-sm py-16" data-aos="fade-up">
                 <div className="container mx-auto px-4 md:px-20">
                     <div className="text-center mb-12">
                         <h2 className="font-montserrat text-2xl md:text-4xl font-bold mb-4">Types of Business Loans We Support</h2>
@@ -90,7 +90,7 @@ const LoanSupportPage = () => {
                             <Link
                                 to={`/services/business-loans/${loan.slug}`}
                                 key={index}
-                                className="bg-dark-bg border border-white/5 p-6 rounded-xl hover:border-primary-accent/30 transition-all duration-300 group block"
+                                className="bg-dark-bg/60 backdrop-blur-sm border border-white/5 p-6 rounded-xl hover:border-primary-accent/30 transition-all duration-300 group block"
                             >
                                 <div className="w-12 h-12 bg-secondary-dark rounded-lg flex items-center justify-center text-primary-accent text-xl mb-4 group-hover:scale-110 transition-transform duration-300">
                                     <DynamicFaIcon name={loan.icon} />
@@ -165,7 +165,7 @@ const LoanSupportPage = () => {
             </section>
 
             {/* Rejection vs Help Section */}
-            <section className="bg-secondary-dark py-16" data-aos="fade-up">
+            <section className="relative z-10 bg-secondary-dark/65 backdrop-blur-sm py-16" data-aos="fade-up">
                 <div className="container mx-auto px-4 md:px-20">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
                         {/* Rejection */}
@@ -214,7 +214,7 @@ const LoanSupportPage = () => {
             {/* New Section: What is CMA Data & Why is it Critical? */}
             <section className="container mx-auto px-4 md:px-20 py-16 md:py-24" data-aos="fade-up">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div className="bg-secondary-dark/40 border border-primary-accent/10 rounded-2xl p-8 lg:p-10">
+                    <div className="bg-secondary-dark/40 backdrop-blur-sm border border-primary-accent/10 rounded-2xl p-8 lg:p-10">
                         <span className="text-primary-accent font-bold tracking-wider uppercase text-sm">Credit Analysis</span>
                         <h2 className="font-montserrat text-2xl md:text-3xl font-bold mt-2 mb-6">What is CMA Data & Why do Banks Demand it?</h2>
                         <p className="text-boulder text-sm leading-relaxed mb-4">
@@ -274,7 +274,7 @@ const LoanSupportPage = () => {
 
             {/* New Section: Pre-Sanction and Post-Sanction Advisory */}
             <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16" data-aos="fade-up">
-                <div className="bg-secondary-dark/30 border border-primary-accent/15 rounded-3xl p-8 md:p-12">
+                <div className="bg-secondary-dark/30 backdrop-blur-sm border border-primary-accent/15 rounded-3xl p-8 md:p-12">
                     <div className="text-center mb-10">
                         <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-4">Pre-Sanction & Post-Sanction Advisory Services</h2>
                         <p className="text-boulder max-w-3xl mx-auto">
@@ -282,7 +282,7 @@ const LoanSupportPage = () => {
                         </p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="bg-dark-bg/60 p-6 rounded-xl border border-white/5">
+                        <div className="bg-dark-bg/60 backdrop-blur-sm p-6 rounded-xl border border-white/5">
                             <h4 className="font-semibold text-primary-accent mb-2">1. Credit Appraisal Advisory</h4>
                             <p className="text-xs text-boulder leading-relaxed">
                                 We help you prepare for interactions with bank credit managers, explaining the logic behind your sales projections, inventory margins, and capital expenditure timelines.
@@ -343,7 +343,7 @@ const LoanSupportPage = () => {
             </section>
 
             {/* Who Can Take Support */}
-            <section className="bg-secondary-dark/30 py-16" data-aos="fade-up">
+            <section className="relative z-10 bg-secondary-dark/30 backdrop-blur-sm py-16" data-aos="fade-up">
                 <div className="container mx-auto px-4 md:px-20 text-center">
                     <h2 className="font-montserrat text-2xl font-bold mb-4">Who Can Benefit from Our Loan Support?</h2>
                     <p className="text-boulder max-w-2xl mx-auto mb-8">
@@ -365,7 +365,7 @@ const LoanSupportPage = () => {
 
             {/* New Section: FAQs for Business Loans & Project Reports */}
             <section className="container mx-auto px-4 md:px-20 mb-12 md:mb-16" data-aos="fade-up">
-                <div className="bg-secondary-dark/80 rounded-2xl p-8 md:p-10 border border-primary-accent/10">
+                <div className="bg-secondary-dark/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-primary-accent/10">
                     <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-6 text-center">Business Loans & Project Reports – FAQs</h2>
                     <div className="space-y-6 text-boulder">
                         <div>

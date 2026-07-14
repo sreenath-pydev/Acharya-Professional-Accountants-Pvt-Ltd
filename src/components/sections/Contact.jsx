@@ -89,8 +89,8 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-dark-bg relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[rgba(44,14,9,0.1)] to-[rgba(4,4,4,0.9)] z-0"></div>
+    <section id="contact" className="relative z-10 py-20 bg-transparent overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-[rgba(44,14,9,0.05)] to-[rgba(4,4,4,0.7)] z-0"></div>
 
       <div className="container mx-auto px-5 md:px-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">

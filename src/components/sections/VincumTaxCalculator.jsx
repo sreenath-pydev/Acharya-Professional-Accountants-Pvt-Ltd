@@ -414,7 +414,7 @@ const VincumTaxCalculator = () => {
   const deductionsDisabled = regime === 'new';
 
   return (
-    <section id="tax-calculator" className="py-16 md:py-20 bg-dark-bg">
+    <section id="tax-calculator" className="relative z-10 py-16 md:py-20 bg-transparent">
       <div className="container mx-auto px-5 md:px-12 lg:px-20" data-aos="fade-up" data-aos-delay="80">
         <div className="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-10">
           {/* Left: Inputs */}

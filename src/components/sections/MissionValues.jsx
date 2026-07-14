@@ -41,7 +41,7 @@ const MissionValues = () => {
   ];
 
   return (
-    <section id="mission-values" className="py-16 md:py-20 bg-secondary-dark overflow-hidden">
+    <section id="mission-values" className="relative z-10 py-16 md:py-20 bg-secondary-dark/40 backdrop-blur-md overflow-hidden">
       <div className="container mx-auto px-4 md:px-20">
         <div data-aos="fade-up" data-aos-delay="50">
           <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 text-primary-accent">

@@ -10,7 +10,7 @@ const ContactPage = () => {
   }, []);
 
   return (
-    <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
+    <main className="relative z-10 font-inter text-white bg-transparent pt-24 md:pt-28">
       <SEO
         title="Contact Us | Acharya Professional Accountants"
         description="Get in touch with Acharya Professional Accountants in Calicut for expert CA services, tax consulting, and business support."

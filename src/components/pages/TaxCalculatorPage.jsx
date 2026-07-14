@@ -12,7 +12,7 @@ const TaxCalculatorPage = () => {
     }, []);
 
     return (
-        <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
+        <main className="relative z-10 font-inter text-white bg-transparent pt-24 md:pt-28">
             <SEO
                 title="Income Tax Calculator & Planner | Acharya Accountants"
                 description="Calculate your income tax instantly with our easy-to-use online tax calculator. Plan your taxes accurately and make informed financial decisions."
@@ -37,7 +37,7 @@ const TaxCalculatorPage = () => {
             {/* Benefits / Why Use Section */}
             <section className="container mx-auto px-4 md:px-20 py-12 md:py-16" data-aos="fade-up">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div className="bg-secondary-dark/50 border border-primary-accent/10 p-6 rounded-2xl hover:border-primary-accent/30 transition-colors">
+                    <div className="bg-secondary-dark/50 backdrop-blur-sm border border-primary-accent/10 p-6 rounded-2xl hover:border-primary-accent/30 transition-colors">
                         <div className="w-12 h-12 bg-primary-accent/10 rounded-full flex items-center justify-center mb-4 text-primary-accent text-xl">
                             <DynamicFaIcon name="fa-calculator" />
                         </div>
@@ -46,7 +46,7 @@ const TaxCalculatorPage = () => {
                             Updated with the latest budget 2025 amendments, surcharges, and rebate limits to ensure precise calculations.
                         </p>
                     </div>
-                    <div className="bg-secondary-dark/50 border border-primary-accent/10 p-6 rounded-2xl hover:border-primary-accent/30 transition-colors">
+                    <div className="bg-secondary-dark/50 backdrop-blur-sm border border-primary-accent/10 p-6 rounded-2xl hover:border-primary-accent/30 transition-colors">
                         <div className="w-12 h-12 bg-primary-accent/10 rounded-full flex items-center justify-center mb-4 text-primary-accent text-xl">
                             <DynamicFaIcon name="fa-balance-scale" />
                         </div>
@@ -55,7 +55,7 @@ const TaxCalculatorPage = () => {
                             Confused between Old and New regimes? We automatically compare both to show you where you save more.
                         </p>
                     </div>
-                    <div className="bg-secondary-dark/50 border border-primary-accent/10 p-6 rounded-2xl hover:border-primary-accent/30 transition-colors">
+                    <div className="bg-secondary-dark/50 backdrop-blur-sm border border-primary-accent/10 p-6 rounded-2xl hover:border-primary-accent/30 transition-colors">
                         <div className="w-12 h-12 bg-primary-accent/10 rounded-full flex items-center justify-center mb-4 text-primary-accent text-xl">
                             <DynamicFaIcon name="fa-file-invoice-dollar" />
                         </div>
@@ -69,7 +69,7 @@ const TaxCalculatorPage = () => {
 
             {/* Expert Services CTA Section */}
             <section className="container mx-auto px-4 md:px-20 mb-16" data-aos="fade-up" data-aos-delay="100">
-                <div className="bg-secondary-dark border border-primary-accent/15 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10">
+                <div className="bg-secondary-dark/65 backdrop-blur-sm border border-primary-accent/15 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10">
                     <div className="flex-1">
                         <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-4">
                             Need Professional Tax Assistance?

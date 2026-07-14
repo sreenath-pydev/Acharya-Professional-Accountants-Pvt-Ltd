@@ -23,7 +23,7 @@ const LoanDetailPage = () => {
     }
 
     return (
-        <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
+        <main className="relative z-10 font-inter text-white bg-transparent pt-24 md:pt-28">
             <SEO
                 title={loan.title}
                 description={loan.seoDescription}
@@ -71,7 +71,7 @@ const LoanDetailPage = () => {
 
             {/* Content Section */}
             <section className="container mx-auto px-4 md:px-20 mb-16" data-aos="fade-up">
-                <div className="bg-secondary-dark/50 border border-white/5 rounded-3xl p-8 md:p-12">
+                <div className="bg-secondary-dark/50 backdrop-blur-md border border-white/5 rounded-3xl p-8 md:p-12">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         <div className="space-y-10">
                             {loan.content.map((section, idx) => (
@@ -99,7 +99,7 @@ const LoanDetailPage = () => {
                         </div>
 
                         {/* Sidebar / CTA Box */}
-                        <div className="bg-dark-bg p-8 rounded-2xl border border-primary-accent/20 h-fit sticky top-24">
+                        <div className="bg-dark-bg/60 backdrop-blur-sm p-8 rounded-2xl border border-primary-accent/20 h-fit sticky top-24">
                             <h3 className="font-montserrat text-xl font-bold mb-4">Why Apply Through Acharya?</h3>
                             <ul className="space-y-4 mb-8">
                                 {[

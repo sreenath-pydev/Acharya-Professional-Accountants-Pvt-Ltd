@@ -36,10 +36,10 @@ const TopCities = () => {
     ];
 
     return (
-        <section className="py-20 bg-dark-bg border-t border-white/5">
+        <section className="relative z-10 py-20 bg-transparent border-t border-white/5">
             <div className="container mx-auto px-5 md:px-20">
                 <div 
-                    className="bg-secondary-dark/40 border border-white/5 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden"
+                    className="bg-secondary-dark/40 backdrop-blur-md border border-white/5 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden"
                     data-aos="fade-up"
                 >
                     {/* Decorative background glow */}

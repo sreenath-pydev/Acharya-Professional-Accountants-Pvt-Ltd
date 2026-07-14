@@ -47,7 +47,7 @@ const OurExpertise = () => {
   ];
 
   return (
-    <section id="our-expertise" className="py-16 md:py-20 bg-dark-bg overflow-hidden">
+    <section id="our-expertise" className="relative z-10 py-16 md:py-20 bg-transparent overflow-hidden">
       <div className="container mx-auto px-4 md:px-20">
         <div data-aos="fade-up" data-aos-delay="50" className="text-center mb-12">
           <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4 text-primary-accent">
@@ -65,7 +65,7 @@ const OurExpertise = () => {
               key={index}
               data-aos="fade-up"
               data-aos-delay={50 + index * 50}
-              className="bg-secondary-dark p-6 rounded-xl border border-primary-accent/10 hover:border-primary-accent/30 hover:shadow-lg hover:shadow-primary-accent/10 hover:-translate-y-2 transition-all duration-300"
+              className="bg-secondary-dark/65 backdrop-blur-sm p-6 rounded-xl border border-primary-accent/10 hover:border-primary-accent/30 hover:shadow-lg hover:shadow-primary-accent/10 hover:-translate-y-2 transition-all duration-300"
             >
               <div className="text-4xl text-primary-accent mb-4">
                 <DynamicFaIcon name={area.icon} />

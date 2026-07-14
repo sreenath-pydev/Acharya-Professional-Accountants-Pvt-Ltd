@@ -67,7 +67,7 @@ const FAQ = () => {
   return (
     <section
       id="faq"
-      className="relative overflow-hidden py-16 md:py-24 bg-dark-bg"
+      className="relative z-10 overflow-hidden py-16 md:py-24 bg-transparent"
     >
       <div className="container mx-auto px-5 md:px-12 lg:px-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-8 lg:gap-12 items-start">

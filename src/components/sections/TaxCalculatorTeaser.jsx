@@ -3,7 +3,7 @@ import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const TaxCalculatorTeaser = () => {
     return (
-        <section className="py-16 bg-gradient-to-r from-secondary-dark to-dark-bg border-y border-primary-accent/10">
+        <section className="relative z-10 py-16 bg-gradient-to-r from-secondary-dark/45 to-dark-bg/25 backdrop-blur-md border-y border-primary-accent/10">
             <div className="container mx-auto px-4 md:px-20" data-aos="fade-up">
                 <div className="bg-primary-accent/5 rounded-3xl p-8 md:p-12 relative overflow-hidden border border-primary-accent/20">
                     {/* Background decorative elements */}

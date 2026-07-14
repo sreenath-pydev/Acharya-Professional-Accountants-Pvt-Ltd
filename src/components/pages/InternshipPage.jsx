@@ -10,7 +10,7 @@ const InternshipPage = () => {
     }, []);
 
     return (
-        <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
+        <main className="relative z-10 font-inter text-white bg-transparent pt-24 md:pt-28">
             <SEO
                 title="Accounting & Finance Internship in Kerala | Acharya"
                 description="Join Acharya's Accounting & Finance Internship in Kozhikode. Practical training in GST, Income Tax, Audit for BCom, MCom, MBA, CMA, ACCA students."
@@ -32,7 +32,7 @@ const InternshipPage = () => {
                     Accounting & Finance Internship Programs in Kozhikode, Kerala
                 </h1>
 
-                <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-6 md:p-8 mb-8">
+                <div className="bg-secondary-dark/65 backdrop-blur-sm border border-primary-accent/15 rounded-2xl p-6 md:p-8 mb-8">
                     <p className="text-lg text-boulder leading-relaxed">
                         Acharya Professional Accountants offers structured accounting internship in Kerala and finance internship in Kerala programs designed to provide real-world professional exposure. Based in Kozhikode, our internship programs help students understand how accounting, finance, taxation, and compliance work in actual professional environments. Whether you are a degree student, post-graduate, or pursuing professional qualifications, our finance internship in Kozhikode focuses on practical learning, industry relevance, and career readiness.
                     </p>
@@ -43,12 +43,12 @@ const InternshipPage = () => {
           FYUGP Internship Stats
       ========================== */}
             <section
-                className="py-16 bg-secondary-dark/30 border-y border-white/5 mb-16"
+                className="relative z-10 py-16 bg-secondary-dark/30 backdrop-blur-sm border-y border-white/5 mb-16"
                 data-aos="fade-up"
                 data-aos-delay="50"
             >
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
-                    <div className="bg-secondary-dark border border-primary-accent/15 rounded-3xl p-8 md:p-10 text-center relative overflow-hidden shadow-2xl mb-12">
+                    <div className="bg-secondary-dark/65 backdrop-blur-sm border border-primary-accent/15 rounded-3xl p-8 md:p-10 text-center relative overflow-hidden shadow-2xl mb-12">
                         <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_70%_20%,rgba(229,161,69,0.3),transparent_50%)]"></div>
                         <span className="text-primary-accent uppercase tracking-[0.2em] text-xs font-semibold block mb-2">
                             Trusted by Students Across Kerala
@@ -70,27 +70,27 @@ const InternshipPage = () => {
                             Through our structured internship programs, students gained practical exposure in:
                         </h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <div className="bg-secondary-dark border border-white/5 rounded-full px-6 py-3.5 flex items-center gap-3 text-white text-sm">
+                            <div className="bg-secondary-dark/65 backdrop-blur-sm border border-white/5 rounded-full px-6 py-3.5 flex items-center gap-3 text-white text-sm">
                                 <span className="w-6 h-6 rounded-full bg-primary-accent/20 flex items-center justify-center text-primary-accent text-xs flex-shrink-0">✓</span>
                                 <span>Accounting and Bookkeeping</span>
                             </div>
-                            <div className="bg-secondary-dark border border-white/5 rounded-full px-6 py-3.5 flex items-center gap-3 text-white text-sm">
+                            <div className="bg-secondary-dark/65 backdrop-blur-sm border border-white/5 rounded-full px-6 py-3.5 flex items-center gap-3 text-white text-sm">
                                 <span className="w-6 h-6 rounded-full bg-primary-accent/20 flex items-center justify-center text-primary-accent text-xs flex-shrink-0">✓</span>
                                 <span>GST and Taxation Basics</span>
                             </div>
-                            <div className="bg-secondary-dark border border-white/5 rounded-full px-6 py-3.5 flex items-center gap-3 text-white text-sm">
+                            <div className="bg-secondary-dark/65 backdrop-blur-sm border border-white/5 rounded-full px-6 py-3.5 flex items-center gap-3 text-white text-sm">
                                 <span className="w-6 h-6 rounded-full bg-primary-accent/20 flex items-center justify-center text-primary-accent text-xs flex-shrink-0">✓</span>
                                 <span>Finance and Business Operations</span>
                             </div>
-                            <div className="bg-secondary-dark border border-white/5 rounded-full px-6 py-3.5 flex items-center gap-3 text-white text-sm">
+                            <div className="bg-secondary-dark/65 backdrop-blur-sm border border-white/5 rounded-full px-6 py-3.5 flex items-center gap-3 text-white text-sm">
                                 <span className="w-6 h-6 rounded-full bg-primary-accent/20 flex items-center justify-center text-primary-accent text-xs flex-shrink-0">✓</span>
                                 <span>Audit Support Activities</span>
                             </div>
-                            <div className="bg-secondary-dark border border-white/5 rounded-full px-6 py-3.5 flex items-center gap-3 text-white text-sm">
+                            <div className="bg-secondary-dark/65 backdrop-blur-sm border border-white/5 rounded-full px-6 py-3.5 flex items-center gap-3 text-white text-sm">
                                 <span className="w-6 h-6 rounded-full bg-primary-accent/20 flex items-center justify-center text-primary-accent text-xs flex-shrink-0">✓</span>
                                 <span>Professional Documentation</span>
                             </div>
-                            <div className="bg-secondary-dark border border-white/5 rounded-full px-6 py-3.5 flex items-center gap-3 text-white text-sm">
+                            <div className="bg-secondary-dark/65 backdrop-blur-sm border border-white/5 rounded-full px-6 py-3.5 flex items-center gap-3 text-white text-sm">
                                 <span className="w-6 h-6 rounded-full bg-primary-accent/20 flex items-center justify-center text-primary-accent text-xs flex-shrink-0">✓</span>
                                 <span>Workplace Ethics and Compliance</span>
                             </div>
@@ -120,7 +120,7 @@ const InternshipPage = () => {
                         </p>
 
                         <div className="space-y-6 mb-8">
-                            <div className="bg-secondary-dark border border-primary-accent/20 rounded-xl p-5">
+                            <div className="bg-secondary-dark/65 backdrop-blur-sm border border-primary-accent/20 rounded-xl p-5">
                                 <h3 className="text-white font-semibold text-lg mb-3 flex items-center gap-2">
                                     <DynamicFaIcon name="fa-briefcase" className="text-primary-accent" />
                                     Accounting Internship in Kozhikode with Practical Office Exposure
@@ -147,7 +147,7 @@ const InternshipPage = () => {
                                 </p>
                             </div>
 
-                            <div className="bg-secondary-dark border border-primary-accent/20 rounded-xl p-5">
+                            <div className="bg-secondary-dark/65 backdrop-blur-sm border border-primary-accent/20 rounded-xl p-5">
                                 <h3 className="text-white font-semibold text-lg mb-3 flex items-center gap-2">
                                     <DynamicFaIcon name="fa-chart-line" className="text-primary-accent" />
                                     Finance Internship in Kozhikode for Early Career Learners
@@ -239,7 +239,7 @@ const InternshipPage = () => {
                         </p>
 
                         <div className="space-y-6 mb-8">
-                            <div className="bg-secondary-dark border border-primary-accent/20 rounded-xl p-5">
+                            <div className="bg-secondary-dark/65 backdrop-blur-sm border border-primary-accent/20 rounded-xl p-5">
                                 <h3 className="text-white font-semibold text-lg mb-3 flex items-center gap-2">
                                     <DynamicFaIcon name="fa-user-graduate" className="text-primary-accent" />
                                     Accounting Internship in Kozhikode Aligned with Professional Courses
@@ -266,7 +266,7 @@ const InternshipPage = () => {
                                 </p>
                             </div>
 
-                            <div className="bg-secondary-dark border border-primary-accent/20 rounded-xl p-5">
+                            <div className="bg-secondary-dark/65 backdrop-blur-sm border border-primary-accent/20 rounded-xl p-5">
                                 <h3 className="text-white font-semibold text-lg mb-3 flex items-center gap-2">
                                     <DynamicFaIcon name="fa-file-invoice-dollar" className="text-primary-accent" />
                                     Finance Internship in Kozhikode with Professional Skill Development
@@ -351,7 +351,7 @@ const InternshipPage = () => {
           Structured Learning Approach
       ========================== */}
             <section
-                className="bg-secondary-dark py-16 mb-16"
+                className="relative z-10 bg-secondary-dark/65 backdrop-blur-sm py-16 mb-16"
                 data-aos="fade-up"
             >
                 <div className="container mx-auto px-4 md:px-20">
@@ -387,7 +387,7 @@ const InternshipPage = () => {
                                 description: "Training approach designed for job readiness."
                             }
                         ].map((item, index) => (
-                            <div key={index} className="bg-dark-bg p-6 rounded-xl border border-primary-accent/10 hover:border-primary-accent/30 transition-all duration-300">
+                            <div key={index} className="bg-dark-bg/60 backdrop-blur-sm p-6 rounded-xl border border-primary-accent/10 hover:border-primary-accent/30 transition-all duration-300">
                                 <div className="w-12 h-12 rounded-full bg-primary-accent/10 flex items-center justify-center text-primary-accent mb-4 text-xl">
                                     <DynamicFaIcon name={item.icon} />
                                 </div>
@@ -423,7 +423,7 @@ const InternshipPage = () => {
                                 'Prepare for careers in accounting, audit, taxation, and finance',
                                 'Strengthen profiles for CA, CMA, ACCA, and MBA pathways'
                             ].map((item, index) => (
-                                <li key={index} className="flex items-start gap-4 p-4 bg-secondary-dark rounded-xl border border-white/5 hover:border-primary-accent/20 transition-all">
+                                <li key={index} className="flex items-start gap-4 p-4 bg-secondary-dark/65 backdrop-blur-sm rounded-xl border border-white/5 hover:border-primary-accent/20 transition-all">
                                     <div className="mt-1 text-primary-accent">
                                         <DynamicFaIcon name="fa-check-circle" />
                                     </div>
@@ -434,7 +434,7 @@ const InternshipPage = () => {
                     </div>
                     <div className="md:w-1/2">
                         {/* Placeholder for career benefits visual if needed, or keeping it text focused */}
-                        <div className="bg-gradient-to-br from-secondary-dark to-dark-bg p-8 rounded-3xl border border-primary-accent/20 relative overflow-hidden">
+                        <div className="bg-gradient-to-br from-secondary-dark/45 to-dark-bg/25 backdrop-blur-md p-8 rounded-3xl border border-primary-accent/20 relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-32 bg-primary-accent/5 rounded-full blur-3xl"></div>
                             <div className="relative z-10 text-center">
                                 <h3 className="text-2xl font-bold text-white mb-2">Be Job Ready</h3>
@@ -452,7 +452,7 @@ const InternshipPage = () => {
           Program Outcome Section
       ========================== */}
             <section
-                className="bg-primary-accent/10 py-16"
+                className="relative z-10 bg-primary-accent/10 backdrop-blur-sm py-16"
                 data-aos="fade-up"
             >
                 <div className="container mx-auto px-4 md:px-20 text-center">

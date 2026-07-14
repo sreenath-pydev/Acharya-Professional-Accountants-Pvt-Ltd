@@ -17,7 +17,7 @@ const ServicesPage = () => {
   }, []);
 
   return (
-    <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
+    <main className="relative z-10 font-inter text-white bg-transparent pt-24 md:pt-28">
       <SEO
         title="Accounting, Tax, GST & Audit Services | Acharya"
         description="Get professional accounting, tax, GST, and audit services for businesses and individuals. Reliable compliance solutions from expert accountants."
@@ -54,7 +54,7 @@ const ServicesPage = () => {
         data-aos="fade-up"
         data-aos-delay="50"
       >
-        <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-6">
+        <div className="bg-secondary-dark/65 backdrop-blur-sm border border-primary-accent/15 rounded-2xl p-6">
           <h2 className="font-montserrat text-xl font-semibold mb-3">
             Compliance Assured
           </h2>
@@ -64,7 +64,7 @@ const ServicesPage = () => {
           </p>
         </div>
 
-        <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-6">
+        <div className="bg-secondary-dark/65 backdrop-blur-sm border border-primary-accent/15 rounded-2xl p-6">
           <h2 className="font-montserrat text-xl font-semibold mb-3">
             Insight-Driven Reporting
           </h2>
@@ -74,7 +74,7 @@ const ServicesPage = () => {
           </p>
         </div>
 
-        <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-6">
+        <div className="bg-secondary-dark/65 backdrop-blur-sm border border-primary-accent/15 rounded-2xl p-6">
           <h2 className="font-montserrat text-xl font-semibold mb-3">
             Partner for Growth
           </h2>
@@ -98,7 +98,7 @@ const ServicesPage = () => {
         data-aos="fade-up"
         data-aos-delay="100"
       >
-        <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-8">
+        <div className="bg-secondary-dark/65 backdrop-blur-sm border border-primary-accent/15 rounded-2xl p-8">
           <h2 className="font-montserrat text-2xl font-bold mb-4">
             Who We Serve
           </h2>
@@ -118,7 +118,7 @@ const ServicesPage = () => {
           </ul>
         </div>
 
-        <div className="bg-secondary-dark border border-primary-accent/15 rounded-2xl p-8">
+        <div className="bg-secondary-dark/65 backdrop-blur-sm border border-primary-accent/15 rounded-2xl p-8">
           <h2 className="font-montserrat text-2xl font-bold mb-4">
             Why Businesses Choose Acharya
           </h2>

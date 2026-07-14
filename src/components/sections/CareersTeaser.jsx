@@ -3,7 +3,7 @@ import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const CareersTeaser = () => {
     return (
-        <section className="py-20 bg-gradient-to-br from-secondary-dark to-dark-bg border-b border-primary-accent/10">
+        <section className="relative z-10 py-20 bg-gradient-to-br from-secondary-dark/45 to-dark-bg/25 backdrop-blur-md border-b border-primary-accent/10">
             <div className="container mx-auto px-4 md:px-20" data-aos="fade-up">
                 <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                     <div className="w-full lg:w-1/2">

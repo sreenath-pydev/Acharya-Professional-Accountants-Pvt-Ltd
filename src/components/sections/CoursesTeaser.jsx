@@ -3,7 +3,7 @@ import { FaArrowRight, FaCheckCircle, FaStar, FaWhatsapp } from 'react-icons/fa'
 
 const CoursesTeaser = () => {
     return (
-        <section className="py-20 bg-dark-bg border-b border-primary-accent/10">
+        <section className="relative z-10 py-20 bg-transparent border-b border-primary-accent/10">
             <div className="container mx-auto px-4 md:px-20" data-aos="fade-up">
                 <div className="text-center mb-12">
                     <p className="text-primary-accent uppercase tracking-[0.2em] text-sm mb-3 font-semibold">

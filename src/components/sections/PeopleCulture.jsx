@@ -19,7 +19,7 @@ const perks = [
 
 const PeopleCulture = () => {
   return (
-    <section id="people-culture" className="py-12 md:py-20 bg-graphite overflow-hidden">
+    <section id="people-culture" className="relative z-10 py-12 md:py-20 bg-graphite/45 backdrop-blur-md overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
         <div data-aos="fade-up" data-aos-delay="50">
           <h2 className="font-montserrat text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-primary-accent">

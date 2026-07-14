@@ -29,7 +29,7 @@ const CareersPage = () => {
   }, [location.state]);
 
   return (
-    <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28">
+    <main className="relative z-10 font-inter text-white bg-transparent pt-24 md:pt-28">
       <SEO
         title="Careers & Internships at Acharya Professional Accountants"
         description="Explore accounting careers and internships in Kerala with Acharya. Join our expert team and grow your accounting and finance career with us."

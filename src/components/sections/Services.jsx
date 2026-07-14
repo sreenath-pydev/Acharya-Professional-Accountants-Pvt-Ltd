@@ -74,7 +74,7 @@ const getIconComponent = (iconName) => {
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-dark-bg">
+    <section id="services" className="relative z-10 py-20 bg-transparent">
       <div
         data-aos="fade-up"
         data-aos-delay="50"
@@ -93,7 +93,7 @@ const Services = () => {
                 data-aos="fade-up"
                 data-aos-delay={50 + index * 50}
                 data-aos-duration={100 + index * 50}
-                className="bg-secondary-dark p-8 rounded-xl text-center border border-primary-accent/10 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary-accent/20 hover:border-primary-accent transition-all duration-300"
+                className="bg-secondary-dark/65 backdrop-blur-sm p-8 rounded-xl text-center border border-primary-accent/10 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary-accent/20 hover:border-primary-accent transition-all duration-300"
               >
                 <div className="text-5xl text-primary-accent mb-4 flex justify-center">
                   <IconComponent className="w-12 h-12" />

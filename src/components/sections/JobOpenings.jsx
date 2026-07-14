@@ -106,7 +106,7 @@ const JobOpenings = () => {
   }, [showModal]);
 
   return (
-    <section id="job-openings" className="py-20 bg-graphite">
+    <section id="job-openings" className="relative z-10 py-20 bg-graphite/40 backdrop-blur-md">
       <div className="container mx-auto px-4 sm:px-6 md:px-20">
         <div data-aos="fade-up">
           <h3 className="text-2xl font-semibold mb-8 text-center text-primary-accent">Current Openings</h3>
@@ -117,7 +117,7 @@ const JobOpenings = () => {
             key={index}
             data-aos="fade-up"
             data-aos-delay={index * 50}
-            className={`bg-secondary-dark rounded-xl overflow-hidden mb-6 border border-primary-accent/10 hover:border-primary-accent transition-all duration-300 ${activeJob === index ? 'shadow-lg shadow-primary-accent/20' : ''
+            className={`bg-secondary-dark/65 backdrop-blur-sm rounded-xl overflow-hidden mb-6 border border-primary-accent/10 hover:border-primary-accent transition-all duration-300 ${activeJob === index ? 'shadow-lg shadow-primary-accent/20' : ''
               }`}
             style={{
               // Fallback styles in case AOS doesn't work
