@@ -179,7 +179,6 @@ const MangaluruPage = () => {
                 description="Acharya Professional Accountants – a trusted CA firm in Mangalore offering GST filing, income tax, audit, bookkeeping & company registration for traders, exporters, NRI clients and businesses across Mangalore, Surathkal, Bantwal, Puttur and Udupi."
                 keywords="CA firm in Mangalore, chartered accountant in Mangalore, GST filing Mangalore, income tax consultant Mangalore, audit firm Mangalore, accounting services Mangalore, company registration Mangalore, NRI tax Mangalore, GST consultant Mangalore"
                 canonical="https://www.acharyaprofessionalaccountants.in/accounting-service-in-mangaluru"
-                robots="noindex,follow"
             />
 
             {/* Structured Schema Data */}

@@ -24,7 +24,7 @@ const LocationPage = ({ citySlugOverride }) => {
         'ajmer', 'anantapur', 'bengaluru', 'bangalore', 'chennai', 'coimbatore', 'delhi', 
         'faridabad', 'hyderabad', 'jodhpur', 'kochi', 'kottayam', 'mumbai', 'palakkad', 
         'surat', 'thrissur', 'visakhapatnam', 'rajkot', 'noida', 'cuttack', 'pune', 
-        'manjeri', 'mangaluru', 'mangalore', 'nagpur', 'ahmedabad'
+        'manjeri', 'nagpur', 'ahmedabad'
     ];
     const shouldNoindex = noindexCities.includes(normalizedSlug);
 
