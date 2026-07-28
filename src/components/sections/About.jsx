@@ -32,6 +32,8 @@ const About = () => {
               src="/images/about2.webp"
               alt="Accounting services illustration"
               className="absolute inset-0 w-full h-full object-cover object-center opacity-90"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

@@ -13,6 +13,8 @@ const CareersTeaser = () => {
                                 src="/images/careers.webp" // Updated image path
                                 alt="Careers at Acharya"
                                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                loading="lazy"
+                                decoding="async"
                                 onError={(e) => {
                                     e.target.onerror = null;
                                     e.target.src = 'https://images.unsplash.com/photo-1522201876988-66273c2fd55f?q=80&w=1471&auto=format&fit=crop'; // Fallback

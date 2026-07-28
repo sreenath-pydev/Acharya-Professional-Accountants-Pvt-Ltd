@@ -11,7 +11,6 @@ import {
   Cell,
   Legend,
 } from 'recharts';
-import jsPDF from 'jspdf';
 import DynamicFaIcon from '../common/FontAwesomeRegistry';
 
 const COLORS = ['#e5a145', '#8e400e', '#7c7c7b'];
@@ -295,7 +294,8 @@ const VincumTaxCalculator = () => {
       ? Math.abs(selectedResult.totalTax - alternateResult.totalTax)
       : 0;
 
-  const generatePdfReport = () => {
+  const generatePdfReport = async () => {
+    const { default: jsPDF } = await import('jspdf');
     const doc = new jsPDF();
     let y = 10;
 

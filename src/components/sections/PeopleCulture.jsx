@@ -49,6 +49,7 @@ const PeopleCulture = () => {
                       alt={member.name} 
                       className="w-full h-full object-cover" 
                       loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div className="font-semibold text-white text-sm sm:text-base">{member.name}</div>
