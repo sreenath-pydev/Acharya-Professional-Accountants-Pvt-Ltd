@@ -5,8 +5,8 @@ export const cityContent = {
     "kozhikode": {
         name: "Kozhikode",
         slug: "kozhikode",
-        metaTitle: "CA and Accounting Services in Kozhikode | Acharya",
-        metaDescription: "Acharya Professional Accountants provides the best CA and accounting services in Kozhikode. Get expert GST, income tax, and audit support for your business.",
+        metaTitle: "CA Firm & Accounting Services in Kozhikode | Acharya",
+        metaDescription: "CA firm in Kozhikode with 500+ clients and a zero penalty record. GST, income tax, bookkeeping, audit, and NRI tax support. Get your free consultation now.",
         introTitle: "Looking for expert CA services in Kozhikode?",
         introText: [
             "Acharya Professional Accountants delivers best professional CA and accounting services built on strong compliance, accuracy, and long-term financial clarity. Our approach focuses on structured accounting systems, disciplined tax management, and reliable statutory support for businesses and individuals at every stage.",

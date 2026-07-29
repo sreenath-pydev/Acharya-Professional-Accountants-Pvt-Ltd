@@ -1,13 +1,16 @@
 import puppeteer from 'puppeteer';
 import fs from 'fs';
 import path from 'path';
+import http from 'http';
 import { fileURLToPath } from 'url';
+import { cityContent } from './src/data/locationData.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.join(__dirname, 'dist');
 
 const routes = [
     '/',
+    '/accounting-service-in-kozhikode',
     '/about',
     '/services',
     '/services/accounting',
@@ -35,8 +38,8 @@ const routes = [
 function extractKeys(filePath) {
     try {
         const content = fs.readFileSync(filePath, 'utf8');
-        // Match keys with 4 spaces indentation at start of lines (top level keys in our exported objects)
-        const regex = /^ {4}['"]([^'"]+)['"]\s*:\s*\{/gm;
+        // Match keys with 4 spaces indentation at start of lines
+        const regex = /^ {4}['"]?([a-zA-Z0-9_-]+)['"]?\s*:\s*\{/gm;
         const keys = [];
         let match;
         while ((match = regex.exec(content)) !== null) {
@@ -49,9 +52,8 @@ function extractKeys(filePath) {
     }
 }
 
-// Dynamically add all dynamic sub-service and location routes
-const locationKeys = extractKeys(path.join(__dirname, 'src', 'data', 'locationData.js'));
-locationKeys.forEach(key => routes.push(`/accounting-service-in-${key}`));
+// Dynamically add all location routes from locationData.js
+Object.keys(cityContent).forEach(key => routes.push(`/accounting-service-in-${key}`));
 routes.push('/accounting-service-in-mangaluru');
 routes.push('/accounting-service-in-coimbatore');
 
@@ -72,75 +74,95 @@ console.log(`Loaded ${uniqueRoutes.length} total routes for pre-rendering.`);
 
 async function prerender() {
     console.log('Starting pre-rendering...');
+
+    const spaShell = fs.readFileSync(path.join(distDir, 'index.html'), 'utf8');
+
+    const server = http.createServer((req, res) => {
+        const urlPath = decodeURIComponent(req.url.split('?')[0]);
+        let filePath = path.join(distDir, urlPath.startsWith('/') ? urlPath.substring(1) : urlPath);
+
+        if (urlPath === '/' || urlPath === '') {
+            filePath = path.join(distDir, 'index.html');
+        }
+
+        if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
+            const ext = path.extname(filePath).toLowerCase();
+            const contentTypeMap = {
+                '.html': 'text/html; charset=utf-8',
+                '.js': 'text/javascript; charset=utf-8',
+                '.mjs': 'text/javascript; charset=utf-8',
+                '.css': 'text/css; charset=utf-8',
+                '.json': 'application/json',
+                '.png': 'image/png',
+                '.jpg': 'image/jpeg',
+                '.jpeg': 'image/jpeg',
+                '.webp': 'image/webp',
+                '.svg': 'image/svg+xml',
+                '.pdf': 'application/pdf',
+                '.woff': 'font/woff',
+                '.woff2': 'font/woff2',
+                '.ttf': 'font/ttf',
+            };
+            res.writeHead(200, { 'Content-Type': contentTypeMap[ext] || 'application/octet-stream' });
+            res.end(fs.readFileSync(filePath));
+        } else if (urlPath.startsWith('/assets/') || path.extname(urlPath)) {
+            res.writeHead(404, { 'Content-Type': 'text/plain' });
+            res.end('Asset Not Found');
+        } else {
+            res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+            res.end(spaShell);
+        }
+    });
+
+    await new Promise((resolve) => server.listen(0, resolve));
+    const port = server.address().port;
+    const baseUrl = `http://localhost:${port}`;
+    console.log(`Static server started at ${baseUrl}`);
+
     const browser = await puppeteer.launch({
         headless: "new",
         args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
     const page = await browser.newPage();
+    page.on('pageerror', err => console.error('PAGE ERROR:', err.toString()));
 
-    // We need to serve the dist folder. 
-    // For simplicity, we can use a local file server or assume 'vite preview' is running.
-    // But starting vite preview from node is tricky.
-    // Easier approach: Use a static file server library or just Puppeteer with file:// protocol?
-    // file:// protocol won't match routes defined in React Router (e.g. /about).
-
-    // We will assume the user or script starts a server. 
-    // Or we can start 'vite preview' in a child process.
-
-    // Let's rely on a simpler approach: 
-    // We'll use 'preview' command in parallel? No.
-    // Let's spawn 'npm run preview' and wait for it.
-
-    const { spawn } = await import('child_process');
-    const server = spawn(/^win/.test(process.platform) ? 'npm.cmd' : 'npm', ['run', 'preview', '--', '--port', '4173'], {
-        stdio: 'pipe',
-        shell: true
-    });
-
-    // Wait for server to start
-    await new Promise((resolve) => {
-        server.stdout.on('data', (data) => {
-            if (data.toString().includes('Local:')) {
-                resolve();
-            }
-        });
-        // Fallback timeout
-        setTimeout(resolve, 5000);
-    });
-
-    console.log('Server started, rendering routes...');
-    const baseUrl = 'http://localhost:4173';
+    let rootContent = null;
 
     for (const route of uniqueRoutes) {
         try {
             console.log(`Rendering ${route}...`);
             await page.goto(`${baseUrl}${route}`, { waitUntil: 'networkidle0' });
 
-            // Wait for a bit more to ensure Helmet has applied changes
+            // Wait for React lazy component and Helmet to mount
+            try {
+                await page.waitForSelector('h1', { timeout: 10000 });
+            } catch (err) {
+                console.error(`Timeout waiting for h1 on ${route}:`, err.message);
+            }
             await new Promise(r => setTimeout(r, 500));
 
             const content = await page.content();
 
-            // Post-process: fix paths if needed, though they should be fine.
-            // Replace localhost with production URL for canonicals if they were absolute local
-            // But our SEO component uses absolute prod URLs so it should be fine.
-
-            // Define output path
-            const routePath = route === '/' ? '/index.html' : `${route}/index.html`;
-            const filePath = path.join(distDir, routePath);
-
-            // Ensure dir exists
-            fs.mkdirSync(path.dirname(filePath), { recursive: true });
-
-            fs.writeFileSync(filePath, content);
-            console.log(`Saved ${filePath}`);
+            if (route === '/') {
+                rootContent = content;
+            } else {
+                const filePath = path.join(distDir, route, 'index.html');
+                fs.mkdirSync(path.dirname(filePath), { recursive: true });
+                fs.writeFileSync(filePath, content);
+                console.log(`Saved ${filePath}`);
+            }
         } catch (e) {
             console.error(`Error rendering ${route}:`, e);
         }
     }
 
+    if (rootContent) {
+        fs.writeFileSync(path.join(distDir, 'index.html'), rootContent);
+        console.log(`Saved root index.html`);
+    }
+
     await browser.close();
-    server.kill();
+    server.close();
     console.log('Pre-rendering complete.');
     process.exit(0);
 }

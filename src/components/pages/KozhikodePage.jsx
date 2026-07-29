@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import SEO from '../common/SEO';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import { locationGroups } from '../../data/locationData';
@@ -203,28 +204,36 @@ const KozhikodePage = () => {
 
     const faqs = [
         {
-            q: "What does it cost to hire a CA firm in Kozhikode?",
-            a: "It depends on the services. For a small proprietorship needing GST filing and ITR, monthly retainer costs typically range from ₹2,500 to ₹6,000. For companies needing statutory audit, payroll, and full compliance, the range is higher. We provide a fixed-fee quote after understanding your business — no surprises."
+            q: "What services does a CA in Kozhikode provide?",
+            a: "A CA may help with GST registration and filing, income tax returns, bookkeeping, audits, company registration, tax planning and other compliance requirements. The exact service depends on your business or personal situation."
         },
         {
-            q: "Do I need a CA for GST filing, or can I do it myself?",
-            a: "You can file GST yourself. Many business owners do. But ITC reconciliation, annual GSTR-9 filing, and responding to notices are where errors happen — and where the penalties are significant. Most of our clients started filing themselves and came to us after a mismatch or notice."
+            q: "How much do accounting and tax services cost in Kozhikode?",
+            a: "For a small proprietorship needing GST filing and ITR, monthly retainer costs typically range from ₹2,500 to ₹6,000. Companies needing statutory audit, payroll and full compliance fall in a higher range. We provide a fixed-fee quote after understanding your business."
         },
         {
-            q: "Can you work with businesses outside Kozhikode city?",
-            a: "Yes. We work with clients across Kozhikode district — including Vadakara, Koyilandy, Ramanattukara, and Feroke — and also with NRI clients managing Kerala-based businesses from abroad. Most work is done remotely; we visit for audits when needed."
+            q: "Do you provide accounting services in Kozhikode for small businesses?",
+            a: "Yes. Accounting requirements vary from business to business. We can discuss regular bookkeeping, reconciliation, financial reports and the compliance work connected to your business."
         },
         {
-            q: "How quickly can you take over if my previous accountant left?",
-            a: "Usually within 2–3 weeks. We need access to the previous returns, books, and login credentials. We've done this transition many times — including cases where the previous accountant left the records in rough shape. We'll give you an honest assessment of where things stand before we start."
+            q: "Do I need to visit the office for tax or accounting work?",
+            a: "Not always. Many routine services can be handled through digital document sharing, phone calls and online communication. Some requirements may need an in-person meeting depending on the nature of the work."
         },
         {
-            q: "Is my financial data safe with you?",
-            a: "We operate under ICAI's code of ethics, which includes strict confidentiality obligations. We don't share client data. Ever. For cloud-based accounting, we use only platforms with standard security protocols — Tally on Prime, Zoho Books, QuickBooks."
+            q: "Do you have a CA firm in Calicut?",
+            a: "Calicut is the older, more commonly used name for Kozhikode. Our office in Mankavu serves the same city under both names, so if you are comparing CA firms in Calicut, we are one of the options based right here."
         },
         {
-            q: "Do you handle income tax notices?",
-            a: "Yes. Notice response and representation before the Assessing Officer is part of our work. We handle notices under Section 143(1), 143(2), 148, and 139(9) defective return notices."
+            q: "What should I look for in a CA firm in Kozhikode?",
+            a: "Look at how directly you can reach the person handling your work, whether the fee is clear before you start, and whether they explain filings in plain language instead of just submitting paperwork. A track record of on-time filing and no penalty history is worth asking about directly."
+        },
+        {
+            q: "Can you help NRIs with Indian income and property taxation?",
+            a: "Yes. NRI tax requirements can involve rental income, capital gains, TDS and other Indian tax matters. We first understand the details of the income or transaction and then advise on the relevant compliance work."
+        },
+        {
+            q: "Can you help if my previous accounts or filings are not up to date?",
+            a: "We can review the available records and explain what is pending. The steps required depend on the condition of the accounts, previous filings and the nature of the issue."
         }
     ];
 
@@ -232,12 +241,72 @@ const KozhikodePage = () => {
         "Mankavu", "Mavoor Road", "SM Street", "Kallai", "Vadakara", "Koyilandy", "Feroke", "Ramanattukara", "Kallai Road"
     ];
 
+    const accountingServiceSchema = {
+        "@context": "https://schema.org",
+        "@type": "AccountingService",
+        "name": "Acharya Professional Accountants",
+        "image": "https://www.acharyaprofessionalaccountants.in/images/Acharya-Professional-Accountants-OG-image.webp",
+        "url": "https://www.acharyaprofessionalaccountants.in/accounting-service-in-kozhikode",
+        "telephone": "+919562069434",
+        "email": "acharya.apa@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1st Floor, Palace Arcade, Palace Road, Mankavu",
+            "addressLocality": "Kozhikode",
+            "addressRegion": "Kerala",
+            "postalCode": "673002",
+            "addressCountry": "IN"
+        },
+        "areaServed": ["Kozhikode", "Vadakara", "Koyilandy", "Ramanattukara", "Feroke", "Beypore"],
+        "priceRange": "₹₹",
+        "foundingDate": "2015",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "96"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Accounting and Tax Services",
+            "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "GST Registration & Filing" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Income Tax Filing & Planning" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Accounting & Bookkeeping" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Audit & Assurance" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Company Registration" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "NRI Tax & Property Income" } }
+            ]
+        }
+    };
+
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.q,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.a
+            }
+        }))
+    };
+
     return (
         <main className="font-inter text-white bg-dark-bg pt-24 md:pt-28 overflow-x-hidden">
             <SEO
-                title="CA & Accounting Services in Kozhikode | Acharya PA"
-                description="Acharya Professional Accountants — CA firm in Kozhikode offering GST filing, income tax, audit, and bookkeeping for businesses across Malabar. Call for a free consultation."
+                title="CA Firm & Accounting Services in Kozhikode | Acharya"
+                description="CA firm in Kozhikode with 500+ clients and a zero penalty record. GST, income tax, bookkeeping, audit, and NRI tax support. Get your free consultation now."
                 canonical="https://www.acharyaprofessionalaccountants.in/accounting-service-in-kozhikode"
+                schema={[accountingServiceSchema, faqSchema]}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(accountingServiceSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
 
             {/* HERO SECTION */}

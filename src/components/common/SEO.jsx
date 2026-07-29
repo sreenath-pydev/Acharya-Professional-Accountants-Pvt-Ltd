@@ -9,7 +9,8 @@ const SEO = ({
     canonical,
     ogType = 'website',
     ogImage,
-    robots
+    robots,
+    schema
 }) => {
     const location = useLocation();
     const siteUrl = 'https://www.acharyaprofessionalaccountants.in';
@@ -29,8 +30,14 @@ const SEO = ({
         ? (title.includes('Acharya') ? title : `${title} | Acharya Professional Accountants`)
         : 'Acharya Professional Accountants | CA & Tax Consultant in Calicut';
 
+    const schemaList = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
+    const scriptProps = schemaList.map(s => ({
+        type: 'application/ld+json',
+        innerHTML: JSON.stringify(s)
+    }));
+
     return (
-        <Helmet>
+        <Helmet script={scriptProps}>
             {/* Basic Metadata */}
             <title>{fullTitle}</title>
             <meta name="description" content={description} />
