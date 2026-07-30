@@ -38,167 +38,156 @@ const KozhikodePage = () => {
         {
             num: "01",
             title: "GST Registration & Filing",
-            intro: "Most businesses in Kozhikode come to us first with a GST problem — a missed GSTR-3B deadline, an ITC mismatch, or a notice they don't know how to respond to.",
+            intro: "We help with GST registration, regular returns, annual reconciliation, ITC checks and responses to GST notices.",
             items: [
-                "GST registration for new businesses and those crossing the threshold",
+                "GST registration for new businesses and those crossing threshold",
                 "Monthly and quarterly GSTR-1 and GSTR-3B filing",
-                "Annual GSTR-9 reconciliation",
-                "ITC verification and reconciliation",
-                "E-invoicing setup",
+                "Annual GSTR-9 reconciliation & ITC checks",
                 "GST notice response and representation"
             ],
             note: "Businesses that file GSTR-3B but never reconcile it with their purchase register build up ITC mismatches over years. We catch these before they become a department problem.",
-            tags: ["GST Registration", "GSTR-1 / 3B", "GSTR-9 Annual", "GST Notice Reply", "ITC Reconciliation"]
+            tags: ["GST Registration", "GSTR-1", "GSTR-3B", "ITC Reconciliation"]
         },
         {
             num: "02",
             title: "Income Tax Filing & Planning",
-            intro: "Whether you're a proprietor, a partnership firm, a private limited company, or an NRI with income from Kozhikode — your tax situation is different and needs to be handled accordingly.",
+            intro: "Income tax returns for individuals, firms, companies and NRIs, along with tax planning and support with department notices.",
             items: [
                 "ITR filing for individuals, HUFs, firms, and companies",
-                "Advance tax computation (Section 234B & 234C)",
-                "TDS filing — Form 24Q, 26Q, 27Q",
                 "Tax planning — structuring income and expenses",
-                "Response to income tax notices and scrutiny assessments",
-                "PAN and TAN applications"
+                "TDS filing and compliance",
+                "Response to income tax notices and scrutiny assessments"
             ],
             note: "Common mistake: mixing personal and business expenses. This causes disallowances during assessments. Proper bookkeeping prevents it from the start.",
-            tags: ["ITR Filing", "Tax Planning", "TDS Filing", "NRI Tax Filing", "Tax Audit", "Notice Response"]
+            tags: ["ITR Filing", "Tax Planning", "TDS", "Notice Response"]
         },
         {
             num: "03",
-            title: "Bookkeeping & Accounting",
-            intro: "Clean books are not just about compliance. They tell you whether your business is actually profitable, which clients are worth keeping, and where your cash is leaking.",
+            title: "Accounting & Bookkeeping",
+            intro: "Regular bookkeeping, ledger maintenance, bank reconciliation and financial reports that help you understand how your business is doing.",
             items: [
-                "Monthly bookkeeping — Tally, QuickBooks, or cloud-based",
-                "Ledger maintenance and reconciliation",
+                "Regular bookkeeping on Tally, Zoho Books or cloud software",
+                "Ledger maintenance and Bank Reconciliation (BRS)",
                 "P&L statements and balance sheets",
-                "Bank reconciliation statements (BRS)",
-                "MIS reports for business decisions",
-                "Year-end accounts finalization"
+                "MIS reports for business decision making"
             ],
             note: "Most clients see a cleaner picture of their business within the first three months — without disrupting how they currently work.",
-            tags: ["Tally Accounting", "Bank Reconciliation", "Payroll", "PF & ESI Filing", "MIS Reports"]
+            tags: ["Tally", "Zoho Books", "BRS", "MIS Reports"]
         },
         {
             num: "04",
             title: "Audit & Assurance",
-            intro: "Statutory audit is a legal requirement for many companies. Internal audit is something you do because you want to actually know what's happening in your business.",
+            intro: "Statutory, tax and internal audits for companies, firms and other organisations that need reliable financial reporting and compliance.",
             items: [
-                "Statutory audit under the Companies Act 2013",
+                "Statutory audit under the Companies Act",
                 "Tax audit under Section 44AB of the Income Tax Act",
-                "GST audit and annual return (GSTR-9C)",
                 "Internal audit for process and control review",
-                "Stock audit for businesses with large inventory",
-                "Bank audit support"
+                "Stock audit and inventory verification"
             ],
             note: "We conduct audits across manufacturing, trading, healthcare, and services — not just for compliance, but to give owners a report they can actually use.",
-            tags: ["Statutory Audit", "Internal Audit", "Tax Audit", "Audit & Assurance", "Financial Statements"]
+            tags: ["Statutory Audit", "Tax Audit", "Internal Audit"]
         },
         {
             num: "05",
-            title: "Company Registration & Compliance",
-            intro: "Starting a new business in Kozhikode? Or converting a proprietorship to a private limited company? We handle the paperwork end to end.",
+            title: "Company Registration",
+            intro: "Support with choosing a business structure, registration and the compliance work that follows after the business is formed, including Mudra loan support for eligible small businesses.",
             items: [
-                "Private limited company incorporation",
-                "LLP registration",
-                "Partnership firm registration",
-                "Sole proprietorship setup — MSME/Udyam, GST",
-                "ROC filing — annual returns, director changes",
-                "MCA compliance for existing companies"
+                "Private limited company and LLP incorporation",
+                "MSME / Udyam registration",
+                "ROC compliance and annual returns",
+                "Mudra loan support for small businesses"
             ],
             note: "Business structure affects your tax liability, your ability to raise funds, and your personal liability exposure. Worth getting right from day one.",
-            tags: ["Pvt. Ltd. Registration", "LLP Registration", "MSME / Udyam", "Startup Registration", "ROC Filing"]
+            tags: ["Private Limited", "LLP", "MSME", "ROC Compliance"]
         },
         {
             num: "06",
-            title: "Payroll & HR Compliance",
-            intro: "If you employ more than a handful of people, payroll compliance adds up fast — PF, ESI, professional tax, TDS on salary. We manage it so you don't have to track it yourself.",
+            title: "NRI Tax & Property Income",
+            intro: "Remote support for NRIs dealing with Indian income, rental property, capital gains, TDS and other tax requirements.",
             items: [
-                "Monthly payroll processing",
-                "PF and ESI filing",
-                "Professional Tax (Kerala) compliance",
-                "TDS on salary computation and filing",
-                "Payslip generation",
-                "Form 16 issuance"
+                "NRI ITR filing and income declarations",
+                "Rental income tax compliance & TDS",
+                "Capital gains on property sale in Kerala",
+                "Form 15CA/15CB for foreign remittances"
             ],
-            note: null,
-            tags: ["PF & ESI Filing", "Payroll Processing", "Form 16", "Professional Tax"]
+            note: "Remote document sharing via WhatsApp or email — no need to visit the office in person for annual tax filings.",
+            tags: ["NRI ITR", "Rental Income", "Capital Gains", "TDS"]
         }
     ];
 
     const industries = [
-        { icon: "🏪", name: "Wholesale & Retail Traders", desc: "Especially those dealing with interstate supply, where GST compliance is complex and ITC claims need careful reconciliation." },
-        { icon: "✈️", name: "Gulf-Linked Businesses & NRIs", desc: "NRI taxation, foreign remittance accounting, and Kerala-based income reporting for those managing assets from abroad." },
-        { icon: "🍽️", name: "Restaurants & Food Businesses", desc: "GST for hospitality has its own rules — 5% without ITC or 12% with. We get it right the first time." },
-        { icon: "🏥", name: "Healthcare & Clinics", desc: "Clinic owners often don't realize which services are GST-exempt and which are not. We prevent those mistakes before they happen." },
-        { icon: "🏗️", name: "Construction & Real Estate", desc: "Project-based accounting, sub-contractor TDS, and WCT compliance — handled properly from the start." },
-        { icon: "💻", name: "Freelancers & Consultants", desc: "Especially IT professionals with international clients who need to manage GST, advance tax, and foreign income declarations." },
-        { icon: "📦", name: "E-Commerce Sellers", desc: "Sellers on Amazon, Flipkart, or Meesho need TCS reconciliation and correct GSTR filings. This is a common gap we fill." }
+        { icon: "🏪", name: "Traders & Retailers", desc: "GST returns, bookkeeping, ITC reconciliation and income tax support." },
+        { icon: "🏥", name: "Clinics & Professionals", desc: "Tax filing, payroll, accounting and advice on compliance requirements." },
+        { icon: "🏗️", name: "Construction & Real Estate", desc: "Project accounting, TDS, GST and financial records for ongoing work." },
+        { icon: "✈️", name: "NRIs & Gulf Families", desc: "Support with Indian property income, rental income, TDS and tax returns." },
+        { icon: "💻", name: "Freelancers & Consultants", desc: "Tax planning, GST and income reporting for professionals with local or overseas clients." },
+        { icon: "🏭", name: "Manufacturing & Trading Firms", desc: "Accounting, internal audit, GST compliance and financial reporting for growing businesses." },
+        { icon: "🎓", name: "Educational Institutions", desc: "Payroll, accounting and advice on applicable compliance requirements." },
+        { icon: "🏢", name: "Growing Companies", desc: "Company compliance, bookkeeping, tax and audit support as the business expands." }
     ];
 
     const whyUs = [
         {
             num: "01",
-            title: "We're in Kozhikode",
-            desc: "Not a remote firm operating from Bengaluru or Delhi. Our office is in Mankavu — and we meet clients in person when that's what they need."
+            title: "You can speak to the people handling your work",
+            desc: "We try to keep communication direct. You should be able to ask questions about your accounts and understand the answer."
         },
         {
             num: "02",
-            title: "No Rotating Relationship Managers",
-            desc: "The CA or senior accountant who handles your file is who you actually talk to. Not a helpdesk ticket system."
+            title: "We explain the work in plain language",
+            desc: "Tax and accounting terms can be confusing. We explain what is being done and why it matters to your situation."
         },
         {
             num: "03",
-            title: "We Flag Problems Early",
-            desc: "Most tax notices are predictable. We catch the issues during filing, not after the fact when options are limited."
+            title: "We look at the details, not just the deadline",
+            desc: "Regular reconciliation and proper records can help identify problems before they turn into notices or avoidable costs."
         },
         {
             num: "04",
-            title: "We Don't Work with Everyone",
-            desc: "We take on clients we can actually serve well. If your business needs something outside our expertise, we'll tell you honestly."
+            title: "You know the scope before the work begins",
+            desc: "We discuss the requirement, the work involved and the fee before starting the engagement."
         }
     ];
 
     const testimonials = [
         {
-            text: "We were running three retail shops and handling GST ourselves. When we got a notice for ITC mismatch, we didn't know what to do. Acharya's team resolved it within two weeks and cleaned up two years of filings. We've been with them since.",
+            text: "“We were running three retail shops and handling GST ourselves. When we got a notice for ITC mismatch, we didn't know what to do. Acharya's team resolved it within two weeks and cleaned up two years of filings.”",
             attr: "Proprietor, garment trader · SM Street area, Kozhikode"
         },
         {
-            text: "As an NRI managing my family's property income in Kozhikode, I was struggling to understand what to file and when. The team explained everything clearly and handled the whole thing remotely. No need to come back just for tax filings.",
-            attr: "Client, Dubai · NRI income reporting"
+            text: "“I live abroad and manage my family's property income in Kerala. Being able to send documents remotely and get clear updates has made the yearly tax work much easier.”",
+            attr: "NRI client, Dubai"
         },
         {
-            text: "Our startup registered as a private limited company based on their advice. They explained the compliance requirements upfront — ROC filing, statutory audit, MCA — and now handle everything so we can focus on the product.",
+            text: "“Our startup registered as a private limited company based on their advice. They explained the compliance requirements upfront, ROC filing, statutory audit, MCA, and now handle everything so we can focus on the product.”",
             attr: "Co-founder, tech startup · Kozhikode"
         }
     ];
 
     const areas = [
         {
-            title: "CA in Mankavu",
-            desc: "Our main head office is located in Mankavu, Kozhikode, providing convenient walk-in support and full in-person consultations."
-        },
-        {
-            title: "SM Street & Mavoor Road",
-            desc: "Comprehensive accounting and GST compliance support for retail traders and merchant businesses in the business hubs."
+            title: "Kozhikode City: Mankavu, SM Street, Mavoor Road",
+            desc: "Our main office is in Mankavu. GST, income tax, bookkeeping and company compliance for retail traders and merchant businesses around SM Street and Mavoor Road."
         },
         {
             title: "Kallai Timber & Industrial Zone",
-            desc: "Statutory audits, cost records, and tax filings for timber operators and local manufacturers."
+            desc: "Statutory audits, cost records and tax filings for timber operators and local manufacturers."
         },
         {
             title: "Vadakara & Koyilandy",
-            desc: "GST returns, NRI taxation advice, and business registration for clients across Northern Kozhikode district."
+            desc: "GST returns, bookkeeping and NRI taxation advice for traders and professionals across Northern Kozhikode district."
         },
         {
             title: "Feroke & Ramanattukara",
-            desc: "Bookkeeping and payroll management for tile factories, trading houses, and clay processing units."
+            desc: "Bookkeeping and payroll management for tile factories, trading houses and clay processing units."
         },
         {
-            title: "All of Kozhikode — Online",
-            desc: "Remote consulting via WhatsApp, documents via email, and zero-travel digital compliance workflows."
+            title: "Beypore & Nearby Areas",
+            desc: "Tax and accounting services for businesses and families in the southern parts of Kozhikode."
+        },
+        {
+            title: "Online Across Kerala",
+            desc: "Documents can be shared digitally for many services, so distance does not have to stop you from getting support."
         }
     ];
 
@@ -322,15 +311,14 @@ const KozhikodePage = () => {
                         <div className="flex items-center gap-3">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                ✦ ICAI Registered · Kozhikode
+                                CA Firm in Kozhikode
                             </span>
                         </div>
                         <h1 className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                            CA Firm in<br />
-                            <span className="italic text-primary-accent">Kozhikode</span>
+                            CA & Accounting Services in Kozhikode
                         </h1>
                         <p className="text-lg text-boulder max-w-xl">
-                            We handle GST filing, income tax, bookkeeping, audit, payroll, and company compliance — from small proprietorships in Mavoor Road to established trading companies in Kallai.
+                            GST returns, income tax, bookkeeping, audits. All the compliance work that piles up when you're busy running a business. Acharya is a CA firm in Kozhikode that handles it for businesses, professionals, families and NRIs, and explains what's happening at every step.
                         </p>
 
                         <div className="flex flex-wrap gap-4 pt-4">
@@ -341,7 +329,7 @@ const KozhikodePage = () => {
                                 offset={-80}
                                 className="bg-primary-accent text-dark-bg px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 cursor-pointer text-center"
                             >
-                                Book Free Consultation
+                                Book a Free Consultation
                             </ScrollLink>
                             <ScrollLink
                                 to="services"
@@ -350,56 +338,70 @@ const KozhikodePage = () => {
                                 offset={-80}
                                 className="border-2 border-primary-accent text-primary-accent bg-transparent px-8 py-4 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-accent/30 transition-all duration-300 cursor-pointer text-center"
                             >
-                                View All Services
+                                View Our Services
                             </ScrollLink>
-                        </div>
-
-                        <div className="flex flex-wrap gap-2 pt-6">
-                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">GST Filing</span>
-                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">Income Tax</span>
-                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-primary-accent text-primary-accent bg-primary-accent/5 font-semibold">Audit & Assurance</span>
-                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Bookkeeping</span>
-                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Company Registration</span>
-                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">Payroll & PF</span>
-                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">NRI Tax</span>
-                            <span className="text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-white/5 text-boulder bg-transparent">TDS Filing</span>
                         </div>
                     </div>
 
-                    {/* Right Stats Column */}
-                    <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 md:p-10 flex flex-col justify-center relative overflow-hidden shadow-2xl">
-                        <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_70%_20%,rgba(229,161,69,0.4),transparent_50%)]" />
-
-                        <div className="relative z-10 grid grid-cols-2 gap-y-12 md:gap-y-16 gap-x-8 md:gap-x-12">
-                            <div>
-                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">
-                                    <AnimatedCounter value={500} suffix="+" />
-                                </span>
-                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Active Clients</span>
+                    {/* Right Hero Card Column */}
+                    <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 md:p-10 flex flex-col justify-center relative overflow-hidden shadow-2xl space-y-6">
+                        <h3 className="font-montserrat text-2xl font-bold text-white">
+                            Dealing with a tax or accounting problem right now?
+                        </h3>
+                        <p className="text-sm text-boulder">
+                            Tell us what's going on. We'll tell you what needs to be done and what documents we'll need.
+                        </p>
+                        <div className="space-y-4 pt-2 border-t border-white/10">
+                            <div className="flex gap-3 items-start">
+                                <span className="text-primary-accent font-bold">✓</span>
+                                <div>
+                                    <strong className="block text-white text-sm">Talk to the team doing the work</strong>
+                                    <span className="text-xs text-boulder">Not a call centre. The person on the file is the person you talk to.</span>
+                                </div>
                             </div>
-                            <div>
-                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">
-                                    <AnimatedCounter value={10} suffix="+" />
-                                </span>
-                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Years in Kozhikode</span>
+                            <div className="flex gap-3 items-start">
+                                <span className="text-primary-accent font-bold">✓</span>
+                                <div>
+                                    <strong className="block text-white text-sm">A process you can follow</strong>
+                                    <span className="text-xs text-boulder">You'll know what's being filed and when.</span>
+                                </div>
                             </div>
-                            <div>
-                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">
-                                    <AnimatedCounter value={100} suffix="%" />
-                                </span>
-                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">On-Time Filing</span>
-                            </div>
-                            <div>
-                                <span className="font-montserrat text-4xl md:text-5xl lg:text-6xl font-bold text-primary-accent block leading-none">
-                                    <AnimatedCounter value={0} prefix="₹" />
-                                </span>
-                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Penalty Record</span>
-                            </div>
-                            <div className="col-span-2 border-t border-white/10 pt-6 mt-2">
-                                <span className="font-montserrat text-3xl font-bold text-primary-accent block leading-none">ICAI Registered</span>
-                                <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-2">Chartered Accountants</span>
+                            <div className="flex gap-3 items-start">
+                                <span className="text-primary-accent font-bold">✓</span>
+                                <div>
+                                    <strong className="block text-white text-sm">Most of it can be done online</strong>
+                                    <span className="text-xs text-boulder">Documents over WhatsApp or email, no office visit required.</span>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                {/* STATS BAR */}
+                <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div>
+                        <span className="font-montserrat text-4xl md:text-5xl font-bold text-primary-accent block leading-none">
+                            <AnimatedCounter value={500} suffix="+" />
+                        </span>
+                        <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Active Clients</span>
+                    </div>
+                    <div>
+                        <span className="font-montserrat text-4xl md:text-5xl font-bold text-primary-accent block leading-none">
+                            <AnimatedCounter value={10} suffix="+" />
+                        </span>
+                        <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Years in Kozhikode</span>
+                    </div>
+                    <div>
+                        <span className="font-montserrat text-4xl md:text-5xl font-bold text-primary-accent block leading-none">
+                            <AnimatedCounter value={100} suffix="%" />
+                        </span>
+                        <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">On-Time Filing</span>
+                    </div>
+                    <div>
+                        <span className="font-montserrat text-4xl md:text-5xl font-bold text-primary-accent block leading-none">
+                            <AnimatedCounter value={0} prefix="₹" />
+                        </span>
+                        <span className="text-xs md:text-sm text-silver-sand font-medium uppercase tracking-wider block mt-3">Penalty Record</span>
                     </div>
                 </div>
             </section>
@@ -415,99 +417,34 @@ const KozhikodePage = () => {
                 </div>
             </div>
 
-            {/* WHO WE ARE (ABOUT) SECTION */}
+            {/* INTRO SECTION */}
             <section id="about" className="py-20 bg-secondary-dark/10 border-t border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                        {/* Left Content column */}
-                        <div className="lg:col-span-7 space-y-6" data-aos="fade-right">
+                        {/* Left column */}
+                        <div className="lg:col-span-6 space-y-4" data-aos="fade-right">
                             <div className="flex items-center gap-3">
                                 <span className="w-8 h-[1px] bg-primary-accent"></span>
                                 <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                    Who We Are
+                                    Your local accounting partner
                                 </span>
                             </div>
                             <h2 className="font-montserrat text-3xl md:text-4xl font-bold leading-tight">
-                                Your <span className="italic text-primary-accent">Chartered Accountant</span> in Kozhikode
+                                A CA firm in Kozhikode for the everyday financial work businesses cannot ignore
                             </h2>
-                            <div className="text-boulder space-y-4 text-base md:text-lg leading-relaxed">
-                                <p>
-                                    We are Acharya Professional Accountants — a CA firm operating in Kozhikode, providing accounting, tax, and compliance services to businesses and individuals across the district. Our main office is located here in Mankavu, and we've been serving the local trade ecosystem since 2015.
-                                </p>
-                                <p>
-                                    Whether you need to file your GST returns before the deadline, register your new company, respond to an income tax notice, or simply get your books in order before year-end — <strong className="text-white font-semibold">we handle it all under one roof</strong>, with qualified CAs who are directly accessible to you.
-                                </p>
-                                <p>
-                                    We work with sole traders, MSMEs, partnership firms, private limited companies, wholesalers, restaurants, and NRI clients. If you have a financial compliance need in Kozhikode, our doors are always open.
-                                </p>
-                            </div>
-                            <div className="pt-4">
-                                <ScrollLink
-                                    to="contact"
-                                    smooth={true}
-                                    duration={500}
-                                    offset={-80}
-                                    className="inline-flex items-center bg-primary-accent text-dark-bg px-8 py-3.5 rounded-full font-semibold hover:-translate-y-1 transition-all duration-300 cursor-pointer"
-                                >
-                                    Talk to Our CA <span className="ml-2">→</span>
-                                </ScrollLink>
-                            </div>
                         </div>
 
-                        {/* Right pillars column */}
-                        <div className="lg:col-span-5 bg-secondary-dark border border-white/5 rounded-3xl p-8 space-y-6 shadow-xl" data-aos="fade-left">
-                            <h3 className="font-montserrat text-lg font-bold text-white mb-4 pb-2 border-b border-white/5">
-                                Our Client Promises
-                            </h3>
-
-                            <div className="flex items-start gap-4">
-                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">🏛️</div>
-                                <div>
-                                    <h4 className="text-white font-bold text-sm mb-1">ICAI-Qualified CAs</h4>
-                                    <p className="text-boulder text-xs leading-relaxed">
-                                        All engagements are led by ICAI-registered chartered accountants. No delegation to unqualified staff.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-4">
-                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">📍</div>
-                                <div>
-                                    <h4 className="text-white font-bold text-sm mb-1">Based in Kozhikode</h4>
-                                    <p className="text-boulder text-xs leading-relaxed">
-                                        Our office is in Mankavu. Walk in, call, or WhatsApp — we are always reachable in Malayalam or English.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-4">
-                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">📅</div>
-                                <div>
-                                    <h4 className="text-white font-bold text-sm mb-1">Deadline-Driven Process</h4>
-                                    <p className="text-boulder text-xs leading-relaxed">
-                                        Every client file has a compliance calendar. We file before the due date — you never pay a late fee.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-4">
-                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">🔒</div>
-                                <div>
-                                    <h4 className="text-white font-bold text-sm mb-1">Confidential & Secure</h4>
-                                    <p className="text-boulder text-xs leading-relaxed">
-                                        Your financial data stays private. We follow strict document handling and data security protocols.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-4">
-                                <div className="w-10 h-10 rounded-lg bg-primary-accent/10 flex items-center justify-center text-xl flex-shrink-0">💬</div>
-                                <div>
-                                    <h4 className="text-white font-bold text-sm mb-1">Jargon-Free Advice</h4>
-                                    <p className="text-boulder text-xs leading-relaxed">
-                                        We explain your tax position in plain language so you always know where you stand — no confusing accounting-speak.
-                                    </p>
-                                </div>
+                        {/* Right column */}
+                        <div className="lg:col-span-6 space-y-6 text-boulder text-base md:text-lg leading-relaxed" data-aos="fade-left">
+                            <p>
+                                Acharya Professional Accountants is an <a href="https://www.icai.org/" target="_blank" rel="noopener noreferrer" className="text-primary-accent underline">ICAI registered</a> CA firm handling accounting and tax work for businesses and individuals in Kozhikode. If you're looking for a CA firm in Kozhikode, we can take care of your regular compliance and also the one-off stuff: a new company registration, a tax notice you weren't expecting, an audit, NRI taxation.
+                            </p>
+                            <p>
+                                We work with traders, retailers, professionals, companies, clinics, construction businesses, families with property in Kerala and clients living abroad. Some clients need a monthly accounting service in Kozhikode. Others contact us only when they have a tax notice or need help setting up a new business. The work is different for every client, so we start by understanding the situation before recommending the next step.
+                            </p>
+                            <div className="border-l-4 border-primary-accent p-6 bg-secondary-dark rounded-r-2xl space-y-2">
+                                <strong className="block text-white font-bold text-base">Looking for a Chartered Accountant in Kozhikode?</strong>
+                                <span className="text-sm text-boulder block">Start with a conversation about your requirement. We can discuss the work involved, the documents needed and how we can help.</span>
                             </div>
                         </div>
                     </div>
@@ -521,14 +458,14 @@ const KozhikodePage = () => {
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Our Services
+                                Our services
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Accounting Services in <span className="italic text-primary-accent">Kozhikode</span>
+                            Accounting, tax and compliance support in one place
                         </h2>
                         <p className="text-boulder text-lg">
-                            We offer a complete range of financial and compliance services — all delivered by qualified CAs, tailored to the scale of your business.
+                            Whether you need regular support or help with a specific requirement, our services cover the main financial and compliance needs of businesses and individuals.
                         </p>
                     </div>
 
@@ -596,14 +533,14 @@ const KozhikodePage = () => {
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Industries served
+                                Who we work with
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Who We Work With in Kozhikode
+                            Different businesses have different accounting problems
                         </h2>
                         <p className="text-boulder text-lg">
-                            We work across most industries in the Kozhikode district. A few of the business types we handle most often:
+                            Our work includes regular compliance as well as the accounting and tax questions that come with running different types of businesses.
                         </p>
                     </div>
 
@@ -637,12 +574,15 @@ const KozhikodePage = () => {
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Why Us
+                                Why clients work with us
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Why Clients Choose Our <span className="italic text-primary-accent">CA Firm in Kozhikode</span>
+                            Good accounting support should make things clearer
                         </h2>
+                        <p className="text-boulder text-lg">
+                            A CA's job isn't just filing returns. It's catching what needs attention before a small issue turns into a bigger, more expensive one.
+                        </p>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -667,16 +607,22 @@ const KozhikodePage = () => {
 
                         {/* Testimonials stack */}
                         <div className="lg:col-span-5 space-y-6" data-aos="fade-left">
+                            <div className="flex items-center gap-3 mb-2">
+                                <span className="w-8 h-[1px] bg-primary-accent"></span>
+                                <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
+                                    Client experiences
+                                </span>
+                            </div>
+                            <h3 className="font-montserrat text-2xl font-bold text-white mb-4">
+                                What clients value in an accounting relationship
+                            </h3>
                             {testimonials.map((t, index) => (
                                 <div
                                     key={index}
                                     className="bg-secondary-dark border border-white/5 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between hover:border-primary-accent/30 transition-all duration-300"
                                     style={{ borderLeft: index === 1 ? '3px solid #e5a145' : '1px solid rgba(255,255,255,0.05)' }}
                                 >
-                                    <span className="font-serif text-primary-accent/10 text-7xl absolute -top-4 -left-2 select-none pointer-events-none">
-                                        “
-                                    </span>
-                                    <p className="text-gray-300 text-sm leading-relaxed mb-4 pt-4 italic relative z-10">
+                                    <p className="text-gray-300 text-sm leading-relaxed mb-4 italic relative z-10">
                                         {t.text}
                                     </p>
                                     <div className="border-t border-white/5 pt-3 mt-auto">
@@ -691,6 +637,46 @@ const KozhikodePage = () => {
                 </div>
             </section>
 
+            {/* PROCESS SECTION */}
+            <section className="py-20 border-b border-white/5">
+                <div className="container mx-auto px-5 md:px-12 lg:px-20">
+                    <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
+                        <div className="flex items-center gap-3 mb-4">
+                            <span className="w-8 h-[1px] bg-primary-accent"></span>
+                            <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
+                                How we get started
+                            </span>
+                        </div>
+                        <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
+                            A simple process for getting your accounts and compliance in order
+                        </h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div className="bg-secondary-dark border-t-4 border-primary-accent rounded-2xl p-6">
+                            <strong className="text-primary-accent text-xs uppercase tracking-wider block mb-2 font-bold">Step 01</strong>
+                            <h3 className="font-montserrat text-lg font-bold text-white mb-2">Tell us what you need</h3>
+                            <p className="text-boulder text-xs leading-relaxed">Share the situation, whether it is regular accounting, a new business, a tax return or a notice.</p>
+                        </div>
+                        <div className="bg-secondary-dark border-t-4 border-primary-accent rounded-2xl p-6">
+                            <strong className="text-primary-accent text-xs uppercase tracking-wider block mb-2 font-bold">Step 02</strong>
+                            <h3 className="font-montserrat text-lg font-bold text-white mb-2">We understand the details</h3>
+                            <p className="text-boulder text-xs leading-relaxed">We look at the documents and information needed to understand the actual requirement.</p>
+                        </div>
+                        <div className="bg-secondary-dark border-t-4 border-primary-accent rounded-2xl p-6">
+                            <strong className="text-primary-accent text-xs uppercase tracking-wider block mb-2 font-bold">Step 03</strong>
+                            <h3 className="font-montserrat text-lg font-bold text-white mb-2">We explain the next steps</h3>
+                            <p className="text-boulder text-xs leading-relaxed">You will know what work is required, what documents are needed and what the engagement involves.</p>
+                        </div>
+                        <div className="bg-secondary-dark border-t-4 border-primary-accent rounded-2xl p-6">
+                            <strong className="text-primary-accent text-xs uppercase tracking-wider block mb-2 font-bold">Step 04</strong>
+                            <h3 className="font-montserrat text-lg font-bold text-white mb-2">We take care of the work</h3>
+                            <p className="text-boulder text-xs leading-relaxed">Once everything is agreed, we handle the relevant filing, accounting or compliance work.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* AREAS COVERED SECTION */}
             <section id="areas" className="py-20 bg-secondary-dark/30 border-y border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
@@ -698,14 +684,14 @@ const KozhikodePage = () => {
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                Coverage
+                                Local coverage
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            We Serve All of <span className="italic text-primary-accent">Kozhikode</span>
+                            Serving Kozhikode and nearby business centres
                         </h2>
                         <p className="text-boulder text-lg">
-                            Our CA services reach every corner of Kozhikode district — in person at our Mankavu office and online.
+                            Many routine accounting and tax services can be handled online. We also support clients across the wider Kozhikode region.
                         </p>
                     </div>
 
@@ -736,11 +722,11 @@ const KozhikodePage = () => {
                         <div className="flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                FAQ
+                                Frequently asked questions
                             </span>
                         </div>
                         <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4">
-                            Common Questions — <span className="italic text-primary-accent">CA Services Kozhikode</span>
+                            Questions people often ask before choosing a CA
                         </h2>
                     </div>
 
