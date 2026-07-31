@@ -585,54 +585,22 @@ const KozhikodePage = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                        {/* Why us list */}
-                        <div className="lg:col-span-7 space-y-8" data-aos="fade-right">
-                            {whyUs.map((item) => (
-                                <div key={item.num} className="flex gap-6 items-start hover:translate-x-1 transition-transform duration-300">
-                                    <span className="font-montserrat text-3xl md:text-4xl font-bold text-primary-accent/30 leading-none">
-                                        {item.num}
-                                    </span>
-                                    <div>
-                                        <h3 className="font-montserrat text-lg font-bold text-white mb-2">
-                                            {item.title}
-                                        </h3>
-                                        <p className="text-boulder text-sm leading-relaxed">
-                                            {item.desc}
-                                        </p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-
-                        {/* Testimonials stack */}
-                        <div className="lg:col-span-5 space-y-6" data-aos="fade-left">
-                            <div className="flex items-center gap-3 mb-2">
-                                <span className="w-8 h-[1px] bg-primary-accent"></span>
-                                <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
-                                    Client experiences
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up">
+                        {whyUs.map((item) => (
+                            <div key={item.num} className="flex gap-6 items-start hover:translate-x-1 transition-transform duration-300 bg-secondary-dark/50 border border-white/5 rounded-2xl p-6">
+                                <span className="font-montserrat text-3xl md:text-4xl font-bold text-primary-accent/30 leading-none">
+                                    {item.num}
                                 </span>
-                            </div>
-                            <h3 className="font-montserrat text-2xl font-bold text-white mb-4">
-                                What clients value in an accounting relationship
-                            </h3>
-                            {testimonials.map((t, index) => (
-                                <div
-                                    key={index}
-                                    className="bg-secondary-dark border border-white/5 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between hover:border-primary-accent/30 transition-all duration-300"
-                                    style={{ borderLeft: index === 1 ? '3px solid #e5a145' : '1px solid rgba(255,255,255,0.05)' }}
-                                >
-                                    <p className="text-gray-300 text-sm leading-relaxed mb-4 italic relative z-10">
-                                        {t.text}
+                                <div>
+                                    <h3 className="font-montserrat text-lg font-bold text-white mb-2">
+                                        {item.title}
+                                    </h3>
+                                    <p className="text-boulder text-sm leading-relaxed">
+                                        {item.desc}
                                     </p>
-                                    <div className="border-t border-white/5 pt-3 mt-auto">
-                                        <span className="text-xs uppercase tracking-wider text-primary-accent font-semibold leading-relaxed block">
-                                            {t.attr}
-                                        </span>
-                                    </div>
                                 </div>
-                            ))}
-                        </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -710,6 +678,42 @@ const KozhikodePage = () => {
                                     {area.desc}
                                 </p>
                             </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* CLIENT EXPERIENCES SECTION */}
+            <section className="py-20 border-t border-white/5">
+                <div className="container mx-auto px-5 md:px-12 lg:px-20">
+                    <div className="section-head max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
+                        <div className="kicker flex items-center gap-3 mb-4">
+                            <span className="w-8 h-[1px] bg-primary-accent"></span>
+                            <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
+                                Client experiences
+                            </span>
+                        </div>
+                        <h2 className="font-montserrat text-3xl md:text-4xl font-bold mb-4 text-white">
+                            What clients value in an accounting relationship
+                        </h2>
+                    </div>
+
+                    <div className="testimonials grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {testimonials.map((t, index) => (
+                            <article
+                                key={index}
+                                className="quote bg-secondary-dark border border-white/5 rounded-2xl p-6 md:p-8 flex flex-col justify-between hover:border-primary-accent/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative"
+                                style={{ borderLeft: index === 1 ? '3px solid #e5a145' : undefined }}
+                                data-aos="fade-up"
+                                data-aos-delay={index * 100}
+                            >
+                                <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6 italic">
+                                    {t.text}
+                                </p>
+                                <small className="text-xs uppercase tracking-wider text-primary-accent font-semibold leading-relaxed block border-t border-white/5 pt-4 mt-auto not-italic">
+                                    {t.attr}
+                                </small>
+                            </article>
                         ))}
                     </div>
                 </div>
