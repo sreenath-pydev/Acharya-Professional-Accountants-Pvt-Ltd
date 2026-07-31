@@ -119,15 +119,30 @@ async function prerender() {
     const baseUrl = `http://localhost:${port}`;
     console.log(`Static server started at ${baseUrl}`);
 
-    const browser = await puppeteer.launch({
+    let launchOptions = {
         headless: true,
         args: [
             '--no-sandbox',
             '--disable-setuid-sandbox',
             '--disable-dev-shm-usage',
-            '--disable-gpu'
+            '--disable-gpu',
+            '--no-first-run',
+            '--no-zygote',
+            '--single-process'
         ]
-    });
+    };
+
+    try {
+        const execPath = puppeteer.executablePath();
+        if (execPath && fs.existsSync(execPath)) {
+            console.log(`Using Chrome binary at: ${execPath}`);
+            launchOptions.executablePath = execPath;
+        }
+    } catch (e) {
+        console.warn('Could not resolve default executablePath:', e.message);
+    }
+
+    const browser = await puppeteer.launch(launchOptions);
     const page = await browser.newPage();
     page.on('pageerror', err => console.error('PAGE ERROR:', err.toString()));
 

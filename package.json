@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node prerender.js",
-    "postinstall": "node node_modules/puppeteer/install.mjs",
+    "build": "npx puppeteer install chrome && vite build && node prerender.js",
+    "postinstall": "npx puppeteer install chrome",
     "lint": "eslint .",
     "preview": "vite preview"
   },
