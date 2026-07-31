@@ -822,45 +822,6 @@ const KozhikodePage = () => {
                     </div>
                 </div>
             </section>
-
-            {/* OTHER LOCATIONS */}
-            <section className="py-16 border-t border-white/5">
-                <div className="container mx-auto px-5 md:px-12 lg:px-20" data-aos="fade-up">
-                    <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-8 text-center">
-                        Other Locations We Serve
-                    </h2>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {locationGroups.map((group, index) => (
-                            <div key={index} className="bg-secondary-dark/40 rounded-2xl p-6 border border-white/5">
-                                <h3 className="text-primary-accent font-semibold text-lg mb-4 pb-2 border-b border-white/5">
-                                    {group.region}
-                                </h3>
-                                <div className="flex flex-wrap gap-3">
-                                    {group.cities.map((city) => {
-                                        let slug = city.toLowerCase();
-                                        if (city.includes('Delhi')) slug = 'delhi';
-                                        else if (city.includes('Kochi')) slug = 'kochi';
-                                        else if (city.includes('Bengaluru')) slug = 'bengaluru';
-                                        else if (city.includes('Mangaluru')) slug = 'mangaluru';
-                                        else slug = city.trim().toLowerCase().replace(/\s+/g, '-');
-
-                                        return (
-                                            <Link
-                                                key={city}
-                                                to={`/accounting-service-in-${slug}`}
-                                                className="inline-block bg-white/5 hover:bg-primary-accent hover:text-dark-bg text-boulder hover:text-white text-xs md:text-sm px-4 py-2 rounded-full transition-all duration-300 border border-white/5 hover:border-transparent"
-                                            >
-                                                {city}
-                                            </Link>
-                                        );
-                                    })}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
         </main>
     );
 };
