@@ -38,79 +38,45 @@ const KozhikodePage = () => {
         {
             num: "01",
             title: "GST Registration & Filing",
-            intro: "We help with GST registration, regular returns, annual reconciliation, ITC checks and responses to GST notices.",
-            items: [
-                "GST registration for new businesses and those crossing threshold",
-                "Monthly and quarterly GSTR-1 and GSTR-3B filing",
-                "Annual GSTR-9 reconciliation & ITC checks",
-                "GST notice response and representation"
-            ],
-            note: "Businesses that file GSTR-3B but never reconcile it with their purchase register build up ITC mismatches over years. We catch these before they become a department problem.",
+            intro: (
+                <>We help with <Link to="/services/gst/registration-profile-management" className="text-primary-accent hover:underline">GST registration</Link>, regular returns, annual reconciliation, ITC checks and responses to GST notices.</>
+            ),
             tags: ["GST Registration", "GSTR-1", "GSTR-3B", "ITC Reconciliation"]
         },
         {
             num: "02",
             title: "Income Tax Filing & Planning",
-            intro: "Income tax returns for individuals, firms, companies and NRIs, along with tax planning and support with department notices.",
-            items: [
-                "ITR filing for individuals, HUFs, firms, and companies",
-                "Tax planning — structuring income and expenses",
-                "TDS filing and compliance",
-                "Response to income tax notices and scrutiny assessments"
-            ],
-            note: "Common mistake: mixing personal and business expenses. This causes disallowances during assessments. Proper bookkeeping prevents it from the start.",
+            intro: (
+                <><a href="https://taxsummaries.pwc.com/india/individual/taxes-on-personal-income" target="_blank" rel="noopener noreferrer" className="text-primary-accent hover:underline">Income tax returns</a> for individuals, firms, companies and NRIs, along with <Link to="/services/taxation" className="text-primary-accent hover:underline">tax planning</Link> and support with department notices.</>
+            ),
             tags: ["ITR Filing", "Tax Planning", "TDS", "Notice Response"]
         },
         {
             num: "03",
             title: "Accounting & Bookkeeping",
-            intro: "Regular bookkeeping, ledger maintenance, bank reconciliation and financial reports that help you understand how your business is doing.",
-            items: [
-                "Regular bookkeeping on Tally, Zoho Books or cloud software",
-                "Ledger maintenance and Bank Reconciliation (BRS)",
-                "P&L statements and balance sheets",
-                "MIS reports for business decision making"
-            ],
-            note: "Most clients see a cleaner picture of their business within the first three months — without disrupting how they currently work.",
+            intro: (
+                <>Regular <a href="https://en.wikipedia.org/wiki/Bookkeeping" target="_blank" rel="noopener noreferrer" className="text-primary-accent hover:underline">bookkeeping</a>, ledger maintenance, bank reconciliation and financial reports that help you understand how your business is doing.</>
+            ),
             tags: ["Tally", "Zoho Books", "BRS", "MIS Reports"]
         },
         {
             num: "04",
             title: "Audit & Assurance",
             intro: "Statutory, tax and internal audits for companies, firms and other organisations that need reliable financial reporting and compliance.",
-            items: [
-                "Statutory audit under the Companies Act",
-                "Tax audit under Section 44AB of the Income Tax Act",
-                "Internal audit for process and control review",
-                "Stock audit and inventory verification"
-            ],
-            note: "We conduct audits across manufacturing, trading, healthcare, and services — not just for compliance, but to give owners a report they can actually use.",
             tags: ["Statutory Audit", "Tax Audit", "Internal Audit"]
         },
         {
             num: "05",
             title: "Company Registration",
-            intro: "Support with choosing a business structure, registration and the compliance work that follows after the business is formed, including Mudra loan support for eligible small businesses.",
-            items: [
-                "Private limited company and LLP incorporation",
-                "MSME / Udyam registration",
-                "ROC compliance and annual returns",
-                "Mudra loan support for small businesses"
-            ],
-            note: "Business structure affects your tax liability, your ability to raise funds, and your personal liability exposure. Worth getting right from day one.",
+            intro: (
+                <>Support with choosing a business structure, registration and the compliance work that follows after the business is formed, including <Link to="/services/business-loans/mudra-loans" className="text-primary-accent hover:underline">Mudra loan</Link> support for eligible small businesses.</>
+            ),
             tags: ["Private Limited", "LLP", "MSME", "ROC Compliance"]
         },
         {
             num: "06",
             title: "NRI Tax & Property Income",
             intro: "Remote support for NRIs dealing with Indian income, rental property, capital gains, TDS and other tax requirements.",
-            items: [
-                "NRI ITR filing and income declarations",
-                "Rental income tax compliance & TDS",
-                "Capital gains on property sale in Kerala",
-                "Form 15CA/15CB for foreign remittances"
-            ],
-            note: "Remote document sharing via WhatsApp or email — no need to visit the office in person for annual tax filings.",
             tags: ["NRI ITR", "Rental Income", "Capital Gains", "TDS"]
         }
     ];
@@ -454,8 +420,8 @@ const KozhikodePage = () => {
             {/* SERVICES SECTION */}
             <section id="services" className="py-20 bg-secondary-dark/30 border-y border-white/5">
                 <div className="container mx-auto px-5 md:px-12 lg:px-20">
-                    <div className="max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
-                        <div className="flex items-center gap-3 mb-4">
+                    <div className="section-head max-w-3xl mb-12 md:mb-16" data-aos="fade-up">
+                        <div className="kicker flex items-center gap-3 mb-4">
                             <span className="w-8 h-[1px] bg-primary-accent"></span>
                             <span className="text-primary-accent uppercase tracking-[0.25em] text-xs font-semibold">
                                 Our services
@@ -469,58 +435,36 @@ const KozhikodePage = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="services-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {services.map((service, index) => (
-                            <div
+                            <article
                                 key={index}
-                                className="bg-secondary-dark border border-white/5 rounded-2xl p-6 md:p-8 hover:border-primary-accent/30 transition-all duration-300 group hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-accent/5 flex flex-col justify-between"
+                                className="card bg-secondary-dark border border-white/5 rounded-2xl p-6 md:p-8 hover:border-primary-accent/30 transition-all duration-300 group hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-accent/5 flex flex-col justify-between"
                                 data-aos="fade-up"
                                 data-aos-delay={index * 50}
                             >
                                 <div>
-                                    <div className="flex justify-between items-start mb-4">
-                                        <span className="font-montserrat text-sm font-semibold text-primary-accent/50 block">
-                                            {service.num}
-                                        </span>
-                                        <span className="text-2xl rounded-lg bg-primary-accent/5 w-10 h-10 flex items-center justify-center border border-white/5">
-                                            {index === 0 ? "📊" : index === 1 ? "🧾" : index === 2 ? "📒" : index === 3 ? "🔍" : index === 4 ? "🏢" : "💻"}
-                                        </span>
-                                    </div>
+                                    <span className="service-no font-montserrat text-sm font-semibold text-primary-accent/50 block mb-3">
+                                        {service.num}
+                                    </span>
                                     <h3 className="font-montserrat text-xl font-bold text-white mb-3 group-hover:text-primary-accent transition-colors">
                                         {service.title}
                                     </h3>
                                     <p className="text-boulder text-sm mb-6 leading-relaxed">
                                         {service.intro}
                                     </p>
-                                    <ul className="space-y-3 mb-6">
-                                        {service.items.map((item, idx) => (
-                                            <li key={idx} className="flex items-start gap-3 text-sm text-gray-300">
-                                                <span className="text-primary-accent mt-0.5 flex-shrink-0">
-                                                    <IconCheck className="w-4 h-4" />
-                                                </span>
-                                                <span className="text-xs leading-relaxed text-boulder">{item}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
                                 </div>
-                                {service.note && (
-                                    <div className="border-l-2 border-primary-accent pl-4 py-2 mt-4 bg-primary-accent/5 rounded-r-xl">
-                                        <p className="text-[11px] text-boulder italic leading-relaxed">
-                                            {service.note}
-                                        </p>
-                                    </div>
-                                )}
-                                <div className="flex flex-wrap gap-1.5 mt-auto pt-4 border-t border-white/5">
+                                <div className="tags flex flex-wrap gap-1.5 mt-auto pt-4 border-t border-white/5">
                                     {service.tags.map((tag, idx) => (
                                         <span
                                             key={idx}
-                                            className="text-[10px] uppercase tracking-wider font-semibold text-silver-sand bg-white/5 px-2 py-1 rounded"
+                                            className="tag text-[10px] uppercase tracking-wider font-semibold text-silver-sand bg-white/5 px-2 py-1 rounded"
                                         >
                                             {tag}
                                         </span>
                                     ))}
                                 </div>
-                            </div>
+                            </article>
                         ))}
                     </div>
                 </div>
