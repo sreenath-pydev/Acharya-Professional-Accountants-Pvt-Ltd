@@ -12,7 +12,10 @@ export default defineConfig({
   },
   resolve: {
     alias: [
-      { find: /^aos$/, replacement: path.resolve(__dirname, './src/utils/aosObserver.js') }
+      { find: /^aos$/, replacement: path.resolve(__dirname, './src/utils/aosObserver.js') },
+      { find: /^react-router-dom$/, replacement: path.resolve(__dirname, './node_modules/react-router/dist/development/index.mjs') },
+      { find: /^react-router$/, replacement: path.resolve(__dirname, './node_modules/react-router/dist/development/index.mjs') },
+      { find: /^react-helmet-async$/, replacement: path.resolve(__dirname, './node_modules/react-helmet-async/lib/index.esm.js') }
     ]
   },
   plugins: [

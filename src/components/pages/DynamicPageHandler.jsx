@@ -1,22 +1,22 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import LocationPage from './LocationPage';
 import SEO from '../common/SEO';
 
-const KozhikodePage = lazy(() => import('./KozhikodePage'));
-const KannurPage = lazy(() => import('./KannurPage'));
-const MalappuramPage = lazy(() => import('./MalappuramPage'));
-const ThrissurPage = lazy(() => import('./ThrissurPage'));
-const WayanadPage = lazy(() => import('./WayanadPage'));
-const KasaragodPage = lazy(() => import('./KasaragodPage'));
-const KochiPage = lazy(() => import('./KochiPage'));
-const PalakkadPage = lazy(() => import('./PalakkadPage'));
-const BangalorePage = lazy(() => import('./BangalorePage'));
-const MangaluruPage = lazy(() => import('./MangaluruPage'));
-const ChennaiPage = lazy(() => import('./ChennaiPage'));
-const CoimbatorePage = lazy(() => import('./CoimbatorePage'));
-const MumbaiPage = lazy(() => import('./MumbaiPage'));
-const HyderabadPage = lazy(() => import('./HyderabadPage'));
+import KozhikodePage from './KozhikodePage';
+import KannurPage from './KannurPage';
+import MalappuramPage from './MalappuramPage';
+import ThrissurPage from './ThrissurPage';
+import WayanadPage from './WayanadPage';
+import KasaragodPage from './KasaragodPage';
+import KochiPage from './KochiPage';
+import PalakkadPage from './PalakkadPage';
+import BangalorePage from './BangalorePage';
+import MangaluruPage from './MangaluruPage';
+import ChennaiPage from './ChennaiPage';
+import CoimbatorePage from './CoimbatorePage';
+import MumbaiPage from './MumbaiPage';
+import HyderabadPage from './HyderabadPage';
 
 const DynamicPageHandler = () => {
     const { slug } = useParams();

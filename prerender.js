@@ -1,8 +1,7 @@
-import puppeteer from 'puppeteer';
 import fs from 'fs';
 import path from 'path';
-import http from 'http';
 import { fileURLToPath } from 'url';
+import { createServer as createViteServer } from 'vite';
 import { cityContent } from './src/data/locationData.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -70,121 +69,92 @@ const loanKeys = extractKeys(path.join(__dirname, 'src', 'data', 'loanDetails.js
 loanKeys.forEach(key => routes.push(`/services/business-loans/${key}`));
 
 const uniqueRoutes = Array.from(new Set(routes));
-console.log(`Loaded ${uniqueRoutes.length} total routes for pre-rendering.`);
+console.log(`Loaded ${uniqueRoutes.length} total routes for static pre-rendering.`);
 
-async function prerender() {
-    console.log('Starting pre-rendering...');
+function injectSSR(template, appHtml, helmet) {
+    let html = template;
 
-    const spaShell = fs.readFileSync(path.join(distDir, 'index.html'), 'utf8');
+    // Inject rendered React DOM into root element
+    html = html.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
 
-    const server = http.createServer((req, res) => {
-        const urlPath = decodeURIComponent(req.url.split('?')[0]);
-        let filePath = path.join(distDir, urlPath.startsWith('/') ? urlPath.substring(1) : urlPath);
+    if (helmet) {
+        const title = helmet.title ? helmet.title.toString() : '';
+        const meta = helmet.meta ? helmet.meta.toString() : '';
+        const link = helmet.link ? helmet.link.toString() : '';
+        const script = helmet.script ? helmet.script.toString() : '';
+        const style = helmet.style ? helmet.style.toString() : '';
+        const htmlAttrs = helmet.htmlAttributes ? helmet.htmlAttributes.toString() : '';
+        const bodyAttrs = helmet.bodyAttributes ? helmet.bodyAttributes.toString() : '';
 
-        if (urlPath === '/' || urlPath === '') {
-            filePath = path.join(distDir, 'index.html');
+        if (htmlAttrs) {
+            html = html.replace('<html', `<html ${htmlAttrs}`);
         }
 
-        if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
-            const ext = path.extname(filePath).toLowerCase();
-            const contentTypeMap = {
-                '.html': 'text/html; charset=utf-8',
-                '.js': 'text/javascript; charset=utf-8',
-                '.mjs': 'text/javascript; charset=utf-8',
-                '.css': 'text/css; charset=utf-8',
-                '.json': 'application/json',
-                '.png': 'image/png',
-                '.jpg': 'image/jpeg',
-                '.jpeg': 'image/jpeg',
-                '.webp': 'image/webp',
-                '.svg': 'image/svg+xml',
-                '.pdf': 'application/pdf',
-                '.woff': 'font/woff',
-                '.woff2': 'font/woff2',
-                '.ttf': 'font/ttf',
-            };
-            res.writeHead(200, { 'Content-Type': contentTypeMap[ext] || 'application/octet-stream' });
-            res.end(fs.readFileSync(filePath));
-        } else if (urlPath.startsWith('/assets/') || path.extname(urlPath)) {
-            res.writeHead(404, { 'Content-Type': 'text/plain' });
-            res.end('Asset Not Found');
-        } else {
-            res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-            res.end(spaShell);
+        if (bodyAttrs) {
+            html = html.replace('<body', `<body ${bodyAttrs}`);
         }
-    });
 
-    await new Promise((resolve) => server.listen(0, resolve));
-    const port = server.address().port;
-    const baseUrl = `http://localhost:${port}`;
-    console.log(`Static server started at ${baseUrl}`);
-
-    let launchOptions = {
-        headless: true,
-        args: [
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-dev-shm-usage',
-            '--disable-gpu',
-            '--no-first-run',
-            '--no-zygote',
-            '--single-process'
-        ]
-    };
-
-    try {
-        const execPath = puppeteer.executablePath();
-        if (execPath && fs.existsSync(execPath)) {
-            console.log(`Using Chrome binary at: ${execPath}`);
-            launchOptions.executablePath = execPath;
+        if (title) {
+            html = html.replace(/<title[^>]*>.*?<\/title>/i, title);
         }
-    } catch (e) {
-        console.warn('Could not resolve default executablePath:', e.message);
-    }
 
-    const browser = await puppeteer.launch(launchOptions);
-    const page = await browser.newPage();
-    page.on('pageerror', err => console.error('PAGE ERROR:', err.toString()));
-
-    let rootContent = null;
-
-    for (const route of uniqueRoutes) {
-        try {
-            console.log(`Rendering ${route}...`);
-            await page.goto(`${baseUrl}${route}`, { waitUntil: 'networkidle0' });
-
-            // Wait for React lazy component and Helmet to mount
-            try {
-                await page.waitForSelector('h1', { timeout: 10000 });
-            } catch (err) {
-                console.error(`Timeout waiting for h1 on ${route}:`, err.message);
-            }
-            await new Promise(r => setTimeout(r, 500));
-
-            const content = await page.content();
-
-            if (route === '/') {
-                rootContent = content;
-            } else {
-                const filePath = path.join(distDir, route, 'index.html');
-                fs.mkdirSync(path.dirname(filePath), { recursive: true });
-                fs.writeFileSync(filePath, content);
-                console.log(`Saved ${filePath}`);
-            }
-        } catch (e) {
-            console.error(`Error rendering ${route}:`, e);
+        const headContent = [meta, link, script, style].filter(Boolean).join('\n');
+        if (headContent) {
+            html = html.replace('</head>', `${headContent}\n</head>`);
         }
     }
 
-    if (rootContent) {
-        fs.writeFileSync(path.join(distDir, 'index.html'), rootContent);
-        console.log(`Saved root index.html`);
-    }
-
-    await browser.close();
-    server.close();
-    console.log('Pre-rendering complete.');
-    process.exit(0);
+    return html;
 }
 
-prerender();
+async function prerender() {
+    console.log('Starting static SSR pre-rendering (pure Node.js, zero Puppeteer)...');
+
+    const templatePath = path.join(distDir, 'index.html');
+    if (!fs.existsSync(templatePath)) {
+        throw new Error(`dist/index.html not found. Please run "vite build" before pre-rendering.`);
+    }
+
+    const template = fs.readFileSync(templatePath, 'utf8');
+
+    // Create Vite server in SSR mode to transpile and load entry-server.jsx
+    const vite = await createViteServer({
+        server: { middlewareMode: true },
+        appType: 'custom'
+    });
+
+    try {
+        const { render } = await vite.ssrLoadModule('./src/entry-server.jsx');
+
+        let renderedCount = 0;
+        for (const route of uniqueRoutes) {
+            try {
+                const { appHtml, helmet } = render(route);
+                const html = injectSSR(template, appHtml, helmet);
+
+                if (route === '/') {
+                    fs.writeFileSync(templatePath, html);
+                } else {
+                    const filePath = path.join(distDir, route.substring(1), 'index.html');
+                    fs.mkdirSync(path.dirname(filePath), { recursive: true });
+                    fs.writeFileSync(filePath, html);
+                }
+                renderedCount++;
+            } catch (e) {
+                console.error(`Error pre-rendering route ${route}:`, e);
+            }
+        }
+
+        console.log(`Successfully pre-rendered ${renderedCount}/${uniqueRoutes.length} static route HTML files.`);
+    } finally {
+        await vite.close();
+    }
+}
+
+prerender().then(() => {
+    console.log('Pre-rendering completed successfully.');
+    process.exit(0);
+}).catch(err => {
+    console.error('Fatal pre-rendering error:', err);
+    process.exit(1);
+});
