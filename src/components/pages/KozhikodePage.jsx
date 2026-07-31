@@ -732,7 +732,7 @@ const KozhikodePage = () => {
                                 Speak to a <span className="italic text-primary-accent">Chartered Accountant</span> in Kozhikode
                             </h2>
                             <p className="text-boulder text-lg max-w-xl">
-                                Free first consultation. Bring your GST, tax, audit, or registration question — we will give you a straight answer and a clear quote, no obligations.
+                                Free first consultation. Bring your GST, tax, audit, or registration question; we will give you a straight answer and a clear quote with no obligation.
                             </p>
                             <div className="flex flex-wrap gap-4 pt-4">
                                 <a
