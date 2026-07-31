@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && node prerender.js",
-    "postinstall": "puppeteer browsers install chrome",
+    "postinstall": "node node_modules/puppeteer/install.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
